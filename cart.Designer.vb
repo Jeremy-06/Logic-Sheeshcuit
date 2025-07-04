@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class cart
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,18 +24,16 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'Form1
+        'cart
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1182, 753)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "Form1"
+        Me.ClientSize = New System.Drawing.Size(1102, 703)
+        Me.ControlBox = False
+        Me.Name = "cart"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = ".."
+        Me.Text = "cart"
         Me.ResumeLayout(False)
 
     End Sub
-
 End Class
