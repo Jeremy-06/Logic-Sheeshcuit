@@ -85,11 +85,11 @@
     <Compile Include="cart.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="home.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="home.Designer.vb">
+      <DependentUpon>home.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="inventory.Designer.vb">
@@ -98,10 +98,17 @@
     <Compile Include="inventory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="logo.Designer.vb">
+      <DependentUpon>logo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="logo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -169,11 +176,14 @@
     <EmbeddedResource Include="cart.resx">
       <DependentUpon>cart.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inventory.resx">
       <DependentUpon>inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logo.resx">
+      <DependentUpon>logo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

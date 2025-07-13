@@ -9,7 +9,7 @@
 
         ' Initialize and start timer
         splashTimer = New Timer()
-        splashTimer.Interval = 3000 '
+        splashTimer.Interval = 2000 '
         AddHandler splashTimer.Tick, AddressOf SplashTimer_Tick
         splashTimer.Start()
     End Sub
@@ -18,6 +18,6 @@
         splashTimer.Stop()
         splashTimer.Dispose()
         Me.Hide()
-        Form1.Show() ' Show the main form after the splash screen
+        home.Show() ' Show the main form after the splash screen
     End Sub
 End Class

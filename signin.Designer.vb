@@ -30,6 +30,7 @@ Partial Class signin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(582, 603)
         Me.Name = "signin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "signin"
         Me.ResumeLayout(False)
 
