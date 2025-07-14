@@ -32,7 +32,7 @@ Partial Class cart
         Me.ControlBox = False
         Me.Name = "cart"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "cart"
+        Me.Text = "Cart"
         Me.ResumeLayout(False)
 
     End Sub

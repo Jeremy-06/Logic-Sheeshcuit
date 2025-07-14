@@ -33,7 +33,7 @@ Partial Class inventory
         Me.MinimizeBox = False
         Me.Name = "inventory"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "inventory"
+        Me.Text = "Inventory"
         Me.ResumeLayout(False)
 
     End Sub

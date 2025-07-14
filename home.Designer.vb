@@ -23,10 +23,14 @@ Partial Class home
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
         Me.PictureBox21 = New System.Windows.Forms.PictureBox()
         Me.PictureBox22 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox27 = New System.Windows.Forms.PictureBox()
         Me.PictureBox23 = New System.Windows.Forms.PictureBox()
         Me.PictureBox24 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox28 = New System.Windows.Forms.PictureBox()
         Me.PictureBox17 = New System.Windows.Forms.PictureBox()
         Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.PictureBox19 = New System.Windows.Forms.PictureBox()
@@ -49,14 +53,31 @@ Partial Class home
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PRODUCTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ICToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RESISTORSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BREADBOARDSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MakerlabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CircuitrocksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Element14ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RSComponentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DISPLAYToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PartNgICToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LEDsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PowerSupplyAndModuleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WiresAndCaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BreadboardsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SwitchesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResistorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CapacitorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OscilloscopesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,10 +104,14 @@ Partial Class home
         'Panel1
         '
         Me.Panel1.AutoScroll = True
+        Me.Panel1.Controls.Add(Me.PictureBox25)
+        Me.Panel1.Controls.Add(Me.PictureBox26)
         Me.Panel1.Controls.Add(Me.PictureBox21)
         Me.Panel1.Controls.Add(Me.PictureBox22)
+        Me.Panel1.Controls.Add(Me.PictureBox27)
         Me.Panel1.Controls.Add(Me.PictureBox23)
         Me.Panel1.Controls.Add(Me.PictureBox24)
+        Me.Panel1.Controls.Add(Me.PictureBox28)
         Me.Panel1.Controls.Add(Me.PictureBox17)
         Me.Panel1.Controls.Add(Me.PictureBox18)
         Me.Panel1.Controls.Add(Me.PictureBox19)
@@ -112,6 +137,26 @@ Partial Class home
         Me.Panel1.Size = New System.Drawing.Size(1181, 495)
         Me.Panel1.TabIndex = 0
         '
+        'PictureBox25
+        '
+        Me.PictureBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox25.Location = New System.Drawing.Point(880, 2728)
+        Me.PictureBox25.Name = "PictureBox25"
+        Me.PictureBox25.Size = New System.Drawing.Size(250, 250)
+        Me.PictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox25.TabIndex = 30
+        Me.PictureBox25.TabStop = False
+        '
+        'PictureBox26
+        '
+        Me.PictureBox26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox26.Location = New System.Drawing.Point(597, 2728)
+        Me.PictureBox26.Name = "PictureBox26"
+        Me.PictureBox26.Size = New System.Drawing.Size(250, 250)
+        Me.PictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox26.TabIndex = 29
+        Me.PictureBox26.TabStop = False
+        '
         'PictureBox21
         '
         Me.PictureBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -132,6 +177,16 @@ Partial Class home
         Me.PictureBox22.TabIndex = 25
         Me.PictureBox22.TabStop = False
         '
+        'PictureBox27
+        '
+        Me.PictureBox27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox27.Location = New System.Drawing.Point(314, 2728)
+        Me.PictureBox27.Name = "PictureBox27"
+        Me.PictureBox27.Size = New System.Drawing.Size(250, 250)
+        Me.PictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox27.TabIndex = 28
+        Me.PictureBox27.TabStop = False
+        '
         'PictureBox23
         '
         Me.PictureBox23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -151,6 +206,16 @@ Partial Class home
         Me.PictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox24.TabIndex = 23
         Me.PictureBox24.TabStop = False
+        '
+        'PictureBox28
+        '
+        Me.PictureBox28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox28.Location = New System.Drawing.Point(31, 2728)
+        Me.PictureBox28.Name = "PictureBox28"
+        Me.PictureBox28.Size = New System.Drawing.Size(250, 250)
+        Me.PictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox28.TabIndex = 27
+        Me.PictureBox28.TabStop = False
         '
         'PictureBox17
         '
@@ -358,37 +423,117 @@ Partial Class home
         Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PRODUCTSToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(315, 27)
+        Me.MenuStrip1.Location = New System.Drawing.Point(315, 44)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(150, 39)
+        Me.MenuStrip1.Size = New System.Drawing.Size(300, 39)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'PRODUCTSToolStripMenuItem
         '
         Me.PRODUCTSToolStripMenuItem.BackColor = System.Drawing.Color.Transparent
-        Me.PRODUCTSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ICToolStripMenuItem, Me.RESISTORSToolStripMenuItem, Me.BREADBOARDSToolStripMenuItem})
+        Me.PRODUCTSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SupplierToolStripMenuItem, Me.CatToolStripMenuItem})
         Me.PRODUCTSToolStripMenuItem.Name = "PRODUCTSToolStripMenuItem"
         Me.PRODUCTSToolStripMenuItem.Size = New System.Drawing.Size(142, 35)
         Me.PRODUCTSToolStripMenuItem.Text = "PRODUCTS"
         '
-        'ICToolStripMenuItem
+        'SupplierToolStripMenuItem
         '
-        Me.ICToolStripMenuItem.Name = "ICToolStripMenuItem"
-        Me.ICToolStripMenuItem.Size = New System.Drawing.Size(258, 36)
-        Me.ICToolStripMenuItem.Text = "IC"
+        Me.SupplierToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MakerlabToolStripMenuItem, Me.CircuitrocksToolStripMenuItem, Me.Element14ToolStripMenuItem, Me.RSComponentsToolStripMenuItem})
+        Me.SupplierToolStripMenuItem.Name = "SupplierToolStripMenuItem"
+        Me.SupplierToolStripMenuItem.Size = New System.Drawing.Size(244, 36)
+        Me.SupplierToolStripMenuItem.Text = "BY SUPPLIER"
         '
-        'RESISTORSToolStripMenuItem
+        'MakerlabToolStripMenuItem
         '
-        Me.RESISTORSToolStripMenuItem.Name = "RESISTORSToolStripMenuItem"
-        Me.RESISTORSToolStripMenuItem.Size = New System.Drawing.Size(258, 36)
-        Me.RESISTORSToolStripMenuItem.Text = "RESISTORS"
+        Me.MakerlabToolStripMenuItem.Name = "MakerlabToolStripMenuItem"
+        Me.MakerlabToolStripMenuItem.Size = New System.Drawing.Size(314, 36)
+        Me.MakerlabToolStripMenuItem.Text = "Makerlab Electronics"
         '
-        'BREADBOARDSToolStripMenuItem
+        'CatToolStripMenuItem
         '
-        Me.BREADBOARDSToolStripMenuItem.Name = "BREADBOARDSToolStripMenuItem"
-        Me.BREADBOARDSToolStripMenuItem.Size = New System.Drawing.Size(258, 36)
-        Me.BREADBOARDSToolStripMenuItem.Text = "BREADBOARDS"
+        Me.CatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DISPLAYToolStripMenuItem, Me.PartNgICToolStripMenuItem, Me.LEDsToolStripMenuItem, Me.PowerSupplyAndModuleToolStripMenuItem, Me.WiresAndCaToolStripMenuItem, Me.BreadboardsToolStripMenuItem, Me.SwitchesToolStripMenuItem, Me.ResistorsToolStripMenuItem, Me.CapacitorsToolStripMenuItem, Me.OscilloscopesToolStripMenuItem})
+        Me.CatToolStripMenuItem.Name = "CatToolStripMenuItem"
+        Me.CatToolStripMenuItem.Size = New System.Drawing.Size(244, 36)
+        Me.CatToolStripMenuItem.Text = "BY CATEGORY"
+        '
+        'CircuitrocksToolStripMenuItem
+        '
+        Me.CircuitrocksToolStripMenuItem.Name = "CircuitrocksToolStripMenuItem"
+        Me.CircuitrocksToolStripMenuItem.Size = New System.Drawing.Size(314, 36)
+        Me.CircuitrocksToolStripMenuItem.Text = "Circuitrocks"
+        '
+        'Element14ToolStripMenuItem
+        '
+        Me.Element14ToolStripMenuItem.Name = "Element14ToolStripMenuItem"
+        Me.Element14ToolStripMenuItem.Size = New System.Drawing.Size(314, 36)
+        Me.Element14ToolStripMenuItem.Text = "element14"
+        '
+        'RSComponentsToolStripMenuItem
+        '
+        Me.RSComponentsToolStripMenuItem.Name = "RSComponentsToolStripMenuItem"
+        Me.RSComponentsToolStripMenuItem.Size = New System.Drawing.Size(314, 36)
+        Me.RSComponentsToolStripMenuItem.Text = "RS Components"
+        '
+        'DISPLAYToolStripMenuItem
+        '
+        Me.DISPLAYToolStripMenuItem.Name = "DISPLAYToolStripMenuItem"
+        Me.DISPLAYToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.DISPLAYToolStripMenuItem.Text = "Digital Displays"
+        '
+        'PartNgICToolStripMenuItem
+        '
+        Me.PartNgICToolStripMenuItem.Name = "PartNgICToolStripMenuItem"
+        Me.PartNgICToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.PartNgICToolStripMenuItem.Text = "Integrated Circuits"
+        '
+        'LEDsToolStripMenuItem
+        '
+        Me.LEDsToolStripMenuItem.Name = "LEDsToolStripMenuItem"
+        Me.LEDsToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.LEDsToolStripMenuItem.Text = "LEDs"
+        '
+        'PowerSupplyAndModuleToolStripMenuItem
+        '
+        Me.PowerSupplyAndModuleToolStripMenuItem.Name = "PowerSupplyAndModuleToolStripMenuItem"
+        Me.PowerSupplyAndModuleToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.PowerSupplyAndModuleToolStripMenuItem.Text = "Power Supply and Modules"
+        '
+        'WiresAndCaToolStripMenuItem
+        '
+        Me.WiresAndCaToolStripMenuItem.Name = "WiresAndCaToolStripMenuItem"
+        Me.WiresAndCaToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.WiresAndCaToolStripMenuItem.Text = "Wires and Cables"
+        '
+        'BreadboardsToolStripMenuItem
+        '
+        Me.BreadboardsToolStripMenuItem.Name = "BreadboardsToolStripMenuItem"
+        Me.BreadboardsToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.BreadboardsToolStripMenuItem.Text = "Breadboards"
+        '
+        'SwitchesToolStripMenuItem
+        '
+        Me.SwitchesToolStripMenuItem.Name = "SwitchesToolStripMenuItem"
+        Me.SwitchesToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.SwitchesToolStripMenuItem.Text = "Switches"
+        '
+        'ResistorsToolStripMenuItem
+        '
+        Me.ResistorsToolStripMenuItem.Name = "ResistorsToolStripMenuItem"
+        Me.ResistorsToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.ResistorsToolStripMenuItem.Text = "Resistors"
+        '
+        'CapacitorsToolStripMenuItem
+        '
+        Me.CapacitorsToolStripMenuItem.Name = "CapacitorsToolStripMenuItem"
+        Me.CapacitorsToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.CapacitorsToolStripMenuItem.Text = "Capacitors"
+        '
+        'OscilloscopesToolStripMenuItem
+        '
+        Me.OscilloscopesToolStripMenuItem.Name = "OscilloscopesToolStripMenuItem"
+        Me.OscilloscopesToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.OscilloscopesToolStripMenuItem.Text = "Oscilloscopes"
         '
         'home
         '
@@ -405,10 +550,14 @@ Partial Class home
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "HOME"
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
@@ -463,7 +612,24 @@ Partial Class home
     Friend WithEvents PictureBox12 As PictureBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents PRODUCTSToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ICToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RESISTORSToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BREADBOARDSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SupplierToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CatToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PictureBox25 As PictureBox
+    Friend WithEvents PictureBox26 As PictureBox
+    Friend WithEvents PictureBox27 As PictureBox
+    Friend WithEvents PictureBox28 As PictureBox
+    Friend WithEvents MakerlabToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CircuitrocksToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Element14ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RSComponentsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DISPLAYToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PartNgICToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LEDsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PowerSupplyAndModuleToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents WiresAndCaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BreadboardsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SwitchesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ResistorsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CapacitorsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OscilloscopesToolStripMenuItem As ToolStripMenuItem
 End Class

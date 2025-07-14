@@ -33,7 +33,7 @@ Partial Class orders
         Me.MinimizeBox = False
         Me.Name = "orders"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "orders"
+        Me.Text = "Orders"
         Me.ResumeLayout(False)
 
     End Sub

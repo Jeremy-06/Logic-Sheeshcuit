@@ -79,10 +79,28 @@
     <Compile Include="admin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="breadboards.Designer.vb">
+      <DependentUpon>breadboards.vb</DependentUpon>
+    </Compile>
+    <Compile Include="breadboards.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="capacitors.Designer.vb">
+      <DependentUpon>capacitors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="capacitors.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="cart.Designer.vb">
       <DependentUpon>cart.vb</DependentUpon>
     </Compile>
     <Compile Include="cart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="digitaldisplays.Designer.vb">
+      <DependentUpon>digitaldisplays.vb</DependentUpon>
+    </Compile>
+    <Compile Include="digitaldisplays.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="home.vb">
@@ -92,10 +110,22 @@
       <DependentUpon>home.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="integratedcircuits.Designer.vb">
+      <DependentUpon>integratedcircuits.vb</DependentUpon>
+    </Compile>
+    <Compile Include="integratedcircuits.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="inventory.Designer.vb">
       <DependentUpon>inventory.vb</DependentUpon>
     </Compile>
     <Compile Include="inventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="led.Designer.vb">
+      <DependentUpon>led.vb</DependentUpon>
+    </Compile>
+    <Compile Include="led.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="logo.Designer.vb">
@@ -126,28 +156,47 @@
     <Compile Include="orders.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="products0.Designer.vb">
-      <DependentUpon>products0.vb</DependentUpon>
-    </Compile>
-    <Compile Include="products0.vb">
+    <Compile Include=".Designer.vb">
+      <DependentUpon>makerlab.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="products1.Designer.vb">
-      <DependentUpon>products1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="products1.vb">
+    <Compile Include="makerlab.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="products2.Designer.vb">
-      <DependentUpon>products2.vb</DependentUpon>
+    <Compile Include="circuitrocks.Designer.vb">
+      <DependentUpon>circuitrocks.vb</DependentUpon>
     </Compile>
-    <Compile Include="products2.vb">
+    <Compile Include="circuitrocks.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="products3.Designer.vb">
-      <DependentUpon>products3.vb</DependentUpon>
+    <Compile Include="element14.Designer.vb">
+      <DependentUpon>element14.vb</DependentUpon>
     </Compile>
-    <Compile Include="products3.vb">
+    <Compile Include="element14.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oscilloscopes.Designer.vb">
+      <DependentUpon>oscilloscopes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oscilloscopes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="powersupply.Designer.vb">
+      <DependentUpon>powersupply.vb</DependentUpon>
+    </Compile>
+    <Compile Include="powersupply.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="resistor.Designer.vb">
+      <DependentUpon>resistor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="resistor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rscomponents.Designer.vb">
+      <DependentUpon>rscomponents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rscomponents.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="sales.Designer.vb">
@@ -168,19 +217,46 @@
     <Compile Include="signup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="switches.Designer.vb">
+      <DependentUpon>switches.vb</DependentUpon>
+    </Compile>
+    <Compile Include="switches.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wires.Designer.vb">
+      <DependentUpon>wires.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wires.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="breadboards.resx">
+      <DependentUpon>breadboards.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="capacitors.resx">
+      <DependentUpon>capacitors.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cart.resx">
       <DependentUpon>cart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="digitaldisplays.resx">
+      <DependentUpon>digitaldisplays.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="integratedcircuits.resx">
+      <DependentUpon>integratedcircuits.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="inventory.resx">
       <DependentUpon>inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="led.resx">
+      <DependentUpon>led.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="logo.resx">
       <DependentUpon>logo.vb</DependentUpon>
@@ -194,17 +270,26 @@
     <EmbeddedResource Include="orders.resx">
       <DependentUpon>orders.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="products0.resx">
-      <DependentUpon>products0.vb</DependentUpon>
+    <EmbeddedResource Include="makerlab.resx">
+      <DependentUpon>makerlab.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="products1.resx">
-      <DependentUpon>products1.vb</DependentUpon>
+    <EmbeddedResource Include="circuitrocks.resx">
+      <DependentUpon>circuitrocks.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="products2.resx">
-      <DependentUpon>products2.vb</DependentUpon>
+    <EmbeddedResource Include="element14.resx">
+      <DependentUpon>element14.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="products3.resx">
-      <DependentUpon>products3.vb</DependentUpon>
+    <EmbeddedResource Include="oscilloscopes.resx">
+      <DependentUpon>oscilloscopes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="powersupply.resx">
+      <DependentUpon>powersupply.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resistor.resx">
+      <DependentUpon>resistor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rscomponents.resx">
+      <DependentUpon>rscomponents.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sales.resx">
       <DependentUpon>sales.vb</DependentUpon>
@@ -214,6 +299,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="switches.resx">
+      <DependentUpon>switches.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wires.resx">
+      <DependentUpon>wires.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

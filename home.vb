@@ -8,7 +8,7 @@ Public Class home
         Application.Exit()
     End Sub
 
-    Private Sub ICToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ICToolStripMenuItem.Click
+    Private Sub SupplierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SupplierToolStripMenuItem.Click
         products0.Show()
     End Sub
 

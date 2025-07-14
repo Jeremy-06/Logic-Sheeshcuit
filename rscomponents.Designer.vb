@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class products2
+Partial Class rscomponents
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -34,16 +34,16 @@ Partial Class products2
         Me.Panel1.Size = New System.Drawing.Size(1182, 753)
         Me.Panel1.TabIndex = 0
         '
-        'products2
+        'rscomponents
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1182, 753)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "products2"
+        Me.Name = "rscomponents"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "products2"
+        Me.Text = "RS Components"
         Me.ResumeLayout(False)
 
     End Sub
