@@ -3,7 +3,8 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Back.Click
         Me.Close()
+        home.Show()
     End Sub
 End Class

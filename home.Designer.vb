@@ -55,15 +55,15 @@ Partial Class home
         Me.PRODUCTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MakerlabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CircuitrocksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Element14ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RSComponentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DISPLAYToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PartNgICToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DisplayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ICToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LEDsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PowerSupplyAndModuleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.WiresAndCaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WiresAndCablesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BreadboardsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SwitchesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResistorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -132,9 +132,9 @@ Partial Class home
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(1, 130)
+        Me.Panel1.Location = New System.Drawing.Point(5, 130)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1181, 495)
+        Me.Panel1.Size = New System.Drawing.Size(1170, 495)
         Me.Panel1.TabIndex = 0
         '
         'PictureBox25
@@ -425,7 +425,7 @@ Partial Class home
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PRODUCTSToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(315, 44)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(300, 39)
+        Me.MenuStrip1.Size = New System.Drawing.Size(150, 39)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -450,13 +450,6 @@ Partial Class home
         Me.MakerlabToolStripMenuItem.Size = New System.Drawing.Size(314, 36)
         Me.MakerlabToolStripMenuItem.Text = "Makerlab Electronics"
         '
-        'CatToolStripMenuItem
-        '
-        Me.CatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DISPLAYToolStripMenuItem, Me.PartNgICToolStripMenuItem, Me.LEDsToolStripMenuItem, Me.PowerSupplyAndModuleToolStripMenuItem, Me.WiresAndCaToolStripMenuItem, Me.BreadboardsToolStripMenuItem, Me.SwitchesToolStripMenuItem, Me.ResistorsToolStripMenuItem, Me.CapacitorsToolStripMenuItem, Me.OscilloscopesToolStripMenuItem})
-        Me.CatToolStripMenuItem.Name = "CatToolStripMenuItem"
-        Me.CatToolStripMenuItem.Size = New System.Drawing.Size(244, 36)
-        Me.CatToolStripMenuItem.Text = "BY CATEGORY"
-        '
         'CircuitrocksToolStripMenuItem
         '
         Me.CircuitrocksToolStripMenuItem.Name = "CircuitrocksToolStripMenuItem"
@@ -475,17 +468,24 @@ Partial Class home
         Me.RSComponentsToolStripMenuItem.Size = New System.Drawing.Size(314, 36)
         Me.RSComponentsToolStripMenuItem.Text = "RS Components"
         '
-        'DISPLAYToolStripMenuItem
+        'CatToolStripMenuItem
         '
-        Me.DISPLAYToolStripMenuItem.Name = "DISPLAYToolStripMenuItem"
-        Me.DISPLAYToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
-        Me.DISPLAYToolStripMenuItem.Text = "Digital Displays"
+        Me.CatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DisplayToolStripMenuItem, Me.ICToolStripMenuItem, Me.LEDsToolStripMenuItem, Me.PowerSupplyAndModuleToolStripMenuItem, Me.WiresAndCablesToolStripMenuItem, Me.BreadboardsToolStripMenuItem, Me.SwitchesToolStripMenuItem, Me.ResistorsToolStripMenuItem, Me.CapacitorsToolStripMenuItem, Me.OscilloscopesToolStripMenuItem})
+        Me.CatToolStripMenuItem.Name = "CatToolStripMenuItem"
+        Me.CatToolStripMenuItem.Size = New System.Drawing.Size(244, 36)
+        Me.CatToolStripMenuItem.Text = "BY CATEGORY"
         '
-        'PartNgICToolStripMenuItem
+        'DisplayToolStripMenuItem
         '
-        Me.PartNgICToolStripMenuItem.Name = "PartNgICToolStripMenuItem"
-        Me.PartNgICToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
-        Me.PartNgICToolStripMenuItem.Text = "Integrated Circuits"
+        Me.DisplayToolStripMenuItem.Name = "DisplayToolStripMenuItem"
+        Me.DisplayToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.DisplayToolStripMenuItem.Text = "Digital Displays"
+        '
+        'ICToolStripMenuItem
+        '
+        Me.ICToolStripMenuItem.Name = "ICToolStripMenuItem"
+        Me.ICToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.ICToolStripMenuItem.Text = "Integrated Circuits"
         '
         'LEDsToolStripMenuItem
         '
@@ -499,11 +499,11 @@ Partial Class home
         Me.PowerSupplyAndModuleToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
         Me.PowerSupplyAndModuleToolStripMenuItem.Text = "Power Supply and Modules"
         '
-        'WiresAndCaToolStripMenuItem
+        'WiresAndCablesToolStripMenuItem
         '
-        Me.WiresAndCaToolStripMenuItem.Name = "WiresAndCaToolStripMenuItem"
-        Me.WiresAndCaToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
-        Me.WiresAndCaToolStripMenuItem.Text = "Wires and Cables"
+        Me.WiresAndCablesToolStripMenuItem.Name = "WiresAndCablesToolStripMenuItem"
+        Me.WiresAndCablesToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.WiresAndCablesToolStripMenuItem.Text = "Wires and Cables"
         '
         'BreadboardsToolStripMenuItem
         '
@@ -622,11 +622,11 @@ Partial Class home
     Friend WithEvents CircuitrocksToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Element14ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RSComponentsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DISPLAYToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PartNgICToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DisplayToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ICToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LEDsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PowerSupplyAndModuleToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents WiresAndCaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents WiresAndCablesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BreadboardsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SwitchesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ResistorsToolStripMenuItem As ToolStripMenuItem

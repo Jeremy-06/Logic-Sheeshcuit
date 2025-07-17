@@ -22,7 +22,17 @@ Partial Class oscilloscopes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
+        '
+        'Panel1
+        '
+        Me.Panel1.AutoScroll = True
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1182, 753)
+        Me.Panel1.TabIndex = 0
         '
         'oscilloscopes
         '
@@ -30,10 +40,13 @@ Partial Class oscilloscopes
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1182, 753)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Panel1)
         Me.Name = "oscilloscopes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Oscilloscopes"
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents Panel1 As Panel
 End Class

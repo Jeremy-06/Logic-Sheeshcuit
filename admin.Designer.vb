@@ -28,7 +28,7 @@ Partial Class admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1082, 653)
+        Me.ClientSize = New System.Drawing.Size(1198, 755)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "admin"
