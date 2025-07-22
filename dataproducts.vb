@@ -105,6 +105,47 @@ Public Class dataproducts
         RefreshData()
     End Sub
     Private Sub RefreshData()
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Try
+            ' Validate required fields
+            If String.IsNullOrWhiteSpace(TextBox1.Text) OrElse
+               ComboBox1.SelectedIndex = -1 OrElse
+               ComboBox2.SelectedIndex = -1 OrElse
+               String.IsNullOrWhiteSpace(TextBox4.Text) OrElse
+               String.IsNullOrWhiteSpace(TextBox5.Text) OrElse
+               String.IsNullOrWhiteSpace(TextBox6.Text) Then
+                MessageBox.Show("Please select a product and fill in all fields before updating.")
+                Exit Sub
+            End If
+
+            conn.Open()
+            Dim productId As String = TextBox1.Text
+            Dim supplierName As String = ComboBox1.Text
+            Dim category As String = ComboBox2.Text
+            Dim productName As String = TextBox4.Text
+            Dim productPrice As String = TextBox5.Text
+            Dim productStock As String = TextBox6.Text
+
+            ' Update products table
+            query = $"UPDATE products SET productName = '{productName}', productPrice = '{productPrice}', productCategories_categoryId = (SELECT categoryId FROM productCategories WHERE category = '{category}') WHERE productId = {productId}"
+            cmd = New MySqlCommand(query, conn)
+            cmd.ExecuteNonQuery()
+
+            ' Update inventory table
+            query = $"UPDATE inventory SET suppliers_supplierId = (SELECT supplierId FROM suppliers WHERE supplierName = '{supplierName}'), productStock = '{productStock}' WHERE products_productId = {productId}"
+            cmd = New MySqlCommand(query, conn)
+            cmd.ExecuteNonQuery()
+
+            MessageBox.Show("Product updated successfully.")
+            conn.Close()
+            RefreshData()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+    End Sub
         Try
             conn.Open()
             query = "SELECT 
