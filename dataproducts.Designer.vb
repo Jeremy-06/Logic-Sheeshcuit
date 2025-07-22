@@ -228,7 +228,7 @@ Partial Class dataproducts
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(414, 46)
+        Me.Label8.Location = New System.Drawing.Point(468, 86)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(48, 16)
         Me.Label8.TabIndex = 21

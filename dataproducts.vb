@@ -63,18 +63,24 @@ Public Class dataproducts
 
             conn.Open()
             Dim productId As String = TextBox1.Text
-            Dim supplierName As String = TextBox6.Text
-            Dim category As String = ComboBox1.Text
-            Dim productName As String = ComboBox2.Text
-            Dim productPrice As String = TextBox4.Text
-            Dim productStock As String = TextBox5.Text
+            Dim supplierName As String = ComboBox1.Text
+            Dim category As String = ComboBox2.Text
+            Dim productName As String = TextBox4.Text
+            Dim productPrice As String = TextBox5.Text
+            Dim productStock As String = TextBox6.Text
 
-
-            query = $"INSERT INTO products (productId, productName, productPrice, productCategories_categoryId) VALUES ('{productId}', '{productName}', '{productPrice}', $(SELECT categoryId FROM productCategories WHERE category = '{category}'))"
+            ' After inserting into products, get the last inserted productId using LAST_INSERT_ID()
+            query = $"INSERT INTO products (productName, productPrice, productCategories_categoryId) VALUES ('{productName}', '{productPrice}', (SELECT categoryId FROM productCategories WHERE category = '{category}'))"
             cmd = New MySqlCommand(query, conn)
             cmd.ExecuteNonQuery()
 
-            query = $"INSERT INTO inventory (products_productId, suppliers_supplierId, productStock) VALUES ('{productId}', (SELECT supplierId FROM suppliers WHERE supplierName = '{supplierName}'), '{productStock}')"
+            ' Get the auto-incremented productId
+            query = "SELECT LAST_INSERT_ID();"
+            cmd = New MySqlCommand(query, conn)
+            Dim newProductId As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+            ' Now insert into inventory using the new productId
+            query = $"INSERT INTO inventory (products_productId, suppliers_supplierId, productStock) VALUES ({newProductId}, (SELECT supplierId FROM suppliers WHERE supplierName = '{supplierName}'), '{productStock}')"
             cmd = New MySqlCommand(query, conn)
             cmd.ExecuteNonQuery()
 
@@ -95,5 +101,34 @@ Public Class dataproducts
         TextBox4.Clear()
         TextBox5.Clear()
         TextBox6.Clear()
+        ' Add this method to refresh the DataGridView data from the database.
+        RefreshData()
+    End Sub
+    Private Sub RefreshData()
+        Try
+            conn.Open()
+            query = "SELECT 
+                          p.productId,
+                          s.supplierName, 
+                          pc.category, 
+                          p.productName, 
+                          p.productPrice, 
+                          i.productStock FROM inventory i
+                        JOIN products p ON i.products_productId = p.productId
+                        JOIN productCategories pc ON p.productCategories_categoryId = pc.categoryId
+                        JOIN suppliers s ON i.suppliers_supplierId = s.supplierId
+                        ORDER BY p.productId;"
+            cmd = New MySqlCommand(query, conn)
+            da = New MySqlDataAdapter(cmd)
+            ds = New DataSet()
+            da.Fill(ds, "products")
+            DataGridView1.DataSource = ds.Tables("products")
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
     End Sub
 End Class
