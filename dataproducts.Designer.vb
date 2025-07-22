@@ -42,6 +42,7 @@ Partial Class dataproducts
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -234,11 +235,20 @@ Partial Class dataproducts
         Me.Label8.TabIndex = 21
         Me.Label8.Text = "Label8"
         '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(480, 628)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(195, 30)
+        Me.TextBox2.TabIndex = 22
+        '
         'dataproducts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1182, 753)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.ComboBox2)
@@ -287,4 +297,5 @@ Partial Class dataproducts
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Button5 As Button
     Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox2 As TextBox
 End Class

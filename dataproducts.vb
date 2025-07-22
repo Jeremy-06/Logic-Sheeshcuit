@@ -31,7 +31,33 @@ Public Class dataproducts
             MessageBox.Show("Error: " & ex.Message)
         End Try
     End Sub
-
+    Private Sub RefreshData()
+        Try
+            conn.Open()
+            query = "SELECT 
+                          p.productId,
+                          s.supplierName, 
+                          pc.category, 
+                          p.productName, 
+                          p.productPrice, 
+                          i.productStock FROM inventory i
+                        JOIN products p ON i.products_productId = p.productId
+                        JOIN productCategories pc ON p.productCategories_categoryId = pc.categoryId
+                        JOIN suppliers s ON i.suppliers_supplierId = s.supplierId
+                        ORDER BY p.productId;"
+            cmd = New MySqlCommand(query, conn)
+            da = New MySqlDataAdapter(cmd)
+            ds = New DataSet()
+            da.Fill(ds, "products")
+            DataGridView1.DataSource = ds.Tables("products")
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+    End Sub
     ' Add this event handler to show the selected row's values in TextBoxes when a cell is clicked.
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Try
@@ -48,7 +74,7 @@ Public Class dataproducts
             MessageBox.Show("Error: " & ex.Message)
         End Try
     End Sub
-
+    'INSERT
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             ' Validate required fields
@@ -104,7 +130,8 @@ Public Class dataproducts
         ' Add this method to refresh the DataGridView data from the database.
         RefreshData()
     End Sub
-    Private Sub RefreshData()
+
+    'UPDATE
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
             ' Validate required fields
@@ -146,6 +173,8 @@ Public Class dataproducts
             End If
         End Try
     End Sub
+    'DELETE
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Try
             ' Validate that a product is selected
             If String.IsNullOrWhiteSpace(TextBox1.Text) Then
@@ -169,16 +198,48 @@ Public Class dataproducts
 
             ' Delete from products table
             query = $"DELETE FROM products WHERE productId = {productId}"
-                        JOIN productCategories pc ON p.productCategories_categoryId = pc.categoryId
-                        JOIN suppliers s ON i.suppliers_supplierId = s.supplierId
-                        ORDER BY p.productId;"
             cmd = New MySqlCommand(query, conn)
             cmd.ExecuteNonQuery()
 
             MessageBox.Show("Product deleted successfully.")
-            DataGridView1.DataSource = ds.Tables("products")
             conn.Close()
             RefreshData()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+    End Sub
+    'SEARCH
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Try
+            Dim searchText As String = TextBox2.Text.Trim()
+            If String.IsNullOrWhiteSpace(searchText) Then
+                MessageBox.Show("Please enter a product name to search.")
+                Exit Sub
+            End If
+
+            conn.Open()
+            query = "SELECT 
+                        p.productId,
+                        s.supplierName, 
+                        pc.category, 
+                        p.productName, 
+                        p.productPrice, 
+                        i.productStock 
+                     FROM inventory i
+                     JOIN products p ON i.products_productId = p.productId
+                     JOIN productCategories pc ON p.productCategories_categoryId = pc.categoryId
+                     JOIN suppliers s ON i.suppliers_supplierId = s.supplierId
+                     WHERE p.productName LIKE '%" & searchText & "%'
+                     ORDER BY p.productId;"
+            cmd = New MySqlCommand(query, conn)
+            da = New MySqlDataAdapter(cmd)
+            ds = New DataSet()
+            da.Fill(ds, "products")
+            DataGridView1.DataSource = ds.Tables("products")
+            conn.Close()
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
             If conn.State = ConnectionState.Open Then
