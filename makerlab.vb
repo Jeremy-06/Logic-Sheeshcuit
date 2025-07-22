@@ -7,4 +7,8 @@
         Me.Close()
         home.Show()
     End Sub
+
+    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
+
+    End Sub
 End Class

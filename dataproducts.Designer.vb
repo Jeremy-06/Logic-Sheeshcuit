@@ -238,7 +238,7 @@ Partial Class dataproducts
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(480, 628)
+        Me.TextBox2.Location = New System.Drawing.Point(608, 612)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(195, 30)
         Me.TextBox2.TabIndex = 22
