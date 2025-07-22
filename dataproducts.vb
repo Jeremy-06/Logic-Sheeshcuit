@@ -147,24 +147,38 @@ Public Class dataproducts
         End Try
     End Sub
         Try
+            ' Validate that a product is selected
+            If String.IsNullOrWhiteSpace(TextBox1.Text) Then
+                MessageBox.Show("Please select a product to delete.")
+                Exit Sub
+            End If
+
+            Dim productId As String = TextBox1.Text
+
+            Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete this product?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+            If result = DialogResult.No Then
+                Exit Sub
+            End If
+
             conn.Open()
-            query = "SELECT 
-                          p.productId,
-                          s.supplierName, 
-                          pc.category, 
-                          p.productName, 
-                          p.productPrice, 
-                          i.productStock FROM inventory i
-                        JOIN products p ON i.products_productId = p.productId
+
+            ' Delete from inventory first due to foreign key constraints
+            query = $"DELETE FROM inventory WHERE products_productId = {productId}"
+            cmd = New MySqlCommand(query, conn)
+            cmd.ExecuteNonQuery()
+
+            ' Delete from products table
+            query = $"DELETE FROM products WHERE productId = {productId}"
                         JOIN productCategories pc ON p.productCategories_categoryId = pc.categoryId
                         JOIN suppliers s ON i.suppliers_supplierId = s.supplierId
                         ORDER BY p.productId;"
             cmd = New MySqlCommand(query, conn)
-            da = New MySqlDataAdapter(cmd)
-            ds = New DataSet()
-            da.Fill(ds, "products")
+            cmd.ExecuteNonQuery()
+
+            MessageBox.Show("Product deleted successfully.")
             DataGridView1.DataSource = ds.Tables("products")
             conn.Close()
+            RefreshData()
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
             If conn.State = ConnectionState.Open Then
