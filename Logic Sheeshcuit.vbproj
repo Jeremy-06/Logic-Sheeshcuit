@@ -212,12 +212,6 @@
     <Compile Include="sales.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="signin.Designer.vb">
-      <DependentUpon>signin.vb</DependentUpon>
-    </Compile>
-    <Compile Include="signin.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="signup.Designer.vb">
       <DependentUpon>signup.vb</DependentUpon>
     </Compile>
@@ -303,9 +297,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sales.resx">
       <DependentUpon>sales.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="signin.resx">
-      <DependentUpon>signin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.vb</DependentUpon>
