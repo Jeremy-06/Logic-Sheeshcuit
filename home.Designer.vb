@@ -69,6 +69,7 @@ Partial Class home
         Me.ResistorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CapacitorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OscilloscopesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -535,11 +536,21 @@ Partial Class home
         Me.OscilloscopesToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
         Me.OscilloscopesToolStripMenuItem.Text = "Oscilloscopes"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(155, 44)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1182, 753)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -632,4 +643,5 @@ Partial Class home
     Friend WithEvents ResistorsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CapacitorsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OscilloscopesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button1 As Button
 End Class
