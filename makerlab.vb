@@ -8,7 +8,9 @@ Public Class makerlab
     Dim reader As MySqlDataReader
     Dim query As String
 
-    Dim product1Qty As Integer
+    Dim product1Qty As Integer = 0
+    Dim product2Qty As Integer = 0
+
     Private Sub makerlab_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '  Try
         '      conn.Open()
@@ -23,9 +25,6 @@ Public Class makerlab
         '  Finally
         '      conn.Close()
         '  End Try
-
-
-
 
     End Sub
 
@@ -53,6 +52,63 @@ Public Class makerlab
         End If
 
     End Sub
+    Private Sub plus_btn_Click(sender As Object, e As EventArgs) Handles plus_btn.Click
+        product1Qty += 1
+        TextBox1.Text = product1Qty.ToString()
+        If product1Qty <= 0 Then
+            product1Qty = 0
+            TextBox1.Text = product1Qty.ToString()
+            minus_btn.Enabled = False
+        Else
+            minus_btn.Enabled = True
+        End If
+    End Sub
+    Private Sub minus_btn_Click(sender As Object, e As EventArgs) Handles minus_btn.Click
+        product1Qty -= 1
+        TextBox1.Text = product1Qty.ToString()
+        If product1Qty <= 0 Then
+            product1Qty = 0
+            TextBox1.Text = product1Qty.ToString()
+            minus_btn.Enabled = False
+        End If
+    End Sub
+    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs) Handles addtocart_btn1.Click
+        If Integer.TryParse(TextBox2.Text, product2Qty) Then
+            ' product1Qty now contains the integer value from the textbox
+            Try
+                conn.Open()
+                query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES (2, 1, '{product2Qty}')"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+                MessageBox.Show("Product added to cart successfully!")
+            Catch ex As Exception
+                MessageBox.Show("Error adding product to cart: " & ex.Message)
+            Finally
+                conn.Close()
+            End Try
+        Else
+            MessageBox.Show("Please enter a valid number.")
+        End If
+    End Sub
 
-
+    Private Sub plus_btn1_Click(sender As Object, e As EventArgs) Handles plus_btn1.Click
+        product2Qty += 1
+        TextBox2.Text = product2Qty.ToString()
+        If product2Qty <= 0 Then
+            product2Qty = 0
+            TextBox1.Text = product2Qty.ToString()
+            minus_btn.Enabled = False
+        Else
+            minus_btn.Enabled = True
+        End If
+    End Sub
+    Private Sub minus_btn1_Click(sender As Object, e As EventArgs) Handles minus_btn1.Click
+        product2Qty -= 1
+        TextBox2.Text = product2Qty.ToString()
+        If product2Qty <= 0 Then
+            product2Qty = 0
+            TextBox2.Text = product2Qty.ToString()
+            minus_btn1.Enabled = False
+        End If
+    End Sub
 End Class

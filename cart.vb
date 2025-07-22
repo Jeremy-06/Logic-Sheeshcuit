@@ -17,7 +17,7 @@ Public Class cart
                         ca.productQty FROM customers c
                     JOIN cart ca ON c.customerId = ca.customers_customerId
                     JOIN products p ON ca.products_productId = p.productId
-                    ORDER BY c.customerId;"
+                    ORDER BY p.productId;"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
