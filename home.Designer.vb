@@ -71,6 +71,7 @@ Partial Class home
         Me.OscilloscopesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -427,7 +428,7 @@ Partial Class home
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PRODUCTSToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(315, 44)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(150, 39)
+        Me.MenuStrip1.Size = New System.Drawing.Size(126, 33)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -436,105 +437,105 @@ Partial Class home
         Me.PRODUCTSToolStripMenuItem.BackColor = System.Drawing.Color.Transparent
         Me.PRODUCTSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SupplierToolStripMenuItem, Me.CatToolStripMenuItem})
         Me.PRODUCTSToolStripMenuItem.Name = "PRODUCTSToolStripMenuItem"
-        Me.PRODUCTSToolStripMenuItem.Size = New System.Drawing.Size(142, 35)
+        Me.PRODUCTSToolStripMenuItem.Size = New System.Drawing.Size(118, 29)
         Me.PRODUCTSToolStripMenuItem.Text = "PRODUCTS"
         '
         'SupplierToolStripMenuItem
         '
         Me.SupplierToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MakerlabToolStripMenuItem, Me.CircuitrocksToolStripMenuItem, Me.Element14ToolStripMenuItem, Me.RSComponentsToolStripMenuItem})
         Me.SupplierToolStripMenuItem.Name = "SupplierToolStripMenuItem"
-        Me.SupplierToolStripMenuItem.Size = New System.Drawing.Size(244, 36)
+        Me.SupplierToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
         Me.SupplierToolStripMenuItem.Text = "BY SUPPLIER"
         '
         'MakerlabToolStripMenuItem
         '
         Me.MakerlabToolStripMenuItem.Name = "MakerlabToolStripMenuItem"
-        Me.MakerlabToolStripMenuItem.Size = New System.Drawing.Size(314, 36)
+        Me.MakerlabToolStripMenuItem.Size = New System.Drawing.Size(259, 30)
         Me.MakerlabToolStripMenuItem.Text = "Makerlab Electronics"
         '
         'CircuitrocksToolStripMenuItem
         '
         Me.CircuitrocksToolStripMenuItem.Name = "CircuitrocksToolStripMenuItem"
-        Me.CircuitrocksToolStripMenuItem.Size = New System.Drawing.Size(314, 36)
+        Me.CircuitrocksToolStripMenuItem.Size = New System.Drawing.Size(259, 30)
         Me.CircuitrocksToolStripMenuItem.Text = "Circuitrocks"
         '
         'Element14ToolStripMenuItem
         '
         Me.Element14ToolStripMenuItem.Name = "Element14ToolStripMenuItem"
-        Me.Element14ToolStripMenuItem.Size = New System.Drawing.Size(314, 36)
+        Me.Element14ToolStripMenuItem.Size = New System.Drawing.Size(259, 30)
         Me.Element14ToolStripMenuItem.Text = "element14"
         '
         'RSComponentsToolStripMenuItem
         '
         Me.RSComponentsToolStripMenuItem.Name = "RSComponentsToolStripMenuItem"
-        Me.RSComponentsToolStripMenuItem.Size = New System.Drawing.Size(314, 36)
+        Me.RSComponentsToolStripMenuItem.Size = New System.Drawing.Size(259, 30)
         Me.RSComponentsToolStripMenuItem.Text = "RS Components"
         '
         'CatToolStripMenuItem
         '
         Me.CatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DisplayToolStripMenuItem, Me.ICToolStripMenuItem, Me.LEDsToolStripMenuItem, Me.PowerSupplyAndModuleToolStripMenuItem, Me.WiresAndCablesToolStripMenuItem, Me.BreadboardsToolStripMenuItem, Me.SwitchesToolStripMenuItem, Me.ResistorsToolStripMenuItem, Me.CapacitorsToolStripMenuItem, Me.OscilloscopesToolStripMenuItem})
         Me.CatToolStripMenuItem.Name = "CatToolStripMenuItem"
-        Me.CatToolStripMenuItem.Size = New System.Drawing.Size(244, 36)
+        Me.CatToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
         Me.CatToolStripMenuItem.Text = "BY CATEGORY"
         '
         'DisplayToolStripMenuItem
         '
         Me.DisplayToolStripMenuItem.Name = "DisplayToolStripMenuItem"
-        Me.DisplayToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.DisplayToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
         Me.DisplayToolStripMenuItem.Text = "Digital Displays"
         '
         'ICToolStripMenuItem
         '
         Me.ICToolStripMenuItem.Name = "ICToolStripMenuItem"
-        Me.ICToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.ICToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
         Me.ICToolStripMenuItem.Text = "Integrated Circuits"
         '
         'LEDsToolStripMenuItem
         '
         Me.LEDsToolStripMenuItem.Name = "LEDsToolStripMenuItem"
-        Me.LEDsToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.LEDsToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
         Me.LEDsToolStripMenuItem.Text = "LEDs"
         '
         'PowerSupplyAndModuleToolStripMenuItem
         '
         Me.PowerSupplyAndModuleToolStripMenuItem.Name = "PowerSupplyAndModuleToolStripMenuItem"
-        Me.PowerSupplyAndModuleToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.PowerSupplyAndModuleToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
         Me.PowerSupplyAndModuleToolStripMenuItem.Text = "Power Supply and Modules"
         '
         'WiresAndCablesToolStripMenuItem
         '
         Me.WiresAndCablesToolStripMenuItem.Name = "WiresAndCablesToolStripMenuItem"
-        Me.WiresAndCablesToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.WiresAndCablesToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
         Me.WiresAndCablesToolStripMenuItem.Text = "Wires and Cables"
         '
         'BreadboardsToolStripMenuItem
         '
         Me.BreadboardsToolStripMenuItem.Name = "BreadboardsToolStripMenuItem"
-        Me.BreadboardsToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.BreadboardsToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
         Me.BreadboardsToolStripMenuItem.Text = "Breadboards"
         '
         'SwitchesToolStripMenuItem
         '
         Me.SwitchesToolStripMenuItem.Name = "SwitchesToolStripMenuItem"
-        Me.SwitchesToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.SwitchesToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
         Me.SwitchesToolStripMenuItem.Text = "Switches"
         '
         'ResistorsToolStripMenuItem
         '
         Me.ResistorsToolStripMenuItem.Name = "ResistorsToolStripMenuItem"
-        Me.ResistorsToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.ResistorsToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
         Me.ResistorsToolStripMenuItem.Text = "Resistors"
         '
         'CapacitorsToolStripMenuItem
         '
         Me.CapacitorsToolStripMenuItem.Name = "CapacitorsToolStripMenuItem"
-        Me.CapacitorsToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.CapacitorsToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
         Me.CapacitorsToolStripMenuItem.Text = "Capacitors"
         '
         'OscilloscopesToolStripMenuItem
         '
         Me.OscilloscopesToolStripMenuItem.Name = "OscilloscopesToolStripMenuItem"
-        Me.OscilloscopesToolStripMenuItem.Size = New System.Drawing.Size(380, 36)
+        Me.OscilloscopesToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
         Me.OscilloscopesToolStripMenuItem.Text = "Oscilloscopes"
         '
         'Button1
@@ -555,11 +556,21 @@ Partial Class home
         Me.Button2.Text = "cart"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(788, 49)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(104, 42)
+        Me.Button3.TabIndex = 4
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1182, 753)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel1)
@@ -656,4 +667,5 @@ Partial Class home
     Friend WithEvents OscilloscopesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

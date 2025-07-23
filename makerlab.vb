@@ -10,6 +10,7 @@ Public Class makerlab
 
     Dim product1Qty As Integer = 0
     Dim product2Qty As Integer = 0
+    Dim product3Qty As Integer = 0
 
     Private Sub makerlab_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '  Try
@@ -109,6 +110,46 @@ Public Class makerlab
             product2Qty = 0
             TextBox2.Text = product2Qty.ToString()
             minus_btn1.Enabled = False
+        End If
+    End Sub
+
+    Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs) Handles addtocart_btn2.Click
+        If Integer.TryParse(TextBox3.Text, product3Qty) Then
+            ' product1Qty now contains the integer value from the textbox
+            Try
+                conn.Open()
+                query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES (3, 1, '{product3Qty}')"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+                MessageBox.Show("Product added to cart successfully!")
+            Catch ex As Exception
+                MessageBox.Show("Error adding product to cart: " & ex.Message)
+            Finally
+                conn.Close()
+            End Try
+        Else
+            MessageBox.Show("Please enter a valid number.")
+        End If
+    End Sub
+
+    Private Sub plus_btn2_Click(sender As Object, e As EventArgs) Handles plus_btn2.Click
+        product3Qty += 1
+        TextBox3.Text = product3Qty.ToString()
+        If product3Qty <= 0 Then
+            product3Qty = 0
+            TextBox3.Text = product3Qty.ToString()
+            minus_btn2.Enabled = False
+        Else
+            minus_btn2.Enabled = True
+        End If
+    End Sub
+    Private Sub minus_btn2_Click(sender As Object, e As EventArgs) Handles minus_btn2.Click
+        product3Qty -= 1
+        TextBox3.Text = product3Qty.ToString()
+        If product3Qty <= 0 Then
+            product3Qty = 0
+            TextBox3.Text = product3Qty.ToString()
+            minus_btn2.Enabled = False
         End If
     End Sub
 End Class

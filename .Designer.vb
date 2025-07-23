@@ -24,6 +24,12 @@ Partial Class makerlab
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(makerlab))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.minus_btn2 = New System.Windows.Forms.Button()
+        Me.plus_btn2 = New System.Windows.Forms.Button()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.addtocart_btn2 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.minus_btn1 = New System.Windows.Forms.Button()
         Me.plus_btn1 = New System.Windows.Forms.Button()
@@ -59,6 +65,13 @@ Partial Class makerlab
         Me.Panel1.AutoScroll = True
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.minus_btn2)
+        Me.Panel1.Controls.Add(Me.plus_btn2)
+        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.addtocart_btn2)
+        Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.minus_btn1)
         Me.Panel1.Controls.Add(Me.plus_btn1)
@@ -86,6 +99,67 @@ Partial Class makerlab
         Me.Panel1.Size = New System.Drawing.Size(1182, 753)
         Me.Panel1.TabIndex = 0
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(702, 1670)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(68, 20)
+        Me.Label7.TabIndex = 25
+        Me.Label7.Text = "Quantity"
+        '
+        'minus_btn2
+        '
+        Me.minus_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.minus_btn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.minus_btn2.Location = New System.Drawing.Point(1037, 1698)
+        Me.minus_btn2.Name = "minus_btn2"
+        Me.minus_btn2.Size = New System.Drawing.Size(63, 44)
+        Me.minus_btn2.TabIndex = 24
+        Me.minus_btn2.Text = "-"
+        Me.minus_btn2.UseVisualStyleBackColor = True
+        '
+        'plus_btn2
+        '
+        Me.plus_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.plus_btn2.Location = New System.Drawing.Point(968, 1698)
+        Me.plus_btn2.Name = "plus_btn2"
+        Me.plus_btn2.Size = New System.Drawing.Size(63, 44)
+        Me.plus_btn2.TabIndex = 23
+        Me.plus_btn2.Text = "+"
+        Me.plus_btn2.UseVisualStyleBackColor = True
+        '
+        'TextBox3
+        '
+        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(703, 1698)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(259, 35)
+        Me.TextBox3.TabIndex = 22
+        '
+        'addtocart_btn2
+        '
+        Me.addtocart_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.addtocart_btn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addtocart_btn2.Location = New System.Drawing.Point(703, 1758)
+        Me.addtocart_btn2.Name = "addtocart_btn2"
+        Me.addtocart_btn2.Size = New System.Drawing.Size(397, 67)
+        Me.addtocart_btn2.TabIndex = 21
+        Me.addtocart_btn2.Text = "ADD TO CART"
+        Me.addtocart_btn2.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 28.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(699, 724)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(332, 88)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "4 digit" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "7 Segment display"
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -102,7 +176,7 @@ Partial Class makerlab
         Me.minus_btn1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.minus_btn1.Location = New System.Drawing.Point(1037, 1097)
         Me.minus_btn1.Name = "minus_btn1"
-        Me.minus_btn1.Size = New System.Drawing.Size(63, 41)
+        Me.minus_btn1.Size = New System.Drawing.Size(63, 44)
         Me.minus_btn1.TabIndex = 18
         Me.minus_btn1.Text = "-"
         Me.minus_btn1.UseVisualStyleBackColor = True
@@ -112,7 +186,7 @@ Partial Class makerlab
         Me.plus_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.plus_btn1.Location = New System.Drawing.Point(968, 1097)
         Me.plus_btn1.Name = "plus_btn1"
-        Me.plus_btn1.Size = New System.Drawing.Size(63, 41)
+        Me.plus_btn1.Size = New System.Drawing.Size(63, 44)
         Me.plus_btn1.TabIndex = 17
         Me.plus_btn1.Text = "+"
         Me.plus_btn1.UseVisualStyleBackColor = True
@@ -120,7 +194,7 @@ Partial Class makerlab
         'TextBox2
         '
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(703, 1097)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(259, 35)
@@ -140,12 +214,12 @@ Partial Class makerlab
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(899, 399)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(701, 405)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(160, 31)
+        Me.Label4.Size = New System.Drawing.Size(181, 37)
         Me.Label4.TabIndex = 14
-        Me.Label4.Text = "PHP 100.00"
+        Me.Label4.Text = "PHP 40.00"
         '
         'Label3
         '
@@ -160,10 +234,10 @@ Partial Class makerlab
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 28.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 29.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(698, 113)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(324, 132)
+        Me.Label2.Size = New System.Drawing.Size(351, 132)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "1 inch 7 Segment " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Display Common " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Anode "
         '
@@ -173,7 +247,7 @@ Partial Class makerlab
         Me.minus_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.minus_btn.Location = New System.Drawing.Point(1037, 486)
         Me.minus_btn.Name = "minus_btn"
-        Me.minus_btn.Size = New System.Drawing.Size(63, 41)
+        Me.minus_btn.Size = New System.Drawing.Size(63, 44)
         Me.minus_btn.TabIndex = 11
         Me.minus_btn.Text = "-"
         Me.minus_btn.UseVisualStyleBackColor = True
@@ -183,7 +257,7 @@ Partial Class makerlab
         Me.plus_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.plus_btn.Location = New System.Drawing.Point(968, 486)
         Me.plus_btn.Name = "plus_btn"
-        Me.plus_btn.Size = New System.Drawing.Size(63, 41)
+        Me.plus_btn.Size = New System.Drawing.Size(63, 44)
         Me.plus_btn.TabIndex = 10
         Me.plus_btn.Text = "+"
         Me.plus_btn.UseVisualStyleBackColor = True
@@ -191,7 +265,7 @@ Partial Class makerlab
         'TextBox1
         '
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(703, 486)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(259, 35)
@@ -253,6 +327,7 @@ Partial Class makerlab
         '
         'PictureBox3
         '
+        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(44, 1325)
         Me.PictureBox3.Name = "PictureBox3"
@@ -275,10 +350,10 @@ Partial Class makerlab
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 28.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(35, 12)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 29.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(36, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(533, 44)
+        Me.Label1.Size = New System.Drawing.Size(580, 44)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Makerlab Electronics Products"
         '
@@ -301,7 +376,6 @@ Partial Class makerlab
         Me.ClientSize = New System.Drawing.Size(1182, 753)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "makerlab"
@@ -341,4 +415,10 @@ Partial Class makerlab
     Friend WithEvents plus_btn1 As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents addtocart_btn1 As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents minus_btn2 As Button
+    Friend WithEvents plus_btn2 As Button
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents addtocart_btn2 As Button
+    Friend WithEvents Label6 As Label
 End Class
