@@ -107,7 +107,9 @@
     <Compile Include="dataeditor.Designer.vb">
       <DependentUpon>dataeditor.vb</DependentUpon>
     </Compile>
-    <Compile Include="dataeditor.vb" />
+    <Compile Include="dataeditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dataproducts.Designer.vb">
       <DependentUpon>dataproducts.vb</DependentUpon>
     </Compile>

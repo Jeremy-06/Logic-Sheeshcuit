@@ -7,9 +7,6 @@ Public Class admin
     Dim ds As DataSet
     Dim query As String
 
-    Private Sub admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         Try
             conn.Open()
@@ -41,7 +38,9 @@ Public Class admin
         MessageBox.Show("Logging Out...", "Goodbye, admin.", MessageBoxButtons.OK, MessageBoxIcon.Information)
         home.Show()
     End Sub
+
     'meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow
     'meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow
     'meow meow meow meow meo
+
 End Class
