@@ -83,15 +83,11 @@
     <Compile Include="breadboards.Designer.vb">
       <DependentUpon>breadboards.vb</DependentUpon>
     </Compile>
-    <Compile Include="breadboards.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="breadboards.vb" />
     <Compile Include="capacitors.Designer.vb">
       <DependentUpon>capacitors.vb</DependentUpon>
     </Compile>
-    <Compile Include="capacitors.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="capacitors.vb" />
     <Compile Include="cart.Designer.vb">
       <DependentUpon>cart.vb</DependentUpon>
     </Compile>
@@ -107,9 +103,7 @@
     <Compile Include="digitaldisplays.Designer.vb">
       <DependentUpon>digitaldisplays.vb</DependentUpon>
     </Compile>
-    <Compile Include="digitaldisplays.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="digitaldisplays.vb" />
     <Compile Include="home.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -120,9 +114,7 @@
     <Compile Include="integratedcircuits.Designer.vb">
       <DependentUpon>integratedcircuits.vb</DependentUpon>
     </Compile>
-    <Compile Include="integratedcircuits.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="integratedcircuits.vb" />
     <Compile Include="inventory.Designer.vb">
       <DependentUpon>inventory.vb</DependentUpon>
     </Compile>
@@ -132,7 +124,11 @@
     <Compile Include="led.Designer.vb">
       <DependentUpon>led.vb</DependentUpon>
     </Compile>
-    <Compile Include="led.vb">
+    <Compile Include="led.vb" />
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="logo.Designer.vb">
@@ -167,39 +163,27 @@
       <DependentUpon>makerlab.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="makerlab.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="makerlab.vb" />
     <Compile Include="circuitrocks.Designer.vb">
       <DependentUpon>circuitrocks.vb</DependentUpon>
     </Compile>
-    <Compile Include="circuitrocks.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="circuitrocks.vb" />
     <Compile Include="element14.Designer.vb">
       <DependentUpon>element14.vb</DependentUpon>
     </Compile>
-    <Compile Include="element14.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="element14.vb" />
     <Compile Include="oscilloscopes.Designer.vb">
       <DependentUpon>oscilloscopes.vb</DependentUpon>
     </Compile>
-    <Compile Include="oscilloscopes.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="oscilloscopes.vb" />
     <Compile Include="powersupply.Designer.vb">
       <DependentUpon>powersupply.vb</DependentUpon>
     </Compile>
-    <Compile Include="powersupply.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="powersupply.vb" />
     <Compile Include="resistor.Designer.vb">
       <DependentUpon>resistor.vb</DependentUpon>
     </Compile>
-    <Compile Include="resistor.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="resistor.vb" />
     <Compile Include="rscomponents.Designer.vb">
       <DependentUpon>rscomponents.vb</DependentUpon>
     </Compile>
@@ -218,18 +202,26 @@
     <Compile Include="signup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="signup1.Designer.vb">
+      <DependentUpon>signup1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="signup1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signup2.Designer.vb">
+      <DependentUpon>signup2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="signup2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="switches.Designer.vb">
       <DependentUpon>switches.vb</DependentUpon>
     </Compile>
-    <Compile Include="switches.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="switches.vb" />
     <Compile Include="wires.Designer.vb">
       <DependentUpon>wires.vb</DependentUpon>
     </Compile>
-    <Compile Include="wires.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="wires.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="admin.resx">
@@ -261,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="led.resx">
       <DependentUpon>led.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="logo.resx">
       <DependentUpon>logo.vb</DependentUpon>
@@ -301,6 +296,12 @@
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="signup1.resx">
+      <DependentUpon>signup1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signup2.resx">
+      <DependentUpon>signup2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="switches.resx">
       <DependentUpon>switches.vb</DependentUpon>
     </EmbeddedResource>
@@ -319,6 +320,27 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log In Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign Up Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log In Form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign Up %28Authentication%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign Up %28Contact%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign Up %28Name%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
