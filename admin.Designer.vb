@@ -27,6 +27,7 @@ Partial Class admin
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -38,11 +39,11 @@ Partial Class admin
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(364, 202)
+        Me.DataGridView1.Location = New System.Drawing.Point(359, 202)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(463, 282)
+        Me.DataGridView1.Size = New System.Drawing.Size(469, 282)
         Me.DataGridView1.TabIndex = 2
         '
         'ComboBox1
@@ -50,7 +51,7 @@ Partial Class admin
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"cart", "customers", "expenses", "inventory", "orderitems", "orders", "productcategories", "products", "sales", "suppliers", "users"})
-        Me.ComboBox1.Location = New System.Drawing.Point(85, 215)
+        Me.ComboBox1.Location = New System.Drawing.Point(81, 231)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(260, 21)
         Me.ComboBox1.TabIndex = 3
@@ -85,6 +86,17 @@ Partial Class admin
         Me.Button2.TabIndex = 12
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(78, 208)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(52, 20)
+        Me.Label1.TabIndex = 13
+        Me.Label1.Text = "Tables"
+        '
         'admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -92,6 +104,7 @@ Partial Class admin
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(898, 609)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox1)
@@ -104,10 +117,12 @@ Partial Class admin
         Me.Text = "admin"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label1 As Label
 End Class

@@ -80,6 +80,12 @@
     <Compile Include="admin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="auditor.Designer.vb">
+      <DependentUpon>auditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="auditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="breadboards.Designer.vb">
       <DependentUpon>breadboards.vb</DependentUpon>
     </Compile>
@@ -98,10 +104,20 @@
     <Compile Include="cart.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dataeditor.Designer.vb">
+      <DependentUpon>dataeditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dataeditor.vb" />
     <Compile Include="dataproducts.Designer.vb">
       <DependentUpon>dataproducts.vb</DependentUpon>
     </Compile>
     <Compile Include="dataproducts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dbreader.Designer.vb">
+      <DependentUpon>dbreader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dbreader.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="digitaldisplays.Designer.vb">
@@ -163,6 +179,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ordermanager.Designer.vb">
+      <DependentUpon>ordermanager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ordermanager.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="orders.Designer.vb">
       <DependentUpon>orders.vb</DependentUpon>
     </Compile>
@@ -218,6 +240,18 @@
     <Compile Include="sales.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="schemamaintainer.Designer.vb">
+      <DependentUpon>schemamaintainer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="schemamaintainer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="security.Designer.vb">
+      <DependentUpon>security.vb</DependentUpon>
+    </Compile>
+    <Compile Include="security.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="signup.Designer.vb">
       <DependentUpon>signup.vb</DependentUpon>
     </Compile>
@@ -253,6 +287,9 @@
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="auditor.resx">
+      <DependentUpon>auditor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="breadboards.resx">
       <DependentUpon>breadboards.vb</DependentUpon>
     </EmbeddedResource>
@@ -262,8 +299,14 @@
     <EmbeddedResource Include="cart.resx">
       <DependentUpon>cart.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dataeditor.resx">
+      <DependentUpon>dataeditor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dataproducts.resx">
       <DependentUpon>dataproducts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dbreader.resx">
+      <DependentUpon>dbreader.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="digitaldisplays.resx">
       <DependentUpon>digitaldisplays.vb</DependentUpon>
@@ -292,6 +335,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ordermanager.resx">
+      <DependentUpon>ordermanager.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="orders.resx">
       <DependentUpon>orders.vb</DependentUpon>
     </EmbeddedResource>
@@ -318,6 +364,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sales.resx">
       <DependentUpon>sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="schemamaintainer.resx">
+      <DependentUpon>schemamaintainer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="security.resx">
+      <DependentUpon>security.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.vb</DependentUpon>
@@ -487,6 +539,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Product 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Auditor Form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data Editor Form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DB Reader Form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Order Manager Form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schema Maintainer Form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Security Form.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

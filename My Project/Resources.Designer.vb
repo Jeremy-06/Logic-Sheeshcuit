@@ -73,6 +73,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Auditor_Form() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Auditor_Form", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Data_Editor_Form() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Data_Editor_Form", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property DB_Edit_Data_Button() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("DB Edit Data Button", resourceCulture)
@@ -86,6 +106,16 @@ Namespace My.Resources
         Friend ReadOnly Property DB_Log_Out_Button() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("DB Log Out Button", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property DB_Reader_Form() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("DB_Reader_Form", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -116,6 +146,16 @@ Namespace My.Resources
         Friend ReadOnly Property Next_Button() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Next_Button", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Order_Manager_Form() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Order_Manager_Form", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -486,6 +526,26 @@ Namespace My.Resources
         Friend ReadOnly Property Product_9() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Product_9", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Schema_Maintainer_Form() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Schema_Maintainer_Form", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Security_Form() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Security_Form", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
