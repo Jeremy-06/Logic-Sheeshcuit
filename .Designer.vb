@@ -95,7 +95,7 @@ Partial Class makerlab
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(904, 611)
         Me.Panel1.TabIndex = 0
@@ -116,7 +116,7 @@ Partial Class makerlab
         Me.minus_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.minus_btn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.minus_btn2.Location = New System.Drawing.Point(778, 1380)
-        Me.minus_btn2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.minus_btn2.Margin = New System.Windows.Forms.Padding(2)
         Me.minus_btn2.Name = "minus_btn2"
         Me.minus_btn2.Size = New System.Drawing.Size(47, 36)
         Me.minus_btn2.TabIndex = 24
@@ -127,7 +127,7 @@ Partial Class makerlab
         '
         Me.plus_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.plus_btn2.Location = New System.Drawing.Point(726, 1380)
-        Me.plus_btn2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.plus_btn2.Margin = New System.Windows.Forms.Padding(2)
         Me.plus_btn2.Name = "plus_btn2"
         Me.plus_btn2.Size = New System.Drawing.Size(47, 36)
         Me.plus_btn2.TabIndex = 23
@@ -139,7 +139,7 @@ Partial Class makerlab
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(527, 1380)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(195, 35)
         Me.TextBox3.TabIndex = 22
@@ -149,7 +149,7 @@ Partial Class makerlab
         Me.addtocart_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.addtocart_btn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addtocart_btn2.Location = New System.Drawing.Point(527, 1428)
-        Me.addtocart_btn2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.addtocart_btn2.Margin = New System.Windows.Forms.Padding(2)
         Me.addtocart_btn2.Name = "addtocart_btn2"
         Me.addtocart_btn2.Size = New System.Drawing.Size(298, 54)
         Me.addtocart_btn2.TabIndex = 21
@@ -183,7 +183,7 @@ Partial Class makerlab
         Me.minus_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.minus_btn1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.minus_btn1.Location = New System.Drawing.Point(778, 891)
-        Me.minus_btn1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.minus_btn1.Margin = New System.Windows.Forms.Padding(2)
         Me.minus_btn1.Name = "minus_btn1"
         Me.minus_btn1.Size = New System.Drawing.Size(47, 36)
         Me.minus_btn1.TabIndex = 18
@@ -194,7 +194,7 @@ Partial Class makerlab
         '
         Me.plus_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.plus_btn1.Location = New System.Drawing.Point(726, 891)
-        Me.plus_btn1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.plus_btn1.Margin = New System.Windows.Forms.Padding(2)
         Me.plus_btn1.Name = "plus_btn1"
         Me.plus_btn1.Size = New System.Drawing.Size(47, 36)
         Me.plus_btn1.TabIndex = 17
@@ -206,7 +206,7 @@ Partial Class makerlab
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(527, 891)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(195, 35)
         Me.TextBox2.TabIndex = 16
@@ -216,7 +216,7 @@ Partial Class makerlab
         Me.addtocart_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.addtocart_btn1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addtocart_btn1.Location = New System.Drawing.Point(527, 940)
-        Me.addtocart_btn1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.addtocart_btn1.Margin = New System.Windows.Forms.Padding(2)
         Me.addtocart_btn1.Name = "addtocart_btn1"
         Me.addtocart_btn1.Size = New System.Drawing.Size(298, 54)
         Me.addtocart_btn1.TabIndex = 15
@@ -261,7 +261,7 @@ Partial Class makerlab
         Me.minus_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.minus_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.minus_btn.Location = New System.Drawing.Point(778, 395)
-        Me.minus_btn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.minus_btn.Margin = New System.Windows.Forms.Padding(2)
         Me.minus_btn.Name = "minus_btn"
         Me.minus_btn.Size = New System.Drawing.Size(47, 36)
         Me.minus_btn.TabIndex = 11
@@ -272,7 +272,7 @@ Partial Class makerlab
         '
         Me.plus_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.plus_btn.Location = New System.Drawing.Point(726, 395)
-        Me.plus_btn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.plus_btn.Margin = New System.Windows.Forms.Padding(2)
         Me.plus_btn.Name = "plus_btn"
         Me.plus_btn.Size = New System.Drawing.Size(47, 36)
         Me.plus_btn.TabIndex = 10
@@ -284,7 +284,7 @@ Partial Class makerlab
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(527, 395)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(195, 35)
         Me.TextBox1.TabIndex = 9
@@ -294,7 +294,7 @@ Partial Class makerlab
         Me.addtocart_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.addtocart_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addtocart_btn.Location = New System.Drawing.Point(527, 444)
-        Me.addtocart_btn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.addtocart_btn.Margin = New System.Windows.Forms.Padding(2)
         Me.addtocart_btn.Name = "addtocart_btn"
         Me.addtocart_btn.Size = New System.Drawing.Size(298, 54)
         Me.addtocart_btn.TabIndex = 8
@@ -305,7 +305,7 @@ Partial Class makerlab
         '
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
         Me.PictureBox6.Location = New System.Drawing.Point(33, 2562)
-        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(450, 406)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -319,7 +319,7 @@ Partial Class makerlab
         Me.Back.Font = New System.Drawing.Font("Microsoft Himalaya", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Back.ForeColor = System.Drawing.Color.Black
         Me.Back.Location = New System.Drawing.Point(772, 10)
-        Me.Back.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Back.Margin = New System.Windows.Forms.Padding(2)
         Me.Back.Name = "Back"
         Me.Back.Size = New System.Drawing.Size(103, 31)
         Me.Back.TabIndex = 0
@@ -330,7 +330,7 @@ Partial Class makerlab
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
         Me.PictureBox5.Location = New System.Drawing.Point(33, 2063)
-        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(450, 406)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -341,7 +341,7 @@ Partial Class makerlab
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
         Me.PictureBox4.Location = New System.Drawing.Point(33, 1566)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(450, 406)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -353,7 +353,7 @@ Partial Class makerlab
         Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(33, 1077)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(450, 407)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -365,7 +365,7 @@ Partial Class makerlab
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(33, 588)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(450, 407)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -388,7 +388,7 @@ Partial Class makerlab
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(33, 92)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(450, 407)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -403,7 +403,7 @@ Partial Class makerlab
         Me.ClientSize = New System.Drawing.Size(904, 611)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "makerlab"

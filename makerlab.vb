@@ -35,11 +35,26 @@ Public Class makerlab
     End Sub
 
     Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
+        Dim product1Qty As Integer
+
         If Integer.TryParse(TextBox1.Text, product1Qty) Then
-            ' product1Qty now contains the integer value from the textbox
             Try
                 conn.Open()
-                query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES (1, 1, '{product1Qty}')"
+
+                ' Check if the product is already in the cart for the customer
+                query = "SELECT productQty FROM cart WHERE products_productId = 1 AND customers_customerId = 1"
+                cmd = New MySqlCommand(query, conn)
+                Dim existingQty As Object = cmd.ExecuteScalar()
+
+                If existingQty IsNot Nothing Then
+                    ' Product exists, update the quantity
+                    Dim newQty As Integer = CInt(existingQty) + product1Qty
+                    query = $"UPDATE cart SET productQty = {newQty} WHERE products_productId = 1 AND customers_customerId = 1"
+                Else
+                    ' Product does not exist, insert new row
+                    query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES (1, 1, {product1Qty})"
+                End If
+
                 cmd = New MySqlCommand(query, conn)
                 cmd.ExecuteNonQuery()
                 MessageBox.Show("Product added to cart successfully!")
@@ -51,8 +66,8 @@ Public Class makerlab
         Else
             MessageBox.Show("Please enter a valid number.")
         End If
-
     End Sub
+
     Private Sub plus_btn_Click(sender As Object, e As EventArgs) Handles plus_btn.Click
         product1Qty += 1
         TextBox1.Text = product1Qty.ToString()
