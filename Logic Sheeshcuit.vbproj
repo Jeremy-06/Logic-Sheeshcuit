@@ -377,5 +377,116 @@
   <ItemGroup>
     <None Include="Resources\DB Log Out Button.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 26.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 27.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 28.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 33.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 34.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 35.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 36.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 37.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product 1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
