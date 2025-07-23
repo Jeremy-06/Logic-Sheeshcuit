@@ -368,5 +368,14 @@
   <ItemGroup>
     <None Include="Resources\Sign Up %28Name%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin Form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DB Edit Data Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DB Log Out Button.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
