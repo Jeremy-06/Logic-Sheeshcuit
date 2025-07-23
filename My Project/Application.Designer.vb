@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Logic_Sheeshcuit.home
+            Me.MainForm = Global.Logic_Sheeshcuit.admin
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
