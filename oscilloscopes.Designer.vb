@@ -35,10 +35,10 @@ Partial Class oscilloscopes
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.minus_btn1 = New System.Windows.Forms.Button()
+        Me.plus_btn1 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.addtocart_btn1 = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -193,28 +193,28 @@ Partial Class oscilloscopes
         Me.Label7.TabIndex = 106
         Me.Label7.Text = "Oscilloscope" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "with 2-Channel" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Handheld DMM"
         '
-        'Button2
+        'minus_btn1
         '
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(789, 890)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(47, 36)
-        Me.Button2.TabIndex = 105
-        Me.Button2.Text = "-"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.minus_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.minus_btn1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.minus_btn1.Location = New System.Drawing.Point(789, 890)
+        Me.minus_btn1.Margin = New System.Windows.Forms.Padding(2)
+        Me.minus_btn1.Name = "minus_btn1"
+        Me.minus_btn1.Size = New System.Drawing.Size(47, 36)
+        Me.minus_btn1.TabIndex = 105
+        Me.minus_btn1.Text = "-"
+        Me.minus_btn1.UseVisualStyleBackColor = True
         '
-        'Button3
+        'plus_btn1
         '
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(737, 890)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(47, 36)
-        Me.Button3.TabIndex = 104
-        Me.Button3.Text = "+"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.plus_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.plus_btn1.Location = New System.Drawing.Point(737, 890)
+        Me.plus_btn1.Margin = New System.Windows.Forms.Padding(2)
+        Me.plus_btn1.Name = "plus_btn1"
+        Me.plus_btn1.Size = New System.Drawing.Size(47, 36)
+        Me.plus_btn1.TabIndex = 104
+        Me.plus_btn1.Text = "+"
+        Me.plus_btn1.UseVisualStyleBackColor = True
         '
         'TextBox2
         '
@@ -227,17 +227,17 @@ Partial Class oscilloscopes
         Me.TextBox2.Size = New System.Drawing.Size(195, 35)
         Me.TextBox2.TabIndex = 103
         '
-        'Button4
+        'addtocart_btn1
         '
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(538, 939)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(298, 54)
-        Me.Button4.TabIndex = 102
-        Me.Button4.Text = "ADD TO CART"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.addtocart_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.addtocart_btn1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addtocart_btn1.Location = New System.Drawing.Point(538, 939)
+        Me.addtocart_btn1.Margin = New System.Windows.Forms.Padding(2)
+        Me.addtocart_btn1.Name = "addtocart_btn1"
+        Me.addtocart_btn1.Size = New System.Drawing.Size(298, 54)
+        Me.addtocart_btn1.TabIndex = 102
+        Me.addtocart_btn1.Text = "ADD TO CART"
+        Me.addtocart_btn1.UseVisualStyleBackColor = True
         '
         'PictureBox2
         '
@@ -261,10 +261,10 @@ Partial Class oscilloscopes
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.minus_btn1)
+        Me.Controls.Add(Me.plus_btn1)
         Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.addtocart_btn1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -300,9 +300,9 @@ Partial Class oscilloscopes
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents minus_btn1 As Button
+    Friend WithEvents plus_btn1 As Button
     Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button4 As Button
+    Friend WithEvents addtocart_btn1 As Button
     Friend WithEvents PictureBox2 As PictureBox
 End Class
