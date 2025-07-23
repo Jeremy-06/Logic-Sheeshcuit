@@ -33,8 +33,78 @@ Public Class cart
             conn.Close()
         End Try
     End Sub
-
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        Try
+            If e.RowIndex >= 0 Then
+                Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+                TextBox1.Text = row.Cells(1).Value.ToString()
+                TextBox2.Text = row.Cells(2).Value.ToString()
+                TextBox3.Text = row.Cells(3).Value.ToString()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+    End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        If DataGridView1.SelectedRows.Count > 0 Then
+            ' Get the selected values
+            Dim customerId As Integer = Convert.ToInt32(DataGridView1.SelectedRows(0).Cells("customerId").Value)
+            Dim productName As String = DataGridView1.SelectedRows(0).Cells("productName").Value.ToString()
+
+            ' Optional: Confirm delete
+            Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this item from the cart?", "Confirm Delete", MessageBoxButtons.YesNo)
+            If confirm = DialogResult.No Then Exit Sub
+
+            Try
+                conn.Open()
+
+                ' Get the productId from productName
+                query = $"SELECT productId FROM products WHERE productName = '{productName}'"
+                cmd = New MySqlCommand(query, conn)
+
+                Dim productId As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+                ' Now delete from cart using customerId and productId
+                query = $"DELETE FROM cart WHERE customers_customerId = '{customerId}' AND products_productId = '{productId}'"
+                cmd = New MySqlCommand(query, conn)
+
+                cmd.ExecuteNonQuery()
+
+                MessageBox.Show("Item deleted successfully.")
+                refreshData()
+            Catch ex As Exception
+                MessageBox.Show("Error deleting item: " & ex.Message)
+            Finally
+                conn.Close()
+            End Try
+        Else
+            MessageBox.Show("Please select a row to delete.")
+        End If
+    End Sub
+    Private Sub refreshData()
+        Try
+            conn.Open()
+            query = "SELECT 
+                        c.customerId,
+                        p.productName, 
+                        p.productPrice, 
+                        ca.productQty FROM customers c
+                    JOIN cart ca ON c.customerId = ca.customers_customerId
+                    JOIN products p ON ca.products_productId = p.productId
+                    ORDER BY p.productId;"
+            cmd = New MySqlCommand(query, conn)
+            da = New MySqlDataAdapter(cmd)
+            ds = New DataSet()
+            da.Fill(ds, "cart")
+            DataGridView1.DataSource = ds.Tables("cart")
+        Catch ex As Exception
+            MessageBox.Show("Error refreshing data: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
     End Sub
 End Class
