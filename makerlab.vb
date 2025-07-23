@@ -35,8 +35,6 @@ Public Class makerlab
     End Sub
 
     Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
-        Dim product1Qty As Integer
-
         If Integer.TryParse(TextBox1.Text, product1Qty) Then
             Try
                 conn.Open()

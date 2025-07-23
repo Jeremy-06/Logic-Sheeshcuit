@@ -141,6 +141,7 @@ Partial Class makerlab
         Me.TextBox3.Location = New System.Drawing.Point(527, 1380)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(195, 35)
         Me.TextBox3.TabIndex = 22
         '
@@ -208,6 +209,7 @@ Partial Class makerlab
         Me.TextBox2.Location = New System.Drawing.Point(527, 891)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(195, 35)
         Me.TextBox2.TabIndex = 16
         '
@@ -286,6 +288,7 @@ Partial Class makerlab
         Me.TextBox1.Location = New System.Drawing.Point(527, 395)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(195, 35)
         Me.TextBox1.TabIndex = 9
         '
