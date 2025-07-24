@@ -172,10 +172,10 @@ Public Class cart
         Else
             MessageBox.Show("Please select a row to delete.")
         End If
+        refreshData()
     End Sub
     Private Sub refreshData()
         Try
-            conn.Open()
             query = "SELECT 
                         c.customerId,
                         p.productName, 
