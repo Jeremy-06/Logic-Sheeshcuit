@@ -31,7 +31,6 @@ Partial Class integratedcircuits
         Me.plus_btn = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.addtocart_btn = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -39,7 +38,6 @@ Partial Class integratedcircuits
         Me.plus_btn1 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.addtocart_btn1 = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -47,7 +45,6 @@ Partial Class integratedcircuits
         Me.plus_btn2 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.addtocart_btn2 = New System.Windows.Forms.Button()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -56,10 +53,13 @@ Partial Class integratedcircuits
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.addtocart_btn3 = New System.Windows.Forms.Button()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Back
@@ -166,18 +166,6 @@ Partial Class integratedcircuits
         Me.addtocart_btn.Text = "ADD TO CART"
         Me.addtocart_btn.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_3
-        Me.PictureBox1.Location = New System.Drawing.Point(44, 107)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(450, 407)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 93
-        Me.PictureBox1.TabStop = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -257,18 +245,6 @@ Partial Class integratedcircuits
         Me.addtocart_btn1.Text = "ADD TO CART"
         Me.addtocart_btn1.UseVisualStyleBackColor = True
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_4
-        Me.PictureBox2.Location = New System.Drawing.Point(44, 575)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(450, 407)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 101
-        Me.PictureBox2.TabStop = False
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -347,18 +323,6 @@ Partial Class integratedcircuits
         Me.addtocart_btn2.TabIndex = 110
         Me.addtocart_btn2.Text = "ADD TO CART"
         Me.addtocart_btn2.UseVisualStyleBackColor = True
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox3.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_5
-        Me.PictureBox3.Location = New System.Drawing.Point(44, 1056)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(450, 407)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 109
-        Me.PictureBox3.TabStop = False
         '
         'Label10
         '
@@ -451,12 +415,48 @@ Partial Class integratedcircuits
         Me.PictureBox4.TabIndex = 117
         Me.PictureBox4.TabStop = False
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox3.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_5
+        Me.PictureBox3.Location = New System.Drawing.Point(44, 1056)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(450, 407)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 109
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox2.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_4
+        Me.PictureBox2.Location = New System.Drawing.Point(44, 575)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(450, 407)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 101
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_3
+        Me.PictureBox1.Location = New System.Drawing.Point(44, 107)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(450, 407)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 93
+        Me.PictureBox1.TabStop = False
+        '
         'integratedcircuits
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(904, 611)
+        Me.ClientSize = New System.Drawing.Size(921, 611)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label11)
@@ -497,10 +497,10 @@ Partial Class integratedcircuits
         Me.Name = "integratedcircuits"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "IC"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
