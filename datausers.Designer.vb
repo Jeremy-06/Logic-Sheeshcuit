@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class inventory
+Partial Class datausers
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,16 +24,16 @@ Partial Class inventory
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'inventory
+        'datausers
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1082, 653)
+        Me.ClientSize = New System.Drawing.Size(886, 609)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "inventory"
+        Me.Name = "datausers"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Inventory"
+        Me.Text = "datausers"
         Me.ResumeLayout(False)
 
     End Sub

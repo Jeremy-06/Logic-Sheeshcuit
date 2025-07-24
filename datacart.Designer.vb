@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class sales
+Partial Class datacart
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,14 +24,16 @@ Partial Class sales
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'sales
+        'datacart
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1082, 753)
-        Me.Name = "sales"
+        Me.ClientSize = New System.Drawing.Size(886, 609)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "datacart"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Sales"
+        Me.Text = "datacart"
         Me.ResumeLayout(False)
 
     End Sub

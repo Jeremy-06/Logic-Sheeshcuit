@@ -55,100 +55,111 @@ Partial Class dataproducts
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(127, 143)
+        Me.DataGridView1.Location = New System.Drawing.Point(95, 116)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(676, 440)
+        Me.DataGridView1.Size = New System.Drawing.Size(507, 358)
         Me.DataGridView1.TabIndex = 0
         '
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(879, 132)
+        Me.TextBox1.Location = New System.Drawing.Point(659, 107)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(195, 30)
+        Me.TextBox1.Size = New System.Drawing.Size(147, 26)
         Me.TextBox1.TabIndex = 1
         '
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(879, 344)
+        Me.TextBox4.Location = New System.Drawing.Point(659, 280)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(195, 30)
+        Me.TextBox4.Size = New System.Drawing.Size(147, 26)
         Me.TextBox4.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(876, 113)
+        Me.Label1.Location = New System.Drawing.Point(657, 92)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 16)
+        Me.Label1.Size = New System.Drawing.Size(74, 13)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "PRODUCT ID"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(877, 325)
+        Me.Label2.Location = New System.Drawing.Point(658, 264)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(116, 16)
+        Me.Label2.Size = New System.Drawing.Size(94, 13)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "PRODUCT NAME"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(876, 391)
+        Me.Label3.Location = New System.Drawing.Point(657, 318)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(117, 16)
+        Me.Label3.Size = New System.Drawing.Size(95, 13)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "PRODUCT PRICE"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(877, 261)
+        Me.Label4.Location = New System.Drawing.Point(658, 212)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(152, 16)
+        Me.Label4.Size = New System.Drawing.Size(122, 13)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "PRODUCT CATEGORY"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(879, 546)
+        Me.Button1.Location = New System.Drawing.Point(659, 444)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(195, 37)
+        Me.Button1.Size = New System.Drawing.Size(146, 30)
         Me.Button1.TabIndex = 9
         Me.Button1.Text = "INSERT"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(879, 594)
+        Me.Button2.Location = New System.Drawing.Point(659, 483)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(195, 37)
+        Me.Button2.Size = New System.Drawing.Size(146, 30)
         Me.Button2.TabIndex = 10
         Me.Button2.Text = "UPDATE"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(879, 642)
+        Me.Button3.Location = New System.Drawing.Point(659, 522)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(195, 37)
+        Me.Button3.Size = New System.Drawing.Size(146, 30)
         Me.Button3.TabIndex = 11
         Me.Button3.Text = "DELETE"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(879, 690)
+        Me.Button4.Location = New System.Drawing.Point(659, 561)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(195, 37)
+        Me.Button4.Size = New System.Drawing.Size(146, 30)
         Me.Button4.TabIndex = 12
         Me.Button4.Text = "SEARCH"
         Me.Button4.UseVisualStyleBackColor = True
@@ -157,43 +168,48 @@ Partial Class dataproducts
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(12, 9)
+        Me.Label5.Location = New System.Drawing.Point(9, 7)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(258, 32)
+        Me.Label5.Size = New System.Drawing.Size(205, 26)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "PRODUCTS CRUD"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(883, 179)
+        Me.Label6.Location = New System.Drawing.Point(662, 145)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(115, 16)
+        Me.Label6.Size = New System.Drawing.Size(94, 13)
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "SUPPLIER NAME"
         '
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(879, 410)
+        Me.TextBox5.Location = New System.Drawing.Point(659, 333)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(195, 30)
+        Me.TextBox5.Size = New System.Drawing.Size(147, 26)
         Me.TextBox5.TabIndex = 14
         '
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(879, 481)
+        Me.TextBox6.Location = New System.Drawing.Point(659, 391)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(195, 30)
+        Me.TextBox6.Size = New System.Drawing.Size(147, 26)
         Me.TextBox6.TabIndex = 16
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(876, 462)
+        Me.Label7.Location = New System.Drawing.Point(657, 375)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(122, 16)
+        Me.Label7.Size = New System.Drawing.Size(99, 13)
         Me.Label7.TabIndex = 17
         Me.Label7.Text = "PRODUCT STOCK" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -202,9 +218,10 @@ Partial Class dataproducts
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Makerlab Electronics", "Circuitrocks", "element14", "RS Components"})
-        Me.ComboBox1.Location = New System.Drawing.Point(880, 208)
+        Me.ComboBox1.Location = New System.Drawing.Point(660, 169)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(194, 33)
+        Me.ComboBox1.Size = New System.Drawing.Size(146, 28)
         Me.ComboBox1.TabIndex = 18
         '
         'ComboBox2
@@ -212,16 +229,18 @@ Partial Class dataproducts
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Digital Displays", "Integrated Circuits", "LEDs", "Power Supply and Modules", "Wires and Cables", "Breadboards", "Switches", "Resistors", "Capacitors", "Oscilloscopes", "Others"})
-        Me.ComboBox2.Location = New System.Drawing.Point(879, 280)
+        Me.ComboBox2.Location = New System.Drawing.Point(659, 228)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(194, 33)
+        Me.ComboBox2.Size = New System.Drawing.Size(146, 28)
         Me.ComboBox2.TabIndex = 19
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(678, 690)
+        Me.Button5.Location = New System.Drawing.Point(508, 561)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(195, 37)
+        Me.Button5.Size = New System.Drawing.Size(146, 30)
         Me.Button5.TabIndex = 20
         Me.Button5.Text = "CLEAR "
         Me.Button5.UseVisualStyleBackColor = True
@@ -229,25 +248,27 @@ Partial Class dataproducts
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(468, 86)
+        Me.Label8.Location = New System.Drawing.Point(351, 70)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(48, 16)
+        Me.Label8.Size = New System.Drawing.Size(39, 13)
         Me.Label8.TabIndex = 21
         Me.Label8.Text = "Label8"
         '
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(608, 612)
+        Me.TextBox2.Location = New System.Drawing.Point(456, 497)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(195, 30)
+        Me.TextBox2.Size = New System.Drawing.Size(147, 26)
         Me.TextBox2.TabIndex = 22
         '
         'dataproducts
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1182, 753)
+        Me.ClientSize = New System.Drawing.Size(886, 609)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button5)
@@ -269,7 +290,11 @@ Partial Class dataproducts
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "dataproducts"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "dataproducts"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

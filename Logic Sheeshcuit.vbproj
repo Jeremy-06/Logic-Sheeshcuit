@@ -104,16 +104,58 @@
     <Compile Include="cart.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="datacart.Designer.vb">
+      <DependentUpon>datacart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="datacart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datacustomers.Designer.vb">
+      <DependentUpon>datacustomers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="datacustomers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dataeditor.Designer.vb">
       <DependentUpon>dataeditor.vb</DependentUpon>
     </Compile>
     <Compile Include="dataeditor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dataexpenses.Designer.vb">
+      <DependentUpon>dataexpenses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dataexpenses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dataorderitems.Designer.vb">
+      <DependentUpon>dataorderitems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dataorderitems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dataproductcategories.Designer.vb">
+      <DependentUpon>dataproductcategories.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dataproductcategories.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dataproducts.Designer.vb">
       <DependentUpon>dataproducts.vb</DependentUpon>
     </Compile>
     <Compile Include="dataproducts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datasuppliers.Designer.vb">
+      <DependentUpon>datasuppliers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="datasuppliers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datausers.Designer.vb">
+      <DependentUpon>datausers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="datausers.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="dbreader.Designer.vb">
@@ -141,10 +183,10 @@
     <Compile Include="integratedcircuits.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="inventory.Designer.vb">
-      <DependentUpon>inventory.vb</DependentUpon>
+    <Compile Include="datainventory.Designer.vb">
+      <DependentUpon>datainventory.vb</DependentUpon>
     </Compile>
-    <Compile Include="inventory.vb">
+    <Compile Include="datainventory.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="led.Designer.vb">
@@ -187,10 +229,10 @@
     <Compile Include="ordermanager.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="orders.Designer.vb">
-      <DependentUpon>orders.vb</DependentUpon>
+    <Compile Include="dataorders.Designer.vb">
+      <DependentUpon>dataorders.vb</DependentUpon>
     </Compile>
-    <Compile Include="orders.vb">
+    <Compile Include="dataorders.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.vb">
@@ -236,10 +278,10 @@
     <Compile Include="rscomponents.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="sales.Designer.vb">
-      <DependentUpon>sales.vb</DependentUpon>
+    <Compile Include="datasales.Designer.vb">
+      <DependentUpon>datasales.vb</DependentUpon>
     </Compile>
-    <Compile Include="sales.vb">
+    <Compile Include="datasales.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="schemamaintainer.Designer.vb">
@@ -301,11 +343,32 @@
     <EmbeddedResource Include="cart.resx">
       <DependentUpon>cart.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="datacart.resx">
+      <DependentUpon>datacart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datacustomers.resx">
+      <DependentUpon>datacustomers.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dataeditor.resx">
       <DependentUpon>dataeditor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dataexpenses.resx">
+      <DependentUpon>dataexpenses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dataorderitems.resx">
+      <DependentUpon>dataorderitems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dataproductcategories.resx">
+      <DependentUpon>dataproductcategories.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dataproducts.resx">
       <DependentUpon>dataproducts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datasuppliers.resx">
+      <DependentUpon>datasuppliers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datausers.resx">
+      <DependentUpon>datausers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dbreader.resx">
       <DependentUpon>dbreader.vb</DependentUpon>
@@ -319,8 +382,8 @@
     <EmbeddedResource Include="integratedcircuits.resx">
       <DependentUpon>integratedcircuits.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="inventory.resx">
-      <DependentUpon>inventory.vb</DependentUpon>
+    <EmbeddedResource Include="datainventory.resx">
+      <DependentUpon>datainventory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="led.resx">
       <DependentUpon>led.vb</DependentUpon>
@@ -340,8 +403,8 @@
     <EmbeddedResource Include="ordermanager.resx">
       <DependentUpon>ordermanager.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="orders.resx">
-      <DependentUpon>orders.vb</DependentUpon>
+    <EmbeddedResource Include="dataorders.resx">
+      <DependentUpon>dataorders.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="makerlab.resx">
       <DependentUpon>makerlab.vb</DependentUpon>
@@ -364,8 +427,8 @@
     <EmbeddedResource Include="rscomponents.resx">
       <DependentUpon>rscomponents.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sales.resx">
-      <DependentUpon>sales.vb</DependentUpon>
+    <EmbeddedResource Include="datasales.resx">
+      <DependentUpon>datasales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="schemamaintainer.resx">
       <DependentUpon>schemamaintainer.vb</DependentUpon>
