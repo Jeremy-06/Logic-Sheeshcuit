@@ -11,6 +11,9 @@ Public Class makerlab
     Dim product1Qty As Integer = 0
     Dim product2Qty As Integer = 0
     Dim product3Qty As Integer = 0
+    Dim product7Qty As Integer = 0
+
+
 
     Private Sub makerlab_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -22,48 +25,61 @@ Public Class makerlab
     End Sub
 
     Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
-        If Integer.TryParse(TextBox1.Text, product1Qty) Then
-            Try
-                conn.Open()
+        Dim customerId = login.customerId
+        Dim productId As Integer = 1 ' Change this if needed
+        Dim newQty As Integer
 
-                ' Check if there's an existing cart item that hasn't been ordered
-                query = "SELECT ca.cartId, ca.productQty
-                     FROM cart ca
-                     LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                     WHERE ca.products_productId = 1 AND ca.customers_customerId = 1 AND oi.cart_cartId IS NULL
-                     LIMIT 1;"
-                cmd = New MySqlCommand(query, conn)
-                Dim reader As MySqlDataReader = cmd.ExecuteReader()
-
-                If reader.Read() Then
-                    ' Unordered cart item exists → update its quantity
-                    Dim cartId As Integer = reader.GetInt32("cartId")
-                    Dim existingQty As Integer = reader.GetInt32("productQty")
-                    Dim newQty As Integer = existingQty + product1Qty
-                    reader.Close()
-
-                    query = $"UPDATE cart SET productQty = {newQty} WHERE cartId = {cartId}"
-                    cmd = New MySqlCommand(query, conn)
-                    cmd.ExecuteNonQuery()
-                Else
-                    ' No unordered cart item → insert new one
-                    reader.Close()
-                    query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES (1, 1, {product1Qty})"
-                    cmd = New MySqlCommand(query, conn)
-                    cmd.ExecuteNonQuery()
-                End If
-
-                MessageBox.Show("Product added to cart successfully!")
-                cart.refreshData()
-            Catch ex As Exception
-                MessageBox.Show("Error adding product to cart: " & ex.Message)
-            Finally
-                conn.Close()
-            End Try
-        Else
+        If Not Integer.TryParse(TextBox1.Text, newQty) Then
             MessageBox.Show("Please enter a valid number.")
+            Return
         End If
+
+        If newQty <= 0 Then
+            MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+
+        Try
+            conn.Open()
+
+            ' Check if there's an existing cart item for this product and customer
+            query = $"SELECT cartId, productQty 
+                 FROM cart 
+                 WHERE products_productId = {productId} 
+                   AND customers_customerId = {customerId}
+                 LIMIT 1"
+
+            cmd = New MySqlCommand(query, conn)
+            Dim existingCartId = cmd.ExecuteScalar()
+
+            If existingCartId IsNot Nothing Then
+                ' Found existing cart item - update it (add to existing quantity)
+                query = $"UPDATE cart SET productQty = productQty + {newQty} WHERE cartId = {existingCartId}"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+
+                MessageBox.Show($"Updated cart! Added {newQty} more items to existing cart item.")
+            Else
+                ' No cart item exists for this product - insert new one
+                query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) 
+                     VALUES ({productId}, {customerId}, {newQty})"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+
+                MessageBox.Show($"Product added to cart successfully! Quantity: {newQty}")
+            End If
+
+            ' Refresh cart display
+            cart.refreshData()
+
+        Catch ex As Exception
+            MessageBox.Show("Error adding product to cart: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
     End Sub
+
+
 
     Private Sub plus_btn_Click(sender As Object, e As EventArgs) Handles plus_btn.Click
         product1Qty += 1

@@ -55,7 +55,8 @@ Public Class cart
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Dim productId As Integer
         Dim productName As String
-
+        plus_btn.Enabled = True
+        minus_btn.Enabled = True
         Try
             conn.Open()
             If e.RowIndex >= 0 Then
@@ -173,6 +174,8 @@ Public Class cart
                 TextBox2.Clear() ' Product price
                 TextBox3.Clear() ' Quantity
                 PictureBox1.Image = Nothing
+                plus_btn.Enabled = False
+                minus_btn.Enabled = False
 
             End Try
         Else
