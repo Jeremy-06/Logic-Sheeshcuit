@@ -13,19 +13,6 @@ Public Class makerlab
     Dim product3Qty As Integer = 0
 
     Private Sub makerlab_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        '  Try
-        '      conn.Open()
-        '      query = "SELECT productPrice FROM products WHERE productId = 1"
-        '      cmd = New MySqlCommand(query, conn)
-        '      reader = cmd.ExecuteReader()
-        '      If reader.Read() Then
-        '          product1price = reader.GetDecimal("productPrice")
-        '      End If
-        '  Catch ex As Exception
-        '      MessageBox.Show("Error loading product price: " & ex.Message)
-        '  Finally
-        '      conn.Close()
-        '  End Try
 
     End Sub
 
