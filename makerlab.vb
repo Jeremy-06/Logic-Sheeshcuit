@@ -26,23 +26,35 @@ Public Class makerlab
             Try
                 conn.Open()
 
-                ' Check if the product is already in the cart for the customer
-                query = "SELECT productQty FROM cart WHERE products_productId = 1 AND customers_customerId = 1"
+                ' Check if there's an existing cart item that hasn't been ordered
+                query = "SELECT ca.cartId, ca.productQty
+                     FROM cart ca
+                     LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
+                     WHERE ca.products_productId = 1 AND ca.customers_customerId = 1 AND oi.cart_cartId IS NULL
+                     LIMIT 1;"
                 cmd = New MySqlCommand(query, conn)
-                Dim existingQty As Object = cmd.ExecuteScalar()
+                Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
-                If existingQty IsNot Nothing Then
-                    ' Product exists, update the quantity
-                    Dim newQty As Integer = CInt(existingQty) + product1Qty
-                    query = $"UPDATE cart SET productQty = {newQty} WHERE products_productId = 1 AND customers_customerId = 1"
+                If reader.Read() Then
+                    ' Unordered cart item exists → update its quantity
+                    Dim cartId As Integer = reader.GetInt32("cartId")
+                    Dim existingQty As Integer = reader.GetInt32("productQty")
+                    Dim newQty As Integer = existingQty + product1Qty
+                    reader.Close()
+
+                    query = $"UPDATE cart SET productQty = {newQty} WHERE cartId = {cartId}"
+                    cmd = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
                 Else
-                    ' Product does not exist, insert new row
+                    ' No unordered cart item → insert new one
+                    reader.Close()
                     query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES (1, 1, {product1Qty})"
+                    cmd = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
                 End If
 
-                cmd = New MySqlCommand(query, conn)
-                cmd.ExecuteNonQuery()
                 MessageBox.Show("Product added to cart successfully!")
+                cart.refreshData()
             Catch ex As Exception
                 MessageBox.Show("Error adding product to cart: " & ex.Message)
             Finally

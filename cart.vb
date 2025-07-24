@@ -8,31 +8,41 @@ Public Class cart
     Dim reader As MySqlDataReader
     Dim query As String
     Private Sub cart_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        refreshData()
+    End Sub
+    Public Sub refreshData()
         Try
             conn.Open()
             query = "SELECT 
-                        c.customerId,
-                        p.productName, 
-                        p.productPrice, 
-                        ca.productQty FROM customers c
-                    JOIN cart ca ON c.customerId = ca.customers_customerId
-                    JOIN products p ON ca.products_productId = p.productId
-                    ORDER BY p.productId;"
+                    c.customerId,
+                    p.productName,
+                    p.productPrice,
+                    ca.productQty
+                FROM customers c
+                INNER JOIN cart ca ON c.customerId = ca.customers_customerId
+                INNER JOIN products p ON ca.products_productId = p.productId
+                LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
+                WHERE oi.cart_cartId IS NULL
+                ORDER BY p.productId;"
+
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
             da.Fill(ds, "cart")
             DataGridView1.DataSource = ds.Tables("cart")
+
             DataGridView1.Columns("customerId").HeaderText = "Customer ID"
             DataGridView1.Columns("productName").HeaderText = "Product Name"
             DataGridView1.Columns("productPrice").HeaderText = "Price"
             DataGridView1.Columns("productQty").HeaderText = "Quantity"
         Catch ex As Exception
-            MessageBox.Show("Error loading cart data: " & ex.Message)
+            MessageBox.Show("Error loading cart: " & ex.Message)
         Finally
             conn.Close()
         End Try
     End Sub
+
+
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Dim productId As Integer
         Dim productName As String
@@ -174,25 +184,71 @@ Public Class cart
         End If
         refreshData()
     End Sub
-    Private Sub refreshData()
-        Try
-            query = "SELECT 
-                        c.customerId,
-                        p.productName, 
-                        p.productPrice, 
-                        ca.productQty FROM customers c
-                    JOIN cart ca ON c.customerId = ca.customers_customerId
-                    JOIN products p ON ca.products_productId = p.productId
-                    ORDER BY p.productId;"
-            cmd = New MySqlCommand(query, conn)
-            da = New MySqlDataAdapter(cmd)
-            ds = New DataSet()
-            da.Fill(ds, "cart")
-            DataGridView1.DataSource = ds.Tables("cart")
-        Catch ex As Exception
-            MessageBox.Show("Error refreshing data: " & ex.Message)
-        Finally
-            conn.Close()
-        End Try
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ' Me.Hide()
+        orders.Show()
+
+        If DataGridView1.SelectedRows.Count > 0 Then
+            Dim customerId As Integer = Convert.ToInt32(DataGridView1.SelectedRows(0).Cells("customerId").Value)
+            Dim productName As String = DataGridView1.SelectedRows(0).Cells("productName").Value.ToString()
+            Dim productQty As Integer = Convert.ToInt32(DataGridView1.SelectedRows(0).Cells("productQty").Value)
+
+            Try
+                conn.Open()
+
+                ' Get productId
+                query = $"SELECT productId FROM products WHERE productName = '{productName}'"
+                cmd = New MySqlCommand(query, conn)
+                Dim productId As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+                ' Get cartId
+                query = $"SELECT cartId FROM cart WHERE products_productId = {productId} AND customers_customerId = {customerId} AND productQty = {productQty}"
+                cmd = New MySqlCommand(query, conn)
+                Dim cartIdObj = cmd.ExecuteScalar()
+                If cartIdObj Is Nothing Then
+                    MessageBox.Show("Cart item not found.")
+                    conn.Close()
+                    Exit Sub
+                End If
+                Dim cartId As Integer = Convert.ToInt32(cartIdObj)
+
+                ' Insert into sales
+                query = "INSERT INTO sales (salesDate) VALUES (CURDATE())"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+
+                ' Get salesId
+                query = "SELECT LAST_INSERT_ID();"
+                cmd = New MySqlCommand(query, conn)
+                Dim salesId As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+                ' Insert into orders
+                query = $"INSERT INTO orders (orderDate, orderStatus, sales_salesId) VALUES (CURDATE(), 'Pending', {salesId})"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+
+                ' Get orderId
+                query = "SELECT LAST_INSERT_ID();"
+                cmd = New MySqlCommand(query, conn)
+                Dim orderId As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+                ' Insert into orderitems
+                query = "INSERT INTO orderitems (productQty, orders_orderId, cart_cartId, cart_products_productId, cart_customers_customerId) " &
+                        $"VALUES ({productQty}, {orderId}, {cartId}, {productId}, {customerId})"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+
+                MessageBox.Show("Order placed successfully.")
+
+            Catch ex As Exception
+                MessageBox.Show("Error placing order: " & ex.Message)
+            Finally
+                conn.Close()
+                refreshData() ' Refresh grid to hide ordered item
+            End Try
+        Else
+            MessageBox.Show("Please select an item to order.")
+        End If
     End Sub
+
 End Class
