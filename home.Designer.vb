@@ -23,10 +23,20 @@ Partial Class home
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox37 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox33 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox34 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox35 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox36 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox29 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox30 = New System.Windows.Forms.PictureBox()
         Me.PictureBox25 = New System.Windows.Forms.PictureBox()
         Me.PictureBox26 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
         Me.PictureBox21 = New System.Windows.Forms.PictureBox()
         Me.PictureBox22 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox32 = New System.Windows.Forms.PictureBox()
         Me.PictureBox27 = New System.Windows.Forms.PictureBox()
         Me.PictureBox23 = New System.Windows.Forms.PictureBox()
         Me.PictureBox24 = New System.Windows.Forms.PictureBox()
@@ -72,11 +82,25 @@ Partial Class home
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -107,10 +131,22 @@ Partial Class home
         'Panel1
         '
         Me.Panel1.AutoScroll = True
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.PictureBox37)
+        Me.Panel1.Controls.Add(Me.PictureBox33)
+        Me.Panel1.Controls.Add(Me.PictureBox34)
+        Me.Panel1.Controls.Add(Me.PictureBox35)
+        Me.Panel1.Controls.Add(Me.PictureBox36)
+        Me.Panel1.Controls.Add(Me.PictureBox29)
+        Me.Panel1.Controls.Add(Me.PictureBox30)
         Me.Panel1.Controls.Add(Me.PictureBox25)
         Me.Panel1.Controls.Add(Me.PictureBox26)
+        Me.Panel1.Controls.Add(Me.PictureBox31)
         Me.Panel1.Controls.Add(Me.PictureBox21)
         Me.Panel1.Controls.Add(Me.PictureBox22)
+        Me.Panel1.Controls.Add(Me.PictureBox32)
         Me.Panel1.Controls.Add(Me.PictureBox27)
         Me.Panel1.Controls.Add(Me.PictureBox23)
         Me.Panel1.Controls.Add(Me.PictureBox24)
@@ -138,12 +174,106 @@ Partial Class home
         Me.Panel1.Location = New System.Drawing.Point(4, 106)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(930, 402)
+        Me.Panel1.Size = New System.Drawing.Size(930, 494)
         Me.Panel1.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(733, 1032)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(26, 13)
+        Me.Label1.TabIndex = 40
+        Me.Label1.Text = "wire"
+        '
+        'PictureBox37
+        '
+        Me.PictureBox37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox37.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_36
+        Me.PictureBox37.Location = New System.Drawing.Point(37, 3410)
+        Me.PictureBox37.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox37.Name = "PictureBox37"
+        Me.PictureBox37.Size = New System.Drawing.Size(200, 200)
+        Me.PictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox37.TabIndex = 39
+        Me.PictureBox37.TabStop = False
+        '
+        'PictureBox33
+        '
+        Me.PictureBox33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox33.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_36
+        Me.PictureBox33.Location = New System.Drawing.Point(674, 3062)
+        Me.PictureBox33.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox33.Name = "PictureBox33"
+        Me.PictureBox33.Size = New System.Drawing.Size(200, 200)
+        Me.PictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox33.TabIndex = 38
+        Me.PictureBox33.TabStop = False
+        '
+        'PictureBox34
+        '
+        Me.PictureBox34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox34.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_35
+        Me.PictureBox34.Location = New System.Drawing.Point(462, 3062)
+        Me.PictureBox34.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox34.Name = "PictureBox34"
+        Me.PictureBox34.Size = New System.Drawing.Size(200, 200)
+        Me.PictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox34.TabIndex = 37
+        Me.PictureBox34.TabStop = False
+        '
+        'PictureBox35
+        '
+        Me.PictureBox35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox35.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_34
+        Me.PictureBox35.Location = New System.Drawing.Point(250, 3062)
+        Me.PictureBox35.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox35.Name = "PictureBox35"
+        Me.PictureBox35.Size = New System.Drawing.Size(200, 200)
+        Me.PictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox35.TabIndex = 36
+        Me.PictureBox35.TabStop = False
+        '
+        'PictureBox36
+        '
+        Me.PictureBox36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox36.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_33
+        Me.PictureBox36.Location = New System.Drawing.Point(37, 3062)
+        Me.PictureBox36.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox36.Name = "PictureBox36"
+        Me.PictureBox36.Size = New System.Drawing.Size(200, 200)
+        Me.PictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox36.TabIndex = 35
+        Me.PictureBox36.TabStop = False
+        '
+        'PictureBox29
+        '
+        Me.PictureBox29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox29.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_32
+        Me.PictureBox29.Location = New System.Drawing.Point(674, 2699)
+        Me.PictureBox29.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox29.Name = "PictureBox29"
+        Me.PictureBox29.Size = New System.Drawing.Size(200, 200)
+        Me.PictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox29.TabIndex = 34
+        Me.PictureBox29.TabStop = False
+        '
+        'PictureBox30
+        '
+        Me.PictureBox30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox30.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_31
+        Me.PictureBox30.Location = New System.Drawing.Point(462, 2699)
+        Me.PictureBox30.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox30.Name = "PictureBox30"
+        Me.PictureBox30.Size = New System.Drawing.Size(200, 200)
+        Me.PictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox30.TabIndex = 33
+        Me.PictureBox30.TabStop = False
         '
         'PictureBox25
         '
         Me.PictureBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox25.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_28
         Me.PictureBox25.Location = New System.Drawing.Point(674, 2318)
         Me.PictureBox25.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox25.Name = "PictureBox25"
@@ -155,6 +285,7 @@ Partial Class home
         'PictureBox26
         '
         Me.PictureBox26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox26.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_27
         Me.PictureBox26.Location = New System.Drawing.Point(462, 2318)
         Me.PictureBox26.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox26.Name = "PictureBox26"
@@ -163,9 +294,22 @@ Partial Class home
         Me.PictureBox26.TabIndex = 29
         Me.PictureBox26.TabStop = False
         '
+        'PictureBox31
+        '
+        Me.PictureBox31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox31.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_30
+        Me.PictureBox31.Location = New System.Drawing.Point(250, 2699)
+        Me.PictureBox31.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox31.Name = "PictureBox31"
+        Me.PictureBox31.Size = New System.Drawing.Size(200, 200)
+        Me.PictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox31.TabIndex = 32
+        Me.PictureBox31.TabStop = False
+        '
         'PictureBox21
         '
         Me.PictureBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox21.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_24
         Me.PictureBox21.Location = New System.Drawing.Point(674, 1943)
         Me.PictureBox21.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox21.Name = "PictureBox21"
@@ -177,6 +321,7 @@ Partial Class home
         'PictureBox22
         '
         Me.PictureBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox22.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_23
         Me.PictureBox22.Location = New System.Drawing.Point(462, 1943)
         Me.PictureBox22.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox22.Name = "PictureBox22"
@@ -185,9 +330,22 @@ Partial Class home
         Me.PictureBox22.TabIndex = 25
         Me.PictureBox22.TabStop = False
         '
+        'PictureBox32
+        '
+        Me.PictureBox32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox32.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_29
+        Me.PictureBox32.Location = New System.Drawing.Point(37, 2699)
+        Me.PictureBox32.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox32.Name = "PictureBox32"
+        Me.PictureBox32.Size = New System.Drawing.Size(200, 200)
+        Me.PictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox32.TabIndex = 31
+        Me.PictureBox32.TabStop = False
+        '
         'PictureBox27
         '
         Me.PictureBox27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox27.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_26
         Me.PictureBox27.Location = New System.Drawing.Point(250, 2318)
         Me.PictureBox27.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox27.Name = "PictureBox27"
@@ -199,6 +357,7 @@ Partial Class home
         'PictureBox23
         '
         Me.PictureBox23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox23.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_22
         Me.PictureBox23.Location = New System.Drawing.Point(250, 1943)
         Me.PictureBox23.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox23.Name = "PictureBox23"
@@ -210,6 +369,7 @@ Partial Class home
         'PictureBox24
         '
         Me.PictureBox24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox24.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_21
         Me.PictureBox24.Location = New System.Drawing.Point(37, 1943)
         Me.PictureBox24.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox24.Name = "PictureBox24"
@@ -221,6 +381,7 @@ Partial Class home
         'PictureBox28
         '
         Me.PictureBox28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox28.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_25
         Me.PictureBox28.Location = New System.Drawing.Point(37, 2318)
         Me.PictureBox28.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox28.Name = "PictureBox28"
@@ -232,6 +393,7 @@ Partial Class home
         'PictureBox17
         '
         Me.PictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox17.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_20
         Me.PictureBox17.Location = New System.Drawing.Point(674, 1569)
         Me.PictureBox17.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox17.Name = "PictureBox17"
@@ -243,6 +405,7 @@ Partial Class home
         'PictureBox18
         '
         Me.PictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox18.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_19
         Me.PictureBox18.Location = New System.Drawing.Point(462, 1569)
         Me.PictureBox18.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox18.Name = "PictureBox18"
@@ -254,6 +417,7 @@ Partial Class home
         'PictureBox19
         '
         Me.PictureBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox19.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_18
         Me.PictureBox19.Location = New System.Drawing.Point(250, 1569)
         Me.PictureBox19.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox19.Name = "PictureBox19"
@@ -265,6 +429,7 @@ Partial Class home
         'PictureBox20
         '
         Me.PictureBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox20.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_17
         Me.PictureBox20.Location = New System.Drawing.Point(38, 1569)
         Me.PictureBox20.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox20.Name = "PictureBox20"
@@ -276,6 +441,7 @@ Partial Class home
         'PictureBox13
         '
         Me.PictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox13.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_16
         Me.PictureBox13.Location = New System.Drawing.Point(674, 1196)
         Me.PictureBox13.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox13.Name = "PictureBox13"
@@ -287,6 +453,7 @@ Partial Class home
         'PictureBox14
         '
         Me.PictureBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox14.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_15
         Me.PictureBox14.Location = New System.Drawing.Point(462, 1196)
         Me.PictureBox14.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox14.Name = "PictureBox14"
@@ -298,6 +465,7 @@ Partial Class home
         'PictureBox15
         '
         Me.PictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox15.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_14
         Me.PictureBox15.Location = New System.Drawing.Point(250, 1196)
         Me.PictureBox15.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox15.Name = "PictureBox15"
@@ -309,6 +477,7 @@ Partial Class home
         'PictureBox16
         '
         Me.PictureBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox16.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_13
         Me.PictureBox16.Location = New System.Drawing.Point(38, 1196)
         Me.PictureBox16.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox16.Name = "PictureBox16"
@@ -320,6 +489,7 @@ Partial Class home
         'PictureBox9
         '
         Me.PictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox9.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_12
         Me.PictureBox9.Location = New System.Drawing.Point(674, 816)
         Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox9.Name = "PictureBox9"
@@ -331,6 +501,7 @@ Partial Class home
         'PictureBox10
         '
         Me.PictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox10.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_11
         Me.PictureBox10.Location = New System.Drawing.Point(462, 816)
         Me.PictureBox10.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox10.Name = "PictureBox10"
@@ -342,6 +513,7 @@ Partial Class home
         'PictureBox11
         '
         Me.PictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox11.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_10
         Me.PictureBox11.Location = New System.Drawing.Point(250, 816)
         Me.PictureBox11.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox11.Name = "PictureBox11"
@@ -353,6 +525,7 @@ Partial Class home
         'PictureBox12
         '
         Me.PictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox12.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_9
         Me.PictureBox12.Location = New System.Drawing.Point(38, 816)
         Me.PictureBox12.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox12.Name = "PictureBox12"
@@ -364,6 +537,7 @@ Partial Class home
         'PictureBox5
         '
         Me.PictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox5.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_8
         Me.PictureBox5.Location = New System.Drawing.Point(674, 432)
         Me.PictureBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox5.Name = "PictureBox5"
@@ -375,6 +549,7 @@ Partial Class home
         'PictureBox6
         '
         Me.PictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox6.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_7
         Me.PictureBox6.Location = New System.Drawing.Point(462, 432)
         Me.PictureBox6.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox6.Name = "PictureBox6"
@@ -386,6 +561,7 @@ Partial Class home
         'PictureBox7
         '
         Me.PictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox7.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_6
         Me.PictureBox7.Location = New System.Drawing.Point(250, 432)
         Me.PictureBox7.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox7.Name = "PictureBox7"
@@ -397,6 +573,7 @@ Partial Class home
         'PictureBox8
         '
         Me.PictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox8.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_5
         Me.PictureBox8.Location = New System.Drawing.Point(38, 432)
         Me.PictureBox8.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox8.Name = "PictureBox8"
@@ -408,6 +585,7 @@ Partial Class home
         'PictureBox4
         '
         Me.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox4.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_4
         Me.PictureBox4.Location = New System.Drawing.Point(674, 43)
         Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox4.Name = "PictureBox4"
@@ -419,6 +597,7 @@ Partial Class home
         'PictureBox3
         '
         Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox3.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_3
         Me.PictureBox3.Location = New System.Drawing.Point(462, 43)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
@@ -430,6 +609,7 @@ Partial Class home
         'PictureBox2
         '
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox2.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_2
         Me.PictureBox2.Location = New System.Drawing.Point(250, 43)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
@@ -441,6 +621,7 @@ Partial Class home
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_1
         Me.PictureBox1.Location = New System.Drawing.Point(38, 43)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
@@ -598,11 +779,57 @@ Partial Class home
         Me.Button3.Text = "Button3"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(716, 69)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 5
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(823, 65)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 6
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(262, 1781)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(31, 13)
+        Me.Label2.TabIndex = 41
+        Me.Label2.Text = "wires"
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(904, 65)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 7
+        Me.Button5.Text = "Button5"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(419, 3279)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(26, 13)
+        Me.Label3.TabIndex = 42
+        Me.Label3.Text = "wire"
+        '
         'home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(934, 611)
+        Me.ClientSize = New System.Drawing.Size(1234, 761)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -617,10 +844,20 @@ Partial Class home
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "HOME"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
@@ -702,4 +939,19 @@ Partial Class home
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents PictureBox33 As PictureBox
+    Friend WithEvents PictureBox34 As PictureBox
+    Friend WithEvents PictureBox35 As PictureBox
+    Friend WithEvents PictureBox36 As PictureBox
+    Friend WithEvents PictureBox29 As PictureBox
+    Friend WithEvents PictureBox30 As PictureBox
+    Friend WithEvents PictureBox31 As PictureBox
+    Friend WithEvents PictureBox32 As PictureBox
+    Friend WithEvents PictureBox37 As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Label3 As Label
 End Class
