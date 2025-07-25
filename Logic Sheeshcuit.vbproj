@@ -599,5 +599,17 @@
   <ItemGroup>
     <None Include="Resources\Search Icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home Form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cart Icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

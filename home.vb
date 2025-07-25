@@ -78,12 +78,56 @@ Public Class home
         Me.Hide()
     End Sub
 
+    Private Sub ScrollToCurrentResult()
+        If currentResultIndex >= 0 AndAlso currentResultIndex < searchResults.Count Then
+            Dim lbl As Label = searchResults(currentResultIndex)
+            Panel1.ScrollControlIntoView(lbl)
+
+            ' Optional: highlight
+            lbl.BackColor = Color.Black
+            lbl.ForeColor = Color.White
+        End If
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        datainventory.Show()
+        If searchResults.Count = 0 Then
+            MessageBox.Show("No results to go back to. Please search first.")
+            Return
+        End If
+        ' Move to previous result, wrap around if needed
+        currentResultIndex = (currentResultIndex - 1 + searchResults.Count) Mod searchResults.Count
+        ScrollToCurrentResult()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If searchResults.Count = 0 Then
+            MessageBox.Show("No results to go to. Please search first.")
+            Return
+        End If
+
+        ' Move to next result, wrap around if needed
+        currentResultIndex = (currentResultIndex + 1) Mod searchResults.Count
+        ScrollToCurrentResult()
+    End Sub
+
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim searchTerm As String = TextBox1.Text.Trim()
+        If Not String.IsNullOrWhiteSpace(searchTerm) Then
+            SearchAndScroll(searchTerm)
+        End If
+    End Sub
+
+    Private Sub PictureBox38_Click(sender As Object, e As EventArgs) Handles PictureBox38.Click
+
+    End Sub
+
+    Private Sub PictureBox39_Click(sender As Object, e As EventArgs) Handles PictureBox39.Click
         cart.Show()
+    End Sub
+
+    Private Sub PictureBox40_Click(sender As Object, e As EventArgs) Handles PictureBox40.Click
+
     End Sub
 
     Private Sub home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -164,38 +208,13 @@ Public Class home
             TextBox1.Focus()
         End If
     End Sub
-    Private Sub ScrollToCurrentResult()
-        If currentResultIndex >= 0 AndAlso currentResultIndex < searchResults.Count Then
-            Dim lbl As Label = searchResults(currentResultIndex)
-            Panel1.ScrollControlIntoView(lbl)
 
-            ' Optional: highlight
-            lbl.BackColor = Color.Black
-            lbl.ForeColor = Color.White
-        End If
-    End Sub
     Private Sub TextBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyDown
         If e.KeyCode = Keys.Enter Then
-            Button4.PerformClick()
+            Button3.PerformClick()
         End If
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Dim searchTerm As String = TextBox1.Text.Trim()
-        If Not String.IsNullOrWhiteSpace(searchTerm) Then
-            SearchAndScroll(searchTerm)
-        End If
-    End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        If searchResults.Count = 0 Then
-            MessageBox.Show("No results to go to. Please search first.")
-            Return
-        End If
-
-        ' Move to next result, wrap around if needed
-        currentResultIndex = (currentResultIndex + 1) Mod searchResults.Count
-        ScrollToCurrentResult()
-    End Sub
 End Class
 
