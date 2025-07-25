@@ -40,8 +40,17 @@ Partial Class wires
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.addtocart_btn1 = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label74 = New System.Windows.Forms.Label()
+        Me.Label75 = New System.Windows.Forms.Label()
+        Me.Label76 = New System.Windows.Forms.Label()
+        Me.minus_btn2 = New System.Windows.Forms.Button()
+        Me.plus_btn2 = New System.Windows.Forms.Button()
+        Me.atc_btn2 = New System.Windows.Forms.Button()
+        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -251,6 +260,97 @@ Partial Class wires
         Me.PictureBox2.TabIndex = 101
         Me.PictureBox2.TabStop = False
         '
+        'Label74
+        '
+        Me.Label74.AutoSize = True
+        Me.Label74.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label74.Location = New System.Drawing.Point(537, 1293)
+        Me.Label74.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label74.Name = "Label74"
+        Me.Label74.Size = New System.Drawing.Size(181, 37)
+        Me.Label74.TabIndex = 348
+        Me.Label74.Text = "PHP 39.00"
+        '
+        'Label75
+        '
+        Me.Label75.AutoSize = True
+        Me.Label75.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label75.Location = New System.Drawing.Point(537, 1336)
+        Me.Label75.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label75.Name = "Label75"
+        Me.Label75.Size = New System.Drawing.Size(68, 20)
+        Me.Label75.TabIndex = 347
+        Me.Label75.Text = "Quantity"
+        '
+        'Label76
+        '
+        Me.Label76.AutoSize = True
+        Me.Label76.Font = New System.Drawing.Font("Microsoft Sans Serif", 29.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label76.Location = New System.Drawing.Point(530, 1056)
+        Me.Label76.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label76.Name = "Label76"
+        Me.Label76.Size = New System.Drawing.Size(313, 88)
+        Me.Label76.TabIndex = 346
+        Me.Label76.Text = "Battery Holder " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "18650 Dual Slot"
+        '
+        'minus_btn2
+        '
+        Me.minus_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.minus_btn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.minus_btn2.Location = New System.Drawing.Point(789, 1359)
+        Me.minus_btn2.Margin = New System.Windows.Forms.Padding(2)
+        Me.minus_btn2.Name = "minus_btn2"
+        Me.minus_btn2.Size = New System.Drawing.Size(47, 36)
+        Me.minus_btn2.TabIndex = 345
+        Me.minus_btn2.Text = "-"
+        Me.minus_btn2.UseVisualStyleBackColor = True
+        '
+        'plus_btn2
+        '
+        Me.plus_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.plus_btn2.Location = New System.Drawing.Point(737, 1359)
+        Me.plus_btn2.Margin = New System.Windows.Forms.Padding(2)
+        Me.plus_btn2.Name = "plus_btn2"
+        Me.plus_btn2.Size = New System.Drawing.Size(47, 36)
+        Me.plus_btn2.TabIndex = 344
+        Me.plus_btn2.Text = "+"
+        Me.plus_btn2.UseVisualStyleBackColor = True
+        '
+        'atc_btn2
+        '
+        Me.atc_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.atc_btn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.atc_btn2.Location = New System.Drawing.Point(538, 1408)
+        Me.atc_btn2.Margin = New System.Windows.Forms.Padding(2)
+        Me.atc_btn2.Name = "atc_btn2"
+        Me.atc_btn2.Size = New System.Drawing.Size(298, 54)
+        Me.atc_btn2.TabIndex = 343
+        Me.atc_btn2.Text = "ADD TO CART"
+        Me.atc_btn2.UseVisualStyleBackColor = True
+        '
+        'PictureBox25
+        '
+        Me.PictureBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox25.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_37
+        Me.PictureBox25.Location = New System.Drawing.Point(44, 1056)
+        Me.PictureBox25.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox25.Name = "PictureBox25"
+        Me.PictureBox25.Size = New System.Drawing.Size(450, 407)
+        Me.PictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox25.TabIndex = 342
+        Me.PictureBox25.TabStop = False
+        '
+        'TextBox3
+        '
+        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(538, 1359)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ReadOnly = True
+        Me.TextBox3.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox3.TabIndex = 349
+        '
         'wires
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -258,6 +358,14 @@ Partial Class wires
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(904, 611)
         Me.ControlBox = False
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Label74)
+        Me.Controls.Add(Me.Label75)
+        Me.Controls.Add(Me.Label76)
+        Me.Controls.Add(Me.minus_btn2)
+        Me.Controls.Add(Me.plus_btn2)
+        Me.Controls.Add(Me.atc_btn2)
+        Me.Controls.Add(Me.PictureBox25)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label7)
@@ -283,6 +391,7 @@ Partial Class wires
         Me.Text = "Wires and Cables"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -305,4 +414,12 @@ Partial Class wires
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents addtocart_btn1 As Button
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label74 As Label
+    Friend WithEvents Label75 As Label
+    Friend WithEvents Label76 As Label
+    Friend WithEvents minus_btn2 As Button
+    Friend WithEvents plus_btn2 As Button
+    Friend WithEvents atc_btn2 As Button
+    Friend WithEvents PictureBox25 As PictureBox
+    Friend WithEvents TextBox3 As TextBox
 End Class
