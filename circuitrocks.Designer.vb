@@ -29,70 +29,60 @@ Partial Class circuitrocks
         Me.Label10 = New System.Windows.Forms.Label()
         Me.minus_btn2 = New System.Windows.Forms.Button()
         Me.plus_btn2 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.addtocart_btn2 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.minus_btn3 = New System.Windows.Forms.Button()
         Me.plus_btn3 = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.addtocart_btn3 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.minus_btn1 = New System.Windows.Forms.Button()
         Me.plus_btn1 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.addtocart_btn1 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.minus_btn = New System.Windows.Forms.Button()
         Me.plus_btn = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.addtocart_btn = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.minus_btn6 = New System.Windows.Forms.Button()
         Me.plus_btn6 = New System.Windows.Forms.Button()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.addtocart_btn6 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.minus_btn5 = New System.Windows.Forms.Button()
         Me.plus_btn5 = New System.Windows.Forms.Button()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.addtocart_btn5 = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.minus_btn4 = New System.Windows.Forms.Button()
         Me.plus_btn4 = New System.Windows.Forms.Button()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.addtocart_btn4 = New System.Windows.Forms.Button()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
@@ -109,7 +99,6 @@ Partial Class circuitrocks
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.Label35 = New System.Windows.Forms.Label()
@@ -117,7 +106,6 @@ Partial Class circuitrocks
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Button14 = New System.Windows.Forms.Button()
         Me.Button15 = New System.Windows.Forms.Button()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.Button16 = New System.Windows.Forms.Button()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.Label38 = New System.Windows.Forms.Label()
@@ -125,7 +113,6 @@ Partial Class circuitrocks
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Button17 = New System.Windows.Forms.Button()
         Me.Button18 = New System.Windows.Forms.Button()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Button19 = New System.Windows.Forms.Button()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.Label41 = New System.Windows.Forms.Label()
@@ -133,7 +120,6 @@ Partial Class circuitrocks
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Button20 = New System.Windows.Forms.Button()
         Me.Button21 = New System.Windows.Forms.Button()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.Button22 = New System.Windows.Forms.Button()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
         Me.Label44 = New System.Windows.Forms.Label()
@@ -141,7 +127,6 @@ Partial Class circuitrocks
         Me.Label46 = New System.Windows.Forms.Label()
         Me.Button23 = New System.Windows.Forms.Button()
         Me.Button24 = New System.Windows.Forms.Button()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.Button25 = New System.Windows.Forms.Button()
         Me.PictureBox15 = New System.Windows.Forms.PictureBox()
         Me.Label47 = New System.Windows.Forms.Label()
@@ -149,7 +134,6 @@ Partial Class circuitrocks
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Button26 = New System.Windows.Forms.Button()
         Me.Button27 = New System.Windows.Forms.Button()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
         Me.Button28 = New System.Windows.Forms.Button()
         Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.Label50 = New System.Windows.Forms.Label()
@@ -157,7 +141,6 @@ Partial Class circuitrocks
         Me.Label52 = New System.Windows.Forms.Label()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.Button30 = New System.Windows.Forms.Button()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.Button31 = New System.Windows.Forms.Button()
         Me.PictureBox17 = New System.Windows.Forms.PictureBox()
         Me.Label53 = New System.Windows.Forms.Label()
@@ -165,7 +148,6 @@ Partial Class circuitrocks
         Me.Label55 = New System.Windows.Forms.Label()
         Me.Button32 = New System.Windows.Forms.Button()
         Me.Button33 = New System.Windows.Forms.Button()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
         Me.Button34 = New System.Windows.Forms.Button()
         Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.Label56 = New System.Windows.Forms.Label()
@@ -173,7 +155,6 @@ Partial Class circuitrocks
         Me.Label58 = New System.Windows.Forms.Label()
         Me.Button35 = New System.Windows.Forms.Button()
         Me.Button36 = New System.Windows.Forms.Button()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
         Me.Button37 = New System.Windows.Forms.Button()
         Me.PictureBox19 = New System.Windows.Forms.PictureBox()
         Me.Label59 = New System.Windows.Forms.Label()
@@ -181,7 +162,6 @@ Partial Class circuitrocks
         Me.Label61 = New System.Windows.Forms.Label()
         Me.Button38 = New System.Windows.Forms.Button()
         Me.Button39 = New System.Windows.Forms.Button()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.Button40 = New System.Windows.Forms.Button()
         Me.PictureBox20 = New System.Windows.Forms.PictureBox()
         Me.Label62 = New System.Windows.Forms.Label()
@@ -189,7 +169,6 @@ Partial Class circuitrocks
         Me.Label64 = New System.Windows.Forms.Label()
         Me.Button41 = New System.Windows.Forms.Button()
         Me.Button42 = New System.Windows.Forms.Button()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
         Me.Button43 = New System.Windows.Forms.Button()
         Me.PictureBox21 = New System.Windows.Forms.PictureBox()
         Me.Label65 = New System.Windows.Forms.Label()
@@ -197,7 +176,6 @@ Partial Class circuitrocks
         Me.Label67 = New System.Windows.Forms.Label()
         Me.Button44 = New System.Windows.Forms.Button()
         Me.Button45 = New System.Windows.Forms.Button()
-        Me.TextBox22 = New System.Windows.Forms.TextBox()
         Me.Button46 = New System.Windows.Forms.Button()
         Me.PictureBox22 = New System.Windows.Forms.PictureBox()
         Me.Label68 = New System.Windows.Forms.Label()
@@ -205,7 +183,6 @@ Partial Class circuitrocks
         Me.Label70 = New System.Windows.Forms.Label()
         Me.Button47 = New System.Windows.Forms.Button()
         Me.Button48 = New System.Windows.Forms.Button()
-        Me.TextBox23 = New System.Windows.Forms.TextBox()
         Me.Button49 = New System.Windows.Forms.Button()
         Me.PictureBox23 = New System.Windows.Forms.PictureBox()
         Me.Label71 = New System.Windows.Forms.Label()
@@ -213,7 +190,6 @@ Partial Class circuitrocks
         Me.Label73 = New System.Windows.Forms.Label()
         Me.Button50 = New System.Windows.Forms.Button()
         Me.Button51 = New System.Windows.Forms.Button()
-        Me.TextBox24 = New System.Windows.Forms.TextBox()
         Me.Button52 = New System.Windows.Forms.Button()
         Me.PictureBox24 = New System.Windows.Forms.PictureBox()
         Me.Label74 = New System.Windows.Forms.Label()
@@ -221,9 +197,33 @@ Partial Class circuitrocks
         Me.Label76 = New System.Windows.Forms.Label()
         Me.Button53 = New System.Windows.Forms.Button()
         Me.Button54 = New System.Windows.Forms.Button()
-        Me.TextBox25 = New System.Windows.Forms.TextBox()
         Me.Button55 = New System.Windows.Forms.Button()
         Me.PictureBox25 = New System.Windows.Forms.PictureBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.TextBox20 = New System.Windows.Forms.TextBox()
+        Me.TextBox21 = New System.Windows.Forms.TextBox()
+        Me.TextBox22 = New System.Windows.Forms.TextBox()
+        Me.TextBox23 = New System.Windows.Forms.TextBox()
+        Me.TextBox24 = New System.Windows.Forms.TextBox()
+        Me.TextBox25 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -332,17 +332,6 @@ Partial Class circuitrocks
         Me.plus_btn2.Text = "+"
         Me.plus_btn2.UseVisualStyleBackColor = True
         '
-        'TextBox3
-        '
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(538, 410)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox3.TabIndex = 119
-        '
         'addtocart_btn2
         '
         Me.addtocart_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -410,17 +399,6 @@ Partial Class circuitrocks
         Me.plus_btn3.TabIndex = 128
         Me.plus_btn3.Text = "+"
         Me.plus_btn3.UseVisualStyleBackColor = True
-        '
-        'TextBox4
-        '
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(538, 876)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox4.TabIndex = 127
         '
         'addtocart_btn3
         '
@@ -490,17 +468,6 @@ Partial Class circuitrocks
         Me.plus_btn1.Text = "+"
         Me.plus_btn1.UseVisualStyleBackColor = True
         '
-        'TextBox2
-        '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(538, 1353)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox2.TabIndex = 135
-        '
         'addtocart_btn1
         '
         Me.addtocart_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -568,17 +535,6 @@ Partial Class circuitrocks
         Me.plus_btn.TabIndex = 144
         Me.plus_btn.Text = "+"
         Me.plus_btn.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(538, 1827)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox1.TabIndex = 143
         '
         'addtocart_btn
         '
@@ -648,17 +604,6 @@ Partial Class circuitrocks
         Me.plus_btn6.Text = "+"
         Me.plus_btn6.UseVisualStyleBackColor = True
         '
-        'TextBox7
-        '
-        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(538, 4676)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox7.TabIndex = 191
-        '
         'addtocart_btn6
         '
         Me.addtocart_btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -726,17 +671,6 @@ Partial Class circuitrocks
         Me.plus_btn5.TabIndex = 184
         Me.plus_btn5.Text = "+"
         Me.plus_btn5.UseVisualStyleBackColor = True
-        '
-        'TextBox6
-        '
-        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(538, 4194)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox6.TabIndex = 183
         '
         'addtocart_btn5
         '
@@ -806,17 +740,6 @@ Partial Class circuitrocks
         Me.plus_btn4.Text = "+"
         Me.plus_btn4.UseVisualStyleBackColor = True
         '
-        'TextBox5
-        '
-        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(538, 3718)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox5.TabIndex = 175
-        '
         'addtocart_btn4
         '
         Me.addtocart_btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -884,17 +807,6 @@ Partial Class circuitrocks
         Me.Button3.TabIndex = 168
         Me.Button3.Text = "+"
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'TextBox8
-        '
-        Me.TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(538, 3249)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.ReadOnly = True
-        Me.TextBox8.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox8.TabIndex = 167
         '
         'Button4
         '
@@ -964,17 +876,6 @@ Partial Class circuitrocks
         Me.Button6.Text = "+"
         Me.Button6.UseVisualStyleBackColor = True
         '
-        'TextBox9
-        '
-        Me.TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.Location = New System.Drawing.Point(538, 2778)
-        Me.TextBox9.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.ReadOnly = True
-        Me.TextBox9.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox9.TabIndex = 159
-        '
         'Button7
         '
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1042,17 +943,6 @@ Partial Class circuitrocks
         Me.Button9.TabIndex = 152
         Me.Button9.Text = "+"
         Me.Button9.UseVisualStyleBackColor = True
-        '
-        'TextBox10
-        '
-        Me.TextBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox10.Location = New System.Drawing.Point(538, 2310)
-        Me.TextBox10.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.ReadOnly = True
-        Me.TextBox10.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox10.TabIndex = 151
         '
         'Button10
         '
@@ -1242,17 +1132,6 @@ Partial Class circuitrocks
         Me.Button12.Text = "+"
         Me.Button12.UseVisualStyleBackColor = True
         '
-        'TextBox11
-        '
-        Me.TextBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox11.Location = New System.Drawing.Point(538, 5161)
-        Me.TextBox11.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.ReadOnly = True
-        Me.TextBox11.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox11.TabIndex = 199
-        '
         'Button13
         '
         Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1332,17 +1211,6 @@ Partial Class circuitrocks
         Me.Button15.TabIndex = 248
         Me.Button15.Text = "+"
         Me.Button15.UseVisualStyleBackColor = True
-        '
-        'TextBox12
-        '
-        Me.TextBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox12.Location = New System.Drawing.Point(538, 8016)
-        Me.TextBox12.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.ReadOnly = True
-        Me.TextBox12.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox12.TabIndex = 247
         '
         'Button16
         '
@@ -1424,17 +1292,6 @@ Partial Class circuitrocks
         Me.Button18.Text = "+"
         Me.Button18.UseVisualStyleBackColor = True
         '
-        'TextBox13
-        '
-        Me.TextBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox13.Location = New System.Drawing.Point(538, 7533)
-        Me.TextBox13.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.ReadOnly = True
-        Me.TextBox13.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox13.TabIndex = 239
-        '
         'Button19
         '
         Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1514,17 +1371,6 @@ Partial Class circuitrocks
         Me.Button21.TabIndex = 232
         Me.Button21.Text = "+"
         Me.Button21.UseVisualStyleBackColor = True
-        '
-        'TextBox14
-        '
-        Me.TextBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox14.Location = New System.Drawing.Point(538, 7054)
-        Me.TextBox14.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.ReadOnly = True
-        Me.TextBox14.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox14.TabIndex = 231
         '
         'Button22
         '
@@ -1606,17 +1452,6 @@ Partial Class circuitrocks
         Me.Button24.Text = "+"
         Me.Button24.UseVisualStyleBackColor = True
         '
-        'TextBox15
-        '
-        Me.TextBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox15.Location = New System.Drawing.Point(538, 6585)
-        Me.TextBox15.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.ReadOnly = True
-        Me.TextBox15.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox15.TabIndex = 223
-        '
         'Button25
         '
         Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1696,17 +1531,6 @@ Partial Class circuitrocks
         Me.Button27.TabIndex = 216
         Me.Button27.Text = "+"
         Me.Button27.UseVisualStyleBackColor = True
-        '
-        'TextBox16
-        '
-        Me.TextBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox16.Location = New System.Drawing.Point(538, 6101)
-        Me.TextBox16.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.ReadOnly = True
-        Me.TextBox16.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox16.TabIndex = 215
         '
         'Button28
         '
@@ -1788,17 +1612,6 @@ Partial Class circuitrocks
         Me.Button30.Text = "+"
         Me.Button30.UseVisualStyleBackColor = True
         '
-        'TextBox17
-        '
-        Me.TextBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox17.Location = New System.Drawing.Point(538, 5636)
-        Me.TextBox17.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.ReadOnly = True
-        Me.TextBox17.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox17.TabIndex = 207
-        '
         'Button31
         '
         Me.Button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1878,17 +1691,6 @@ Partial Class circuitrocks
         Me.Button33.TabIndex = 304
         Me.Button33.Text = "+"
         Me.Button33.UseVisualStyleBackColor = True
-        '
-        'TextBox18
-        '
-        Me.TextBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox18.Location = New System.Drawing.Point(538, 11321)
-        Me.TextBox18.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.ReadOnly = True
-        Me.TextBox18.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox18.TabIndex = 303
         '
         'Button34
         '
@@ -1970,17 +1772,6 @@ Partial Class circuitrocks
         Me.Button36.Text = "+"
         Me.Button36.UseVisualStyleBackColor = True
         '
-        'TextBox19
-        '
-        Me.TextBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox19.Location = New System.Drawing.Point(538, 10843)
-        Me.TextBox19.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.ReadOnly = True
-        Me.TextBox19.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox19.TabIndex = 295
-        '
         'Button37
         '
         Me.Button37.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -2060,17 +1851,6 @@ Partial Class circuitrocks
         Me.Button39.TabIndex = 288
         Me.Button39.Text = "+"
         Me.Button39.UseVisualStyleBackColor = True
-        '
-        'TextBox20
-        '
-        Me.TextBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox20.Location = New System.Drawing.Point(538, 10370)
-        Me.TextBox20.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.ReadOnly = True
-        Me.TextBox20.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox20.TabIndex = 287
         '
         'Button40
         '
@@ -2152,17 +1932,6 @@ Partial Class circuitrocks
         Me.Button42.Text = "+"
         Me.Button42.UseVisualStyleBackColor = True
         '
-        'TextBox21
-        '
-        Me.TextBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox21.Location = New System.Drawing.Point(538, 9906)
-        Me.TextBox21.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.ReadOnly = True
-        Me.TextBox21.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox21.TabIndex = 279
-        '
         'Button43
         '
         Me.Button43.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -2242,17 +2011,6 @@ Partial Class circuitrocks
         Me.Button45.TabIndex = 272
         Me.Button45.Text = "+"
         Me.Button45.UseVisualStyleBackColor = True
-        '
-        'TextBox22
-        '
-        Me.TextBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox22.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox22.Location = New System.Drawing.Point(538, 9434)
-        Me.TextBox22.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.ReadOnly = True
-        Me.TextBox22.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox22.TabIndex = 271
         '
         'Button46
         '
@@ -2334,17 +2092,6 @@ Partial Class circuitrocks
         Me.Button48.Text = "+"
         Me.Button48.UseVisualStyleBackColor = True
         '
-        'TextBox23
-        '
-        Me.TextBox23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox23.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox23.Location = New System.Drawing.Point(538, 8966)
-        Me.TextBox23.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox23.Name = "TextBox23"
-        Me.TextBox23.ReadOnly = True
-        Me.TextBox23.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox23.TabIndex = 263
-        '
         'Button49
         '
         Me.Button49.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -2424,17 +2171,6 @@ Partial Class circuitrocks
         Me.Button51.TabIndex = 256
         Me.Button51.Text = "+"
         Me.Button51.UseVisualStyleBackColor = True
-        '
-        'TextBox24
-        '
-        Me.TextBox24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox24.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox24.Location = New System.Drawing.Point(538, 8500)
-        Me.TextBox24.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox24.Name = "TextBox24"
-        Me.TextBox24.ReadOnly = True
-        Me.TextBox24.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox24.TabIndex = 255
         '
         'Button52
         '
@@ -2516,17 +2252,6 @@ Partial Class circuitrocks
         Me.Button54.Text = "+"
         Me.Button54.UseVisualStyleBackColor = True
         '
-        'TextBox25
-        '
-        Me.TextBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox25.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox25.Location = New System.Drawing.Point(538, 11792)
-        Me.TextBox25.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox25.Name = "TextBox25"
-        Me.TextBox25.ReadOnly = True
-        Me.TextBox25.Size = New System.Drawing.Size(195, 35)
-        Me.TextBox25.TabIndex = 311
-        '
         'Button55
         '
         Me.Button55.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -2551,6 +2276,281 @@ Partial Class circuitrocks
         Me.PictureBox25.TabIndex = 309
         Me.PictureBox25.TabStop = False
         '
+        'TextBox3
+        '
+        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(538, 1354)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ReadOnly = True
+        Me.TextBox3.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox3.TabIndex = 317
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(538, 411)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox1.TabIndex = 318
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(538, 877)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox2.TabIndex = 319
+        '
+        'TextBox4
+        '
+        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(538, 1828)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.ReadOnly = True
+        Me.TextBox4.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox4.TabIndex = 320
+        '
+        'TextBox5
+        '
+        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(538, 2311)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.ReadOnly = True
+        Me.TextBox5.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox5.TabIndex = 321
+        '
+        'TextBox6
+        '
+        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(538, 2779)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.ReadOnly = True
+        Me.TextBox6.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox6.TabIndex = 322
+        '
+        'TextBox7
+        '
+        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox7.Location = New System.Drawing.Point(538, 3250)
+        Me.TextBox7.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.ReadOnly = True
+        Me.TextBox7.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox7.TabIndex = 323
+        '
+        'TextBox8
+        '
+        Me.TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox8.Location = New System.Drawing.Point(538, 3719)
+        Me.TextBox8.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.ReadOnly = True
+        Me.TextBox8.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox8.TabIndex = 324
+        '
+        'TextBox9
+        '
+        Me.TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox9.Location = New System.Drawing.Point(538, 4195)
+        Me.TextBox9.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.ReadOnly = True
+        Me.TextBox9.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox9.TabIndex = 325
+        '
+        'TextBox10
+        '
+        Me.TextBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox10.Location = New System.Drawing.Point(538, 4677)
+        Me.TextBox10.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.ReadOnly = True
+        Me.TextBox10.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox10.TabIndex = 326
+        '
+        'TextBox11
+        '
+        Me.TextBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox11.Location = New System.Drawing.Point(538, 5162)
+        Me.TextBox11.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.ReadOnly = True
+        Me.TextBox11.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox11.TabIndex = 327
+        '
+        'TextBox12
+        '
+        Me.TextBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox12.Location = New System.Drawing.Point(538, 5637)
+        Me.TextBox12.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.ReadOnly = True
+        Me.TextBox12.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox12.TabIndex = 328
+        '
+        'TextBox13
+        '
+        Me.TextBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox13.Location = New System.Drawing.Point(538, 6102)
+        Me.TextBox13.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.ReadOnly = True
+        Me.TextBox13.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox13.TabIndex = 329
+        '
+        'TextBox14
+        '
+        Me.TextBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox14.Location = New System.Drawing.Point(538, 6586)
+        Me.TextBox14.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.ReadOnly = True
+        Me.TextBox14.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox14.TabIndex = 330
+        '
+        'TextBox15
+        '
+        Me.TextBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox15.Location = New System.Drawing.Point(538, 7055)
+        Me.TextBox15.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.ReadOnly = True
+        Me.TextBox15.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox15.TabIndex = 331
+        '
+        'TextBox16
+        '
+        Me.TextBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox16.Location = New System.Drawing.Point(538, 7534)
+        Me.TextBox16.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.ReadOnly = True
+        Me.TextBox16.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox16.TabIndex = 332
+        '
+        'TextBox17
+        '
+        Me.TextBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox17.Location = New System.Drawing.Point(538, 8017)
+        Me.TextBox17.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox17.Name = "TextBox17"
+        Me.TextBox17.ReadOnly = True
+        Me.TextBox17.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox17.TabIndex = 333
+        '
+        'TextBox18
+        '
+        Me.TextBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox18.Location = New System.Drawing.Point(538, 8501)
+        Me.TextBox18.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox18.Name = "TextBox18"
+        Me.TextBox18.ReadOnly = True
+        Me.TextBox18.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox18.TabIndex = 334
+        '
+        'TextBox19
+        '
+        Me.TextBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox19.Location = New System.Drawing.Point(538, 8967)
+        Me.TextBox19.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox19.Name = "TextBox19"
+        Me.TextBox19.ReadOnly = True
+        Me.TextBox19.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox19.TabIndex = 335
+        '
+        'TextBox20
+        '
+        Me.TextBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox20.Location = New System.Drawing.Point(538, 9435)
+        Me.TextBox20.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox20.Name = "TextBox20"
+        Me.TextBox20.ReadOnly = True
+        Me.TextBox20.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox20.TabIndex = 336
+        '
+        'TextBox21
+        '
+        Me.TextBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox21.Location = New System.Drawing.Point(538, 9907)
+        Me.TextBox21.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox21.Name = "TextBox21"
+        Me.TextBox21.ReadOnly = True
+        Me.TextBox21.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox21.TabIndex = 337
+        '
+        'TextBox22
+        '
+        Me.TextBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox22.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox22.Location = New System.Drawing.Point(538, 10371)
+        Me.TextBox22.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox22.Name = "TextBox22"
+        Me.TextBox22.ReadOnly = True
+        Me.TextBox22.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox22.TabIndex = 338
+        '
+        'TextBox23
+        '
+        Me.TextBox23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox23.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox23.Location = New System.Drawing.Point(538, 10844)
+        Me.TextBox23.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox23.Name = "TextBox23"
+        Me.TextBox23.ReadOnly = True
+        Me.TextBox23.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox23.TabIndex = 339
+        '
+        'TextBox24
+        '
+        Me.TextBox24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox24.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox24.Location = New System.Drawing.Point(538, 11322)
+        Me.TextBox24.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox24.Name = "TextBox24"
+        Me.TextBox24.ReadOnly = True
+        Me.TextBox24.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox24.TabIndex = 340
+        '
+        'TextBox25
+        '
+        Me.TextBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox25.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox25.Location = New System.Drawing.Point(538, 11793)
+        Me.TextBox25.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox25.Name = "TextBox25"
+        Me.TextBox25.ReadOnly = True
+        Me.TextBox25.Size = New System.Drawing.Size(195, 35)
+        Me.TextBox25.TabIndex = 341
+        '
         'circuitrocks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2558,12 +2558,36 @@ Partial Class circuitrocks
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(904, 611)
         Me.ControlBox = False
+        Me.Controls.Add(Me.TextBox25)
+        Me.Controls.Add(Me.TextBox24)
+        Me.Controls.Add(Me.TextBox23)
+        Me.Controls.Add(Me.TextBox22)
+        Me.Controls.Add(Me.TextBox21)
+        Me.Controls.Add(Me.TextBox20)
+        Me.Controls.Add(Me.TextBox19)
+        Me.Controls.Add(Me.TextBox18)
+        Me.Controls.Add(Me.TextBox17)
+        Me.Controls.Add(Me.TextBox16)
+        Me.Controls.Add(Me.TextBox15)
+        Me.Controls.Add(Me.TextBox14)
+        Me.Controls.Add(Me.TextBox13)
+        Me.Controls.Add(Me.TextBox12)
+        Me.Controls.Add(Me.TextBox11)
+        Me.Controls.Add(Me.TextBox10)
+        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label74)
         Me.Controls.Add(Me.Label75)
         Me.Controls.Add(Me.Label76)
         Me.Controls.Add(Me.Button53)
         Me.Controls.Add(Me.Button54)
-        Me.Controls.Add(Me.TextBox25)
         Me.Controls.Add(Me.Button55)
         Me.Controls.Add(Me.PictureBox25)
         Me.Controls.Add(Me.Label53)
@@ -2571,7 +2595,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label55)
         Me.Controls.Add(Me.Button32)
         Me.Controls.Add(Me.Button33)
-        Me.Controls.Add(Me.TextBox18)
         Me.Controls.Add(Me.Button34)
         Me.Controls.Add(Me.PictureBox18)
         Me.Controls.Add(Me.Label56)
@@ -2579,7 +2602,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label58)
         Me.Controls.Add(Me.Button35)
         Me.Controls.Add(Me.Button36)
-        Me.Controls.Add(Me.TextBox19)
         Me.Controls.Add(Me.Button37)
         Me.Controls.Add(Me.PictureBox19)
         Me.Controls.Add(Me.Label59)
@@ -2587,7 +2609,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label61)
         Me.Controls.Add(Me.Button38)
         Me.Controls.Add(Me.Button39)
-        Me.Controls.Add(Me.TextBox20)
         Me.Controls.Add(Me.Button40)
         Me.Controls.Add(Me.PictureBox20)
         Me.Controls.Add(Me.Label62)
@@ -2595,7 +2616,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label64)
         Me.Controls.Add(Me.Button41)
         Me.Controls.Add(Me.Button42)
-        Me.Controls.Add(Me.TextBox21)
         Me.Controls.Add(Me.Button43)
         Me.Controls.Add(Me.PictureBox21)
         Me.Controls.Add(Me.Label65)
@@ -2603,7 +2623,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label67)
         Me.Controls.Add(Me.Button44)
         Me.Controls.Add(Me.Button45)
-        Me.Controls.Add(Me.TextBox22)
         Me.Controls.Add(Me.Button46)
         Me.Controls.Add(Me.PictureBox22)
         Me.Controls.Add(Me.Label68)
@@ -2611,7 +2630,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label70)
         Me.Controls.Add(Me.Button47)
         Me.Controls.Add(Me.Button48)
-        Me.Controls.Add(Me.TextBox23)
         Me.Controls.Add(Me.Button49)
         Me.Controls.Add(Me.PictureBox23)
         Me.Controls.Add(Me.Label71)
@@ -2619,7 +2637,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label73)
         Me.Controls.Add(Me.Button50)
         Me.Controls.Add(Me.Button51)
-        Me.Controls.Add(Me.TextBox24)
         Me.Controls.Add(Me.Button52)
         Me.Controls.Add(Me.PictureBox24)
         Me.Controls.Add(Me.Label35)
@@ -2627,7 +2644,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label37)
         Me.Controls.Add(Me.Button14)
         Me.Controls.Add(Me.Button15)
-        Me.Controls.Add(Me.TextBox12)
         Me.Controls.Add(Me.Button16)
         Me.Controls.Add(Me.PictureBox12)
         Me.Controls.Add(Me.Label38)
@@ -2635,7 +2651,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label40)
         Me.Controls.Add(Me.Button17)
         Me.Controls.Add(Me.Button18)
-        Me.Controls.Add(Me.TextBox13)
         Me.Controls.Add(Me.Button19)
         Me.Controls.Add(Me.PictureBox13)
         Me.Controls.Add(Me.Label41)
@@ -2643,7 +2658,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label43)
         Me.Controls.Add(Me.Button20)
         Me.Controls.Add(Me.Button21)
-        Me.Controls.Add(Me.TextBox14)
         Me.Controls.Add(Me.Button22)
         Me.Controls.Add(Me.PictureBox14)
         Me.Controls.Add(Me.Label44)
@@ -2651,7 +2665,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label46)
         Me.Controls.Add(Me.Button23)
         Me.Controls.Add(Me.Button24)
-        Me.Controls.Add(Me.TextBox15)
         Me.Controls.Add(Me.Button25)
         Me.Controls.Add(Me.PictureBox15)
         Me.Controls.Add(Me.Label47)
@@ -2659,7 +2672,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label49)
         Me.Controls.Add(Me.Button26)
         Me.Controls.Add(Me.Button27)
-        Me.Controls.Add(Me.TextBox16)
         Me.Controls.Add(Me.Button28)
         Me.Controls.Add(Me.PictureBox16)
         Me.Controls.Add(Me.Label50)
@@ -2667,7 +2679,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label52)
         Me.Controls.Add(Me.Button29)
         Me.Controls.Add(Me.Button30)
-        Me.Controls.Add(Me.TextBox17)
         Me.Controls.Add(Me.Button31)
         Me.Controls.Add(Me.PictureBox17)
         Me.Controls.Add(Me.Label32)
@@ -2675,7 +2686,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label34)
         Me.Controls.Add(Me.Button11)
         Me.Controls.Add(Me.Button12)
-        Me.Controls.Add(Me.TextBox11)
         Me.Controls.Add(Me.Button13)
         Me.Controls.Add(Me.PictureBox11)
         Me.Controls.Add(Me.Label19)
@@ -2683,7 +2693,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.minus_btn6)
         Me.Controls.Add(Me.plus_btn6)
-        Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.addtocart_btn6)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.Label16)
@@ -2691,7 +2700,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.minus_btn5)
         Me.Controls.Add(Me.plus_btn5)
-        Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.addtocart_btn5)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.Label14)
@@ -2699,7 +2707,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.minus_btn4)
         Me.Controls.Add(Me.plus_btn4)
-        Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.addtocart_btn4)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.Label23)
@@ -2707,7 +2714,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label25)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.Label26)
@@ -2715,7 +2721,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label28)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.TextBox9)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.PictureBox9)
         Me.Controls.Add(Me.Label29)
@@ -2723,7 +2728,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label31)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.TextBox10)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.PictureBox10)
         Me.Controls.Add(Me.Label4)
@@ -2731,7 +2735,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.minus_btn)
         Me.Controls.Add(Me.plus_btn)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.addtocart_btn)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label5)
@@ -2739,7 +2742,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.minus_btn1)
         Me.Controls.Add(Me.plus_btn1)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.addtocart_btn1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label11)
@@ -2747,7 +2749,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.minus_btn3)
         Me.Controls.Add(Me.plus_btn3)
-        Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.addtocart_btn3)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.Label8)
@@ -2755,7 +2756,6 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.minus_btn2)
         Me.Controls.Add(Me.plus_btn2)
-        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.addtocart_btn2)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Button1)
@@ -2801,7 +2801,6 @@ Partial Class circuitrocks
     Friend WithEvents Label10 As Label
     Friend WithEvents minus_btn2 As Button
     Friend WithEvents plus_btn2 As Button
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents addtocart_btn2 As Button
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label11 As Label
@@ -2809,7 +2808,6 @@ Partial Class circuitrocks
     Friend WithEvents Label13 As Label
     Friend WithEvents minus_btn3 As Button
     Friend WithEvents plus_btn3 As Button
-    Friend WithEvents TextBox4 As TextBox
     Friend WithEvents addtocart_btn3 As Button
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label5 As Label
@@ -2817,7 +2815,6 @@ Partial Class circuitrocks
     Friend WithEvents Label7 As Label
     Friend WithEvents minus_btn1 As Button
     Friend WithEvents plus_btn1 As Button
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents addtocart_btn1 As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label4 As Label
@@ -2825,7 +2822,6 @@ Partial Class circuitrocks
     Friend WithEvents Label2 As Label
     Friend WithEvents minus_btn As Button
     Friend WithEvents plus_btn As Button
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents addtocart_btn As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label19 As Label
@@ -2833,7 +2829,6 @@ Partial Class circuitrocks
     Friend WithEvents Label21 As Label
     Friend WithEvents minus_btn6 As Button
     Friend WithEvents plus_btn6 As Button
-    Friend WithEvents TextBox7 As TextBox
     Friend WithEvents addtocart_btn6 As Button
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents Label16 As Label
@@ -2841,7 +2836,6 @@ Partial Class circuitrocks
     Friend WithEvents Label18 As Label
     Friend WithEvents minus_btn5 As Button
     Friend WithEvents plus_btn5 As Button
-    Friend WithEvents TextBox6 As TextBox
     Friend WithEvents addtocart_btn5 As Button
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents Label14 As Label
@@ -2849,7 +2843,6 @@ Partial Class circuitrocks
     Friend WithEvents Label22 As Label
     Friend WithEvents minus_btn4 As Button
     Friend WithEvents plus_btn4 As Button
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents addtocart_btn4 As Button
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Label23 As Label
@@ -2857,7 +2850,6 @@ Partial Class circuitrocks
     Friend WithEvents Label25 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents TextBox8 As TextBox
     Friend WithEvents Button4 As Button
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents Label26 As Label
@@ -2865,7 +2857,6 @@ Partial Class circuitrocks
     Friend WithEvents Label28 As Label
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
-    Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Button7 As Button
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents Label29 As Label
@@ -2873,7 +2864,6 @@ Partial Class circuitrocks
     Friend WithEvents Label31 As Label
     Friend WithEvents Button8 As Button
     Friend WithEvents Button9 As Button
-    Friend WithEvents TextBox10 As TextBox
     Friend WithEvents Button10 As Button
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents Label32 As Label
@@ -2881,7 +2871,6 @@ Partial Class circuitrocks
     Friend WithEvents Label34 As Label
     Friend WithEvents Button11 As Button
     Friend WithEvents Button12 As Button
-    Friend WithEvents TextBox11 As TextBox
     Friend WithEvents Button13 As Button
     Friend WithEvents PictureBox11 As PictureBox
     Friend WithEvents Label35 As Label
@@ -2889,7 +2878,6 @@ Partial Class circuitrocks
     Friend WithEvents Label37 As Label
     Friend WithEvents Button14 As Button
     Friend WithEvents Button15 As Button
-    Friend WithEvents TextBox12 As TextBox
     Friend WithEvents Button16 As Button
     Friend WithEvents PictureBox12 As PictureBox
     Friend WithEvents Label38 As Label
@@ -2897,7 +2885,6 @@ Partial Class circuitrocks
     Friend WithEvents Label40 As Label
     Friend WithEvents Button17 As Button
     Friend WithEvents Button18 As Button
-    Friend WithEvents TextBox13 As TextBox
     Friend WithEvents Button19 As Button
     Friend WithEvents PictureBox13 As PictureBox
     Friend WithEvents Label41 As Label
@@ -2905,7 +2892,6 @@ Partial Class circuitrocks
     Friend WithEvents Label43 As Label
     Friend WithEvents Button20 As Button
     Friend WithEvents Button21 As Button
-    Friend WithEvents TextBox14 As TextBox
     Friend WithEvents Button22 As Button
     Friend WithEvents PictureBox14 As PictureBox
     Friend WithEvents Label44 As Label
@@ -2913,7 +2899,6 @@ Partial Class circuitrocks
     Friend WithEvents Label46 As Label
     Friend WithEvents Button23 As Button
     Friend WithEvents Button24 As Button
-    Friend WithEvents TextBox15 As TextBox
     Friend WithEvents Button25 As Button
     Friend WithEvents PictureBox15 As PictureBox
     Friend WithEvents Label47 As Label
@@ -2921,7 +2906,6 @@ Partial Class circuitrocks
     Friend WithEvents Label49 As Label
     Friend WithEvents Button26 As Button
     Friend WithEvents Button27 As Button
-    Friend WithEvents TextBox16 As TextBox
     Friend WithEvents Button28 As Button
     Friend WithEvents PictureBox16 As PictureBox
     Friend WithEvents Label50 As Label
@@ -2929,7 +2913,6 @@ Partial Class circuitrocks
     Friend WithEvents Label52 As Label
     Friend WithEvents Button29 As Button
     Friend WithEvents Button30 As Button
-    Friend WithEvents TextBox17 As TextBox
     Friend WithEvents Button31 As Button
     Friend WithEvents PictureBox17 As PictureBox
     Friend WithEvents Label53 As Label
@@ -2937,7 +2920,6 @@ Partial Class circuitrocks
     Friend WithEvents Label55 As Label
     Friend WithEvents Button32 As Button
     Friend WithEvents Button33 As Button
-    Friend WithEvents TextBox18 As TextBox
     Friend WithEvents Button34 As Button
     Friend WithEvents PictureBox18 As PictureBox
     Friend WithEvents Label56 As Label
@@ -2945,7 +2927,6 @@ Partial Class circuitrocks
     Friend WithEvents Label58 As Label
     Friend WithEvents Button35 As Button
     Friend WithEvents Button36 As Button
-    Friend WithEvents TextBox19 As TextBox
     Friend WithEvents Button37 As Button
     Friend WithEvents PictureBox19 As PictureBox
     Friend WithEvents Label59 As Label
@@ -2953,7 +2934,6 @@ Partial Class circuitrocks
     Friend WithEvents Label61 As Label
     Friend WithEvents Button38 As Button
     Friend WithEvents Button39 As Button
-    Friend WithEvents TextBox20 As TextBox
     Friend WithEvents Button40 As Button
     Friend WithEvents PictureBox20 As PictureBox
     Friend WithEvents Label62 As Label
@@ -2961,7 +2941,6 @@ Partial Class circuitrocks
     Friend WithEvents Label64 As Label
     Friend WithEvents Button41 As Button
     Friend WithEvents Button42 As Button
-    Friend WithEvents TextBox21 As TextBox
     Friend WithEvents Button43 As Button
     Friend WithEvents PictureBox21 As PictureBox
     Friend WithEvents Label65 As Label
@@ -2969,7 +2948,6 @@ Partial Class circuitrocks
     Friend WithEvents Label67 As Label
     Friend WithEvents Button44 As Button
     Friend WithEvents Button45 As Button
-    Friend WithEvents TextBox22 As TextBox
     Friend WithEvents Button46 As Button
     Friend WithEvents PictureBox22 As PictureBox
     Friend WithEvents Label68 As Label
@@ -2977,7 +2955,6 @@ Partial Class circuitrocks
     Friend WithEvents Label70 As Label
     Friend WithEvents Button47 As Button
     Friend WithEvents Button48 As Button
-    Friend WithEvents TextBox23 As TextBox
     Friend WithEvents Button49 As Button
     Friend WithEvents PictureBox23 As PictureBox
     Friend WithEvents Label71 As Label
@@ -2985,7 +2962,6 @@ Partial Class circuitrocks
     Friend WithEvents Label73 As Label
     Friend WithEvents Button50 As Button
     Friend WithEvents Button51 As Button
-    Friend WithEvents TextBox24 As TextBox
     Friend WithEvents Button52 As Button
     Friend WithEvents PictureBox24 As PictureBox
     Friend WithEvents Label74 As Label
@@ -2993,7 +2969,31 @@ Partial Class circuitrocks
     Friend WithEvents Label76 As Label
     Friend WithEvents Button53 As Button
     Friend WithEvents Button54 As Button
-    Friend WithEvents TextBox25 As TextBox
     Friend WithEvents Button55 As Button
     Friend WithEvents PictureBox25 As PictureBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents TextBox17 As TextBox
+    Friend WithEvents TextBox18 As TextBox
+    Friend WithEvents TextBox19 As TextBox
+    Friend WithEvents TextBox20 As TextBox
+    Friend WithEvents TextBox21 As TextBox
+    Friend WithEvents TextBox22 As TextBox
+    Friend WithEvents TextBox23 As TextBox
+    Friend WithEvents TextBox24 As TextBox
+    Friend WithEvents TextBox25 As TextBox
 End Class
