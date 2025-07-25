@@ -230,6 +230,12 @@
     <Compile Include="element14.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="orders.Designer.vb">
+      <DependentUpon>orders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orders.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="oscilloscopes.Designer.vb">
       <DependentUpon>oscilloscopes.vb</DependentUpon>
     </Compile>
@@ -378,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="element14.resx">
       <DependentUpon>element14.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orders.resx">
+      <DependentUpon>orders.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="oscilloscopes.resx">
       <DependentUpon>oscilloscopes.vb</DependentUpon>

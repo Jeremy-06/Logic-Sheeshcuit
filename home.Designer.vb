@@ -174,7 +174,7 @@ Partial Class home
         Me.Panel1.Location = New System.Drawing.Point(4, 106)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(930, 494)
+        Me.Panel1.Size = New System.Drawing.Size(900, 494)
         Me.Panel1.TabIndex = 0
         '
         'Label1
