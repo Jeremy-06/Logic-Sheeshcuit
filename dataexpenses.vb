@@ -3,8 +3,8 @@
 'wait lang 'di pa yan tapos, icommit ko na raw kasi sabi ni Jirimiah Primavera 
 
 Public Class dataexpenses
-    Private Sub dataexpenses_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
+
+    Dim conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
         Dim cmd As MySqlCommand
         Dim da As MySqlDataAdapter
         Dim ds As DataSet
@@ -116,7 +116,6 @@ Public Class dataexpenses
         TextBox3.Clear()
         TextBox4.Clear()
         TextBox5.Clear()
-        TextBox6.Clear()
         RefreshData()
     End Sub
 
@@ -198,38 +197,38 @@ Public Class dataexpenses
     End Sub
 
     ' SEARCH
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Try
-            Dim searchText As String = TextBox6.Text.Trim()
-            If String.IsNullOrWhiteSpace(searchText) Then
-                MessageBox.Show("Please enter a product name to search.")
-                Exit Sub
-            End If
-
-            conn.Open()
-            query = "SELECT 
-                        i.inventoryId,
-                        p.productId,
-                        p.productName,
-                        pc.category,  
-                        p.productPrice,
-                        i.productStock,
-                        s.supplierName 
-                     FROM inventory i
-                     JOIN products p ON i.products_productId = p.productId
-                     JOIN productCategories pc ON p.productCategories_categoryId = pc.categoryId
-                     JOIN suppliers s ON i.suppliers_supplierId = s.supplierId
-                     WHERE p.productName LIKE '%" & searchText & "%'
-                     ORDER BY p.productId;"
-            cmd = New MySqlCommand(query, conn)
-            da = New MySqlDataAdapter(cmd)
-            ds = New DataSet()
-            da.Fill(ds, "products")
-            DataGridView1.DataSource = ds.Tables("products")
-            conn.Close()
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-            If conn.State = ConnectionState.Open Then conn.Close()
-        End Try
-    End Sub
+    ' Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    '     Try
+    '         Dim searchText As String = TextBox6.Text.Trim()
+    '         If String.IsNullOrWhiteSpace(searchText) Then
+    '             MessageBox.Show("Please enter a product name to search.")
+    '             Exit Sub
+    '         End If
+    '
+    '         conn.Open()
+    '         query = "SELECT 
+    '                     i.inventoryId,
+    '                     p.productId,
+    '                     p.productName,
+    '                     pc.category,  
+    '                     p.productPrice,
+    '                     i.productStock,
+    '                     s.supplierName 
+    '                  FROM inventory i
+    '                  JOIN products p ON i.products_productId = p.productId
+    '                  JOIN productCategories pc ON p.productCategories_categoryId = pc.categoryId
+    '                  JOIN suppliers s ON i.suppliers_supplierId = s.supplierId
+    '                  WHERE p.productName LIKE '%" & searchText & "%'
+    '                  ORDER BY p.productId;"
+    '         cmd = New MySqlCommand(query, conn)
+    '         da = New MySqlDataAdapter(cmd)
+    '         ds = New DataSet()
+    '         da.Fill(ds, "products")
+    '         DataGridView1.DataSource = ds.Tables("products")
+    '         conn.Close()
+    '     Catch ex As Exception
+    '         MessageBox.Show("Error: " & ex.Message)
+    '         If conn.State = ConnectionState.Open Then conn.Close()
+    '     End Try
+    ' End Sub
 End Class
