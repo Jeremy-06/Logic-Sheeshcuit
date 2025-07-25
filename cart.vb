@@ -12,24 +12,27 @@ Public Class cart
     Dim orderQty As Integer = 0
     Dim selectedCartId As Integer = 0
 
+    Dim customerId As Integer = login.customerId
     Private Sub cart_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         refreshData()
     End Sub
 
     Public Sub refreshData()
+        Button2.Enabled = False
         Try
             conn.Open()
-            query = "SELECT 
+            query = $"SELECT 
                         ca.cartId,
                         c.customerId,
                         p.productName,
                         p.productPrice,
-                        ca.productQty - IFNULL(SUM(oi.productQty), 0) AS remainingQty
+                        ca.productQty - COALESCE(SUM(oi.productQty), 0) AS remainingQty
                     FROM cart ca
                     INNER JOIN customers c ON ca.customers_customerId = c.customerId
                     INNER JOIN products p ON ca.products_productId = p.productId
                     LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                    GROUP BY ca.cartId
+                    WHERE c.customerId = {customerId}
+                    GROUP BY ca.cartId, c.customerId, p.productName, p.productPrice, ca.productQty
                     HAVING remainingQty > 0
                     ORDER BY p.productId;"
 
@@ -40,17 +43,27 @@ Public Class cart
             DataGridView1.DataSource = ds.Tables("cart")
 
             DataGridView1.Columns("cartId").Visible = False ' Hide cartId
-            DataGridView1.Columns("customerId").HeaderText = "Customer ID"
+            DataGridView1.Columns("customerId").Visible = False
             DataGridView1.Columns("productName").HeaderText = "Product Name"
             DataGridView1.Columns("productPrice").HeaderText = "Price"
             DataGridView1.Columns("remainingQty").HeaderText = "Quantity"
+
         Catch ex As Exception
             MessageBox.Show("Error loading cart: " & ex.Message)
         Finally
             conn.Close()
         End Try
     End Sub
+    Private Sub clearinput()
+        ' Clear all input fields and picture box
+        TextBox1.Clear() ' Product name
+        TextBox2.Clear() ' Product price
+        TextBox3.Clear() ' Quantity
+        PictureBox1.Image = Nothing
+        plus_btn.Enabled = False
+        minus_btn.Enabled = False
 
+    End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Dim productId As Integer
@@ -87,6 +100,7 @@ Public Class cart
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         Finally
+            Button2.Enabled = True
             conn.Close()
         End Try
     End Sub
@@ -96,35 +110,71 @@ Public Class cart
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         If DataGridView1.SelectedRows.Count > 0 Then
-            Dim customerId As Integer = Convert.ToInt32(DataGridView1.SelectedRows(0).Cells("customerId").Value)
+            Dim cartId As Integer = Convert.ToInt32(DataGridView1.SelectedRows(0).Cells("cartId").Value)
+            Dim remainingQty As Integer = Convert.ToInt32(DataGridView1.SelectedRows(0).Cells("remainingQty").Value)
             Dim productName As String = DataGridView1.SelectedRows(0).Cells("productName").Value.ToString()
 
-            Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this item from the cart?", "Confirm Delete", MessageBoxButtons.YesNo)
+            ' Get the quantity to remove from the user input (TextBox3)
+            Dim qtyToRemove As Integer
+            If Not Integer.TryParse(TextBox3.Text, qtyToRemove) Then
+                MessageBox.Show("Please enter a valid quantity to remove.")
+                Return
+            End If
+
+            If qtyToRemove <= 0 Then
+                MessageBox.Show("Please enter a quantity greater than 0.")
+                Return
+            End If
+
+            If qtyToRemove > remainingQty Then
+                MessageBox.Show($"Cannot remove {qtyToRemove} items. Only {remainingQty} items are available in cart.")
+                Return
+            End If
+
+            Dim confirm As DialogResult = MessageBox.Show($"Are you sure you want to remove {qtyToRemove} {productName} from your cart?", "Confirm Remove", MessageBoxButtons.YesNo)
             If confirm = DialogResult.No Then Exit Sub
 
             Try
                 conn.Open()
-                query = $"SELECT productId FROM products WHERE productName = '{productName}'"
-                cmd = New MySqlCommand(query, conn)
-                Dim productId As Integer = Convert.ToInt32(cmd.ExecuteScalar())
 
-                query = $"DELETE FROM cart WHERE customers_customerId = '{customerId}' AND products_productId = '{productId}'"
+                ' Get the total ordered quantity for this cart item
+                query = $"SELECT COALESCE(SUM(productQty), 0) FROM orderitems WHERE cart_cartId = {cartId}"
                 cmd = New MySqlCommand(query, conn)
-                cmd.ExecuteNonQuery()
+                Dim totalOrdered As Integer = Convert.ToInt32(cmd.ExecuteScalar())
 
-                MessageBox.Show("Item deleted successfully.")
+                ' Calculate new cart quantity after removal
+                Dim newCartQty As Integer = (totalOrdered + remainingQty) - qtyToRemove
+
+                If newCartQty > 0 Then
+                    ' Update cart quantity
+                    query = $"UPDATE cart SET productQty = {newCartQty} WHERE cartId = {cartId}"
+                    cmd = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+
+                    Dim newRemainingQty As Integer = newCartQty - totalOrdered
+                    MessageBox.Show($"Removed {qtyToRemove} items from cart. Remaining quantity: {newRemainingQty}")
+                Else
+                    ' If removing all items, delete the entire cart item
+                    query = $"DELETE FROM cart WHERE cartId = {cartId}"
+                    cmd = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+
+                    MessageBox.Show("All items removed from cart.")
+                End If
+
             Catch ex As Exception
-                MessageBox.Show("Error deleting item: " & ex.Message)
+                MessageBox.Show("Error removing item: " & ex.Message)
             Finally
                 conn.Close()
                 refreshData()
+                clearinput()
             End Try
         Else
-            MessageBox.Show("Please select a row to delete.")
+            MessageBox.Show("Please select a row to remove.")
         End If
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        orders.Show()
+        'orders.Show()
 
         If DataGridView1.SelectedRows.Count > 0 Then
             Dim customerId As Integer = Convert.ToInt32(DataGridView1.SelectedRows(0).Cells("customerId").Value)
@@ -169,14 +219,7 @@ Public Class cart
             Finally
                 conn.Close()
                 refreshData()
-                ' Clear all input fields and picture box
-                TextBox1.Clear() ' Product name
-                TextBox2.Clear() ' Product price
-                TextBox3.Clear() ' Quantity
-                PictureBox1.Image = Nothing
-                plus_btn.Enabled = False
-                minus_btn.Enabled = False
-
+                clearinput()
             End Try
         Else
             MessageBox.Show("Please select an item to order.")

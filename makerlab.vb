@@ -12,11 +12,19 @@ Public Class makerlab
     Dim product2Qty As Integer = 0
     Dim product3Qty As Integer = 0
     Dim product7Qty As Integer = 0
-
-
+    Dim product9Qty As Integer = 0
+    Dim product12Qty As Integer = 0
 
     Private Sub makerlab_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+    Private Sub clearQty()
+        TextBox1.Text = 0
+        TextBox2.Text = 0
+        TextBox3.Text = 0
+        TextBox4.Text = 0
+        TextBox5.Text = 0
+        TextBox6.Text = 0
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Back.Click
@@ -24,9 +32,10 @@ Public Class makerlab
         home.Show()
     End Sub
 
+    ' PRODUCT 1 
     Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
         Dim customerId = login.customerId
-        Dim productId As Integer = 1 ' Change this if needed
+        Dim productId As Integer = 1
         Dim newQty As Integer
 
         If Not Integer.TryParse(TextBox1.Text, newQty) Then
@@ -40,32 +49,48 @@ Public Class makerlab
         End If
 
         Try
-            conn.Open()
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
 
-            ' Check if there's an existing cart item for this product and customer
-            query = $"SELECT cartId, productQty 
-                 FROM cart 
-                 WHERE products_productId = {productId} 
-                   AND customers_customerId = {customerId}
-                 LIMIT 1"
+            ' First, find cart items for this product and customer that have remaining quantity
+            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
+                  FROM cart ca
+                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
+                  WHERE ca.products_productId = {productId} 
+                    AND ca.customers_customerId = {customerId}
+                  GROUP BY ca.cartId, ca.productQty
+                  ORDER BY ca.cartId DESC"
 
             cmd = New MySqlCommand(query, conn)
-            Dim existingCartId = cmd.ExecuteScalar()
+            da = New MySqlDataAdapter(cmd)
+            ds = New DataSet()
+            da.Fill(ds, "cartcheck")
 
-            If existingCartId IsNot Nothing Then
-                ' Found existing cart item - update it (add to existing quantity)
-                query = $"UPDATE cart SET productQty = productQty + {newQty} WHERE cartId = {existingCartId}"
+            Dim foundAvailableCart As Boolean = False
+            Dim availableCartId As Integer = 0
+
+            ' Check if any cart item has remaining quantity > 0
+            For Each row As DataRow In ds.Tables("cartcheck").Rows
+                If Convert.ToInt32(row("remainingQty")) > 0 Then
+                    foundAvailableCart = True
+                    availableCartId = Convert.ToInt32(row("cartId"))
+                    Exit For
+                End If
+            Next
+
+            If foundAvailableCart Then
+                ' Found existing cart item with remaining quantity - update it
+                query = $"UPDATE cart SET productQty = productQty + {newQty} WHERE cartId = {availableCartId}"
                 cmd = New MySqlCommand(query, conn)
                 cmd.ExecuteNonQuery()
-
                 MessageBox.Show($"Updated cart! Added {newQty} more items to existing cart item.")
+
             Else
-                ' No cart item exists for this product - insert new one
-                query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) 
-                     VALUES ({productId}, {customerId}, {newQty})"
+                ' No available cart item found - insert new one
+                query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES ({productId}, {customerId}, {newQty})"
                 cmd = New MySqlCommand(query, conn)
                 cmd.ExecuteNonQuery()
-
                 MessageBox.Show($"Product added to cart successfully! Quantity: {newQty}")
             End If
 
@@ -75,109 +100,480 @@ Public Class makerlab
         Catch ex As Exception
             MessageBox.Show("Error adding product to cart: " & ex.Message)
         Finally
-            conn.Close()
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+            clearQty()
         End Try
     End Sub
-
-
 
     Private Sub plus_btn_Click(sender As Object, e As EventArgs) Handles plus_btn.Click
         product1Qty += 1
         TextBox1.Text = product1Qty.ToString()
-        If product1Qty <= 0 Then
-            product1Qty = 0
-            TextBox1.Text = product1Qty.ToString()
-            minus_btn.Enabled = False
-        Else
-            minus_btn.Enabled = True
-        End If
+        minus_btn.Enabled = True ' Always enable minus button when quantity > 0
     End Sub
+
     Private Sub minus_btn_Click(sender As Object, e As EventArgs) Handles minus_btn.Click
-        product1Qty -= 1
-        TextBox1.Text = product1Qty.ToString()
-        If product1Qty <= 0 Then
-            product1Qty = 0
+        If product1Qty > 0 Then
+            product1Qty -= 1
             TextBox1.Text = product1Qty.ToString()
-            minus_btn.Enabled = False
-        End If
-    End Sub
-    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs) Handles addtocart_btn1.Click
-        If Integer.TryParse(TextBox2.Text, product2Qty) Then
-            ' product1Qty now contains the integer value from the textbox
-            Try
-                conn.Open()
-                query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES (2, 1, '{product2Qty}')"
-                cmd = New MySqlCommand(query, conn)
-                cmd.ExecuteNonQuery()
-                MessageBox.Show("Product added to cart successfully!")
-            Catch ex As Exception
-                MessageBox.Show("Error adding product to cart: " & ex.Message)
-            Finally
-                conn.Close()
-            End Try
-        Else
-            MessageBox.Show("Please enter a valid number.")
+            If product1Qty <= 0 Then
+                minus_btn.Enabled = False
+            End If
         End If
     End Sub
 
+    ' PRODUCT 2
+    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs) Handles addtocart_btn1.Click
+        Dim customerId = login.customerId
+        Dim productId As Integer = 2
+        Dim newQty As Integer
+
+        If Not Integer.TryParse(TextBox2.Text, newQty) Then
+            MessageBox.Show("Please enter a valid number.")
+            Return
+        End If
+
+        If newQty <= 0 Then
+            MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+
+            ' First, find cart items for this product and customer that have remaining quantity
+            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
+                  FROM cart ca
+                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
+                  WHERE ca.products_productId = {productId} 
+                    AND ca.customers_customerId = {customerId}
+                  GROUP BY ca.cartId, ca.productQty
+                  ORDER BY ca.cartId DESC"
+
+            cmd = New MySqlCommand(query, conn)
+            da = New MySqlDataAdapter(cmd)
+            ds = New DataSet()
+            da.Fill(ds, "cartcheck")
+
+            Dim foundAvailableCart As Boolean = False
+            Dim availableCartId As Integer = 0
+
+            ' Check if any cart item has remaining quantity > 0
+            For Each row As DataRow In ds.Tables("cartcheck").Rows
+                If Convert.ToInt32(row("remainingQty")) > 0 Then
+                    foundAvailableCart = True
+                    availableCartId = Convert.ToInt32(row("cartId"))
+                    Exit For
+                End If
+            Next
+
+            If foundAvailableCart Then
+                ' Found existing cart item with remaining quantity - update it
+                query = $"UPDATE cart SET productQty = productQty + {newQty} WHERE cartId = {availableCartId}"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+                MessageBox.Show($"Updated cart! Added {newQty} more items to existing cart item.")
+
+            Else
+                ' No available cart item found - insert new one
+                query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES ({productId}, {customerId}, {newQty})"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+                MessageBox.Show($"Product added to cart successfully! Quantity: {newQty}")
+            End If
+
+            ' Refresh cart display
+            cart.refreshData()
+
+        Catch ex As Exception
+            MessageBox.Show("Error adding product to cart: " & ex.Message)
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+            clearQty()
+        End Try
+    End Sub
     Private Sub plus_btn1_Click(sender As Object, e As EventArgs) Handles plus_btn1.Click
         product2Qty += 1
         TextBox2.Text = product2Qty.ToString()
-        If product2Qty <= 0 Then
-            product2Qty = 0
-            TextBox1.Text = product2Qty.ToString()
-            minus_btn.Enabled = False
-        Else
-            minus_btn.Enabled = True
-        End If
+        minus_btn1.Enabled = True ' Always enable minus button when quantity > 0
     End Sub
+
     Private Sub minus_btn1_Click(sender As Object, e As EventArgs) Handles minus_btn1.Click
-        product2Qty -= 1
-        TextBox2.Text = product2Qty.ToString()
-        If product2Qty <= 0 Then
-            product2Qty = 0
+        If product2Qty > 0 Then
+            product2Qty -= 1
             TextBox2.Text = product2Qty.ToString()
-            minus_btn1.Enabled = False
+            If product2Qty <= 0 Then
+                minus_btn1.Enabled = False
+            End If
         End If
     End Sub
 
+    ' PRODUCT 3
     Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs) Handles addtocart_btn2.Click
-        If Integer.TryParse(TextBox3.Text, product3Qty) Then
-            ' product1Qty now contains the integer value from the textbox
-            Try
+        Dim customerId = login.customerId
+        Dim productId As Integer = 3
+        Dim newQty As Integer
+
+        If Not Integer.TryParse(TextBox3.Text, newQty) Then
+            MessageBox.Show("Please enter a valid number.")
+            Return
+        End If
+
+        If newQty <= 0 Then
+            MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+
+        Try
+            If conn.State = ConnectionState.Closed Then
                 conn.Open()
-                query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES (3, 1, '{product3Qty}')"
+            End If
+
+            ' First, find cart items for this product and customer that have remaining quantity
+            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
+                  FROM cart ca
+                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
+                  WHERE ca.products_productId = {productId} 
+                    AND ca.customers_customerId = {customerId}
+                  GROUP BY ca.cartId, ca.productQty
+                  ORDER BY ca.cartId DESC"
+
+            cmd = New MySqlCommand(query, conn)
+            da = New MySqlDataAdapter(cmd)
+            ds = New DataSet()
+            da.Fill(ds, "cartcheck")
+
+            Dim foundAvailableCart As Boolean = False
+            Dim availableCartId As Integer = 0
+
+            ' Check if any cart item has remaining quantity > 0
+            For Each row As DataRow In ds.Tables("cartcheck").Rows
+                If Convert.ToInt32(row("remainingQty")) > 0 Then
+                    foundAvailableCart = True
+                    availableCartId = Convert.ToInt32(row("cartId"))
+                    Exit For
+                End If
+            Next
+
+            If foundAvailableCart Then
+                ' Found existing cart item with remaining quantity - update it
+                query = $"UPDATE cart SET productQty = productQty + {newQty} WHERE cartId = {availableCartId}"
                 cmd = New MySqlCommand(query, conn)
                 cmd.ExecuteNonQuery()
-                MessageBox.Show("Product added to cart successfully!")
-            Catch ex As Exception
-                MessageBox.Show("Error adding product to cart: " & ex.Message)
-            Finally
+                MessageBox.Show($"Updated cart! Added {newQty} more items to existing cart item.")
+
+            Else
+                ' No available cart item found - insert new one
+                query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES ({productId}, {customerId}, {newQty})"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+                MessageBox.Show($"Product added to cart successfully! Quantity: {newQty}")
+            End If
+
+            ' Refresh cart display
+            cart.refreshData()
+
+        Catch ex As Exception
+            MessageBox.Show("Error adding product to cart: " & ex.Message)
+        Finally
+            If conn.State = ConnectionState.Open Then
                 conn.Close()
-            End Try
-        Else
-            MessageBox.Show("Please enter a valid number.")
-        End If
+            End If
+            clearQty()
+        End Try
     End Sub
 
     Private Sub plus_btn2_Click(sender As Object, e As EventArgs) Handles plus_btn2.Click
         product3Qty += 1
         TextBox3.Text = product3Qty.ToString()
-        If product3Qty <= 0 Then
-            product3Qty = 0
+        minus_btn2.Enabled = True ' Always enable minus button when quantity > 0
+    End Sub
+
+    Private Sub minus_btn2_Click(sender As Object, e As EventArgs) Handles minus_btn2.Click
+        If product3Qty > 0 Then
+            product3Qty -= 1
             TextBox3.Text = product3Qty.ToString()
-            minus_btn2.Enabled = False
-        Else
-            minus_btn2.Enabled = True
+            If product3Qty <= 0 Then
+                minus_btn2.Enabled = False
+            End If
         End If
     End Sub
-    Private Sub minus_btn2_Click(sender As Object, e As EventArgs) Handles minus_btn2.Click
-        product3Qty -= 1
-        TextBox3.Text = product3Qty.ToString()
-        If product3Qty <= 0 Then
-            product3Qty = 0
-            TextBox3.Text = product3Qty.ToString()
-            minus_btn2.Enabled = False
+
+    'PRODUCT 7
+    Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs) Handles addtocart_btn3.Click
+        Dim customerId = login.customerId
+        Dim productId As Integer = 7
+        Dim newQty As Integer
+
+        If Not Integer.TryParse(TextBox4.Text, newQty) Then
+            MessageBox.Show("Please enter a valid number.")
+            Return
+        End If
+
+        If newQty <= 0 Then
+            MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+
+            ' First, find cart items for this product and customer that have remaining quantity
+            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
+                  FROM cart ca
+                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
+                  WHERE ca.products_productId = {productId} 
+                    AND ca.customers_customerId = {customerId}
+                  GROUP BY ca.cartId, ca.productQty
+                  ORDER BY ca.cartId DESC"
+
+            cmd = New MySqlCommand(query, conn)
+            da = New MySqlDataAdapter(cmd)
+            ds = New DataSet()
+            da.Fill(ds, "cartcheck")
+
+            Dim foundAvailableCart As Boolean = False
+            Dim availableCartId As Integer = 0
+
+            ' Check if any cart item has remaining quantity > 0
+            For Each row As DataRow In ds.Tables("cartcheck").Rows
+                If Convert.ToInt32(row("remainingQty")) > 0 Then
+                    foundAvailableCart = True
+                    availableCartId = Convert.ToInt32(row("cartId"))
+                    Exit For
+                End If
+            Next
+
+            If foundAvailableCart Then
+                ' Found existing cart item with remaining quantity - update it
+                query = $"UPDATE cart SET productQty = productQty + {newQty} WHERE cartId = {availableCartId}"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+                MessageBox.Show($"Updated cart! Added {newQty} more items to existing cart item.")
+
+            Else
+                ' No available cart item found - insert new one
+                query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES ({productId}, {customerId}, {newQty})"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+                MessageBox.Show($"Product added to cart successfully! Quantity: {newQty}")
+            End If
+
+            ' Refresh cart display
+            cart.refreshData()
+
+        Catch ex As Exception
+            MessageBox.Show("Error adding product to cart: " & ex.Message)
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+            clearQty()
+        End Try
+    End Sub
+
+    Private Sub plus_btn3_Click(sender As Object, e As EventArgs) Handles plus_btn3.Click
+        product7Qty += 1
+        TextBox4.Text = product7Qty.ToString()
+        minus_btn3.Enabled = True ' Always enable minus button when quantity > 0
+    End Sub
+
+    Private Sub minus_btn3_Click(sender As Object, e As EventArgs) Handles minus_btn3.Click
+        If product7Qty > 0 Then
+            product7Qty -= 1
+            TextBox4.Text = product7Qty.ToString()
+            If product7Qty <= 0 Then
+                minus_btn3.Enabled = False
+            End If
+        End If
+    End Sub
+
+    'PRODUCT 9
+    Private Sub addtocart_btn4_Click(sender As Object, e As EventArgs) Handles addtocart_btn4.Click
+        Dim customerId = login.customerId
+        Dim productId As Integer = 9
+        Dim newQty As Integer
+
+        If Not Integer.TryParse(TextBox5.Text, newQty) Then
+            MessageBox.Show("Please enter a valid number.")
+            Return
+        End If
+
+        If newQty <= 0 Then
+            MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+
+            ' First, find cart items for this product and customer that have remaining quantity
+            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
+                  FROM cart ca
+                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
+                  WHERE ca.products_productId = {productId} 
+                    AND ca.customers_customerId = {customerId}
+                  GROUP BY ca.cartId, ca.productQty
+                  ORDER BY ca.cartId DESC"
+
+            cmd = New MySqlCommand(query, conn)
+            da = New MySqlDataAdapter(cmd)
+            ds = New DataSet()
+            da.Fill(ds, "cartcheck")
+
+            Dim foundAvailableCart As Boolean = False
+            Dim availableCartId As Integer = 0
+
+            ' Check if any cart item has remaining quantity > 0
+            For Each row As DataRow In ds.Tables("cartcheck").Rows
+                If Convert.ToInt32(row("remainingQty")) > 0 Then
+                    foundAvailableCart = True
+                    availableCartId = Convert.ToInt32(row("cartId"))
+                    Exit For
+                End If
+            Next
+
+            If foundAvailableCart Then
+                ' Found existing cart item with remaining quantity - update it
+                query = $"UPDATE cart SET productQty = productQty + {newQty} WHERE cartId = {availableCartId}"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+                MessageBox.Show($"Updated cart! Added {newQty} more items to existing cart item.")
+
+            Else
+                ' No available cart item found - insert new one
+                query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES ({productId}, {customerId}, {newQty})"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+                MessageBox.Show($"Product added to cart successfully! Quantity: {newQty}")
+            End If
+
+            ' Refresh cart display
+            cart.refreshData()
+
+        Catch ex As Exception
+            MessageBox.Show("Error adding product to cart: " & ex.Message)
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+            clearQty()
+        End Try
+    End Sub
+
+    Private Sub plus_btn4_Click(sender As Object, e As EventArgs) Handles plus_btn4.Click
+        product9Qty += 1
+        TextBox5.Text = product9Qty.ToString()
+        minus_btn4.Enabled = True ' Always enable minus button when quantity > 0
+    End Sub
+
+    Private Sub minus_btn4_Click(sender As Object, e As EventArgs) Handles minus_btn4.Click
+        If product9Qty > 0 Then
+            product9Qty -= 1
+            TextBox5.Text = product9Qty.ToString()
+            If product9Qty <= 0 Then
+                minus_btn4.Enabled = False
+            End If
+        End If
+    End Sub
+
+    'PRODUCT 12
+    Private Sub addtocart_btn5_Click(sender As Object, e As EventArgs) Handles addtocart_btn5.Click
+        Dim customerId = login.customerId
+        Dim productId As Integer = 12
+        Dim newQty As Integer
+
+        If Not Integer.TryParse(TextBox6.Text, newQty) Then
+            MessageBox.Show("Please enter a valid number.")
+            Return
+        End If
+
+        If newQty <= 0 Then
+            MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+
+            ' First, find cart items for this product and customer that have remaining quantity
+            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
+                  FROM cart ca
+                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
+                  WHERE ca.products_productId = {productId} 
+                    AND ca.customers_customerId = {customerId}
+                  GROUP BY ca.cartId, ca.productQty
+                  ORDER BY ca.cartId DESC"
+
+            cmd = New MySqlCommand(query, conn)
+            da = New MySqlDataAdapter(cmd)
+            ds = New DataSet()
+            da.Fill(ds, "cartcheck")
+
+            Dim foundAvailableCart As Boolean = False
+            Dim availableCartId As Integer = 0
+
+            ' Check if any cart item has remaining quantity > 0
+            For Each row As DataRow In ds.Tables("cartcheck").Rows
+                If Convert.ToInt32(row("remainingQty")) > 0 Then
+                    foundAvailableCart = True
+                    availableCartId = Convert.ToInt32(row("cartId"))
+                    Exit For
+                End If
+            Next
+
+            If foundAvailableCart Then
+                ' Found existing cart item with remaining quantity - update it
+                query = $"UPDATE cart SET productQty = productQty + {newQty} WHERE cartId = {availableCartId}"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+                MessageBox.Show($"Updated cart! Added {newQty} more items to existing cart item.")
+
+            Else
+                ' No available cart item found - insert new one
+                query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES ({productId}, {customerId}, {newQty})"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+                MessageBox.Show($"Product added to cart successfully! Quantity: {newQty}")
+            End If
+
+            ' Refresh cart display
+            cart.refreshData()
+
+        Catch ex As Exception
+            MessageBox.Show("Error adding product to cart: " & ex.Message)
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+            clearQty()
+        End Try
+    End Sub
+
+    Private Sub plus_btn5_Click(sender As Object, e As EventArgs) Handles plus_btn5.Click
+        product12Qty += 1
+        TextBox6.Text = product12Qty.ToString()
+        minus_btn5.Enabled = True ' Always enable minus button when quantity > 0
+    End Sub
+
+    Private Sub minus_btn5_Click(sender As Object, e As EventArgs) Handles minus_btn5.Click
+        If product12Qty > 0 Then
+            product12Qty -= 1
+            TextBox6.Text = product12Qty.ToString()
+            If product12Qty <= 0 Then
+                minus_btn5.Enabled = False
+            End If
         End If
     End Sub
 End Class
