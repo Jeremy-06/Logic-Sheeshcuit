@@ -110,12 +110,6 @@
     <Compile Include="datacart.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="datacustomers.Designer.vb">
-      <DependentUpon>datacustomers.vb</DependentUpon>
-    </Compile>
-    <Compile Include="datacustomers.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="dataeditor.Designer.vb">
       <DependentUpon>dataeditor.vb</DependentUpon>
     </Compile>
@@ -132,24 +126,6 @@
       <DependentUpon>dataorderitems.vb</DependentUpon>
     </Compile>
     <Compile Include="dataorderitems.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="dataproductcategories.Designer.vb">
-      <DependentUpon>dataproductcategories.vb</DependentUpon>
-    </Compile>
-    <Compile Include="dataproductcategories.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="dataproducts.Designer.vb">
-      <DependentUpon>dataproducts.vb</DependentUpon>
-    </Compile>
-    <Compile Include="dataproducts.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="datasuppliers.Designer.vb">
-      <DependentUpon>datasuppliers.vb</DependentUpon>
-    </Compile>
-    <Compile Include="datasuppliers.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="datausers.Designer.vb">
@@ -346,9 +322,6 @@
     <EmbeddedResource Include="datacart.resx">
       <DependentUpon>datacart.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="datacustomers.resx">
-      <DependentUpon>datacustomers.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="dataeditor.resx">
       <DependentUpon>dataeditor.vb</DependentUpon>
     </EmbeddedResource>
@@ -357,15 +330,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dataorderitems.resx">
       <DependentUpon>dataorderitems.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="dataproductcategories.resx">
-      <DependentUpon>dataproductcategories.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="dataproducts.resx">
-      <DependentUpon>dataproducts.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="datasuppliers.resx">
-      <DependentUpon>datasuppliers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="datausers.resx">
       <DependentUpon>datausers.vb</DependentUpon>
@@ -622,6 +586,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Security Form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
