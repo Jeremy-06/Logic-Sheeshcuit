@@ -1,4 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.MySqlClient
 
 Public Class circuitrocks
     Dim conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
@@ -95,13 +95,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -170,13 +164,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -245,13 +233,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -320,13 +302,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -395,13 +371,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -470,13 +440,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -545,13 +509,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -620,13 +578,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -695,13 +647,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -770,13 +716,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -845,13 +785,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -920,13 +854,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -995,13 +923,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -1070,13 +992,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -1145,13 +1061,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -1220,13 +1130,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -1296,13 +1200,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -1371,13 +1269,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -1446,13 +1338,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -1521,13 +1407,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -1596,13 +1476,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -1671,13 +1545,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -1746,13 +1614,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -1822,13 +1684,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -1897,13 +1753,7 @@ Public Class circuitrocks
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()

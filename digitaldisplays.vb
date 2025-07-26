@@ -1,4 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.MySqlClient
 
 Public Class digitaldisplays
     Dim conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
@@ -76,13 +76,7 @@ Public Class digitaldisplays
                 conn.Open()
             End If
 
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
 
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
@@ -164,13 +158,7 @@ Public Class digitaldisplays
                 conn.Open()
             End If
 
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
 
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)

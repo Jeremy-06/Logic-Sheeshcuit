@@ -1,4 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.MySqlClient
 
 Public Class makerlab
     Dim conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
@@ -97,14 +97,8 @@ Public Class makerlab
                 conn.Open()
             End If
 
-            ' First, find cart items for this product and customer that have remaining quantity
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            ' First, find cart items for this product and customer
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
 
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
@@ -194,13 +188,7 @@ Public Class makerlab
             End If
 
             ' First, find cart items for this product and customer that have remaining quantity
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
 
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
@@ -289,13 +277,7 @@ Public Class makerlab
             End If
 
             ' First, find cart items for this product and customer that have remaining quantity
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
 
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
@@ -385,13 +367,7 @@ Public Class makerlab
             End If
 
             ' First, find cart items for this product and customer that have remaining quantity
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
 
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
@@ -481,13 +457,7 @@ Public Class makerlab
             End If
 
             ' First, find cart items for this product and customer that have remaining quantity
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
 
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
@@ -577,13 +547,7 @@ Public Class makerlab
             End If
 
             ' First, find cart items for this product and customer that have remaining quantity
-            query = $"SELECT ca.cartId, (ca.productQty - COALESCE(SUM(oi.productQty), 0)) AS remainingQty
-                  FROM cart ca
-                  LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
-                  WHERE ca.products_productId = {productId} 
-                    AND ca.customers_customerId = {customerId}
-                  GROUP BY ca.cartId, ca.productQty
-                  ORDER BY ca.cartId DESC"
+            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
 
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)

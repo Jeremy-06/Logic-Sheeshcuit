@@ -1,4 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.MySqlClient
 
 Public Class datacart
     Dim conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
@@ -20,10 +20,9 @@ Public Class datacart
                         p.productName,
                         pc.category,  
                         p.productPrice,
-                        oi.productQty,
+                        c.productQty,
                         s.supplierName 
                      FROM cart c
-                     JOIN orderitems oi ON c.cartId = oi.cart_cartId
                      JOIN customers cu ON c.customers_customerId = cu.customerId
                      JOIN products p ON c.products_productId = p.productId
                      JOIN inventory i ON i.products_productId = p.productId

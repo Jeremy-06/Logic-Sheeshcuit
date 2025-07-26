@@ -1,4 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.MySqlClient
 
 Public Class cart
     Dim conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
@@ -26,14 +26,11 @@ Public Class cart
                         c.customerId,
                         p.productName,
                         p.productPrice,
-                        ca.productQty - COALESCE(SUM(oi.productQty), 0) AS remainingQty
+                        ca.productQty AS remainingQty
                     FROM cart ca
                     INNER JOIN customers c ON ca.customers_customerId = c.customerId
                     INNER JOIN products p ON ca.products_productId = p.productId
-                    LEFT JOIN orderitems oi ON ca.cartId = oi.cart_cartId
                     WHERE c.customerId = {customerId}
-                    GROUP BY ca.cartId, c.customerId, p.productName, p.productPrice, ca.productQty
-                    HAVING remainingQty > 0
                     ORDER BY p.productId;"
 
             cmd = New MySqlCommand(query, conn)
@@ -137,13 +134,8 @@ Public Class cart
             Try
                 conn.Open()
 
-                ' Get the total ordered quantity for this cart item
-                query = $"SELECT COALESCE(SUM(productQty), 0) FROM orderitems WHERE cart_cartId = {cartId}"
-                cmd = New MySqlCommand(query, conn)
-                Dim totalOrdered As Integer = Convert.ToInt32(cmd.ExecuteScalar())
-
                 ' Calculate new cart quantity after removal
-                Dim newCartQty As Integer = (totalOrdered + remainingQty) - qtyToRemove
+                Dim newCartQty As Integer = remainingQty - qtyToRemove
 
                 If newCartQty > 0 Then
                     ' Update cart quantity
@@ -151,8 +143,7 @@ Public Class cart
                     cmd = New MySqlCommand(query, conn)
                     cmd.ExecuteNonQuery()
 
-                    Dim newRemainingQty As Integer = newCartQty - totalOrdered
-                    MessageBox.Show($"Removed {qtyToRemove} items from cart. Remaining quantity: {newRemainingQty}")
+                    MessageBox.Show($"Removed {qtyToRemove} items from cart. Remaining quantity: {newCartQty}")
                 Else
                     ' If removing all items, delete the entire cart item
                     query = $"DELETE FROM cart WHERE cartId = {cartId}"
@@ -189,16 +180,8 @@ Public Class cart
 
                 Dim cartId As Integer = selectedCartId
 
-                ' Insert into sales
-                query = "INSERT INTO sales (salesDate) VALUES (CURDATE())"
-                cmd = New MySqlCommand(query, conn)
-                cmd.ExecuteNonQuery()
-
-                query = "SELECT LAST_INSERT_ID();"
-                cmd = New MySqlCommand(query, conn)
-                Dim salesId As Integer = Convert.ToInt32(cmd.ExecuteScalar())
-
-                query = $"INSERT INTO orders (orderDate, orderStatus, sales_salesId) VALUES (CURDATE(), 'Pending', {salesId})"
+                ' Create order first
+                query = $"INSERT INTO orders (orderDate, orderStatus) VALUES (CURDATE(), 'Pending')"
                 cmd = New MySqlCommand(query, conn)
                 cmd.ExecuteNonQuery()
 
@@ -206,11 +189,23 @@ Public Class cart
                 cmd = New MySqlCommand(query, conn)
                 Dim orderId As Integer = Convert.ToInt32(cmd.ExecuteScalar())
 
-                ' Insert into orderitems (just record how much was ordered)
-                query = "INSERT INTO orderitems (productQty, orders_orderId, cart_cartId, cart_products_productId, cart_customers_customerId) " &
-                    $"VALUES ({orderQty}, {orderId}, {cartId}, {productId}, {customerId})"
+                ' Insert into orderitems
+                query = $"INSERT INTO orderitems (productQty, orders_orderId) VALUES ({orderQty}, {orderId})"
                 cmd = New MySqlCommand(query, conn)
                 cmd.ExecuteNonQuery()
+
+                ' Remove the ordered quantity from cart
+                Dim newCartQty As Integer = cartQty - orderQty
+                If newCartQty > 0 Then
+                    query = $"UPDATE cart SET productQty = {newCartQty} WHERE cartId = {cartId}"
+                    cmd = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+                Else
+                    ' If all items ordered, delete the cart item
+                    query = $"DELETE FROM cart WHERE cartId = {cartId}"
+                    cmd = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+                End If
 
                 MessageBox.Show("Order placed successfully.")
 
