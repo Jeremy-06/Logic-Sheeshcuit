@@ -91,7 +91,9 @@ Public Class signup2
                 conn.Open()
             End If
             ' Insert into users table (no parameterized query)
-            query = $"INSERT INTO users (username, password, userRole) VALUES ('{TextBox1.Text.Trim()}', '{TextBox2.Text.Trim()}', 'customer')"
+            Dim username As String = TextBox1.Text.Trim().ToLower()
+            Dim password As String = TextBox2.Text.Trim().ToLower()
+            query = $"INSERT INTO users (username, password, userRole) VALUES ('{username}', '{password}', 'customer')"
             cmd = New MySqlCommand(query, conn)
             cmd.ExecuteNonQuery()
             ' Get the new userId

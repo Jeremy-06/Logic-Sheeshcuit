@@ -58,12 +58,16 @@ Public Class userprofile
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
-        login.Show() ' Show login form
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         ' Log out functionality
-        login.customerId = 0 ' Reset customer ID to indicate not logged in
-        MessageBox.Show("You have been logged out successfully.", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If result = DialogResult.Yes Then
+            login.customerId = 0 ' Reset customer ID to indicate not logged in
+            MessageBox.Show("You have been logged out successfully.", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            login.Show()
+            Me.Hide()
+        End If
     End Sub
 End Class
