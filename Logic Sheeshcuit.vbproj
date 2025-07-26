@@ -302,6 +302,12 @@
     <Compile Include="switches.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="userprofile.Designer.vb">
+      <DependentUpon>userprofile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="userprofile.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="wires.Designer.vb">
       <DependentUpon>wires.vb</DependentUpon>
     </Compile>
@@ -420,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="switches.resx">
       <DependentUpon>switches.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userprofile.resx">
+      <DependentUpon>userprofile.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="wires.resx">
       <DependentUpon>wires.vb</DependentUpon>

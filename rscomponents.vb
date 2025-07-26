@@ -26,6 +26,13 @@ Public Class rscomponents
     End Sub
 
     Private Function ValidateCustomer() As Boolean
+        ' Check if user is logged in
+        If login.customerId = 0 Then
+            MessageBox.Show("Please log in first to add items to cart.")
+            Me.Hide()
+            login.Show()
+            Return False
+        End If
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
