@@ -2,66 +2,101 @@
 Public Class home
     Private smoothScrollTarget As Integer = 0
     Private WithEvents smoothScrollTimer As New Timer With {.Interval = 10}
+    Private currentOpenForm As Form = Nothing
 
     Protected Overrides Sub OnFormClosing(e As FormClosingEventArgs)
         MyBase.OnFormClosing(e)
         Application.Exit()
     End Sub
 
+    Private Sub HideCurrentForm()
+        If currentOpenForm IsNot Nothing AndAlso Not currentOpenForm.IsDisposed Then
+            currentOpenForm.Hide()
+        End If
+    End Sub
+
     Private Sub MakerlabToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MakerlabToolStripMenuItem.Click
+        HideCurrentForm()
         makerlab.Show()
+        currentOpenForm = makerlab
     End Sub
 
     Private Sub CircuitrocksToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CircuitrocksToolStripMenuItem.Click
+        HideCurrentForm()
         circuitrocks.Show()
+        currentOpenForm = circuitrocks
     End Sub
 
     Private Sub Element14ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Element14ToolStripMenuItem.Click
+        HideCurrentForm()
         element14.Show()
+        currentOpenForm = element14
     End Sub
 
     Private Sub RSComponentsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RSComponentsToolStripMenuItem.Click
+        HideCurrentForm()
         rscomponents.Show()
+        currentOpenForm = rscomponents
     End Sub
 
     Private Sub DisplayToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DisplayToolStripMenuItem.Click
+        HideCurrentForm()
         digitaldisplays.Show()
+        currentOpenForm = digitaldisplays
     End Sub
 
     Private Sub ICToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ICToolStripMenuItem.Click
+        HideCurrentForm()
         integratedcircuits.Show()
+        currentOpenForm = integratedcircuits
     End Sub
 
     Private Sub LEDsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LEDsToolStripMenuItem.Click
+        HideCurrentForm()
         led.Show()
+        currentOpenForm = led
     End Sub
 
     Private Sub PowerSupplyAndModuleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PowerSupplyAndModuleToolStripMenuItem.Click
+        HideCurrentForm()
         powersupply.Show()
+        currentOpenForm = powersupply
     End Sub
 
     Private Sub WiresAndCablesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WiresAndCablesToolStripMenuItem.Click
+        HideCurrentForm()
         wires.Show()
+        currentOpenForm = wires
     End Sub
 
     Private Sub BreadboardsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BreadboardsToolStripMenuItem.Click
+        HideCurrentForm()
         breadboards.Show()
+        currentOpenForm = breadboards
     End Sub
 
     Private Sub SwitchesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SwitchesToolStripMenuItem.Click
+        HideCurrentForm()
         switches.Show()
+        currentOpenForm = switches
     End Sub
 
     Private Sub ResistorsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResistorsToolStripMenuItem.Click
+        HideCurrentForm()
         resistor.Show()
+        currentOpenForm = resistor
     End Sub
 
     Private Sub CapacitorsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CapacitorsToolStripMenuItem.Click
+        HideCurrentForm()
         capacitors.Show()
+        currentOpenForm = capacitors
     End Sub
 
     Private Sub OscilloscopesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OscilloscopesToolStripMenuItem.Click
+        HideCurrentForm()
         oscilloscopes.Show()
+        currentOpenForm = oscilloscopes
     End Sub
 
     Private Sub ScrollToCurrentResult()
