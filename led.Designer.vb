@@ -41,7 +41,7 @@ Partial Class led
         Me.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Back.Font = New System.Drawing.Font("Microsoft Himalaya", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Back.ForeColor = System.Drawing.Color.Black
-        Me.Back.Location = New System.Drawing.Point(773, 11)
+        Me.Back.Location = New System.Drawing.Point(789, 11)
         Me.Back.Margin = New System.Windows.Forms.Padding(2)
         Me.Back.Name = "Back"
         Me.Back.Size = New System.Drawing.Size(103, 31)

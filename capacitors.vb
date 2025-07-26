@@ -65,7 +65,7 @@ Public Class capacitors
     End Function
 
     ' PRODUCT 28
-    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
+    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 28
@@ -136,13 +136,13 @@ Public Class capacitors
         End Try
     End Sub
 
-    Private Sub plus_btn_Click(sender As Object, e As EventArgs) Handles plus_btn.Click
+    Private Sub plus_btn_Click(sender As Object, e As EventArgs)
         product28Qty += 1
         TextBox1.Text = product28Qty.ToString()
         minus_btn.Enabled = True
     End Sub
 
-    Private Sub minus_btn_Click(sender As Object, e As EventArgs) Handles minus_btn.Click
+    Private Sub minus_btn_Click(sender As Object, e As EventArgs)
         If product28Qty > 0 Then
             product28Qty -= 1
             TextBox1.Text = product28Qty.ToString()
@@ -153,7 +153,7 @@ Public Class capacitors
     End Sub
 
     ' PRODUCT 29
-    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs) Handles addtocart_btn1.Click
+    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 29
@@ -224,13 +224,13 @@ Public Class capacitors
         End Try
     End Sub
 
-    Private Sub plus_btn1_Click(sender As Object, e As EventArgs) Handles plus_btn1.Click
+    Private Sub plus_btn1_Click(sender As Object, e As EventArgs)
         product29Qty += 1
         TextBox2.Text = product29Qty.ToString()
         minus_btn1.Enabled = True
     End Sub
 
-    Private Sub minus_btn1_Click(sender As Object, e As EventArgs) Handles minus_btn1.Click
+    Private Sub minus_btn1_Click(sender As Object, e As EventArgs)
         If product29Qty > 0 Then
             product29Qty -= 1
             TextBox2.Text = product29Qty.ToString()
@@ -241,7 +241,7 @@ Public Class capacitors
     End Sub
 
     ' PRODUCT 30
-    Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs) Handles addtocart_btn2.Click
+    Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 30
@@ -312,13 +312,13 @@ Public Class capacitors
         End Try
     End Sub
 
-    Private Sub plus_btn2_Click(sender As Object, e As EventArgs) Handles plus_btn2.Click
+    Private Sub plus_btn2_Click(sender As Object, e As EventArgs)
         product30Qty += 1
         TextBox3.Text = product30Qty.ToString()
         minus_btn2.Enabled = True
     End Sub
 
-    Private Sub minus_btn2_Click(sender As Object, e As EventArgs) Handles minus_btn2.Click
+    Private Sub minus_btn2_Click(sender As Object, e As EventArgs)
         If product30Qty > 0 Then
             product30Qty -= 1
             TextBox3.Text = product30Qty.ToString()
@@ -329,7 +329,7 @@ Public Class capacitors
     End Sub
 
     ' PRODUCT 31
-    Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs) Handles addtocart_btn3.Click
+    Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 31
@@ -400,13 +400,13 @@ Public Class capacitors
         End Try
     End Sub
 
-    Private Sub plus_btn3_Click(sender As Object, e As EventArgs) Handles plus_btn3.Click
+    Private Sub plus_btn3_Click(sender As Object, e As EventArgs)
         product31Qty += 1
         TextBox4.Text = product31Qty.ToString()
         minus_btn3.Enabled = True
     End Sub
 
-    Private Sub minus_btn3_Click(sender As Object, e As EventArgs) Handles minus_btn3.Click
+    Private Sub minus_btn3_Click(sender As Object, e As EventArgs)
         If product31Qty > 0 Then
             product31Qty -= 1
             TextBox4.Text = product31Qty.ToString()
@@ -417,7 +417,7 @@ Public Class capacitors
     End Sub
 
     ' PRODUCT 32
-    Private Sub addtocart_btn4_Click(sender As Object, e As EventArgs) Handles addtocart_btn4.Click
+    Private Sub addtocart_btn4_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 32
@@ -488,13 +488,13 @@ Public Class capacitors
         End Try
     End Sub
 
-    Private Sub plus_btn4_Click(sender As Object, e As EventArgs) Handles plus_btn4.Click
+    Private Sub plus_btn4_Click(sender As Object, e As EventArgs)
         product32Qty += 1
         TextBox5.Text = product32Qty.ToString()
         minus_btn4.Enabled = True
     End Sub
 
-    Private Sub minus_btn4_Click(sender As Object, e As EventArgs) Handles minus_btn4.Click
+    Private Sub minus_btn4_Click(sender As Object, e As EventArgs)
         If product32Qty > 0 Then
             product32Qty -= 1
             TextBox5.Text = product32Qty.ToString()
@@ -505,7 +505,7 @@ Public Class capacitors
     End Sub
 
     ' PRODUCT 33
-    Private Sub addtocart_btn5_Click(sender As Object, e As EventArgs) Handles addtocart_btn5.Click
+    Private Sub addtocart_btn5_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 33
@@ -576,13 +576,13 @@ Public Class capacitors
         End Try
     End Sub
 
-    Private Sub plus_btn5_Click(sender As Object, e As EventArgs) Handles plus_btn5.Click
+    Private Sub plus_btn5_Click(sender As Object, e As EventArgs)
         product33Qty += 1
         TextBox6.Text = product33Qty.ToString()
         minus_btn5.Enabled = True
     End Sub
 
-    Private Sub minus_btn5_Click(sender As Object, e As EventArgs) Handles minus_btn5.Click
+    Private Sub minus_btn5_Click(sender As Object, e As EventArgs)
         If product33Qty > 0 Then
             product33Qty -= 1
             TextBox6.Text = product33Qty.ToString()
@@ -593,7 +593,7 @@ Public Class capacitors
     End Sub
 
     ' PRODUCT 34
-    Private Sub addtocart_btn6_Click(sender As Object, e As EventArgs) Handles addtocart_btn6.Click
+    Private Sub addtocart_btn6_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 34
@@ -664,13 +664,13 @@ Public Class capacitors
         End Try
     End Sub
 
-    Private Sub plus_btn6_Click(sender As Object, e As EventArgs) Handles plus_btn6.Click
+    Private Sub plus_btn6_Click(sender As Object, e As EventArgs)
         product34Qty += 1
         TextBox7.Text = product34Qty.ToString()
         minus_btn6.Enabled = True
     End Sub
 
-    Private Sub minus_btn6_Click(sender As Object, e As EventArgs) Handles minus_btn6.Click
+    Private Sub minus_btn6_Click(sender As Object, e As EventArgs)
         If product34Qty > 0 Then
             product34Qty -= 1
             TextBox7.Text = product34Qty.ToString()
