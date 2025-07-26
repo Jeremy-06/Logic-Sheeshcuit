@@ -1,4 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.Security.Cryptography
+Imports System.Text
 
 Public Class signup2
     Private conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
@@ -74,6 +76,18 @@ Public Class signup2
         Return result
     End Function
 
+    Private Function HashPassword(password As String) As String
+        Using sha256 As SHA256 = SHA256.Create()
+            Dim bytes As Byte() = Encoding.UTF8.GetBytes(password)
+            Dim hash As Byte() = sha256.ComputeHash(bytes)
+            Dim sb As New StringBuilder()
+            For Each b As Byte In hash
+                sb.Append(b.ToString("x2"))
+            Next
+            Return sb.ToString()
+        End Using
+    End Function
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         ' Check if any TextBox is empty before proceeding
         If String.IsNullOrWhiteSpace(TextBox1.Text) OrElse String.IsNullOrWhiteSpace(TextBox2.Text) Then
@@ -90,10 +104,10 @@ Public Class signup2
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            ' Insert into users table (no parameterized query)
             Dim username As String = TextBox1.Text.Trim().ToLower()
-            Dim password As String = TextBox2.Text.Trim().ToLower()
-            query = $"INSERT INTO users (username, password, userRole) VALUES ('{username}', '{password}', 'customer')"
+            Dim password As String = TextBox2.Text
+            Dim hashedPassword As String = HashPassword(password)
+            query = $"INSERT INTO users (username, password, userRole) VALUES ('{username}', '{hashedPassword}', 'customer')"
             cmd = New MySqlCommand(query, conn)
             cmd.ExecuteNonQuery()
             ' Get the new userId
@@ -147,5 +161,17 @@ Public Class signup2
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
         Me.Hide()
         signup1.Show()
+    End Sub
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        ' Toggle password character visibility based on a checkbox (assume CheckBox1 is "Show Password")
+        If CheckBox1.Checked Then
+            TextBox2.UseSystemPasswordChar = False
+        Else
+            TextBox2.UseSystemPasswordChar = True
+        End If
+    End Sub
+
+    Private Sub signup2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TextBox2.UseSystemPasswordChar = True
     End Sub
 End Class
