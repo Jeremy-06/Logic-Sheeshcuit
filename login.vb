@@ -1,5 +1,5 @@
 ﻿Public Class login
-    Public customerId As Integer = 1
+    Public customerId As Integer = 0
 
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
         Me.Hide()
