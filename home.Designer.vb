@@ -198,7 +198,7 @@ Partial Class home
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox38 = New System.Windows.Forms.PictureBox()
         Me.PictureBox39 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox40 = New System.Windows.Forms.PictureBox()
+        Me.usericon = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox41 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
@@ -242,7 +242,7 @@ Partial Class home
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.usericon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -408,7 +408,7 @@ Partial Class home
         '
         Me.Label116.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label116.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label116.Location = New System.Drawing.Point(37, 3213)
+        Me.Label116.Location = New System.Drawing.Point(44, 3662)
         Me.Label116.Name = "Label116"
         Me.Label116.Size = New System.Drawing.Size(178, 32)
         Me.Label116.TabIndex = 155
@@ -419,7 +419,7 @@ Partial Class home
         '
         Me.Label120.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label120.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label120.Location = New System.Drawing.Point(37, 3181)
+        Me.Label120.Location = New System.Drawing.Point(44, 3630)
         Me.Label120.Name = "Label120"
         Me.Label120.Size = New System.Drawing.Size(178, 32)
         Me.Label120.TabIndex = 151
@@ -430,7 +430,7 @@ Partial Class home
         '
         Me.Label105.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label105.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label105.Location = New System.Drawing.Point(649, 2863)
+        Me.Label105.Location = New System.Drawing.Point(656, 3312)
         Me.Label105.Name = "Label105"
         Me.Label105.Size = New System.Drawing.Size(178, 32)
         Me.Label105.TabIndex = 150
@@ -441,7 +441,7 @@ Partial Class home
         '
         Me.Label106.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label106.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label106.Location = New System.Drawing.Point(446, 2863)
+        Me.Label106.Location = New System.Drawing.Point(453, 3312)
         Me.Label106.Name = "Label106"
         Me.Label106.Size = New System.Drawing.Size(178, 32)
         Me.Label106.TabIndex = 149
@@ -452,7 +452,7 @@ Partial Class home
         '
         Me.Label107.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label107.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label107.Location = New System.Drawing.Point(243, 2863)
+        Me.Label107.Location = New System.Drawing.Point(250, 3312)
         Me.Label107.Name = "Label107"
         Me.Label107.Size = New System.Drawing.Size(178, 32)
         Me.Label107.TabIndex = 148
@@ -463,7 +463,7 @@ Partial Class home
         '
         Me.Label108.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label108.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label108.Location = New System.Drawing.Point(40, 2863)
+        Me.Label108.Location = New System.Drawing.Point(47, 3312)
         Me.Label108.Name = "Label108"
         Me.Label108.Size = New System.Drawing.Size(178, 32)
         Me.Label108.TabIndex = 147
@@ -474,7 +474,7 @@ Partial Class home
         '
         Me.Label109.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label109.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label109.Location = New System.Drawing.Point(649, 2831)
+        Me.Label109.Location = New System.Drawing.Point(656, 3280)
         Me.Label109.Name = "Label109"
         Me.Label109.Size = New System.Drawing.Size(178, 32)
         Me.Label109.TabIndex = 146
@@ -485,7 +485,7 @@ Partial Class home
         '
         Me.Label110.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label110.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label110.Location = New System.Drawing.Point(446, 2831)
+        Me.Label110.Location = New System.Drawing.Point(453, 3280)
         Me.Label110.Name = "Label110"
         Me.Label110.Size = New System.Drawing.Size(178, 32)
         Me.Label110.TabIndex = 145
@@ -496,7 +496,7 @@ Partial Class home
         '
         Me.Label111.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label111.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label111.Location = New System.Drawing.Point(243, 2831)
+        Me.Label111.Location = New System.Drawing.Point(250, 3280)
         Me.Label111.Name = "Label111"
         Me.Label111.Size = New System.Drawing.Size(178, 32)
         Me.Label111.TabIndex = 144
@@ -507,7 +507,7 @@ Partial Class home
         '
         Me.Label112.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label112.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label112.Location = New System.Drawing.Point(40, 2831)
+        Me.Label112.Location = New System.Drawing.Point(47, 3280)
         Me.Label112.Name = "Label112"
         Me.Label112.Size = New System.Drawing.Size(178, 32)
         Me.Label112.TabIndex = 143
@@ -518,7 +518,7 @@ Partial Class home
         '
         Me.Label97.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label97.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label97.Location = New System.Drawing.Point(649, 2500)
+        Me.Label97.Location = New System.Drawing.Point(656, 2949)
         Me.Label97.Name = "Label97"
         Me.Label97.Size = New System.Drawing.Size(178, 32)
         Me.Label97.TabIndex = 142
@@ -529,7 +529,7 @@ Partial Class home
         '
         Me.Label98.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label98.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label98.Location = New System.Drawing.Point(446, 2500)
+        Me.Label98.Location = New System.Drawing.Point(453, 2949)
         Me.Label98.Name = "Label98"
         Me.Label98.Size = New System.Drawing.Size(178, 32)
         Me.Label98.TabIndex = 141
@@ -540,7 +540,7 @@ Partial Class home
         '
         Me.Label99.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label99.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label99.Location = New System.Drawing.Point(243, 2500)
+        Me.Label99.Location = New System.Drawing.Point(250, 2949)
         Me.Label99.Name = "Label99"
         Me.Label99.Size = New System.Drawing.Size(178, 32)
         Me.Label99.TabIndex = 140
@@ -551,7 +551,7 @@ Partial Class home
         '
         Me.Label100.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label100.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label100.Location = New System.Drawing.Point(40, 2500)
+        Me.Label100.Location = New System.Drawing.Point(47, 2949)
         Me.Label100.Name = "Label100"
         Me.Label100.Size = New System.Drawing.Size(178, 32)
         Me.Label100.TabIndex = 139
@@ -562,7 +562,7 @@ Partial Class home
         '
         Me.Label101.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label101.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label101.Location = New System.Drawing.Point(649, 2468)
+        Me.Label101.Location = New System.Drawing.Point(656, 2917)
         Me.Label101.Name = "Label101"
         Me.Label101.Size = New System.Drawing.Size(178, 32)
         Me.Label101.TabIndex = 138
@@ -573,7 +573,7 @@ Partial Class home
         '
         Me.Label102.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label102.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label102.Location = New System.Drawing.Point(446, 2468)
+        Me.Label102.Location = New System.Drawing.Point(453, 2917)
         Me.Label102.Name = "Label102"
         Me.Label102.Size = New System.Drawing.Size(178, 32)
         Me.Label102.TabIndex = 137
@@ -584,7 +584,7 @@ Partial Class home
         '
         Me.Label103.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label103.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label103.Location = New System.Drawing.Point(243, 2468)
+        Me.Label103.Location = New System.Drawing.Point(250, 2917)
         Me.Label103.Name = "Label103"
         Me.Label103.Size = New System.Drawing.Size(178, 32)
         Me.Label103.TabIndex = 136
@@ -595,7 +595,7 @@ Partial Class home
         '
         Me.Label104.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label104.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label104.Location = New System.Drawing.Point(40, 2468)
+        Me.Label104.Location = New System.Drawing.Point(47, 2917)
         Me.Label104.Name = "Label104"
         Me.Label104.Size = New System.Drawing.Size(178, 32)
         Me.Label104.TabIndex = 135
@@ -606,7 +606,7 @@ Partial Class home
         '
         Me.Label89.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label89.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label89.Location = New System.Drawing.Point(649, 2119)
+        Me.Label89.Location = New System.Drawing.Point(656, 2568)
         Me.Label89.Name = "Label89"
         Me.Label89.Size = New System.Drawing.Size(178, 32)
         Me.Label89.TabIndex = 134
@@ -617,7 +617,7 @@ Partial Class home
         '
         Me.Label90.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label90.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label90.Location = New System.Drawing.Point(446, 2119)
+        Me.Label90.Location = New System.Drawing.Point(453, 2568)
         Me.Label90.Name = "Label90"
         Me.Label90.Size = New System.Drawing.Size(178, 32)
         Me.Label90.TabIndex = 133
@@ -628,7 +628,7 @@ Partial Class home
         '
         Me.Label91.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label91.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label91.Location = New System.Drawing.Point(243, 2119)
+        Me.Label91.Location = New System.Drawing.Point(250, 2568)
         Me.Label91.Name = "Label91"
         Me.Label91.Size = New System.Drawing.Size(178, 32)
         Me.Label91.TabIndex = 132
@@ -639,7 +639,7 @@ Partial Class home
         '
         Me.Label92.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label92.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label92.Location = New System.Drawing.Point(40, 2119)
+        Me.Label92.Location = New System.Drawing.Point(47, 2568)
         Me.Label92.Name = "Label92"
         Me.Label92.Size = New System.Drawing.Size(178, 32)
         Me.Label92.TabIndex = 131
@@ -650,7 +650,7 @@ Partial Class home
         '
         Me.Label93.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label93.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label93.Location = New System.Drawing.Point(649, 2087)
+        Me.Label93.Location = New System.Drawing.Point(656, 2536)
         Me.Label93.Name = "Label93"
         Me.Label93.Size = New System.Drawing.Size(178, 32)
         Me.Label93.TabIndex = 130
@@ -661,7 +661,7 @@ Partial Class home
         '
         Me.Label94.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label94.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label94.Location = New System.Drawing.Point(446, 2087)
+        Me.Label94.Location = New System.Drawing.Point(453, 2536)
         Me.Label94.Name = "Label94"
         Me.Label94.Size = New System.Drawing.Size(178, 32)
         Me.Label94.TabIndex = 129
@@ -672,7 +672,7 @@ Partial Class home
         '
         Me.Label95.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label95.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label95.Location = New System.Drawing.Point(243, 2087)
+        Me.Label95.Location = New System.Drawing.Point(250, 2536)
         Me.Label95.Name = "Label95"
         Me.Label95.Size = New System.Drawing.Size(178, 32)
         Me.Label95.TabIndex = 128
@@ -683,7 +683,7 @@ Partial Class home
         '
         Me.Label96.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label96.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label96.Location = New System.Drawing.Point(40, 2087)
+        Me.Label96.Location = New System.Drawing.Point(47, 2536)
         Me.Label96.Name = "Label96"
         Me.Label96.Size = New System.Drawing.Size(178, 32)
         Me.Label96.TabIndex = 127
@@ -694,7 +694,7 @@ Partial Class home
         '
         Me.Label81.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label81.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label81.Location = New System.Drawing.Point(649, 1744)
+        Me.Label81.Location = New System.Drawing.Point(656, 2193)
         Me.Label81.Name = "Label81"
         Me.Label81.Size = New System.Drawing.Size(178, 32)
         Me.Label81.TabIndex = 126
@@ -705,7 +705,7 @@ Partial Class home
         '
         Me.Label82.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label82.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label82.Location = New System.Drawing.Point(446, 1744)
+        Me.Label82.Location = New System.Drawing.Point(453, 2193)
         Me.Label82.Name = "Label82"
         Me.Label82.Size = New System.Drawing.Size(178, 32)
         Me.Label82.TabIndex = 125
@@ -716,7 +716,7 @@ Partial Class home
         '
         Me.Label83.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label83.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label83.Location = New System.Drawing.Point(243, 1744)
+        Me.Label83.Location = New System.Drawing.Point(250, 2193)
         Me.Label83.Name = "Label83"
         Me.Label83.Size = New System.Drawing.Size(178, 32)
         Me.Label83.TabIndex = 124
@@ -727,7 +727,7 @@ Partial Class home
         '
         Me.Label84.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label84.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label84.Location = New System.Drawing.Point(40, 1744)
+        Me.Label84.Location = New System.Drawing.Point(47, 2193)
         Me.Label84.Name = "Label84"
         Me.Label84.Size = New System.Drawing.Size(178, 32)
         Me.Label84.TabIndex = 123
@@ -738,7 +738,7 @@ Partial Class home
         '
         Me.Label85.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label85.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label85.Location = New System.Drawing.Point(649, 1712)
+        Me.Label85.Location = New System.Drawing.Point(656, 2161)
         Me.Label85.Name = "Label85"
         Me.Label85.Size = New System.Drawing.Size(178, 37)
         Me.Label85.TabIndex = 122
@@ -749,7 +749,7 @@ Partial Class home
         '
         Me.Label86.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label86.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label86.Location = New System.Drawing.Point(446, 1712)
+        Me.Label86.Location = New System.Drawing.Point(453, 2161)
         Me.Label86.Name = "Label86"
         Me.Label86.Size = New System.Drawing.Size(178, 37)
         Me.Label86.TabIndex = 121
@@ -760,7 +760,7 @@ Partial Class home
         '
         Me.Label87.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label87.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label87.Location = New System.Drawing.Point(243, 1712)
+        Me.Label87.Location = New System.Drawing.Point(250, 2161)
         Me.Label87.Name = "Label87"
         Me.Label87.Size = New System.Drawing.Size(178, 37)
         Me.Label87.TabIndex = 120
@@ -771,7 +771,7 @@ Partial Class home
         '
         Me.Label88.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label88.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label88.Location = New System.Drawing.Point(40, 1712)
+        Me.Label88.Location = New System.Drawing.Point(47, 2161)
         Me.Label88.Name = "Label88"
         Me.Label88.Size = New System.Drawing.Size(178, 37)
         Me.Label88.TabIndex = 119
@@ -782,7 +782,7 @@ Partial Class home
         '
         Me.Label73.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label73.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label73.Location = New System.Drawing.Point(649, 1370)
+        Me.Label73.Location = New System.Drawing.Point(656, 1819)
         Me.Label73.Name = "Label73"
         Me.Label73.Size = New System.Drawing.Size(178, 32)
         Me.Label73.TabIndex = 118
@@ -793,7 +793,7 @@ Partial Class home
         '
         Me.Label74.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label74.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label74.Location = New System.Drawing.Point(446, 1370)
+        Me.Label74.Location = New System.Drawing.Point(453, 1819)
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(178, 32)
         Me.Label74.TabIndex = 117
@@ -804,7 +804,7 @@ Partial Class home
         '
         Me.Label75.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label75.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label75.Location = New System.Drawing.Point(243, 1370)
+        Me.Label75.Location = New System.Drawing.Point(250, 1819)
         Me.Label75.Name = "Label75"
         Me.Label75.Size = New System.Drawing.Size(178, 32)
         Me.Label75.TabIndex = 116
@@ -815,7 +815,7 @@ Partial Class home
         '
         Me.Label76.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label76.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label76.Location = New System.Drawing.Point(40, 1370)
+        Me.Label76.Location = New System.Drawing.Point(47, 1819)
         Me.Label76.Name = "Label76"
         Me.Label76.Size = New System.Drawing.Size(178, 32)
         Me.Label76.TabIndex = 115
@@ -826,7 +826,7 @@ Partial Class home
         '
         Me.Label77.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label77.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label77.Location = New System.Drawing.Point(649, 1338)
+        Me.Label77.Location = New System.Drawing.Point(656, 1787)
         Me.Label77.Name = "Label77"
         Me.Label77.Size = New System.Drawing.Size(178, 32)
         Me.Label77.TabIndex = 114
@@ -837,7 +837,7 @@ Partial Class home
         '
         Me.Label78.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label78.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label78.Location = New System.Drawing.Point(446, 1338)
+        Me.Label78.Location = New System.Drawing.Point(453, 1787)
         Me.Label78.Name = "Label78"
         Me.Label78.Size = New System.Drawing.Size(178, 32)
         Me.Label78.TabIndex = 113
@@ -848,7 +848,7 @@ Partial Class home
         '
         Me.Label79.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label79.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label79.Location = New System.Drawing.Point(243, 1338)
+        Me.Label79.Location = New System.Drawing.Point(250, 1787)
         Me.Label79.Name = "Label79"
         Me.Label79.Size = New System.Drawing.Size(178, 32)
         Me.Label79.TabIndex = 112
@@ -859,7 +859,7 @@ Partial Class home
         '
         Me.Label80.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label80.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label80.Location = New System.Drawing.Point(40, 1338)
+        Me.Label80.Location = New System.Drawing.Point(47, 1787)
         Me.Label80.Name = "Label80"
         Me.Label80.Size = New System.Drawing.Size(178, 32)
         Me.Label80.TabIndex = 111
@@ -870,7 +870,7 @@ Partial Class home
         '
         Me.Label65.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label65.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label65.Location = New System.Drawing.Point(649, 997)
+        Me.Label65.Location = New System.Drawing.Point(656, 1446)
         Me.Label65.Name = "Label65"
         Me.Label65.Size = New System.Drawing.Size(178, 32)
         Me.Label65.TabIndex = 110
@@ -881,7 +881,7 @@ Partial Class home
         '
         Me.Label66.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label66.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label66.Location = New System.Drawing.Point(446, 997)
+        Me.Label66.Location = New System.Drawing.Point(453, 1446)
         Me.Label66.Name = "Label66"
         Me.Label66.Size = New System.Drawing.Size(178, 32)
         Me.Label66.TabIndex = 109
@@ -892,7 +892,7 @@ Partial Class home
         '
         Me.Label67.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label67.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label67.Location = New System.Drawing.Point(243, 997)
+        Me.Label67.Location = New System.Drawing.Point(250, 1446)
         Me.Label67.Name = "Label67"
         Me.Label67.Size = New System.Drawing.Size(178, 32)
         Me.Label67.TabIndex = 108
@@ -903,7 +903,7 @@ Partial Class home
         '
         Me.Label68.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label68.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label68.Location = New System.Drawing.Point(40, 997)
+        Me.Label68.Location = New System.Drawing.Point(47, 1446)
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(178, 32)
         Me.Label68.TabIndex = 107
@@ -914,7 +914,7 @@ Partial Class home
         '
         Me.Label69.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label69.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label69.Location = New System.Drawing.Point(649, 965)
+        Me.Label69.Location = New System.Drawing.Point(656, 1414)
         Me.Label69.Name = "Label69"
         Me.Label69.Size = New System.Drawing.Size(178, 32)
         Me.Label69.TabIndex = 106
@@ -925,7 +925,7 @@ Partial Class home
         '
         Me.Label70.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label70.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label70.Location = New System.Drawing.Point(446, 965)
+        Me.Label70.Location = New System.Drawing.Point(453, 1414)
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(178, 32)
         Me.Label70.TabIndex = 105
@@ -936,7 +936,7 @@ Partial Class home
         '
         Me.Label71.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label71.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label71.Location = New System.Drawing.Point(243, 965)
+        Me.Label71.Location = New System.Drawing.Point(250, 1414)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(178, 32)
         Me.Label71.TabIndex = 104
@@ -947,7 +947,7 @@ Partial Class home
         '
         Me.Label72.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label72.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label72.Location = New System.Drawing.Point(40, 965)
+        Me.Label72.Location = New System.Drawing.Point(47, 1414)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(178, 32)
         Me.Label72.TabIndex = 103
@@ -958,7 +958,7 @@ Partial Class home
         '
         Me.Label57.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label57.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label57.Location = New System.Drawing.Point(649, 633)
+        Me.Label57.Location = New System.Drawing.Point(656, 1082)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(178, 32)
         Me.Label57.TabIndex = 102
@@ -969,7 +969,7 @@ Partial Class home
         '
         Me.Label58.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label58.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label58.Location = New System.Drawing.Point(446, 633)
+        Me.Label58.Location = New System.Drawing.Point(453, 1082)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(178, 32)
         Me.Label58.TabIndex = 101
@@ -980,7 +980,7 @@ Partial Class home
         '
         Me.Label59.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label59.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label59.Location = New System.Drawing.Point(243, 633)
+        Me.Label59.Location = New System.Drawing.Point(250, 1082)
         Me.Label59.Name = "Label59"
         Me.Label59.Size = New System.Drawing.Size(178, 32)
         Me.Label59.TabIndex = 100
@@ -991,7 +991,7 @@ Partial Class home
         '
         Me.Label60.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label60.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label60.Location = New System.Drawing.Point(40, 633)
+        Me.Label60.Location = New System.Drawing.Point(47, 1082)
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(178, 32)
         Me.Label60.TabIndex = 99
@@ -1002,7 +1002,7 @@ Partial Class home
         '
         Me.Label61.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label61.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label61.Location = New System.Drawing.Point(649, 601)
+        Me.Label61.Location = New System.Drawing.Point(656, 1050)
         Me.Label61.Name = "Label61"
         Me.Label61.Size = New System.Drawing.Size(178, 32)
         Me.Label61.TabIndex = 98
@@ -1013,7 +1013,7 @@ Partial Class home
         '
         Me.Label62.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label62.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label62.Location = New System.Drawing.Point(446, 601)
+        Me.Label62.Location = New System.Drawing.Point(453, 1050)
         Me.Label62.Name = "Label62"
         Me.Label62.Size = New System.Drawing.Size(178, 32)
         Me.Label62.TabIndex = 97
@@ -1024,7 +1024,7 @@ Partial Class home
         '
         Me.Label63.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label63.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label63.Location = New System.Drawing.Point(243, 601)
+        Me.Label63.Location = New System.Drawing.Point(250, 1050)
         Me.Label63.Name = "Label63"
         Me.Label63.Size = New System.Drawing.Size(178, 32)
         Me.Label63.TabIndex = 96
@@ -1035,7 +1035,7 @@ Partial Class home
         '
         Me.Label64.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label64.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label64.Location = New System.Drawing.Point(40, 601)
+        Me.Label64.Location = New System.Drawing.Point(47, 1050)
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(178, 32)
         Me.Label64.TabIndex = 95
@@ -1046,7 +1046,7 @@ Partial Class home
         '
         Me.Label49.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label49.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label49.Location = New System.Drawing.Point(650, 257)
+        Me.Label49.Location = New System.Drawing.Point(657, 706)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(178, 32)
         Me.Label49.TabIndex = 94
@@ -1057,7 +1057,7 @@ Partial Class home
         '
         Me.Label50.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label50.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label50.Location = New System.Drawing.Point(447, 257)
+        Me.Label50.Location = New System.Drawing.Point(454, 706)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(178, 32)
         Me.Label50.TabIndex = 93
@@ -1068,7 +1068,7 @@ Partial Class home
         '
         Me.Label51.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label51.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label51.Location = New System.Drawing.Point(244, 257)
+        Me.Label51.Location = New System.Drawing.Point(251, 706)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(178, 32)
         Me.Label51.TabIndex = 92
@@ -1079,7 +1079,7 @@ Partial Class home
         '
         Me.Label52.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label52.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label52.Location = New System.Drawing.Point(41, 257)
+        Me.Label52.Location = New System.Drawing.Point(48, 706)
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(178, 32)
         Me.Label52.TabIndex = 91
@@ -1090,7 +1090,7 @@ Partial Class home
         '
         Me.Label53.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label53.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label53.Location = New System.Drawing.Point(650, 225)
+        Me.Label53.Location = New System.Drawing.Point(657, 674)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(178, 32)
         Me.Label53.TabIndex = 90
@@ -1101,7 +1101,7 @@ Partial Class home
         '
         Me.Label54.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label54.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label54.Location = New System.Drawing.Point(447, 225)
+        Me.Label54.Location = New System.Drawing.Point(454, 674)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(178, 32)
         Me.Label54.TabIndex = 89
@@ -1112,7 +1112,7 @@ Partial Class home
         '
         Me.Label55.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label55.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label55.Location = New System.Drawing.Point(244, 225)
+        Me.Label55.Location = New System.Drawing.Point(251, 674)
         Me.Label55.Name = "Label55"
         Me.Label55.Size = New System.Drawing.Size(178, 32)
         Me.Label55.TabIndex = 88
@@ -1123,7 +1123,7 @@ Partial Class home
         '
         Me.Label56.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label56.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label56.Location = New System.Drawing.Point(41, 225)
+        Me.Label56.Location = New System.Drawing.Point(48, 674)
         Me.Label56.Name = "Label56"
         Me.Label56.Size = New System.Drawing.Size(178, 32)
         Me.Label56.TabIndex = 87
@@ -1134,7 +1134,7 @@ Partial Class home
         '
         Me.Label48.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label48.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label48.Location = New System.Drawing.Point(649, -135)
+        Me.Label48.Location = New System.Drawing.Point(656, 314)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(178, 32)
         Me.Label48.TabIndex = 86
@@ -1145,7 +1145,7 @@ Partial Class home
         '
         Me.Label45.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label45.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label45.Location = New System.Drawing.Point(446, -135)
+        Me.Label45.Location = New System.Drawing.Point(453, 314)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(178, 32)
         Me.Label45.TabIndex = 85
@@ -1156,7 +1156,7 @@ Partial Class home
         '
         Me.Label46.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label46.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label46.Location = New System.Drawing.Point(243, -135)
+        Me.Label46.Location = New System.Drawing.Point(250, 314)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(178, 32)
         Me.Label46.TabIndex = 84
@@ -1167,7 +1167,7 @@ Partial Class home
         '
         Me.Label47.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label47.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label47.Location = New System.Drawing.Point(40, -135)
+        Me.Label47.Location = New System.Drawing.Point(47, 314)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(178, 32)
         Me.Label47.TabIndex = 83
@@ -1178,7 +1178,7 @@ Partial Class home
         '
         Me.Label41.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label41.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label41.Location = New System.Drawing.Point(649, -167)
+        Me.Label41.Location = New System.Drawing.Point(656, 282)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(178, 32)
         Me.Label41.TabIndex = 82
@@ -1189,7 +1189,7 @@ Partial Class home
         '
         Me.Label42.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label42.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label42.Location = New System.Drawing.Point(446, -167)
+        Me.Label42.Location = New System.Drawing.Point(453, 282)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(178, 32)
         Me.Label42.TabIndex = 81
@@ -1200,7 +1200,7 @@ Partial Class home
         '
         Me.Label43.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label43.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label43.Location = New System.Drawing.Point(243, -167)
+        Me.Label43.Location = New System.Drawing.Point(250, 282)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(178, 32)
         Me.Label43.TabIndex = 80
@@ -1211,7 +1211,7 @@ Partial Class home
         '
         Me.Label44.Font = New System.Drawing.Font("Microsoft Himalaya", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label44.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label44.Location = New System.Drawing.Point(40, -167)
+        Me.Label44.Location = New System.Drawing.Point(47, 282)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(178, 32)
         Me.Label44.TabIndex = 79
@@ -1220,7 +1220,7 @@ Partial Class home
         '
         'Label40
         '
-        Me.Label40.Location = New System.Drawing.Point(391, 3172)
+        Me.Label40.Location = New System.Drawing.Point(398, 3621)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(100, 101)
         Me.Label40.TabIndex = 78
@@ -1228,7 +1228,7 @@ Partial Class home
         'Label39
         '
         Me.Label39.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(38, 3126)
+        Me.Label39.Location = New System.Drawing.Point(45, 3575)
         Me.Label39.Name = "Label39"
         Me.Label39.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label39.Size = New System.Drawing.Size(178, 53)
@@ -1239,7 +1239,7 @@ Partial Class home
         'Label35
         '
         Me.Label35.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(650, 2778)
+        Me.Label35.Location = New System.Drawing.Point(657, 3227)
         Me.Label35.Name = "Label35"
         Me.Label35.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label35.Size = New System.Drawing.Size(178, 53)
@@ -1250,7 +1250,7 @@ Partial Class home
         'Label36
         '
         Me.Label36.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(446, 2778)
+        Me.Label36.Location = New System.Drawing.Point(453, 3227)
         Me.Label36.Name = "Label36"
         Me.Label36.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label36.Size = New System.Drawing.Size(178, 53)
@@ -1261,7 +1261,7 @@ Partial Class home
         'Label37
         '
         Me.Label37.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(242, 2778)
+        Me.Label37.Location = New System.Drawing.Point(249, 3227)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(178, 53)
         Me.Label37.TabIndex = 74
@@ -1271,7 +1271,7 @@ Partial Class home
         'Label38
         '
         Me.Label38.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(38, 2778)
+        Me.Label38.Location = New System.Drawing.Point(45, 3227)
         Me.Label38.Name = "Label38"
         Me.Label38.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label38.Size = New System.Drawing.Size(178, 53)
@@ -1282,7 +1282,7 @@ Partial Class home
         'Label31
         '
         Me.Label31.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(650, 2415)
+        Me.Label31.Location = New System.Drawing.Point(657, 2864)
         Me.Label31.Name = "Label31"
         Me.Label31.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label31.Size = New System.Drawing.Size(178, 53)
@@ -1293,7 +1293,7 @@ Partial Class home
         'Label32
         '
         Me.Label32.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(446, 2415)
+        Me.Label32.Location = New System.Drawing.Point(453, 2864)
         Me.Label32.Name = "Label32"
         Me.Label32.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label32.Size = New System.Drawing.Size(178, 53)
@@ -1304,7 +1304,7 @@ Partial Class home
         'Label33
         '
         Me.Label33.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(242, 2415)
+        Me.Label33.Location = New System.Drawing.Point(249, 2864)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(178, 53)
         Me.Label33.TabIndex = 70
@@ -1314,7 +1314,7 @@ Partial Class home
         'Label34
         '
         Me.Label34.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(38, 2415)
+        Me.Label34.Location = New System.Drawing.Point(45, 2864)
         Me.Label34.Name = "Label34"
         Me.Label34.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label34.Size = New System.Drawing.Size(178, 53)
@@ -1325,7 +1325,7 @@ Partial Class home
         'Label27
         '
         Me.Label27.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(650, 2034)
+        Me.Label27.Location = New System.Drawing.Point(657, 2483)
         Me.Label27.Name = "Label27"
         Me.Label27.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label27.Size = New System.Drawing.Size(178, 53)
@@ -1336,7 +1336,7 @@ Partial Class home
         'Label28
         '
         Me.Label28.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(446, 2034)
+        Me.Label28.Location = New System.Drawing.Point(453, 2483)
         Me.Label28.Name = "Label28"
         Me.Label28.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label28.Size = New System.Drawing.Size(178, 53)
@@ -1347,7 +1347,7 @@ Partial Class home
         'Label29
         '
         Me.Label29.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(242, 2034)
+        Me.Label29.Location = New System.Drawing.Point(249, 2483)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(178, 53)
         Me.Label29.TabIndex = 66
@@ -1357,7 +1357,7 @@ Partial Class home
         'Label30
         '
         Me.Label30.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(38, 2034)
+        Me.Label30.Location = New System.Drawing.Point(45, 2483)
         Me.Label30.Name = "Label30"
         Me.Label30.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label30.Size = New System.Drawing.Size(178, 53)
@@ -1368,7 +1368,7 @@ Partial Class home
         'Label23
         '
         Me.Label23.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(650, 1659)
+        Me.Label23.Location = New System.Drawing.Point(657, 2108)
         Me.Label23.Name = "Label23"
         Me.Label23.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label23.Size = New System.Drawing.Size(178, 53)
@@ -1379,7 +1379,7 @@ Partial Class home
         'Label24
         '
         Me.Label24.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(446, 1659)
+        Me.Label24.Location = New System.Drawing.Point(453, 2108)
         Me.Label24.Name = "Label24"
         Me.Label24.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label24.Size = New System.Drawing.Size(178, 53)
@@ -1390,7 +1390,7 @@ Partial Class home
         'Label25
         '
         Me.Label25.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(242, 1659)
+        Me.Label25.Location = New System.Drawing.Point(249, 2108)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(178, 53)
         Me.Label25.TabIndex = 62
@@ -1400,7 +1400,7 @@ Partial Class home
         'Label26
         '
         Me.Label26.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(38, 1659)
+        Me.Label26.Location = New System.Drawing.Point(45, 2108)
         Me.Label26.Name = "Label26"
         Me.Label26.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label26.Size = New System.Drawing.Size(178, 53)
@@ -1411,7 +1411,7 @@ Partial Class home
         'Label19
         '
         Me.Label19.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(650, 1285)
+        Me.Label19.Location = New System.Drawing.Point(657, 1734)
         Me.Label19.Name = "Label19"
         Me.Label19.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label19.Size = New System.Drawing.Size(178, 53)
@@ -1422,7 +1422,7 @@ Partial Class home
         'Label20
         '
         Me.Label20.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(446, 1285)
+        Me.Label20.Location = New System.Drawing.Point(453, 1734)
         Me.Label20.Name = "Label20"
         Me.Label20.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label20.Size = New System.Drawing.Size(178, 53)
@@ -1433,7 +1433,7 @@ Partial Class home
         'Label21
         '
         Me.Label21.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(242, 1285)
+        Me.Label21.Location = New System.Drawing.Point(249, 1734)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(178, 53)
         Me.Label21.TabIndex = 58
@@ -1443,7 +1443,7 @@ Partial Class home
         'Label22
         '
         Me.Label22.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(38, 1285)
+        Me.Label22.Location = New System.Drawing.Point(45, 1734)
         Me.Label22.Name = "Label22"
         Me.Label22.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label22.Size = New System.Drawing.Size(178, 53)
@@ -1454,7 +1454,7 @@ Partial Class home
         'Label15
         '
         Me.Label15.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(650, 912)
+        Me.Label15.Location = New System.Drawing.Point(657, 1361)
         Me.Label15.Name = "Label15"
         Me.Label15.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label15.Size = New System.Drawing.Size(178, 53)
@@ -1465,7 +1465,7 @@ Partial Class home
         'Label16
         '
         Me.Label16.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(446, 912)
+        Me.Label16.Location = New System.Drawing.Point(453, 1361)
         Me.Label16.Name = "Label16"
         Me.Label16.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label16.Size = New System.Drawing.Size(178, 53)
@@ -1476,7 +1476,7 @@ Partial Class home
         'Label17
         '
         Me.Label17.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(242, 912)
+        Me.Label17.Location = New System.Drawing.Point(249, 1361)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(178, 53)
         Me.Label17.TabIndex = 54
@@ -1486,7 +1486,7 @@ Partial Class home
         'Label18
         '
         Me.Label18.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(38, 912)
+        Me.Label18.Location = New System.Drawing.Point(45, 1361)
         Me.Label18.Name = "Label18"
         Me.Label18.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label18.Size = New System.Drawing.Size(178, 53)
@@ -1497,7 +1497,7 @@ Partial Class home
         'Label11
         '
         Me.Label11.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(650, 532)
+        Me.Label11.Location = New System.Drawing.Point(657, 981)
         Me.Label11.Name = "Label11"
         Me.Label11.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label11.Size = New System.Drawing.Size(178, 53)
@@ -1508,7 +1508,7 @@ Partial Class home
         'Label12
         '
         Me.Label12.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(446, 532)
+        Me.Label12.Location = New System.Drawing.Point(453, 981)
         Me.Label12.Name = "Label12"
         Me.Label12.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label12.Size = New System.Drawing.Size(178, 69)
@@ -1519,7 +1519,7 @@ Partial Class home
         'Label13
         '
         Me.Label13.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(242, 532)
+        Me.Label13.Location = New System.Drawing.Point(249, 981)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(178, 53)
         Me.Label13.TabIndex = 50
@@ -1529,7 +1529,7 @@ Partial Class home
         'Label14
         '
         Me.Label14.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(38, 532)
+        Me.Label14.Location = New System.Drawing.Point(45, 981)
         Me.Label14.Name = "Label14"
         Me.Label14.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label14.Size = New System.Drawing.Size(178, 32)
@@ -1540,7 +1540,7 @@ Partial Class home
         'Label10
         '
         Me.Label10.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(650, 147)
+        Me.Label10.Location = New System.Drawing.Point(657, 596)
         Me.Label10.Name = "Label10"
         Me.Label10.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label10.Size = New System.Drawing.Size(178, 69)
@@ -1551,7 +1551,7 @@ Partial Class home
         'Label9
         '
         Me.Label9.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(446, 147)
+        Me.Label9.Location = New System.Drawing.Point(453, 596)
         Me.Label9.Name = "Label9"
         Me.Label9.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label9.Size = New System.Drawing.Size(178, 53)
@@ -1562,7 +1562,7 @@ Partial Class home
         'Label8
         '
         Me.Label8.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(242, 147)
+        Me.Label8.Location = New System.Drawing.Point(249, 596)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(178, 69)
         Me.Label8.TabIndex = 46
@@ -1572,7 +1572,7 @@ Partial Class home
         'Label7
         '
         Me.Label7.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(38, 147)
+        Me.Label7.Location = New System.Drawing.Point(45, 596)
         Me.Label7.Name = "Label7"
         Me.Label7.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label7.Size = New System.Drawing.Size(178, 53)
@@ -1583,7 +1583,7 @@ Partial Class home
         'Label6
         '
         Me.Label6.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(650, -242)
+        Me.Label6.Location = New System.Drawing.Point(657, 207)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(178, 69)
         Me.Label6.TabIndex = 44
@@ -1593,7 +1593,7 @@ Partial Class home
         'Label5
         '
         Me.Label5.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(446, -242)
+        Me.Label5.Location = New System.Drawing.Point(453, 207)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(178, 53)
         Me.Label5.TabIndex = 43
@@ -1603,7 +1603,7 @@ Partial Class home
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(242, -242)
+        Me.Label4.Location = New System.Drawing.Point(249, 207)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(178, 53)
         Me.Label4.TabIndex = 42
@@ -1613,7 +1613,7 @@ Partial Class home
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(38, -242)
+        Me.Label3.Location = New System.Drawing.Point(45, 207)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(178, 53)
         Me.Label3.TabIndex = 41
@@ -1624,7 +1624,7 @@ Partial Class home
         '
         Me.PictureBox37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox37.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_37
-        Me.PictureBox37.Location = New System.Drawing.Point(31, 2934)
+        Me.PictureBox37.Location = New System.Drawing.Point(38, 3383)
         Me.PictureBox37.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox37.Name = "PictureBox37"
         Me.PictureBox37.Size = New System.Drawing.Size(190, 190)
@@ -1636,7 +1636,7 @@ Partial Class home
         '
         Me.PictureBox33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox33.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_36
-        Me.PictureBox33.Location = New System.Drawing.Point(643, 2586)
+        Me.PictureBox33.Location = New System.Drawing.Point(650, 3035)
         Me.PictureBox33.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox33.Name = "PictureBox33"
         Me.PictureBox33.Size = New System.Drawing.Size(190, 190)
@@ -1648,7 +1648,7 @@ Partial Class home
         '
         Me.PictureBox34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox34.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_35
-        Me.PictureBox34.Location = New System.Drawing.Point(439, 2586)
+        Me.PictureBox34.Location = New System.Drawing.Point(446, 3035)
         Me.PictureBox34.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox34.Name = "PictureBox34"
         Me.PictureBox34.Size = New System.Drawing.Size(190, 190)
@@ -1660,7 +1660,7 @@ Partial Class home
         '
         Me.PictureBox35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox35.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_34
-        Me.PictureBox35.Location = New System.Drawing.Point(235, 2586)
+        Me.PictureBox35.Location = New System.Drawing.Point(242, 3035)
         Me.PictureBox35.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox35.Name = "PictureBox35"
         Me.PictureBox35.Size = New System.Drawing.Size(190, 190)
@@ -1672,7 +1672,7 @@ Partial Class home
         '
         Me.PictureBox36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox36.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_33
-        Me.PictureBox36.Location = New System.Drawing.Point(31, 2586)
+        Me.PictureBox36.Location = New System.Drawing.Point(38, 3035)
         Me.PictureBox36.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox36.Name = "PictureBox36"
         Me.PictureBox36.Size = New System.Drawing.Size(190, 190)
@@ -1684,7 +1684,7 @@ Partial Class home
         '
         Me.PictureBox29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox29.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_32
-        Me.PictureBox29.Location = New System.Drawing.Point(643, 2223)
+        Me.PictureBox29.Location = New System.Drawing.Point(650, 2672)
         Me.PictureBox29.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox29.Name = "PictureBox29"
         Me.PictureBox29.Size = New System.Drawing.Size(190, 190)
@@ -1696,7 +1696,7 @@ Partial Class home
         '
         Me.PictureBox30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox30.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_31
-        Me.PictureBox30.Location = New System.Drawing.Point(439, 2223)
+        Me.PictureBox30.Location = New System.Drawing.Point(446, 2672)
         Me.PictureBox30.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox30.Name = "PictureBox30"
         Me.PictureBox30.Size = New System.Drawing.Size(190, 190)
@@ -1708,7 +1708,7 @@ Partial Class home
         '
         Me.PictureBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox25.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_28
-        Me.PictureBox25.Location = New System.Drawing.Point(643, 1842)
+        Me.PictureBox25.Location = New System.Drawing.Point(650, 2291)
         Me.PictureBox25.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox25.Name = "PictureBox25"
         Me.PictureBox25.Size = New System.Drawing.Size(190, 190)
@@ -1720,7 +1720,7 @@ Partial Class home
         '
         Me.PictureBox26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox26.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_27
-        Me.PictureBox26.Location = New System.Drawing.Point(439, 1842)
+        Me.PictureBox26.Location = New System.Drawing.Point(446, 2291)
         Me.PictureBox26.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox26.Name = "PictureBox26"
         Me.PictureBox26.Size = New System.Drawing.Size(190, 190)
@@ -1732,7 +1732,7 @@ Partial Class home
         '
         Me.PictureBox31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox31.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_30
-        Me.PictureBox31.Location = New System.Drawing.Point(235, 2223)
+        Me.PictureBox31.Location = New System.Drawing.Point(242, 2672)
         Me.PictureBox31.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox31.Name = "PictureBox31"
         Me.PictureBox31.Size = New System.Drawing.Size(190, 190)
@@ -1744,7 +1744,7 @@ Partial Class home
         '
         Me.PictureBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox21.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_24
-        Me.PictureBox21.Location = New System.Drawing.Point(643, 1467)
+        Me.PictureBox21.Location = New System.Drawing.Point(650, 1916)
         Me.PictureBox21.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox21.Name = "PictureBox21"
         Me.PictureBox21.Size = New System.Drawing.Size(190, 190)
@@ -1756,7 +1756,7 @@ Partial Class home
         '
         Me.PictureBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox22.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_23
-        Me.PictureBox22.Location = New System.Drawing.Point(439, 1467)
+        Me.PictureBox22.Location = New System.Drawing.Point(446, 1916)
         Me.PictureBox22.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox22.Name = "PictureBox22"
         Me.PictureBox22.Size = New System.Drawing.Size(190, 190)
@@ -1768,7 +1768,7 @@ Partial Class home
         '
         Me.PictureBox32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox32.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_29
-        Me.PictureBox32.Location = New System.Drawing.Point(31, 2223)
+        Me.PictureBox32.Location = New System.Drawing.Point(38, 2672)
         Me.PictureBox32.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox32.Name = "PictureBox32"
         Me.PictureBox32.Size = New System.Drawing.Size(190, 190)
@@ -1780,7 +1780,7 @@ Partial Class home
         '
         Me.PictureBox27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox27.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_26
-        Me.PictureBox27.Location = New System.Drawing.Point(235, 1842)
+        Me.PictureBox27.Location = New System.Drawing.Point(242, 2291)
         Me.PictureBox27.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox27.Name = "PictureBox27"
         Me.PictureBox27.Size = New System.Drawing.Size(190, 190)
@@ -1792,7 +1792,7 @@ Partial Class home
         '
         Me.PictureBox23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox23.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_22
-        Me.PictureBox23.Location = New System.Drawing.Point(235, 1467)
+        Me.PictureBox23.Location = New System.Drawing.Point(242, 1916)
         Me.PictureBox23.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox23.Name = "PictureBox23"
         Me.PictureBox23.Size = New System.Drawing.Size(190, 190)
@@ -1804,7 +1804,7 @@ Partial Class home
         '
         Me.PictureBox24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox24.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_21
-        Me.PictureBox24.Location = New System.Drawing.Point(31, 1467)
+        Me.PictureBox24.Location = New System.Drawing.Point(38, 1916)
         Me.PictureBox24.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox24.Name = "PictureBox24"
         Me.PictureBox24.Size = New System.Drawing.Size(190, 190)
@@ -1816,7 +1816,7 @@ Partial Class home
         '
         Me.PictureBox28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox28.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_25
-        Me.PictureBox28.Location = New System.Drawing.Point(31, 1842)
+        Me.PictureBox28.Location = New System.Drawing.Point(38, 2291)
         Me.PictureBox28.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox28.Name = "PictureBox28"
         Me.PictureBox28.Size = New System.Drawing.Size(190, 190)
@@ -1828,7 +1828,7 @@ Partial Class home
         '
         Me.PictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox17.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_20
-        Me.PictureBox17.Location = New System.Drawing.Point(643, 1093)
+        Me.PictureBox17.Location = New System.Drawing.Point(650, 1542)
         Me.PictureBox17.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.Size = New System.Drawing.Size(190, 190)
@@ -1840,7 +1840,7 @@ Partial Class home
         '
         Me.PictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox18.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_19
-        Me.PictureBox18.Location = New System.Drawing.Point(439, 1093)
+        Me.PictureBox18.Location = New System.Drawing.Point(446, 1542)
         Me.PictureBox18.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox18.Name = "PictureBox18"
         Me.PictureBox18.Size = New System.Drawing.Size(190, 190)
@@ -1852,7 +1852,7 @@ Partial Class home
         '
         Me.PictureBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox19.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_18
-        Me.PictureBox19.Location = New System.Drawing.Point(235, 1093)
+        Me.PictureBox19.Location = New System.Drawing.Point(242, 1542)
         Me.PictureBox19.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox19.Name = "PictureBox19"
         Me.PictureBox19.Size = New System.Drawing.Size(190, 190)
@@ -1864,7 +1864,7 @@ Partial Class home
         '
         Me.PictureBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox20.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_17
-        Me.PictureBox20.Location = New System.Drawing.Point(31, 1093)
+        Me.PictureBox20.Location = New System.Drawing.Point(38, 1542)
         Me.PictureBox20.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox20.Name = "PictureBox20"
         Me.PictureBox20.Size = New System.Drawing.Size(190, 190)
@@ -1876,7 +1876,7 @@ Partial Class home
         '
         Me.PictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox13.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_16
-        Me.PictureBox13.Location = New System.Drawing.Point(643, 720)
+        Me.PictureBox13.Location = New System.Drawing.Point(650, 1169)
         Me.PictureBox13.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.Size = New System.Drawing.Size(190, 190)
@@ -1888,7 +1888,7 @@ Partial Class home
         '
         Me.PictureBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox14.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_15
-        Me.PictureBox14.Location = New System.Drawing.Point(439, 720)
+        Me.PictureBox14.Location = New System.Drawing.Point(446, 1169)
         Me.PictureBox14.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox14.Name = "PictureBox14"
         Me.PictureBox14.Size = New System.Drawing.Size(190, 190)
@@ -1900,7 +1900,7 @@ Partial Class home
         '
         Me.PictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox15.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_14
-        Me.PictureBox15.Location = New System.Drawing.Point(235, 720)
+        Me.PictureBox15.Location = New System.Drawing.Point(242, 1169)
         Me.PictureBox15.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox15.Name = "PictureBox15"
         Me.PictureBox15.Size = New System.Drawing.Size(190, 190)
@@ -1912,7 +1912,7 @@ Partial Class home
         '
         Me.PictureBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox16.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_13
-        Me.PictureBox16.Location = New System.Drawing.Point(31, 720)
+        Me.PictureBox16.Location = New System.Drawing.Point(38, 1169)
         Me.PictureBox16.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox16.Name = "PictureBox16"
         Me.PictureBox16.Size = New System.Drawing.Size(190, 190)
@@ -1924,7 +1924,7 @@ Partial Class home
         '
         Me.PictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox9.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_12
-        Me.PictureBox9.Location = New System.Drawing.Point(643, 340)
+        Me.PictureBox9.Location = New System.Drawing.Point(650, 789)
         Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(190, 190)
@@ -1936,7 +1936,7 @@ Partial Class home
         '
         Me.PictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox10.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_11
-        Me.PictureBox10.Location = New System.Drawing.Point(439, 340)
+        Me.PictureBox10.Location = New System.Drawing.Point(446, 789)
         Me.PictureBox10.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.Size = New System.Drawing.Size(190, 190)
@@ -1948,7 +1948,7 @@ Partial Class home
         '
         Me.PictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox11.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_10
-        Me.PictureBox11.Location = New System.Drawing.Point(235, 340)
+        Me.PictureBox11.Location = New System.Drawing.Point(242, 789)
         Me.PictureBox11.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(190, 190)
@@ -1960,7 +1960,7 @@ Partial Class home
         '
         Me.PictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox12.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_9
-        Me.PictureBox12.Location = New System.Drawing.Point(31, 340)
+        Me.PictureBox12.Location = New System.Drawing.Point(38, 789)
         Me.PictureBox12.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.Size = New System.Drawing.Size(190, 190)
@@ -1972,7 +1972,7 @@ Partial Class home
         '
         Me.PictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox5.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_8
-        Me.PictureBox5.Location = New System.Drawing.Point(643, -45)
+        Me.PictureBox5.Location = New System.Drawing.Point(650, 404)
         Me.PictureBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(190, 190)
@@ -1984,7 +1984,7 @@ Partial Class home
         '
         Me.PictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox6.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_7
-        Me.PictureBox6.Location = New System.Drawing.Point(439, -45)
+        Me.PictureBox6.Location = New System.Drawing.Point(446, 404)
         Me.PictureBox6.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(190, 190)
@@ -1996,7 +1996,7 @@ Partial Class home
         '
         Me.PictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox7.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_6
-        Me.PictureBox7.Location = New System.Drawing.Point(235, -45)
+        Me.PictureBox7.Location = New System.Drawing.Point(242, 404)
         Me.PictureBox7.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(190, 190)
@@ -2008,7 +2008,7 @@ Partial Class home
         '
         Me.PictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox8.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_5
-        Me.PictureBox8.Location = New System.Drawing.Point(31, -45)
+        Me.PictureBox8.Location = New System.Drawing.Point(38, 404)
         Me.PictureBox8.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(190, 190)
@@ -2020,7 +2020,7 @@ Partial Class home
         '
         Me.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox4.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_4
-        Me.PictureBox4.Location = New System.Drawing.Point(643, -434)
+        Me.PictureBox4.Location = New System.Drawing.Point(650, 15)
         Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(190, 190)
@@ -2032,7 +2032,7 @@ Partial Class home
         '
         Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox3.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_3
-        Me.PictureBox3.Location = New System.Drawing.Point(439, -434)
+        Me.PictureBox3.Location = New System.Drawing.Point(446, 15)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(190, 190)
@@ -2044,7 +2044,7 @@ Partial Class home
         '
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox2.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_2
-        Me.PictureBox2.Location = New System.Drawing.Point(235, -434)
+        Me.PictureBox2.Location = New System.Drawing.Point(242, 15)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(190, 190)
@@ -2056,7 +2056,7 @@ Partial Class home
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.Image = Global.Logic_Sheeshcuit.My.Resources.Resources.Product_1
-        Me.PictureBox1.Location = New System.Drawing.Point(31, -434)
+        Me.PictureBox1.Location = New System.Drawing.Point(38, 15)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(190, 190)
@@ -2253,16 +2253,16 @@ Partial Class home
         Me.PictureBox39.TabIndex = 11
         Me.PictureBox39.TabStop = False
         '
-        'PictureBox40
+        'usericon
         '
-        Me.PictureBox40.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox40.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.User_Icon
-        Me.PictureBox40.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox40.Location = New System.Drawing.Point(873, 36)
-        Me.PictureBox40.Name = "PictureBox40"
-        Me.PictureBox40.Size = New System.Drawing.Size(63, 58)
-        Me.PictureBox40.TabIndex = 12
-        Me.PictureBox40.TabStop = False
+        Me.usericon.BackColor = System.Drawing.Color.Transparent
+        Me.usericon.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.User_Icon
+        Me.usericon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.usericon.Location = New System.Drawing.Point(873, 36)
+        Me.usericon.Name = "usericon"
+        Me.usericon.Size = New System.Drawing.Size(63, 58)
+        Me.usericon.TabIndex = 12
+        Me.usericon.TabStop = False
         '
         'Button1
         '
@@ -2293,7 +2293,7 @@ Partial Class home
         Me.ClientSize = New System.Drawing.Size(984, 661)
         Me.Controls.Add(Me.PictureBox41)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.PictureBox40)
+        Me.Controls.Add(Me.usericon)
         Me.Controls.Add(Me.PictureBox39)
         Me.Controls.Add(Me.PictureBox38)
         Me.Controls.Add(Me.Label2)
@@ -2353,7 +2353,7 @@ Partial Class home
         Me.MenuStrip1.PerformLayout()
         CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.usericon, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -2423,7 +2423,7 @@ Partial Class home
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox38 As PictureBox
     Friend WithEvents PictureBox39 As PictureBox
-    Friend WithEvents PictureBox40 As PictureBox
+    Friend WithEvents usericon As PictureBox
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox41 As PictureBox
     Friend WithEvents Label3 As Label
