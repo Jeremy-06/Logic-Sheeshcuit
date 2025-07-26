@@ -18,6 +18,37 @@ Public Class makerlab
     Private Sub makerlab_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Function ValidateCustomer() As Boolean
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+
+            query = $"SELECT COUNT(*) FROM customers WHERE customerId = {login.customerId}"
+            cmd = New MySqlCommand(query, conn)
+            Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+            If count = 0 Then
+                ' Customer doesn't exist, redirect to signup
+                MessageBox.Show("Please create an account first to add items to cart.")
+                Me.Hide()
+                signup.Show()
+                Return False
+            End If
+
+            Return True
+
+        Catch ex As Exception
+            MessageBox.Show("Error validating customer: " & ex.Message)
+            Return False
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+    End Function
+
     Private Sub clearQty()
         TextBox1.Text = 0
         TextBox2.Text = 0
@@ -34,6 +65,11 @@ Public Class makerlab
 
     ' PRODUCT 1 
     Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
+        ' Validate customer first
+        If Not ValidateCustomer() Then
+            Return
+        End If
+
         Dim customerId = login.customerId
         Dim productId As Integer = 1
         Dim newQty As Integer
@@ -125,6 +161,11 @@ Public Class makerlab
 
     ' PRODUCT 2
     Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs) Handles addtocart_btn1.Click
+        ' Validate customer first
+        If Not ValidateCustomer() Then
+            Return
+        End If
+
         Dim customerId = login.customerId
         Dim productId As Integer = 2
         Dim newQty As Integer
@@ -215,6 +256,11 @@ Public Class makerlab
 
     ' PRODUCT 3
     Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs) Handles addtocart_btn2.Click
+        ' Validate customer first
+        If Not ValidateCustomer() Then
+            Return
+        End If
+
         Dim customerId = login.customerId
         Dim productId As Integer = 3
         Dim newQty As Integer
@@ -306,6 +352,11 @@ Public Class makerlab
 
     'PRODUCT 7
     Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs) Handles addtocart_btn3.Click
+        ' Validate customer first
+        If Not ValidateCustomer() Then
+            Return
+        End If
+
         Dim customerId = login.customerId
         Dim productId As Integer = 7
         Dim newQty As Integer
@@ -397,6 +448,11 @@ Public Class makerlab
 
     'PRODUCT 9
     Private Sub addtocart_btn4_Click(sender As Object, e As EventArgs) Handles addtocart_btn4.Click
+        ' Validate customer first
+        If Not ValidateCustomer() Then
+            Return
+        End If
+
         Dim customerId = login.customerId
         Dim productId As Integer = 9
         Dim newQty As Integer
@@ -488,6 +544,11 @@ Public Class makerlab
 
     'PRODUCT 12
     Private Sub addtocart_btn5_Click(sender As Object, e As EventArgs) Handles addtocart_btn5.Click
+        ' Validate customer first
+        If Not ValidateCustomer() Then
+            Return
+        End If
+
         Dim customerId = login.customerId
         Dim productId As Integer = 12
         Dim newQty As Integer

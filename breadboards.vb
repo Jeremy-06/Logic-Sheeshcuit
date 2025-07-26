@@ -31,8 +31,34 @@ Public Class breadboards
         home.Show()
     End Sub
 
+    Private Function ValidateCustomer() As Boolean
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+            query = $"SELECT COUNT(*) FROM customers WHERE customerId = {login.customerId}"
+            cmd = New MySqlCommand(query, conn)
+            Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+            If count = 0 Then
+                MessageBox.Show("Please create an account first to add items to cart.")
+                Me.Hide()
+                signup.Show()
+                Return False
+            End If
+            Return True
+        Catch ex As Exception
+            MessageBox.Show("Error validating customer: " & ex.Message)
+            Return False
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+    End Function
+
     ' PRODUCT 14
     Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
+        If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 14
         Dim newQty As Integer
@@ -120,6 +146,7 @@ Public Class breadboards
 
     ' PRODUCT 15
     Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs) Handles addtocart_btn1.Click
+        If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 15
         Dim newQty As Integer
@@ -207,6 +234,7 @@ Public Class breadboards
 
     ' PRODUCT 16
     Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs) Handles addtocart_btn2.Click
+        If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 16
         Dim newQty As Integer
@@ -294,6 +322,7 @@ Public Class breadboards
 
     ' PRODUCT 17
     Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs) Handles addtocart_btn3.Click
+        If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 17
         Dim newQty As Integer
@@ -381,6 +410,7 @@ Public Class breadboards
 
     ' PRODUCT 18
     Private Sub addtocart_btn4_Click(sender As Object, e As EventArgs) Handles addtocart_btn4.Click
+        If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 18
         Dim newQty As Integer
@@ -468,6 +498,7 @@ Public Class breadboards
 
     ' PRODUCT 19
     Private Sub addtocart_btn5_Click(sender As Object, e As EventArgs) Handles addtocart_btn5.Click
+        If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 19
         Dim newQty As Integer
@@ -555,6 +586,7 @@ Public Class breadboards
 
     ' PRODUCT 20
     Private Sub addtocart_btn6_Click(sender As Object, e As EventArgs) Handles addtocart_btn6.Click
+        If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 20
         Dim newQty As Integer

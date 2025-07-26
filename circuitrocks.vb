@@ -42,8 +42,35 @@ Public Class circuitrocks
     Private Sub circuitrocks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Function ValidateCustomer() As Boolean
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+            query = $"SELECT COUNT(*) FROM customers WHERE customerId = {login.customerId}"
+            cmd = New MySqlCommand(query, conn)
+            Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+            If count = 0 Then
+                MessageBox.Show("Please create an account first to add items to cart.")
+                Me.Hide()
+                signup.Show()
+                Return False
+            End If
+            Return True
+        Catch ex As Exception
+            MessageBox.Show("Error validating customer: " & ex.Message)
+            Return False
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+    End Function
+
     'atc
     Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs) Handles addtocart_btn2.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 10 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 10
@@ -118,6 +145,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs) Handles addtocart_btn3.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 11 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 11
@@ -192,6 +220,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs) Handles addtocart_btn1.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 13 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 13
@@ -266,6 +295,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 14 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 14
@@ -340,6 +370,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 15 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 15
@@ -414,6 +445,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 16 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 16
@@ -488,6 +520,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 17 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 17
@@ -562,6 +595,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub addtocart_btn4_Click(sender As Object, e As EventArgs) Handles addtocart_btn4.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 18 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 18
@@ -636,6 +670,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub addtocart_btn5_Click(sender As Object, e As EventArgs) Handles addtocart_btn5.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 19 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 19
@@ -710,6 +745,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub addtocart_btn6_Click(sender As Object, e As EventArgs) Handles addtocart_btn6.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 20 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 20
@@ -784,6 +820,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 21 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 21
@@ -858,6 +895,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button31_Click(sender As Object, e As EventArgs) Handles Button31.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 22 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 22
@@ -932,6 +970,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button28_Click(sender As Object, e As EventArgs) Handles Button28.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 23 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 23
@@ -1006,6 +1045,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 24 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 24
@@ -1080,6 +1120,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 25 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 25
@@ -1154,6 +1195,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 26 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 26
@@ -1229,6 +1271,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 27 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 27
@@ -1303,6 +1346,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button52_Click(sender As Object, e As EventArgs) Handles Button52.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 28 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 28
@@ -1377,6 +1421,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button49_Click(sender As Object, e As EventArgs) Handles Button49.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 29 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 29
@@ -1451,6 +1496,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button46_Click(sender As Object, e As EventArgs) Handles Button46.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 30 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 30
@@ -1525,6 +1571,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button43_Click(sender As Object, e As EventArgs) Handles Button43.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 31 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 31
@@ -1599,6 +1646,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button40_Click(sender As Object, e As EventArgs) Handles Button40.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 32 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 32
@@ -1673,6 +1721,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button37_Click(sender As Object, e As EventArgs) Handles Button37.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 33 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 33
@@ -1748,6 +1797,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button34_Click(sender As Object, e As EventArgs) Handles Button34.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 34 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 34
@@ -1822,6 +1872,7 @@ Public Class circuitrocks
     End Sub
 
     Private Sub Button55_Click(sender As Object, e As EventArgs) Handles Button55.Click
+        If Not ValidateCustomer() Then Return
         ' Adds Product 37 to the cart
         Dim customerId = login.customerId
         Dim productId As Integer = 37
