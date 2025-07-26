@@ -112,38 +112,20 @@ Public Class home
         If currentResultIndex >= 0 AndAlso currentResultIndex < searchResults.Count Then
             Dim lbl As Label = searchResults(currentResultIndex)
             Panel1.ScrollControlIntoView(lbl)
-
-            ' Optional: highlight
-            lbl.BackColor = Color.Black
-            lbl.ForeColor = Color.White
         End If
     End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If searchResults.Count = 0 Then
-            MessageBox.Show("No results to go back to. Please search first.")
-            Return
-        End If
-        ' Move to previous result, wrap around if needed
-        currentResultIndex = (currentResultIndex - 1 + searchResults.Count) Mod searchResults.Count
-        ScrollToCurrentResult()
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If searchResults.Count = 0 Then
-            MessageBox.Show("No results to go to. Please search first.")
-            Return
-        End If
-
-        ' Move to next result, wrap around if needed
-        currentResultIndex = (currentResultIndex + 1) Mod searchResults.Count
-        ScrollToCurrentResult()
-    End Sub
-
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim searchTerm As String = TextBox1.Text.Trim()
-        If Not String.IsNullOrWhiteSpace(searchTerm) Then
+        Dim searchTerm As String = TextBox1.Text.Trim().ToLower()
+        If String.IsNullOrWhiteSpace(searchTerm) Then Return
+
+        If searchTerm = lastSearchTerm AndAlso searchResults.Count > 0 Then
+            ' Next result
+            currentResultIndex = (currentResultIndex + 1) Mod searchResults.Count
+            ScrollToCurrentResult()
+        Else
+            ' New search
+            lastSearchTerm = searchTerm
             SearchAndScroll(searchTerm)
         End If
     End Sub
@@ -188,7 +170,21 @@ Public Class home
     End Sub
 
     Private Sub home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+            Dim countQuery As String = "SELECT COUNT(*) FROM products"
+            Dim countCmd As New MySqlCommand(countQuery, conn)
+            Dim totalProducts As Integer = Convert.ToInt32(countCmd.ExecuteScalar())
+            Label2.Text = totalProducts.ToString()
+        Catch ex As Exception
+            Label2.Text = 0
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
     End Sub
 
     Private searchResults As New List(Of Label)
@@ -225,7 +221,7 @@ Public Class home
     End Function
 
     Public Sub SearchAndScroll(searchText As String)
-        ' Reset previously highlighted labels
+        ' Clear previous highlights
         For Each lbl As Label In previousResults
             lbl.BackColor = SystemColors.Control
             lbl.ForeColor = SystemColors.ControlText
@@ -236,27 +232,33 @@ Public Class home
         currentResultIndex = -1
         searchText = searchText.ToLower().Trim()
 
-        ' Get all labels sorted top-to-bottom
-        Dim orderedControls = Panel1.Controls.Cast(Of Control)().
-                          Where(Function(c) TypeOf c Is Label).
-                          OrderBy(Function(c) c.Top)
+        ' Target labels to search
+        Dim targetNumbers As String() = {"3", "4", "5", "6", "7", "8", "9", "10", "14", "13", "12", "11", "18", "17", "16", "15", "22", "21", "20", "19", "26", "25", "24", "23", "30", "29", "28", "27", "34", "33", "32", "31", "38", "37", "36", "35", "39"}
 
-        ' Fuzzy match and collect all results
-        For Each ctrl As Control In orderedControls
-            Dim lbl As Label = CType(ctrl, Label)
-            Dim labelText As String = lbl.Text.ToLower().Trim()
-
-            Dim dist As Integer = LevenshteinDistance(searchText, labelText)
-            Dim maxLen As Integer = Math.Max(searchText.Length, labelText.Length)
-            Dim similarity As Double = 1 - (dist / maxLen)
-
-            If similarity >= 0.8 Then
-                searchResults.Add(lbl)
-                previousResults.Add(lbl) ' Track for later reset
+        ' Search labels
+        For Each num As String In targetNumbers
+            Dim labelName As String = "Label" & num
+            Dim lbl As Label = TryCast(Panel1.Controls(labelName), Label)
+            If lbl IsNot Nothing Then
+                Dim labelText As String = lbl.Text.ToLower().Trim()
+                If labelText.Contains(searchText) Then
+                    searchResults.Add(lbl)
+                    previousResults.Add(lbl)
+                End If
             End If
         Next
 
-        ' Scroll to first result
+        ' Sort by position
+        searchResults = searchResults.OrderBy(Function(lbl) lbl.Top).ToList()
+        previousResults = searchResults.ToList()
+
+        ' Highlight results
+        For Each lbl As Label In searchResults
+            lbl.BackColor = Color.Black
+            lbl.ForeColor = Color.White
+        Next
+
+        ' Show first result
         If searchResults.Count > 0 Then
             currentResultIndex = 0
             ScrollToCurrentResult()
@@ -271,6 +273,33 @@ Public Class home
             Button3.PerformClick()
         End If
     End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        If String.IsNullOrWhiteSpace(TextBox1.Text) Then
+            ' Clear highlights
+            For Each lbl As Label In previousResults
+                lbl.BackColor = SystemColors.Control
+                lbl.ForeColor = SystemColors.ControlText
+            Next
+            previousResults.Clear()
+            searchResults.Clear()
+            currentResultIndex = -1
+            Timer1.Stop()
+        Else
+            Timer1.Stop()
+        End If
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Timer1.Stop()
+        For Each lbl As Label In previousResults
+            lbl.BackColor = SystemColors.Control
+            lbl.ForeColor = SystemColors.ControlText
+        Next
+        previousResults.Clear()
+    End Sub
+
+    Private lastSearchTerm As String = ""
 
 End Class
 

@@ -22,6 +22,7 @@ Partial Class home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(home))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label116 = New System.Windows.Forms.Label()
@@ -193,14 +194,13 @@ Partial Class home
         Me.OscilloscopesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox38 = New System.Windows.Forms.PictureBox()
         Me.PictureBox39 = New System.Windows.Forms.PictureBox()
         Me.usericon = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox41 = New System.Windows.Forms.PictureBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -2186,10 +2186,10 @@ Partial Class home
         '
         'TextBox1
         '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(727, 155)
-        Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(180, 30)
+        Me.TextBox1.Size = New System.Drawing.Size(180, 29)
         Me.TextBox1.TabIndex = 5
         '
         'Button3
@@ -2201,15 +2201,6 @@ Partial Class home
         Me.Button3.Size = New System.Drawing.Size(31, 30)
         Me.Button3.TabIndex = 6
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(578, 162)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Next"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -2264,15 +2255,6 @@ Partial Class home
         Me.usericon.TabIndex = 12
         Me.usericon.TabStop = False
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(341, 160)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 13
-        Me.Button1.Text = "Back"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'PictureBox41
         '
         Me.PictureBox41.BackColor = System.Drawing.Color.Transparent
@@ -2284,6 +2266,9 @@ Partial Class home
         Me.PictureBox41.TabIndex = 14
         Me.PictureBox41.TabStop = False
         '
+        'Timer1
+        '
+        '
         'home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2292,17 +2277,16 @@ Partial Class home
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(984, 661)
         Me.Controls.Add(Me.PictureBox41)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.usericon)
         Me.Controls.Add(Me.PictureBox39)
         Me.Controls.Add(Me.PictureBox38)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(2)
@@ -2418,13 +2402,11 @@ Partial Class home
     Friend WithEvents PictureBox37 As PictureBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox38 As PictureBox
     Friend WithEvents PictureBox39 As PictureBox
     Friend WithEvents usericon As PictureBox
-    Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox41 As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
@@ -2538,4 +2520,5 @@ Partial Class home
     Friend WithEvents Label94 As Label
     Friend WithEvents Label95 As Label
     Friend WithEvents Label96 As Label
+    Friend WithEvents Timer1 As Timer
 End Class
