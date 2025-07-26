@@ -35,9 +35,13 @@ Partial Class cart
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnGoToStaging = New System.Windows.Forms.Button()
+        Me.btnOrderManager = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.minus_btn = New System.Windows.Forms.Button()
         Me.plus_btn = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -69,7 +73,7 @@ Partial Class cart
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlText
-        Me.DataGridView1.Location = New System.Drawing.Point(25, 83)
+        Me.DataGridView1.Location = New System.Drawing.Point(25, 80)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
@@ -94,7 +98,7 @@ Partial Class cart
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(25, 502)
+        Me.Button1.Location = New System.Drawing.Point(25, 571)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(250, 50)
@@ -106,7 +110,7 @@ Partial Class cart
         '
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(553, 340)
+        Me.TextBox1.Location = New System.Drawing.Point(553, 337)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
@@ -117,7 +121,7 @@ Partial Class cart
         '
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(621, 424)
+        Me.TextBox2.Location = New System.Drawing.Point(621, 421)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(181, 29)
@@ -127,7 +131,7 @@ Partial Class cart
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(549, 426)
+        Me.Label1.Location = New System.Drawing.Point(549, 423)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 24)
         Me.Label1.TabIndex = 5
@@ -137,7 +141,7 @@ Partial Class cart
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(548, 461)
+        Me.Label2.Location = New System.Drawing.Point(548, 458)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(83, 24)
         Me.Label2.TabIndex = 7
@@ -147,7 +151,7 @@ Partial Class cart
         '
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(641, 459)
+        Me.TextBox3.Location = New System.Drawing.Point(641, 456)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(82, 29)
@@ -157,19 +161,19 @@ Partial Class cart
         '
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(551, 502)
+        Me.Button2.Location = New System.Drawing.Point(551, 499)
         Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(250, 50)
         Me.Button2.TabIndex = 8
-        Me.Button2.Text = "Check out"
+        Me.Button2.Text = "Checkout Item"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(288, 502)
+        Me.Button3.Location = New System.Drawing.Point(288, 499)
         Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(250, 50)
@@ -177,10 +181,34 @@ Partial Class cart
         Me.Button3.Text = "Remove Item"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'btnGoToStaging
+        '
+        Me.btnGoToStaging.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGoToStaging.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGoToStaging.Location = New System.Drawing.Point(551, 22)
+        Me.btnGoToStaging.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnGoToStaging.Name = "btnGoToStaging"
+        Me.btnGoToStaging.Size = New System.Drawing.Size(120, 50)
+        Me.btnGoToStaging.TabIndex = 10
+        Me.btnGoToStaging.Text = "Pay Orders"
+        Me.btnGoToStaging.UseVisualStyleBackColor = True
+        '
+        'btnOrderManager
+        '
+        Me.btnOrderManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOrderManager.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOrderManager.Location = New System.Drawing.Point(681, 22)
+        Me.btnOrderManager.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnOrderManager.Name = "btnOrderManager"
+        Me.btnOrderManager.Size = New System.Drawing.Size(120, 50)
+        Me.btnOrderManager.TabIndex = 11
+        Me.btnOrderManager.Text = "Order Manager"
+        Me.btnOrderManager.UseVisualStyleBackColor = True
+        '
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(552, 83)
+        Me.PictureBox1.Location = New System.Drawing.Point(552, 80)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(250, 250)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -191,7 +219,7 @@ Partial Class cart
         '
         Me.minus_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.minus_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.minus_btn.Location = New System.Drawing.Point(767, 459)
+        Me.minus_btn.Location = New System.Drawing.Point(766, 456)
         Me.minus_btn.Margin = New System.Windows.Forms.Padding(2)
         Me.minus_btn.Name = "minus_btn"
         Me.minus_btn.Size = New System.Drawing.Size(35, 29)
@@ -202,7 +230,7 @@ Partial Class cart
         'plus_btn
         '
         Me.plus_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.plus_btn.Location = New System.Drawing.Point(728, 459)
+        Me.plus_btn.Location = New System.Drawing.Point(728, 456)
         Me.plus_btn.Margin = New System.Windows.Forms.Padding(2)
         Me.plus_btn.Name = "plus_btn"
         Me.plus_btn.Size = New System.Drawing.Size(35, 29)
@@ -210,14 +238,42 @@ Partial Class cart
         Me.plus_btn.Text = "+"
         Me.plus_btn.UseVisualStyleBackColor = True
         '
+        'Button4
+        '
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(25, 499)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(120, 50)
+        Me.Button4.TabIndex = 124
+        Me.Button4.Text = "Back"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Location = New System.Drawing.Point(153, 499)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(120, 50)
+        Me.Button5.TabIndex = 125
+        Me.Button5.Text = "Refresh"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'cart
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(826, 571)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.minus_btn)
         Me.Controls.Add(Me.plus_btn)
+        Me.Controls.Add(Me.btnOrderManager)
+        Me.Controls.Add(Me.btnGoToStaging)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label2)
@@ -249,6 +305,10 @@ Partial Class cart
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents btnGoToStaging As Button
+    Friend WithEvents btnOrderManager As Button
     Friend WithEvents minus_btn As Button
     Friend WithEvents plus_btn As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
 End Class

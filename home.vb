@@ -135,7 +135,8 @@ Public Class home
     End Sub
 
     Private Sub PictureBox39_Click(sender As Object, e As EventArgs) Handles PictureBox39.Click
-        cart.Show()
+        Dim cartForm As New cart()
+        cartForm.Show()
     End Sub
 
     Private Sub usericon_Click(sender As Object, e As EventArgs) Handles usericon.Click

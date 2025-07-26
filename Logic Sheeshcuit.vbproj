@@ -199,10 +199,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ordermanager.Designer.vb">
-      <DependentUpon>ordermanager.vb</DependentUpon>
+    <Compile Include="orders.Designer.vb">
+      <DependentUpon>orders.vb</DependentUpon>
     </Compile>
-    <Compile Include="ordermanager.vb">
+    <Compile Include="orders.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="receipt.Designer.vb">
+      <DependentUpon>receipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="receipt.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="dataorders.Designer.vb">
@@ -230,10 +236,10 @@
     <Compile Include="element14.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="orders.Designer.vb">
-      <DependentUpon>orders.vb</DependentUpon>
+    <Compile Include="checkout.Designer.vb">
+      <DependentUpon>checkout.vb</DependentUpon>
     </Compile>
-    <Compile Include="orders.vb">
+    <Compile Include="checkout.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="oscilloscopes.Designer.vb">
@@ -376,8 +382,11 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ordermanager.resx">
-      <DependentUpon>ordermanager.vb</DependentUpon>
+    <EmbeddedResource Include="orders.resx">
+      <DependentUpon>orders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="receipt.resx">
+      <DependentUpon>receipt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dataorders.resx">
       <DependentUpon>dataorders.vb</DependentUpon>
@@ -391,8 +400,8 @@
     <EmbeddedResource Include="element14.resx">
       <DependentUpon>element14.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="orders.resx">
-      <DependentUpon>orders.vb</DependentUpon>
+    <EmbeddedResource Include="checkout.resx">
+      <DependentUpon>checkout.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="oscilloscopes.resx">
       <DependentUpon>oscilloscopes.vb</DependentUpon>
