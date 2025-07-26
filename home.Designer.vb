@@ -412,7 +412,7 @@ Partial Class home
         Me.Label116.Name = "Label116"
         Me.Label116.Size = New System.Drawing.Size(178, 32)
         Me.Label116.TabIndex = 155
-        Me.Label116.Text = "₱40.00"
+        Me.Label116.Text = "₱39.00"
         Me.Label116.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label120
@@ -423,7 +423,7 @@ Partial Class home
         Me.Label120.Name = "Label120"
         Me.Label120.Size = New System.Drawing.Size(178, 32)
         Me.Label120.TabIndex = 151
-        Me.Label120.Text = "RC Components"
+        Me.Label120.Text = "Circuitrocks"
         Me.Label120.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label105
@@ -434,7 +434,7 @@ Partial Class home
         Me.Label105.Name = "Label105"
         Me.Label105.Size = New System.Drawing.Size(178, 32)
         Me.Label105.TabIndex = 150
-        Me.Label105.Text = "₱35.00"
+        Me.Label105.Text = "₱13,750.00"
         Me.Label105.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label106
@@ -445,7 +445,7 @@ Partial Class home
         Me.Label106.Name = "Label106"
         Me.Label106.Size = New System.Drawing.Size(178, 32)
         Me.Label106.TabIndex = 149
-        Me.Label106.Text = "₱25.00"
+        Me.Label106.Text = "₱16,750.00"
         Me.Label106.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label107
@@ -456,7 +456,7 @@ Partial Class home
         Me.Label107.Name = "Label107"
         Me.Label107.Size = New System.Drawing.Size(178, 32)
         Me.Label107.TabIndex = 148
-        Me.Label107.Text = "₱35.00"
+        Me.Label107.Text = "₱99.00"
         Me.Label107.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label108
@@ -467,7 +467,7 @@ Partial Class home
         Me.Label108.Name = "Label108"
         Me.Label108.Size = New System.Drawing.Size(178, 32)
         Me.Label108.TabIndex = 147
-        Me.Label108.Text = "₱40.00"
+        Me.Label108.Text = "₱79.00"
         Me.Label108.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label109
@@ -478,7 +478,7 @@ Partial Class home
         Me.Label109.Name = "Label109"
         Me.Label109.Size = New System.Drawing.Size(178, 32)
         Me.Label109.TabIndex = 146
-        Me.Label109.Text = "Makerlab Electronics"
+        Me.Label109.Text = "element14"
         Me.Label109.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label110
@@ -489,7 +489,7 @@ Partial Class home
         Me.Label110.Name = "Label110"
         Me.Label110.Size = New System.Drawing.Size(178, 32)
         Me.Label110.TabIndex = 145
-        Me.Label110.Text = "Makerlab Electronics"
+        Me.Label110.Text = "element14"
         Me.Label110.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label111
@@ -500,7 +500,7 @@ Partial Class home
         Me.Label111.Name = "Label111"
         Me.Label111.Size = New System.Drawing.Size(178, 32)
         Me.Label111.TabIndex = 144
-        Me.Label111.Text = "RC Components"
+        Me.Label111.Text = "Circuitrocks"
         Me.Label111.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label112
@@ -511,7 +511,7 @@ Partial Class home
         Me.Label112.Name = "Label112"
         Me.Label112.Size = New System.Drawing.Size(178, 32)
         Me.Label112.TabIndex = 143
-        Me.Label112.Text = "RC Components"
+        Me.Label112.Text = "Circuitrocks"
         Me.Label112.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label97
@@ -522,7 +522,7 @@ Partial Class home
         Me.Label97.Name = "Label97"
         Me.Label97.Size = New System.Drawing.Size(178, 32)
         Me.Label97.TabIndex = 142
-        Me.Label97.Text = "₱35.00"
+        Me.Label97.Text = "₱55.00"
         Me.Label97.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label98
@@ -533,7 +533,7 @@ Partial Class home
         Me.Label98.Name = "Label98"
         Me.Label98.Size = New System.Drawing.Size(178, 32)
         Me.Label98.TabIndex = 141
-        Me.Label98.Text = "₱25.00"
+        Me.Label98.Text = "₱85.00"
         Me.Label98.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label99
@@ -544,7 +544,7 @@ Partial Class home
         Me.Label99.Name = "Label99"
         Me.Label99.Size = New System.Drawing.Size(178, 32)
         Me.Label99.TabIndex = 140
-        Me.Label99.Text = "₱35.00"
+        Me.Label99.Text = "₱25.00"
         Me.Label99.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label100
@@ -555,7 +555,7 @@ Partial Class home
         Me.Label100.Name = "Label100"
         Me.Label100.Size = New System.Drawing.Size(178, 32)
         Me.Label100.TabIndex = 139
-        Me.Label100.Text = "₱40.00"
+        Me.Label100.Text = "₱19.00"
         Me.Label100.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label101
@@ -566,7 +566,7 @@ Partial Class home
         Me.Label101.Name = "Label101"
         Me.Label101.Size = New System.Drawing.Size(178, 32)
         Me.Label101.TabIndex = 138
-        Me.Label101.Text = "Makerlab Electronics"
+        Me.Label101.Text = "Circuitrocks"
         Me.Label101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label102
@@ -577,7 +577,7 @@ Partial Class home
         Me.Label102.Name = "Label102"
         Me.Label102.Size = New System.Drawing.Size(178, 32)
         Me.Label102.TabIndex = 137
-        Me.Label102.Text = "Makerlab Electronics"
+        Me.Label102.Text = "Circuitrocks"
         Me.Label102.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label103
@@ -588,7 +588,7 @@ Partial Class home
         Me.Label103.Name = "Label103"
         Me.Label103.Size = New System.Drawing.Size(178, 32)
         Me.Label103.TabIndex = 136
-        Me.Label103.Text = "RC Components"
+        Me.Label103.Text = "Circuitrocks"
         Me.Label103.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label104
@@ -599,7 +599,7 @@ Partial Class home
         Me.Label104.Name = "Label104"
         Me.Label104.Size = New System.Drawing.Size(178, 32)
         Me.Label104.TabIndex = 135
-        Me.Label104.Text = "RC Components"
+        Me.Label104.Text = "Circuitrocks"
         Me.Label104.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label89
@@ -610,7 +610,7 @@ Partial Class home
         Me.Label89.Name = "Label89"
         Me.Label89.Size = New System.Drawing.Size(178, 32)
         Me.Label89.TabIndex = 134
-        Me.Label89.Text = "₱35.00"
+        Me.Label89.Text = "₱95.00"
         Me.Label89.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label90
@@ -621,7 +621,7 @@ Partial Class home
         Me.Label90.Name = "Label90"
         Me.Label90.Size = New System.Drawing.Size(178, 32)
         Me.Label90.TabIndex = 133
-        Me.Label90.Text = "₱25.00"
+        Me.Label90.Text = "₱19.00"
         Me.Label90.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label91
@@ -632,7 +632,7 @@ Partial Class home
         Me.Label91.Name = "Label91"
         Me.Label91.Size = New System.Drawing.Size(178, 32)
         Me.Label91.TabIndex = 132
-        Me.Label91.Text = "₱35.00"
+        Me.Label91.Text = "₱19.00"
         Me.Label91.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label92
@@ -643,7 +643,7 @@ Partial Class home
         Me.Label92.Name = "Label92"
         Me.Label92.Size = New System.Drawing.Size(178, 32)
         Me.Label92.TabIndex = 131
-        Me.Label92.Text = "₱40.00"
+        Me.Label92.Text = "₱19.00"
         Me.Label92.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label93
@@ -654,7 +654,7 @@ Partial Class home
         Me.Label93.Name = "Label93"
         Me.Label93.Size = New System.Drawing.Size(178, 32)
         Me.Label93.TabIndex = 130
-        Me.Label93.Text = "Makerlab Electronics"
+        Me.Label93.Text = "Circuitrocks"
         Me.Label93.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label94
@@ -665,7 +665,7 @@ Partial Class home
         Me.Label94.Name = "Label94"
         Me.Label94.Size = New System.Drawing.Size(178, 32)
         Me.Label94.TabIndex = 129
-        Me.Label94.Text = "Makerlab Electronics"
+        Me.Label94.Text = "Circuitrocks"
         Me.Label94.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label95
@@ -676,7 +676,7 @@ Partial Class home
         Me.Label95.Name = "Label95"
         Me.Label95.Size = New System.Drawing.Size(178, 32)
         Me.Label95.TabIndex = 128
-        Me.Label95.Text = "RC Components"
+        Me.Label95.Text = "Circuitrocks"
         Me.Label95.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label96
@@ -687,51 +687,51 @@ Partial Class home
         Me.Label96.Name = "Label96"
         Me.Label96.Size = New System.Drawing.Size(178, 32)
         Me.Label96.TabIndex = 127
-        Me.Label96.Text = "RC Components"
+        Me.Label96.Text = "Circuitrocks"
         Me.Label96.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label81
         '
         Me.Label81.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label81.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label81.Location = New System.Drawing.Point(656, 2193)
+        Me.Label81.Location = New System.Drawing.Point(656, 2198)
         Me.Label81.Name = "Label81"
         Me.Label81.Size = New System.Drawing.Size(178, 32)
         Me.Label81.TabIndex = 126
-        Me.Label81.Text = "₱35.00"
+        Me.Label81.Text = "₱19.00"
         Me.Label81.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label82
         '
         Me.Label82.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label82.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label82.Location = New System.Drawing.Point(453, 2193)
+        Me.Label82.Location = New System.Drawing.Point(453, 2198)
         Me.Label82.Name = "Label82"
         Me.Label82.Size = New System.Drawing.Size(178, 32)
         Me.Label82.TabIndex = 125
-        Me.Label82.Text = "₱25.00"
+        Me.Label82.Text = "₱19.00"
         Me.Label82.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label83
         '
         Me.Label83.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label83.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label83.Location = New System.Drawing.Point(250, 2193)
+        Me.Label83.Location = New System.Drawing.Point(250, 2198)
         Me.Label83.Name = "Label83"
         Me.Label83.Size = New System.Drawing.Size(178, 32)
         Me.Label83.TabIndex = 124
-        Me.Label83.Text = "₱35.00"
+        Me.Label83.Text = "₱19.00"
         Me.Label83.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label84
         '
         Me.Label84.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label84.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label84.Location = New System.Drawing.Point(47, 2193)
+        Me.Label84.Location = New System.Drawing.Point(47, 2198)
         Me.Label84.Name = "Label84"
         Me.Label84.Size = New System.Drawing.Size(178, 32)
         Me.Label84.TabIndex = 123
-        Me.Label84.Text = "₱40.00"
+        Me.Label84.Text = "₱25.00"
         Me.Label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label85
@@ -742,7 +742,7 @@ Partial Class home
         Me.Label85.Name = "Label85"
         Me.Label85.Size = New System.Drawing.Size(178, 37)
         Me.Label85.TabIndex = 122
-        Me.Label85.Text = "Makerlab Electronics"
+        Me.Label85.Text = "Circuitrocks"
         Me.Label85.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label86
@@ -753,7 +753,7 @@ Partial Class home
         Me.Label86.Name = "Label86"
         Me.Label86.Size = New System.Drawing.Size(178, 37)
         Me.Label86.TabIndex = 121
-        Me.Label86.Text = "Makerlab Electronics"
+        Me.Label86.Text = "Circuitrocks"
         Me.Label86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label87
@@ -764,7 +764,7 @@ Partial Class home
         Me.Label87.Name = "Label87"
         Me.Label87.Size = New System.Drawing.Size(178, 37)
         Me.Label87.TabIndex = 120
-        Me.Label87.Text = "RC Components"
+        Me.Label87.Text = "Circuitrocks"
         Me.Label87.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label88
@@ -775,7 +775,7 @@ Partial Class home
         Me.Label88.Name = "Label88"
         Me.Label88.Size = New System.Drawing.Size(178, 37)
         Me.Label88.TabIndex = 119
-        Me.Label88.Text = "RC Components"
+        Me.Label88.Text = "Circuitrocks"
         Me.Label88.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label73
@@ -797,7 +797,7 @@ Partial Class home
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(178, 32)
         Me.Label74.TabIndex = 117
-        Me.Label74.Text = "₱25.00"
+        Me.Label74.Text = "₱55.00"
         Me.Label74.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label75
@@ -808,7 +808,7 @@ Partial Class home
         Me.Label75.Name = "Label75"
         Me.Label75.Size = New System.Drawing.Size(178, 32)
         Me.Label75.TabIndex = 116
-        Me.Label75.Text = "₱35.00"
+        Me.Label75.Text = "₱15.00"
         Me.Label75.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label76
@@ -819,7 +819,7 @@ Partial Class home
         Me.Label76.Name = "Label76"
         Me.Label76.Size = New System.Drawing.Size(178, 32)
         Me.Label76.TabIndex = 115
-        Me.Label76.Text = "₱40.00"
+        Me.Label76.Text = "₱45.00"
         Me.Label76.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label77
@@ -830,7 +830,7 @@ Partial Class home
         Me.Label77.Name = "Label77"
         Me.Label77.Size = New System.Drawing.Size(178, 32)
         Me.Label77.TabIndex = 114
-        Me.Label77.Text = "Makerlab Electronics"
+        Me.Label77.Text = "Circuitrocks"
         Me.Label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label78
@@ -841,7 +841,7 @@ Partial Class home
         Me.Label78.Name = "Label78"
         Me.Label78.Size = New System.Drawing.Size(178, 32)
         Me.Label78.TabIndex = 113
-        Me.Label78.Text = "Makerlab Electronics"
+        Me.Label78.Text = "Circuitrocks"
         Me.Label78.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label79
@@ -852,7 +852,7 @@ Partial Class home
         Me.Label79.Name = "Label79"
         Me.Label79.Size = New System.Drawing.Size(178, 32)
         Me.Label79.TabIndex = 112
-        Me.Label79.Text = "RC Components"
+        Me.Label79.Text = "Circuitrocks"
         Me.Label79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label80
@@ -863,7 +863,7 @@ Partial Class home
         Me.Label80.Name = "Label80"
         Me.Label80.Size = New System.Drawing.Size(178, 32)
         Me.Label80.TabIndex = 111
-        Me.Label80.Text = "RC Components"
+        Me.Label80.Text = "Circuitrocks"
         Me.Label80.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label65
@@ -874,7 +874,7 @@ Partial Class home
         Me.Label65.Name = "Label65"
         Me.Label65.Size = New System.Drawing.Size(178, 32)
         Me.Label65.TabIndex = 110
-        Me.Label65.Text = "₱35.00"
+        Me.Label65.Text = "₱45.00"
         Me.Label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label66
@@ -885,7 +885,7 @@ Partial Class home
         Me.Label66.Name = "Label66"
         Me.Label66.Size = New System.Drawing.Size(178, 32)
         Me.Label66.TabIndex = 109
-        Me.Label66.Text = "₱25.00"
+        Me.Label66.Text = "₱65.00"
         Me.Label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label67
@@ -896,7 +896,7 @@ Partial Class home
         Me.Label67.Name = "Label67"
         Me.Label67.Size = New System.Drawing.Size(178, 32)
         Me.Label67.TabIndex = 108
-        Me.Label67.Text = "₱35.00"
+        Me.Label67.Text = "₱65.00"
         Me.Label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label68
@@ -907,7 +907,7 @@ Partial Class home
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(178, 32)
         Me.Label68.TabIndex = 107
-        Me.Label68.Text = "₱40.00"
+        Me.Label68.Text = "₱15.00"
         Me.Label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label69
@@ -918,7 +918,7 @@ Partial Class home
         Me.Label69.Name = "Label69"
         Me.Label69.Size = New System.Drawing.Size(178, 32)
         Me.Label69.TabIndex = 106
-        Me.Label69.Text = "Makerlab Electronics"
+        Me.Label69.Text = "Circuitrocks"
         Me.Label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label70
@@ -929,7 +929,7 @@ Partial Class home
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(178, 32)
         Me.Label70.TabIndex = 105
-        Me.Label70.Text = "Makerlab Electronics"
+        Me.Label70.Text = "Circuitrocks"
         Me.Label70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label71
@@ -940,7 +940,7 @@ Partial Class home
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(178, 32)
         Me.Label71.TabIndex = 104
-        Me.Label71.Text = "RC Components"
+        Me.Label71.Text = "Circuitrocks"
         Me.Label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label72
@@ -951,18 +951,18 @@ Partial Class home
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(178, 32)
         Me.Label72.TabIndex = 103
-        Me.Label72.Text = "RC Components"
+        Me.Label72.Text = "Circuitrocks"
         Me.Label72.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label57
         '
         Me.Label57.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label57.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label57.Location = New System.Drawing.Point(656, 1082)
+        Me.Label57.Location = New System.Drawing.Point(657, 1082)
         Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(178, 32)
+        Me.Label57.Size = New System.Drawing.Size(178, 54)
         Me.Label57.TabIndex = 102
-        Me.Label57.Text = "₱35.00"
+        Me.Label57.Text = "₱50.00, ₱65.00, ₱90.00"
         Me.Label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label58
@@ -984,7 +984,7 @@ Partial Class home
         Me.Label59.Name = "Label59"
         Me.Label59.Size = New System.Drawing.Size(178, 32)
         Me.Label59.TabIndex = 100
-        Me.Label59.Text = "₱35.00"
+        Me.Label59.Text = "₱57.00"
         Me.Label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label60
@@ -995,7 +995,7 @@ Partial Class home
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(178, 32)
         Me.Label60.TabIndex = 99
-        Me.Label60.Text = "₱40.00"
+        Me.Label60.Text = "₱27.00"
         Me.Label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label61
@@ -1017,7 +1017,7 @@ Partial Class home
         Me.Label62.Name = "Label62"
         Me.Label62.Size = New System.Drawing.Size(178, 32)
         Me.Label62.TabIndex = 97
-        Me.Label62.Text = "Makerlab Electronics"
+        Me.Label62.Text = "Circuitrocks"
         Me.Label62.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label63
@@ -1028,7 +1028,7 @@ Partial Class home
         Me.Label63.Name = "Label63"
         Me.Label63.Size = New System.Drawing.Size(178, 32)
         Me.Label63.TabIndex = 96
-        Me.Label63.Text = "RC Components"
+        Me.Label63.Text = "Circuitrocks"
         Me.Label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label64
@@ -1039,7 +1039,7 @@ Partial Class home
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(178, 32)
         Me.Label64.TabIndex = 95
-        Me.Label64.Text = "RC Components"
+        Me.Label64.Text = "Circuitrocks"
         Me.Label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label49
@@ -1298,7 +1298,7 @@ Partial Class home
         Me.Label32.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label32.Size = New System.Drawing.Size(178, 53)
         Me.Label32.TabIndex = 71
-        Me.Label32.Text = "Electrolytic Capacitor 25V 2200uF (10 pcs"
+        Me.Label32.Text = "Electrolytic Capacitor 25V 2200uF (10 pcs)"
         Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label33
@@ -1416,7 +1416,7 @@ Partial Class home
         Me.Label19.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label19.Size = New System.Drawing.Size(178, 53)
         Me.Label19.TabIndex = 60
-        Me.Label19.Text = "Breadboard SYB-46 300pins"
+        Me.Label19.Text = "Breadboard SYB-46 300 pins"
         Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label20
