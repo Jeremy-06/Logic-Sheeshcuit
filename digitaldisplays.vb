@@ -21,8 +21,34 @@ Public Class digitaldisplays
         home.Show()
     End Sub
 
+    Private Function ValidateCustomer() As Boolean
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+            query = $"SELECT COUNT(*) FROM customers WHERE customerId = {login.customerId}"
+            cmd = New MySqlCommand(query, conn)
+            Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+            If count = 0 Then
+                MessageBox.Show("Please create an account first to add items to cart.")
+                Me.Hide()
+                signup.Show()
+                Return False
+            End If
+            Return True
+        Catch ex As Exception
+            MessageBox.Show("Error validating customer: " & ex.Message)
+            Return False
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+    End Function
+
     ' PRODUCT 1
     Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
+        If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 1
         Dim newQty As Integer
@@ -110,6 +136,7 @@ Public Class digitaldisplays
 
     ' PRODUCT 2
     Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs) Handles addtocart_btn1.Click
+        If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 2
         Dim newQty As Integer
