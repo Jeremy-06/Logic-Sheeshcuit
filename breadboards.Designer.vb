@@ -611,9 +611,9 @@ Partial Class breadboards
         '
         Me.Back.BackColor = System.Drawing.Color.Transparent
         Me.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Back.Font = New System.Drawing.Font("Georgia", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Back.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Back.ForeColor = System.Drawing.Color.Black
-        Me.Back.Location = New System.Drawing.Point(777, 9)
+        Me.Back.Location = New System.Drawing.Point(773, 11)
         Me.Back.Margin = New System.Windows.Forms.Padding(2)
         Me.Back.Name = "Back"
         Me.Back.Size = New System.Drawing.Size(103, 31)
@@ -1054,7 +1054,7 @@ Partial Class breadboards
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(904, 611)
+        Me.ClientSize = New System.Drawing.Size(921, 611)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label30)
