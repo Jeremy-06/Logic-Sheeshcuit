@@ -309,6 +309,7 @@ Partial Class integratedcircuits
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(205, 35)
         Me.TextBox2.TabIndex = 210
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn1
         '
@@ -424,6 +425,7 @@ Partial Class integratedcircuits
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(207, 35)
         Me.TextBox3.TabIndex = 220
+        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn2
         '
@@ -548,6 +550,7 @@ Partial Class integratedcircuits
         Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(207, 35)
         Me.TextBox4.TabIndex = 230
+        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn3
         '

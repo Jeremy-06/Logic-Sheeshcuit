@@ -191,6 +191,7 @@ Partial Class switches
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(207, 35)
         Me.TextBox1.TabIndex = 432
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'switches
         '

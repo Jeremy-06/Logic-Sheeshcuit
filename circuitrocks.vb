@@ -101,6 +101,33 @@ Public Class circuitrocks
         TextBox25.Text = 0
     End Sub
 
+    Private Function HasSufficientStock(productId As Integer, requestedQty As Integer) As Boolean
+        Dim availableStock As Integer = 0
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+            query = $"SELECT productStock FROM inventory WHERE products_productId = {productId} LIMIT 1"
+            cmd = New MySqlCommand(query, conn)
+            Dim result = cmd.ExecuteScalar()
+            If result IsNot Nothing Then
+                availableStock = Convert.ToInt32(result)
+            End If
+            If requestedQty > availableStock Then
+                MessageBox.Show($"Not enough stock available. Only {availableStock} left in stock.", "Insufficient Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return False
+            End If
+            Return True
+        Catch ex As Exception
+            MessageBox.Show("Error checking stock: " & ex.Message)
+            Return False
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+    End Function
+
     'PRODUCT 10
     Private Sub addtocart_btn_Click_1(sender As Object, e As EventArgs) Handles addtocart_btn.Click
         If Not ValidateCustomer() Then Return
@@ -114,6 +141,9 @@ Public Class circuitrocks
         End If
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
         Try
@@ -185,6 +215,9 @@ Public Class circuitrocks
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -252,6 +285,9 @@ Public Class circuitrocks
         End If
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
         Try
@@ -323,6 +359,9 @@ Public Class circuitrocks
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -390,6 +429,9 @@ Public Class circuitrocks
         End If
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
         Try
@@ -461,6 +503,9 @@ Public Class circuitrocks
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -528,6 +573,9 @@ Public Class circuitrocks
         End If
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
         Try
@@ -599,6 +647,9 @@ Public Class circuitrocks
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -666,6 +717,9 @@ Public Class circuitrocks
         End If
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
         Try
@@ -737,6 +791,9 @@ Public Class circuitrocks
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -804,6 +861,9 @@ Public Class circuitrocks
         End If
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
         Try
@@ -875,6 +935,9 @@ Public Class circuitrocks
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -942,6 +1005,9 @@ Public Class circuitrocks
         End If
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
         Try
@@ -1013,6 +1079,9 @@ Public Class circuitrocks
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -1080,6 +1149,9 @@ Public Class circuitrocks
         End If
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
         Try
@@ -1151,6 +1223,9 @@ Public Class circuitrocks
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -1220,73 +1295,7 @@ Public Class circuitrocks
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
-        Try
-            If conn.State = ConnectionState.Closed Then
-                conn.Open()
-            End If
-            query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
-            cmd = New MySqlCommand(query, conn)
-            da = New MySqlDataAdapter(cmd)
-            ds = New DataSet()
-            da.Fill(ds, "cartcheck")
-            Dim foundAvailableCart As Boolean = False
-            Dim availableCartId As Integer = 0
-            For Each row As DataRow In ds.Tables("cartcheck").Rows
-                If Convert.ToInt32(row("remainingQty")) > 0 Then
-                    foundAvailableCart = True
-                    availableCartId = Convert.ToInt32(row("cartId"))
-                    Exit For
-                End If
-            Next
-            If foundAvailableCart Then
-                query = $"UPDATE cart SET productQty = productQty + {newQty} WHERE cartId = {availableCartId}"
-                cmd = New MySqlCommand(query, conn)
-                cmd.ExecuteNonQuery()
-                MessageBox.Show($"Updated cart! Added {newQty} more items to existing cart item.")
-            Else
-                query = $"INSERT INTO cart (products_productId, customers_customerId, productQty) VALUES ({productId}, {customerId}, {newQty})"
-                cmd = New MySqlCommand(query, conn)
-                cmd.ExecuteNonQuery()
-                MessageBox.Show($"Product added to cart successfully! Quantity: {newQty}")
-            End If
-            cart.refreshData()
-            ' Clear all quantity textboxes after adding to cart
-            ClearAllProductTextBoxes()
-        Catch ex As Exception
-            MessageBox.Show("Error adding product to cart: " & ex.Message)
-        Finally
-            If conn.State = ConnectionState.Open Then
-                conn.Close()
-            End If
-        End Try
-    End Sub
-
-    Private Sub plus_btn16_Click(sender As Object, e As EventArgs) Handles plus_btn16.Click
-        product27Qty += 1
-        TextBox17.Text = product27Qty.ToString()
-        addtocart_btn13.Enabled = True
-    End Sub
-
-    Private Sub minus_btn16_Click(sender As Object, e As EventArgs) Handles minus_btn16.Click
-        If product27Qty > 0 Then
-            product27Qty -= 1
-            TextBox17.Text = product27Qty.ToString()
-            If product27Qty <= 0 Then addtocart_btn13.Enabled = False
-        End If
-    End Sub
-    'PRODUCT 28
-    Private Sub addtocart_btn17_Click(sender As Object, e As EventArgs) Handles addtocart_btn17.Click
-        If Not ValidateCustomer() Then Return
-        ' Adds Product 28 to the cart
-        Dim customerId = login.customerId
-        Dim productId As Integer = 28
-        Dim newQty As Integer
-        If Not Integer.TryParse(TextBox18.Text, newQty) Then
-            MessageBox.Show("Please enter a valid number.")
-            Return
-        End If
-        If newQty <= 0 Then
-            MessageBox.Show("Please enter a quantity greater than 0.")
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
         Try
@@ -1358,6 +1367,9 @@ Public Class circuitrocks
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -1399,10 +1411,10 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub plus_btn18_Click(sender As Object, e As EventArgs) Handles plus_btn18.Click
-        product29Qty += 1
-        TextBox19.Text = product29Qty.ToString()
-        addtocart_btn11.Enabled = True
+    Private Sub plus_btn18_Click(sender As Object, e As EventArgs) Handles plus_btn19.Click
+        product30Qty += 1
+        TextBox20.Text = product30Qty.ToString()
+        addtocart_btn20.Enabled = True
     End Sub
 
     Private Sub minus_btn18_Click(sender As Object, e As EventArgs) Handles minus_btn18.Click
@@ -1425,6 +1437,9 @@ Public Class circuitrocks
         End If
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
         Try
@@ -1496,6 +1511,9 @@ Public Class circuitrocks
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -1563,6 +1581,9 @@ Public Class circuitrocks
         End If
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
         Try
@@ -1634,6 +1655,9 @@ Public Class circuitrocks
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -1703,6 +1727,9 @@ Public Class circuitrocks
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -1770,6 +1797,9 @@ Public Class circuitrocks
         End If
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
         Try

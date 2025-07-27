@@ -57,6 +57,38 @@ Public Class makerlab
         End Try
     End Function
 
+    Private Function HasSufficientStock(productId As Integer, requestedQty As Integer) As Boolean
+        Dim availableStock As Integer = 0
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+
+            ' Query the inventory for the product's stock
+            query = $"SELECT productStock FROM inventory WHERE products_productId = {productId} LIMIT 1"
+            cmd = New MySqlCommand(query, conn)
+            Dim result = cmd.ExecuteScalar()
+            If result IsNot Nothing Then
+                availableStock = Convert.ToInt32(result)
+            End If
+
+            If requestedQty > availableStock Then
+                MessageBox.Show($"Not enough stock available. Only {availableStock} left in stock.", "Insufficient Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return False
+            End If
+
+            Return True
+
+        Catch ex As Exception
+            MessageBox.Show("Error checking stock: " & ex.Message)
+            Return False
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+    End Function
+
     Private Sub clearQty()
         ' Reset quantity variables
         product1Qty = 0
@@ -106,6 +138,10 @@ Public Class makerlab
 
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
 
@@ -199,6 +235,10 @@ Public Class makerlab
             Return
         End If
 
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
+
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -286,6 +326,10 @@ Public Class makerlab
 
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
 
@@ -379,6 +423,10 @@ Public Class makerlab
             Return
         End If
 
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
+
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -469,6 +517,10 @@ Public Class makerlab
             Return
         End If
 
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
+
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -556,6 +608,10 @@ Public Class makerlab
 
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
 

@@ -34,7 +34,7 @@ Public Class orders
             conn.Open()
 
             ' Build query based on status filter
-            Dim whereClause As String = $"WHERE o.customers_customerId = {customerId}"
+            Dim whereClause As String = $"WHERE o.customers_customerId = {customerId} AND o.orderStatus <> 'checkout'"
             If Not String.IsNullOrEmpty(statusFilter) Then
                 whereClause += $" AND o.orderStatus = '{statusFilter}'"
             End If

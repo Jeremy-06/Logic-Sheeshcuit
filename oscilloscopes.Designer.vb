@@ -268,6 +268,7 @@ Partial Class oscilloscopes
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(205, 35)
         Me.TextBox2.TabIndex = 215
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn1
         '
@@ -359,7 +360,7 @@ Partial Class oscilloscopes
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(904, 611)
+        Me.ClientSize = New System.Drawing.Size(921, 611)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label30)
         Me.Controls.Add(Me.Label10)

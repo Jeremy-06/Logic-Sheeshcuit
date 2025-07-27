@@ -260,6 +260,7 @@ Partial Class breadboards
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(205, 35)
         Me.TextBox2.TabIndex = 25
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn1
         '
@@ -322,6 +323,7 @@ Partial Class breadboards
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(207, 35)
         Me.TextBox3.TabIndex = 33
+        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn2
         '
@@ -384,6 +386,7 @@ Partial Class breadboards
         Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(207, 35)
         Me.TextBox4.TabIndex = 41
+        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn3
         '
@@ -446,6 +449,7 @@ Partial Class breadboards
         Me.TextBox5.ReadOnly = True
         Me.TextBox5.Size = New System.Drawing.Size(207, 35)
         Me.TextBox5.TabIndex = 49
+        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn4
         '
@@ -508,6 +512,7 @@ Partial Class breadboards
         Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(205, 35)
         Me.TextBox6.TabIndex = 57
+        Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn5
         '
@@ -570,6 +575,7 @@ Partial Class breadboards
         Me.TextBox7.ReadOnly = True
         Me.TextBox7.Size = New System.Drawing.Size(207, 35)
         Me.TextBox7.TabIndex = 65
+        Me.TextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn6
         '
@@ -1054,7 +1060,7 @@ Partial Class breadboards
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(904, 611)
+        Me.ClientSize = New System.Drawing.Size(921, 611)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label30)

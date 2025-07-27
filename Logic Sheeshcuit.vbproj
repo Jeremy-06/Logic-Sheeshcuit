@@ -229,9 +229,7 @@
     <Compile Include="dataorders.Designer.vb">
       <DependentUpon>dataorders.vb</DependentUpon>
     </Compile>
-    <Compile Include="dataorders.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="dataorders.vb" />
     <Compile Include=".Designer.vb">
       <DependentUpon>makerlab.vb</DependentUpon>
       <SubType>Form</SubType>

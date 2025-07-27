@@ -73,7 +73,7 @@ Partial Class datainventory
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Digital Displays", "Integrated Circuits", "LEDs", "Power Supply and Modules", "Wires and Cables", "Breadboards", "Switches", "Resistors", "Capacitors", "Oscilloscopes", "Others"})
-        Me.ComboBox2.Location = New System.Drawing.Point(695, 426)
+        Me.ComboBox2.Location = New System.Drawing.Point(695, 246)
         Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(146, 28)
@@ -84,7 +84,7 @@ Partial Class datainventory
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Makerlab Electronics", "Circuitrocks", "element14", "RS Components"})
-        Me.ComboBox1.Location = New System.Drawing.Point(695, 246)
+        Me.ComboBox1.Location = New System.Drawing.Point(697, 426)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(146, 28)
@@ -295,7 +295,7 @@ Partial Class datainventory
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "datainventory"
