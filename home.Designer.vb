@@ -960,9 +960,9 @@ Partial Class home
         Me.Label57.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label57.Location = New System.Drawing.Point(657, 1082)
         Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(178, 54)
+        Me.Label57.Size = New System.Drawing.Size(178, 32)
         Me.Label57.TabIndex = 102
-        Me.Label57.Text = "₱50.00, ₱65.00, ₱90.00"
+        Me.Label57.Text = "₱50.00"
         Me.Label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label58
@@ -1502,7 +1502,7 @@ Partial Class home
         Me.Label11.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label11.Size = New System.Drawing.Size(178, 53)
         Me.Label11.TabIndex = 52
-        Me.Label11.Text = "40-Pin Jumper Wires (various sizes/types)"
+        Me.Label11.Text = "40-Pin Jumper Wires (Female-Male)"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label12
