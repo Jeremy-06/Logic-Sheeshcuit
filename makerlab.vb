@@ -72,7 +72,7 @@ Public Class makerlab
     End Sub
 
     ' PRODUCT 1 
-    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
+    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs)
         ' Validate customer first
         If Not ValidateCustomer() Then
             Return
@@ -145,13 +145,13 @@ Public Class makerlab
         End Try
     End Sub
 
-    Private Sub plus_btn_Click(sender As Object, e As EventArgs) Handles plus_btn.Click
+    Private Sub plus_btn_Click(sender As Object, e As EventArgs)
         product1Qty += 1
         TextBox1.Text = product1Qty.ToString()
         minus_btn.Enabled = True ' Always enable minus button when quantity > 0
     End Sub
 
-    Private Sub minus_btn_Click(sender As Object, e As EventArgs) Handles minus_btn.Click
+    Private Sub minus_btn_Click(sender As Object, e As EventArgs)
         If product1Qty > 0 Then
             product1Qty -= 1
             TextBox1.Text = product1Qty.ToString()
@@ -162,7 +162,7 @@ Public Class makerlab
     End Sub
 
     ' PRODUCT 2
-    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs) Handles addtocart_btn1.Click
+    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs)
         ' Validate customer first
         If Not ValidateCustomer() Then
             Return
@@ -234,13 +234,13 @@ Public Class makerlab
             clearQty()
         End Try
     End Sub
-    Private Sub plus_btn1_Click(sender As Object, e As EventArgs) Handles plus_btn1.Click
+    Private Sub plus_btn1_Click(sender As Object, e As EventArgs)
         product2Qty += 1
         TextBox2.Text = product2Qty.ToString()
         minus_btn1.Enabled = True ' Always enable minus button when quantity > 0
     End Sub
 
-    Private Sub minus_btn1_Click(sender As Object, e As EventArgs) Handles minus_btn1.Click
+    Private Sub minus_btn1_Click(sender As Object, e As EventArgs)
         If product2Qty > 0 Then
             product2Qty -= 1
             TextBox2.Text = product2Qty.ToString()
@@ -251,7 +251,7 @@ Public Class makerlab
     End Sub
 
     ' PRODUCT 3
-    Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs) Handles addtocart_btn2.Click
+    Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs)
         ' Validate customer first
         If Not ValidateCustomer() Then
             Return
@@ -324,13 +324,13 @@ Public Class makerlab
         End Try
     End Sub
 
-    Private Sub plus_btn2_Click(sender As Object, e As EventArgs) Handles plus_btn2.Click
+    Private Sub plus_btn2_Click(sender As Object, e As EventArgs)
         product3Qty += 1
         TextBox3.Text = product3Qty.ToString()
         minus_btn2.Enabled = True ' Always enable minus button when quantity > 0
     End Sub
 
-    Private Sub minus_btn2_Click(sender As Object, e As EventArgs) Handles minus_btn2.Click
+    Private Sub minus_btn2_Click(sender As Object, e As EventArgs)
         If product3Qty > 0 Then
             product3Qty -= 1
             TextBox3.Text = product3Qty.ToString()
@@ -341,7 +341,7 @@ Public Class makerlab
     End Sub
 
     'PRODUCT 7
-    Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs) Handles addtocart_btn3.Click
+    Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs)
         ' Validate customer first
         If Not ValidateCustomer() Then
             Return
@@ -414,13 +414,13 @@ Public Class makerlab
         End Try
     End Sub
 
-    Private Sub plus_btn3_Click(sender As Object, e As EventArgs) Handles plus_btn3.Click
+    Private Sub plus_btn3_Click(sender As Object, e As EventArgs)
         product7Qty += 1
         TextBox4.Text = product7Qty.ToString()
         minus_btn3.Enabled = True ' Always enable minus button when quantity > 0
     End Sub
 
-    Private Sub minus_btn3_Click(sender As Object, e As EventArgs) Handles minus_btn3.Click
+    Private Sub minus_btn3_Click(sender As Object, e As EventArgs)
         If product7Qty > 0 Then
             product7Qty -= 1
             TextBox4.Text = product7Qty.ToString()
@@ -431,7 +431,7 @@ Public Class makerlab
     End Sub
 
     'PRODUCT 9
-    Private Sub addtocart_btn4_Click(sender As Object, e As EventArgs) Handles addtocart_btn4.Click
+    Private Sub addtocart_btn4_Click(sender As Object, e As EventArgs)
         ' Validate customer first
         If Not ValidateCustomer() Then
             Return
@@ -504,13 +504,13 @@ Public Class makerlab
         End Try
     End Sub
 
-    Private Sub plus_btn4_Click(sender As Object, e As EventArgs) Handles plus_btn4.Click
+    Private Sub plus_btn4_Click(sender As Object, e As EventArgs)
         product9Qty += 1
         TextBox5.Text = product9Qty.ToString()
         minus_btn4.Enabled = True ' Always enable minus button when quantity > 0
     End Sub
 
-    Private Sub minus_btn4_Click(sender As Object, e As EventArgs) Handles minus_btn4.Click
+    Private Sub minus_btn4_Click(sender As Object, e As EventArgs)
         If product9Qty > 0 Then
             product9Qty -= 1
             TextBox5.Text = product9Qty.ToString()
@@ -521,7 +521,7 @@ Public Class makerlab
     End Sub
 
     'PRODUCT 12
-    Private Sub addtocart_btn5_Click(sender As Object, e As EventArgs) Handles addtocart_btn5.Click
+    Private Sub addtocart_btn5_Click(sender As Object, e As EventArgs)
         ' Validate customer first
         If Not ValidateCustomer() Then
             Return
@@ -594,13 +594,13 @@ Public Class makerlab
         End Try
     End Sub
 
-    Private Sub plus_btn5_Click(sender As Object, e As EventArgs) Handles plus_btn5.Click
+    Private Sub plus_btn5_Click(sender As Object, e As EventArgs)
         product12Qty += 1
         TextBox6.Text = product12Qty.ToString()
         minus_btn5.Enabled = True ' Always enable minus button when quantity > 0
     End Sub
 
-    Private Sub minus_btn5_Click(sender As Object, e As EventArgs) Handles minus_btn5.Click
+    Private Sub minus_btn5_Click(sender As Object, e As EventArgs)
         If product12Qty > 0 Then
             product12Qty -= 1
             TextBox6.Text = product12Qty.ToString()

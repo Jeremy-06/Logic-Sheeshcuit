@@ -55,7 +55,7 @@ Public Class digitaldisplays
     End Function
 
     ' PRODUCT 1
-    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
+    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 1
@@ -120,13 +120,13 @@ Public Class digitaldisplays
         End Try
     End Sub
 
-    Private Sub plus_btn_Click(sender As Object, e As EventArgs) Handles plus_btn.Click
+    Private Sub plus_btn_Click(sender As Object, e As EventArgs)
         product1Qty += 1
         TextBox1.Text = product1Qty.ToString()
         minus_btn.Enabled = True
     End Sub
 
-    Private Sub minus_btn_Click(sender As Object, e As EventArgs) Handles minus_btn.Click
+    Private Sub minus_btn_Click(sender As Object, e As EventArgs)
         If product1Qty > 0 Then
             product1Qty -= 1
             TextBox1.Text = product1Qty.ToString()
@@ -137,7 +137,7 @@ Public Class digitaldisplays
     End Sub
 
     ' PRODUCT 2
-    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs) Handles addtocart_btn1.Click
+    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 2
@@ -202,13 +202,13 @@ Public Class digitaldisplays
         End Try
     End Sub
 
-    Private Sub plus_btn1_Click(sender As Object, e As EventArgs) Handles plus_btn1.Click
+    Private Sub plus_btn1_Click(sender As Object, e As EventArgs)
         product2Qty += 1
         TextBox2.Text = product2Qty.ToString()
         minus_btn1.Enabled = True
     End Sub
 
-    Private Sub minus_btn1_Click(sender As Object, e As EventArgs) Handles minus_btn1.Click
+    Private Sub minus_btn1_Click(sender As Object, e As EventArgs)
         If product2Qty > 0 Then
             product2Qty -= 1
             TextBox2.Text = product2Qty.ToString()

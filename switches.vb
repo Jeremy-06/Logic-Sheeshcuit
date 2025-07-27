@@ -51,7 +51,7 @@ Public Class switches
         End Try
     End Function
 
-    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
+    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) 
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 21
@@ -116,13 +116,13 @@ Public Class switches
         End Try
     End Sub
 
-    Private Sub plus_btn_Click(sender As Object, e As EventArgs) Handles plus_btn.Click
+    Private Sub plus_btn_Click(sender As Object, e As EventArgs) 
         product21Qty += 1
         TextBox1.Text = product21Qty.ToString()
         minus_btn.Enabled = True
     End Sub
 
-    Private Sub minus_btn_Click(sender As Object, e As EventArgs) Handles minus_btn.Click
+    Private Sub minus_btn_Click(sender As Object, e As EventArgs) 
         If product21Qty > 0 Then
             product21Qty -= 1
             TextBox1.Text = product21Qty.ToString()

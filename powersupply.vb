@@ -58,7 +58,7 @@ Public Class powersupply
     End Function
 
     ' PRODUCT 8
-    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
+    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 8
@@ -123,13 +123,13 @@ Public Class powersupply
         End Try
     End Sub
 
-    Private Sub plus_btn_Click(sender As Object, e As EventArgs) Handles plus_btn.Click
+    Private Sub plus_btn_Click(sender As Object, e As EventArgs)
         product8Qty += 1
         TextBox1.Text = product8Qty.ToString()
         minus_btn.Enabled = True
     End Sub
 
-    Private Sub minus_btn_Click(sender As Object, e As EventArgs) Handles minus_btn.Click
+    Private Sub minus_btn_Click(sender As Object, e As EventArgs)
         If product8Qty > 0 Then
             product8Qty -= 1
             TextBox1.Text = product8Qty.ToString()
@@ -140,7 +140,7 @@ Public Class powersupply
     End Sub
 
     ' PRODUCT 9
-    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs) Handles addtocart_btn1.Click
+    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 9
@@ -205,13 +205,13 @@ Public Class powersupply
         End Try
     End Sub
 
-    Private Sub plus_btn1_Click(sender As Object, e As EventArgs) Handles plus_btn1.Click
+    Private Sub plus_btn1_Click(sender As Object, e As EventArgs)
         product9Qty += 1
         TextBox2.Text = product9Qty.ToString()
         minus_btn1.Enabled = True
     End Sub
 
-    Private Sub minus_btn1_Click(sender As Object, e As EventArgs) Handles minus_btn1.Click
+    Private Sub minus_btn1_Click(sender As Object, e As EventArgs)
         If product9Qty > 0 Then
             product9Qty -= 1
             TextBox2.Text = product9Qty.ToString()
@@ -222,7 +222,7 @@ Public Class powersupply
     End Sub
 
     ' PRODUCT 10
-    Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs) Handles addtocart_btn2.Click
+    Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 10
@@ -287,13 +287,13 @@ Public Class powersupply
         End Try
     End Sub
 
-    Private Sub plus_btn2_Click(sender As Object, e As EventArgs) Handles plus_btn2.Click
+    Private Sub plus_btn2_Click(sender As Object, e As EventArgs)
         product10Qty += 1
         TextBox3.Text = product10Qty.ToString()
         minus_btn2.Enabled = True
     End Sub
 
-    Private Sub minus_btn2_Click(sender As Object, e As EventArgs) Handles minus_btn2.Click
+    Private Sub minus_btn2_Click(sender As Object, e As EventArgs)
         If product10Qty > 0 Then
             product10Qty -= 1
             TextBox3.Text = product10Qty.ToString()
@@ -304,7 +304,7 @@ Public Class powersupply
     End Sub
 
     ' PRODUCT 11
-    Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs) Handles addtocart_btn3.Click
+    Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 11
@@ -369,13 +369,13 @@ Public Class powersupply
         End Try
     End Sub
 
-    Private Sub plus_btn3_Click(sender As Object, e As EventArgs) Handles plus_btn3.Click
+    Private Sub plus_btn3_Click(sender As Object, e As EventArgs)
         product11Qty += 1
         TextBox4.Text = product11Qty.ToString()
         minus_btn3.Enabled = True
     End Sub
 
-    Private Sub minus_btn3_Click(sender As Object, e As EventArgs) Handles minus_btn3.Click
+    Private Sub minus_btn3_Click(sender As Object, e As EventArgs)
         If product11Qty > 0 Then
             product11Qty -= 1
             TextBox4.Text = product11Qty.ToString()

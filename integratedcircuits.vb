@@ -59,7 +59,7 @@ Public Class integratedcircuits
     End Function
 
     ' PRODUCT 3
-    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
+    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 3
@@ -124,13 +124,13 @@ Public Class integratedcircuits
         End Try
     End Sub
 
-    Private Sub plus_btn_Click(sender As Object, e As EventArgs) Handles plus_btn.Click
+    Private Sub plus_btn_Click(sender As Object, e As EventArgs)
         product3Qty += 1
         TextBox1.Text = product3Qty.ToString()
         minus_btn.Enabled = True
     End Sub
 
-    Private Sub minus_btn_Click(sender As Object, e As EventArgs) Handles minus_btn.Click
+    Private Sub minus_btn_Click(sender As Object, e As EventArgs)
         If product3Qty > 0 Then
             product3Qty -= 1
             TextBox1.Text = product3Qty.ToString()
@@ -141,7 +141,7 @@ Public Class integratedcircuits
     End Sub
 
     ' PRODUCT 4
-    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs) Handles addtocart_btn1.Click
+    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 4
@@ -206,13 +206,13 @@ Public Class integratedcircuits
         End Try
     End Sub
 
-    Private Sub plus_btn1_Click(sender As Object, e As EventArgs) Handles plus_btn1.Click
+    Private Sub plus_btn1_Click(sender As Object, e As EventArgs)
         product4Qty += 1
         TextBox2.Text = product4Qty.ToString()
         minus_btn1.Enabled = True
     End Sub
 
-    Private Sub minus_btn1_Click(sender As Object, e As EventArgs) Handles minus_btn1.Click
+    Private Sub minus_btn1_Click(sender As Object, e As EventArgs)
         If product4Qty > 0 Then
             product4Qty -= 1
             TextBox2.Text = product4Qty.ToString()
@@ -223,7 +223,7 @@ Public Class integratedcircuits
     End Sub
 
     ' PRODUCT 5
-    Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs) Handles addtocart_btn2.Click
+    Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 5
@@ -288,13 +288,13 @@ Public Class integratedcircuits
         End Try
     End Sub
 
-    Private Sub plus_btn2_Click(sender As Object, e As EventArgs) Handles plus_btn2.Click
+    Private Sub plus_btn2_Click(sender As Object, e As EventArgs)
         product5Qty += 1
         TextBox3.Text = product5Qty.ToString()
         minus_btn2.Enabled = True
     End Sub
 
-    Private Sub minus_btn2_Click(sender As Object, e As EventArgs) Handles minus_btn2.Click
+    Private Sub minus_btn2_Click(sender As Object, e As EventArgs)
         If product5Qty > 0 Then
             product5Qty -= 1
             TextBox3.Text = product5Qty.ToString()
@@ -305,7 +305,7 @@ Public Class integratedcircuits
     End Sub
 
     ' PRODUCT 6
-    Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs) Handles addtocart_btn3.Click
+    Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 6
@@ -370,13 +370,13 @@ Public Class integratedcircuits
         End Try
     End Sub
 
-    Private Sub plus_btn3_Click(sender As Object, e As EventArgs) Handles plus_btn3.Click
+    Private Sub plus_btn3_Click(sender As Object, e As EventArgs)
         product6Qty += 1
         TextBox4.Text = product6Qty.ToString()
         minus_btn3.Enabled = True
     End Sub
 
-    Private Sub minus_btn3_Click(sender As Object, e As EventArgs) Handles minus_btn3.Click
+    Private Sub minus_btn3_Click(sender As Object, e As EventArgs)
         If product6Qty > 0 Then
             product6Qty -= 1
             TextBox4.Text = product6Qty.ToString()

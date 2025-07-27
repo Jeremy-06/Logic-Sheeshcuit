@@ -77,7 +77,7 @@ Public Class circuitrocks
     End Function
 
     'atc
-    Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs) Handles addtocart_btn2.Click
+    Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 10 to the cart
         Dim customerId = login.customerId
@@ -132,13 +132,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub plus_btn2_Click(sender As Object, e As EventArgs) Handles plus_btn2.Click
+    Private Sub plus_btn2_Click(sender As Object, e As EventArgs)
         product10Qty += 1
         TextBox1.Text = product10Qty.ToString()
         minus_btn2.Enabled = True
     End Sub
 
-    Private Sub minus_btn2_Click(sender As Object, e As EventArgs) Handles minus_btn2.Click
+    Private Sub minus_btn2_Click(sender As Object, e As EventArgs)
         If product10Qty > 0 Then
             product10Qty -= 1
             TextBox1.Text = product10Qty.ToString()
@@ -146,7 +146,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs) Handles addtocart_btn3.Click
+    Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 11 to the cart
         Dim customerId = login.customerId
@@ -201,13 +201,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub plus_btn3_Click(sender As Object, e As EventArgs) Handles plus_btn3.Click
+    Private Sub plus_btn3_Click(sender As Object, e As EventArgs)
         product11Qty += 1
         TextBox2.Text = product11Qty.ToString()
         minus_btn3.Enabled = True
     End Sub
 
-    Private Sub minus_btn3_Click(sender As Object, e As EventArgs) Handles minus_btn3.Click
+    Private Sub minus_btn3_Click(sender As Object, e As EventArgs)
         If product11Qty > 0 Then
             product11Qty -= 1
             TextBox2.Text = product11Qty.ToString()
@@ -215,7 +215,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs) Handles addtocart_btn1.Click
+    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 13 to the cart
         Dim customerId = login.customerId
@@ -270,13 +270,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub plus_btn1_Click(sender As Object, e As EventArgs) Handles plus_btn1.Click
+    Private Sub plus_btn1_Click(sender As Object, e As EventArgs)
         product13Qty += 1
         TextBox3.Text = product13Qty.ToString()
         minus_btn1.Enabled = True
     End Sub
 
-    Private Sub minus_btn1_Click(sender As Object, e As EventArgs) Handles minus_btn1.Click
+    Private Sub minus_btn1_Click(sender As Object, e As EventArgs)
         If product13Qty > 0 Then
             product13Qty -= 1
             TextBox3.Text = product13Qty.ToString()
@@ -284,7 +284,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs) Handles addtocart_btn.Click
+    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 14 to the cart
         Dim customerId = login.customerId
@@ -339,13 +339,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub plus_btn_Click(sender As Object, e As EventArgs) Handles plus_btn.Click
+    Private Sub plus_btn_Click(sender As Object, e As EventArgs)
         product14Qty += 1
         TextBox4.Text = product14Qty.ToString()
         minus_btn4.Enabled = True
     End Sub
 
-    Private Sub minus_btn_Click(sender As Object, e As EventArgs) Handles minus_btn.Click
+    Private Sub minus_btn_Click(sender As Object, e As EventArgs)
         If product14Qty > 0 Then
             product14Qty -= 1
             TextBox4.Text = product14Qty.ToString()
@@ -353,7 +353,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+    Private Sub Button10_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 15 to the cart
         Dim customerId = login.customerId
@@ -408,13 +408,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+    Private Sub Button9_Click(sender As Object, e As EventArgs)
         product15Qty += 1
         TextBox5.Text = product15Qty.ToString()
         Button8.Enabled = True
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs)
         If product15Qty > 0 Then
             product15Qty -= 1
             TextBox5.Text = product15Qty.ToString()
@@ -422,7 +422,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button7_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 16 to the cart
         Dim customerId = login.customerId
@@ -477,13 +477,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
         product16Qty += 1
         TextBox6.Text = product16Qty.ToString()
         Button5.Enabled = True
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
         If product16Qty > 0 Then
             product16Qty -= 1
             TextBox6.Text = product16Qty.ToString()
@@ -491,7 +491,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 17 to the cart
         Dim customerId = login.customerId
@@ -546,13 +546,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         product17Qty += 1
         TextBox7.Text = product17Qty.ToString()
         Button2.Enabled = True
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         If product17Qty > 0 Then
             product17Qty -= 1
             TextBox7.Text = product17Qty.ToString()
@@ -560,7 +560,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub addtocart_btn4_Click(sender As Object, e As EventArgs) Handles addtocart_btn4.Click
+    Private Sub addtocart_btn4_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 18 to the cart
         Dim customerId = login.customerId
@@ -615,13 +615,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub plus_btn4_Click(sender As Object, e As EventArgs) Handles plus_btn4.Click
+    Private Sub plus_btn4_Click(sender As Object, e As EventArgs)
         product18Qty += 1
         TextBox8.Text = product18Qty.ToString()
         minus_btn4.Enabled = True
     End Sub
 
-    Private Sub minus_btn4_Click(sender As Object, e As EventArgs) Handles minus_btn4.Click
+    Private Sub minus_btn4_Click(sender As Object, e As EventArgs)
         If product18Qty > 0 Then
             product18Qty -= 1
             TextBox8.Text = product18Qty.ToString()
@@ -629,7 +629,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub addtocart_btn5_Click(sender As Object, e As EventArgs) Handles addtocart_btn5.Click
+    Private Sub addtocart_btn5_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 19 to the cart
         Dim customerId = login.customerId
@@ -684,13 +684,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub plus_btn5_Click(sender As Object, e As EventArgs) Handles plus_btn5.Click
+    Private Sub plus_btn5_Click(sender As Object, e As EventArgs)
         product19Qty += 1
         TextBox9.Text = product19Qty.ToString()
         minus_btn5.Enabled = True
     End Sub
 
-    Private Sub minus_btn5_Click(sender As Object, e As EventArgs) Handles minus_btn5.Click
+    Private Sub minus_btn5_Click(sender As Object, e As EventArgs)
         If product19Qty > 0 Then
             product19Qty -= 1
             TextBox9.Text = product19Qty.ToString()
@@ -698,7 +698,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub addtocart_btn6_Click(sender As Object, e As EventArgs) Handles addtocart_btn6.Click
+    Private Sub addtocart_btn6_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 20 to the cart
         Dim customerId = login.customerId
@@ -753,13 +753,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub plus_btn6_Click(sender As Object, e As EventArgs) Handles plus_btn6.Click
+    Private Sub plus_btn6_Click(sender As Object, e As EventArgs)
         product20Qty += 1
         TextBox10.Text = product20Qty.ToString()
         minus_btn6.Enabled = True
     End Sub
 
-    Private Sub minus_btn6_Click(sender As Object, e As EventArgs) Handles minus_btn6.Click
+    Private Sub minus_btn6_Click(sender As Object, e As EventArgs)
         If product20Qty > 0 Then
             product20Qty -= 1
             TextBox10.Text = product20Qty.ToString()
@@ -767,7 +767,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+    Private Sub Button13_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 21 to the cart
         Dim customerId = login.customerId
@@ -822,13 +822,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+    Private Sub Button12_Click(sender As Object, e As EventArgs)
         product21Qty += 1
         TextBox11.Text = product21Qty.ToString()
         Button11.Enabled = True
     End Sub
 
-    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+    Private Sub Button11_Click(sender As Object, e As EventArgs)
         If product21Qty > 0 Then
             product21Qty -= 1
             TextBox11.Text = product21Qty.ToString()
@@ -836,7 +836,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button31_Click(sender As Object, e As EventArgs) Handles Button31.Click
+    Private Sub Button31_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 22 to the cart
         Dim customerId = login.customerId
@@ -891,13 +891,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button30_Click(sender As Object, e As EventArgs) Handles Button30.Click
+    Private Sub Button30_Click(sender As Object, e As EventArgs)
         product22Qty += 1
         TextBox12.Text = product22Qty.ToString()
         Button29.Enabled = True
     End Sub
 
-    Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
+    Private Sub Button29_Click(sender As Object, e As EventArgs)
         If product22Qty > 0 Then
             product22Qty -= 1
             TextBox12.Text = product22Qty.ToString()
@@ -905,7 +905,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button28_Click(sender As Object, e As EventArgs) Handles Button28.Click
+    Private Sub Button28_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 23 to the cart
         Dim customerId = login.customerId
@@ -960,13 +960,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button27_Click(sender As Object, e As EventArgs) Handles Button27.Click
+    Private Sub Button27_Click(sender As Object, e As EventArgs)
         product23Qty += 1
         TextBox13.Text = product23Qty.ToString()
         Button26.Enabled = True
     End Sub
 
-    Private Sub Button26_Click(sender As Object, e As EventArgs) Handles Button26.Click
+    Private Sub Button26_Click(sender As Object, e As EventArgs)
         If product23Qty > 0 Then
             product23Qty -= 1
             TextBox13.Text = product23Qty.ToString()
@@ -974,7 +974,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
+    Private Sub Button25_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 24 to the cart
         Dim customerId = login.customerId
@@ -1029,13 +1029,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button24_Click(sender As Object, e As EventArgs) Handles Button24.Click
+    Private Sub Button24_Click(sender As Object, e As EventArgs)
         product24Qty += 1
         TextBox14.Text = product24Qty.ToString()
         Button23.Enabled = True
     End Sub
 
-    Private Sub Button23_Click(sender As Object, e As EventArgs) Handles Button23.Click
+    Private Sub Button23_Click(sender As Object, e As EventArgs)
         If product24Qty > 0 Then
             product24Qty -= 1
             TextBox14.Text = product24Qty.ToString()
@@ -1043,7 +1043,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
+    Private Sub Button22_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 25 to the cart
         Dim customerId = login.customerId
@@ -1098,13 +1098,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
+    Private Sub Button21_Click(sender As Object, e As EventArgs)
         product25Qty += 1
         TextBox15.Text = product25Qty.ToString()
         Button20.Enabled = True
     End Sub
 
-    Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
+    Private Sub Button20_Click(sender As Object, e As EventArgs)
         If product25Qty > 0 Then
             product25Qty -= 1
             TextBox15.Text = product25Qty.ToString()
@@ -1112,7 +1112,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
+    Private Sub Button19_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 26 to the cart
         Dim customerId = login.customerId
@@ -1167,14 +1167,14 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+    Private Sub Button18_Click(sender As Object, e As EventArgs)
         ' Increments quantity for Product 26
         product26Qty += 1
         TextBox16.Text = product26Qty.ToString()
         Button17.Enabled = True
     End Sub
 
-    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
+    Private Sub Button17_Click(sender As Object, e As EventArgs)
         If product26Qty > 0 Then
             product26Qty -= 1
             TextBox16.Text = product26Qty.ToString()
@@ -1182,7 +1182,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+    Private Sub Button16_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 27 to the cart
         Dim customerId = login.customerId
@@ -1237,13 +1237,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+    Private Sub Button15_Click(sender As Object, e As EventArgs)
         product27Qty += 1
         TextBox17.Text = product27Qty.ToString()
         Button14.Enabled = True
     End Sub
 
-    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+    Private Sub Button14_Click(sender As Object, e As EventArgs)
         If product27Qty > 0 Then
             product27Qty -= 1
             TextBox17.Text = product27Qty.ToString()
@@ -1251,7 +1251,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button52_Click(sender As Object, e As EventArgs) Handles Button52.Click
+    Private Sub Button52_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 28 to the cart
         Dim customerId = login.customerId
@@ -1306,13 +1306,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button51_Click(sender As Object, e As EventArgs) Handles Button51.Click
+    Private Sub Button51_Click(sender As Object, e As EventArgs)
         product28Qty += 1
         TextBox18.Text = product28Qty.ToString()
         Button50.Enabled = True
     End Sub
 
-    Private Sub Button50_Click(sender As Object, e As EventArgs) Handles Button50.Click
+    Private Sub Button50_Click(sender As Object, e As EventArgs)
         If product28Qty > 0 Then
             product28Qty -= 1
             TextBox18.Text = product28Qty.ToString()
@@ -1320,7 +1320,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button49_Click(sender As Object, e As EventArgs) Handles Button49.Click
+    Private Sub Button49_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 29 to the cart
         Dim customerId = login.customerId
@@ -1375,13 +1375,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button48_Click(sender As Object, e As EventArgs) Handles Button48.Click
+    Private Sub Button48_Click(sender As Object, e As EventArgs)
         product29Qty += 1
         TextBox19.Text = product29Qty.ToString()
         Button47.Enabled = True
     End Sub
 
-    Private Sub Button47_Click(sender As Object, e As EventArgs) Handles Button47.Click
+    Private Sub Button47_Click(sender As Object, e As EventArgs)
         If product29Qty > 0 Then
             product29Qty -= 1
             TextBox19.Text = product29Qty.ToString()
@@ -1389,7 +1389,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button46_Click(sender As Object, e As EventArgs) Handles Button46.Click
+    Private Sub Button46_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 30 to the cart
         Dim customerId = login.customerId
@@ -1444,13 +1444,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button45_Click(sender As Object, e As EventArgs) Handles Button45.Click
+    Private Sub Button45_Click(sender As Object, e As EventArgs)
         product30Qty += 1
         TextBox20.Text = product30Qty.ToString()
         Button44.Enabled = True
     End Sub
 
-    Private Sub Button44_Click(sender As Object, e As EventArgs) Handles Button44.Click
+    Private Sub Button44_Click(sender As Object, e As EventArgs)
         If product30Qty > 0 Then
             product30Qty -= 1
             TextBox20.Text = product30Qty.ToString()
@@ -1458,7 +1458,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button43_Click(sender As Object, e As EventArgs) Handles Button43.Click
+    Private Sub Button43_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 31 to the cart
         Dim customerId = login.customerId
@@ -1513,13 +1513,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button42_Click(sender As Object, e As EventArgs) Handles Button42.Click
+    Private Sub Button42_Click(sender As Object, e As EventArgs)
         product31Qty += 1
         TextBox21.Text = product31Qty.ToString()
         Button41.Enabled = True
     End Sub
 
-    Private Sub Button41_Click(sender As Object, e As EventArgs) Handles Button41.Click
+    Private Sub Button41_Click(sender As Object, e As EventArgs)
         If product31Qty > 0 Then
             product31Qty -= 1
             TextBox21.Text = product31Qty.ToString()
@@ -1527,7 +1527,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button40_Click(sender As Object, e As EventArgs) Handles Button40.Click
+    Private Sub Button40_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 32 to the cart
         Dim customerId = login.customerId
@@ -1582,13 +1582,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button39_Click(sender As Object, e As EventArgs) Handles Button39.Click
+    Private Sub Button39_Click(sender As Object, e As EventArgs)
         product32Qty += 1
         TextBox22.Text = product32Qty.ToString()
         Button38.Enabled = True
     End Sub
 
-    Private Sub Button38_Click(sender As Object, e As EventArgs) Handles Button38.Click
+    Private Sub Button38_Click(sender As Object, e As EventArgs)
         If product32Qty > 0 Then
             product32Qty -= 1
             TextBox22.Text = product32Qty.ToString()
@@ -1596,7 +1596,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button37_Click(sender As Object, e As EventArgs) Handles Button37.Click
+    Private Sub Button37_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 33 to the cart
         Dim customerId = login.customerId
@@ -1651,13 +1651,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button36_Click(sender As Object, e As EventArgs) Handles Button36.Click
+    Private Sub Button36_Click(sender As Object, e As EventArgs)
         product33Qty += 1
         TextBox23.Text = product33Qty.ToString()
         Button35.Enabled = True
     End Sub
 
-    Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
+    Private Sub Button35_Click(sender As Object, e As EventArgs)
         If product33Qty > 0 Then
             product33Qty -= 1
             TextBox23.Text = product33Qty.ToString()
@@ -1666,7 +1666,7 @@ Public Class circuitrocks
 
     End Sub
 
-    Private Sub Button34_Click(sender As Object, e As EventArgs) Handles Button34.Click
+    Private Sub Button34_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 34 to the cart
         Dim customerId = login.customerId
@@ -1721,13 +1721,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button33_Click(sender As Object, e As EventArgs) Handles Button33.Click
+    Private Sub Button33_Click(sender As Object, e As EventArgs)
         product34Qty += 1
         TextBox24.Text = product34Qty.ToString()
         Button32.Enabled = True
     End Sub
 
-    Private Sub Button32_Click(sender As Object, e As EventArgs) Handles Button32.Click
+    Private Sub Button32_Click(sender As Object, e As EventArgs)
         If product34Qty > 0 Then
             product34Qty -= 1
             TextBox24.Text = product34Qty.ToString()
@@ -1735,7 +1735,7 @@ Public Class circuitrocks
         End If
     End Sub
 
-    Private Sub Button55_Click(sender As Object, e As EventArgs) Handles Button55.Click
+    Private Sub Button55_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         ' Adds Product 37 to the cart
         Dim customerId = login.customerId
@@ -1790,13 +1790,13 @@ Public Class circuitrocks
         End Try
     End Sub
 
-    Private Sub Button54_Click(sender As Object, e As EventArgs) Handles Button54.Click
+    Private Sub Button54_Click(sender As Object, e As EventArgs)
         product37Qty += 1
         TextBox25.Text = product37Qty.ToString()
         Button53.Enabled = True
     End Sub
 
-    Private Sub Button53_Click(sender As Object, e As EventArgs) Handles Button53.Click
+    Private Sub Button53_Click(sender As Object, e As EventArgs)
         If product37Qty > 0 Then
             product37Qty -= 1
             TextBox25.Text = product37Qty.ToString()
