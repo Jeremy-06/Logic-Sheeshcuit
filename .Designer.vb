@@ -352,6 +352,7 @@ Partial Class makerlab
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(205, 35)
         Me.TextBox2.TabIndex = 214
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn1
         '
@@ -424,6 +425,7 @@ Partial Class makerlab
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(207, 35)
         Me.TextBox3.TabIndex = 224
+        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn2
         '
@@ -496,6 +498,7 @@ Partial Class makerlab
         Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(207, 35)
         Me.TextBox4.TabIndex = 234
+        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn3
         '
@@ -568,6 +571,7 @@ Partial Class makerlab
         Me.TextBox5.ReadOnly = True
         Me.TextBox5.Size = New System.Drawing.Size(207, 35)
         Me.TextBox5.TabIndex = 244
+        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn4
         '
@@ -684,6 +688,7 @@ Partial Class makerlab
         Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(205, 35)
         Me.TextBox6.TabIndex = 254
+        Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn5
         '
@@ -917,8 +922,7 @@ Partial Class makerlab
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(904, 611)
-        Me.ControlBox = False
+        Me.ClientSize = New System.Drawing.Size(921, 611)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox12)
         Me.Controls.Add(Me.Label15)

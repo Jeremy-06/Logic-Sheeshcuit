@@ -27,7 +27,6 @@ Partial Class switches
         Me.Label1 = New System.Windows.Forms.Label()
         Me.minus_btn = New System.Windows.Forms.Button()
         Me.plus_btn = New System.Windows.Forms.Button()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.addtocart_btn = New System.Windows.Forms.Button()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.PictureBox33 = New System.Windows.Forms.PictureBox()
@@ -35,6 +34,7 @@ Partial Class switches
         Me.Label44 = New System.Windows.Forms.Label()
         Me.Label45 = New System.Windows.Forms.Label()
         Me.PictureBox46 = New System.Windows.Forms.PictureBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox46, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,17 +102,6 @@ Partial Class switches
         Me.plus_btn.TabIndex = 423
         Me.plus_btn.Text = "+"
         Me.plus_btn.UseVisualStyleBackColor = True
-        '
-        'TextBox11
-        '
-        Me.TextBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox11.Location = New System.Drawing.Point(590, 394)
-        Me.TextBox11.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.ReadOnly = True
-        Me.TextBox11.Size = New System.Drawing.Size(207, 35)
-        Me.TextBox11.TabIndex = 422
         '
         'addtocart_btn
         '
@@ -192,6 +181,17 @@ Partial Class switches
         Me.PictureBox46.TabIndex = 428
         Me.PictureBox46.TabStop = False
         '
+        'TextBox1
+        '
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(590, 394)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(207, 35)
+        Me.TextBox1.TabIndex = 432
+        '
         'switches
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -199,9 +199,9 @@ Partial Class switches
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(904, 556)
         Me.ControlBox = False
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.minus_btn)
         Me.Controls.Add(Me.plus_btn)
-        Me.Controls.Add(Me.TextBox11)
         Me.Controls.Add(Me.addtocart_btn)
         Me.Controls.Add(Me.Label42)
         Me.Controls.Add(Me.PictureBox33)
@@ -229,7 +229,6 @@ Partial Class switches
     Friend WithEvents Label1 As Label
     Friend WithEvents minus_btn As Button
     Friend WithEvents plus_btn As Button
-    Friend WithEvents TextBox11 As TextBox
     Friend WithEvents addtocart_btn As Button
     Friend WithEvents Label42 As Label
     Friend WithEvents PictureBox33 As PictureBox
@@ -237,4 +236,5 @@ Partial Class switches
     Friend WithEvents Label44 As Label
     Friend WithEvents Label45 As Label
     Friend WithEvents PictureBox46 As PictureBox
+    Friend WithEvents TextBox1 As TextBox
 End Class
