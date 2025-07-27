@@ -121,6 +121,12 @@
   <data name="Product_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 36.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DB_Reader_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DB Reader Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Product_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Product 14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Product_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,14 +145,11 @@
   <data name="Product_29" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 29.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="User Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Product_33" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 33.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Product_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Product 11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cart Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cart Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Product_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 32.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +175,8 @@
   <data name="Product_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Product_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Product 27.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="User Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sign Up (Name)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sign Up (Name).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,9 +187,6 @@
   <data name="Product_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Order_Manager_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Order Manager Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Product_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -195,6 +195,9 @@
   </data>
   <data name="Schema_Maintainer_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Schema Maintainer Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Order Manager Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Order Manager Form1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Admin Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Admin Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,14 +208,14 @@
   <data name="Product_26" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 26.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DB_Reader_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DB Reader Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Product_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Product 11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Product_37" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 37.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Product_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Product 14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Product_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Product 19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Product_35" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 35.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,10 +289,10 @@
   <data name="Product_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 17.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Product_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Product 19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Product_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Product 27.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cart Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cart Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Inventory Manager Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventory Manager Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

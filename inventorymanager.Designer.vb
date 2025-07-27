@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class schemamaintainer
+Partial Class inventorymanager
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -38,7 +38,7 @@ Partial Class schemamaintainer
         Me.Label1.Location = New System.Drawing.Point(78, 208)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(52, 20)
-        Me.Label1.TabIndex = 33
+        Me.Label1.TabIndex = 23
         Me.Label1.Text = "Tables"
         '
         'Button2
@@ -53,7 +53,7 @@ Partial Class schemamaintainer
         Me.Button2.Location = New System.Drawing.Point(784, 551)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 36)
-        Me.Button2.TabIndex = 32
+        Me.Button2.TabIndex = 22
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
@@ -68,18 +68,18 @@ Partial Class schemamaintainer
         Me.Button1.Location = New System.Drawing.Point(14, 551)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 36)
-        Me.Button1.TabIndex = 31
+        Me.Button1.TabIndex = 21
         Me.Button1.UseVisualStyleBackColor = False
         '
         'ComboBox1
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"cart", "customers", "expenses", "inventory", "orderitems", "orders", "productcategories", "products", "sales", "suppliers", "users"})
+        Me.ComboBox1.Items.AddRange(New Object() {"inventory", "productcategories", "products", "suppliers"})
         Me.ComboBox1.Location = New System.Drawing.Point(81, 231)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(260, 21)
-        Me.ComboBox1.TabIndex = 30
+        Me.ComboBox1.TabIndex = 20
         '
         'DataGridView1
         '
@@ -94,13 +94,13 @@ Partial Class schemamaintainer
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(469, 282)
-        Me.DataGridView1.TabIndex = 29
+        Me.DataGridView1.TabIndex = 19
         '
-        'schemamaintainer
+        'inventorymanager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.Schema_Maintainer_Form
+        Me.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.Inventory_Manager_Form
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(898, 609)
         Me.Controls.Add(Me.Label1)
@@ -110,9 +110,9 @@ Partial Class schemamaintainer
         Me.Controls.Add(Me.DataGridView1)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "schemamaintainer"
+        Me.Name = "inventorymanager"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "schemamaintainer"
+        Me.Text = "inventorymanager"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
