@@ -39,10 +39,6 @@ Public Class circuitrocks
         home.Show()
     End Sub
 
-    Private Sub circuitrocks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Function ValidateCustomer() As Boolean
         ' Check if user is logged in
         If login.customerId = 0 Then
@@ -204,14 +200,14 @@ Public Class circuitrocks
     Private Sub plus_btn3_Click(sender As Object, e As EventArgs)
         product11Qty += 1
         TextBox2.Text = product11Qty.ToString()
-        minus_btn3.Enabled = True
+        minus_btn6.Enabled = True
     End Sub
 
     Private Sub minus_btn3_Click(sender As Object, e As EventArgs)
         If product11Qty > 0 Then
             product11Qty -= 1
             TextBox2.Text = product11Qty.ToString()
-            If product11Qty <= 0 Then minus_btn3.Enabled = False
+            If product11Qty <= 0 Then minus_btn6.Enabled = False
         End If
     End Sub
 
@@ -342,14 +338,14 @@ Public Class circuitrocks
     Private Sub plus_btn_Click(sender As Object, e As EventArgs)
         product14Qty += 1
         TextBox4.Text = product14Qty.ToString()
-        minus_btn4.Enabled = True
+        minus_btn7.Enabled = True
     End Sub
 
     Private Sub minus_btn_Click(sender As Object, e As EventArgs)
         If product14Qty > 0 Then
             product14Qty -= 1
             TextBox4.Text = product14Qty.ToString()
-            If product14Qty <= 0 Then minus_btn4.Enabled = False
+            If product14Qty <= 0 Then minus_btn7.Enabled = False
         End If
     End Sub
 
@@ -411,14 +407,14 @@ Public Class circuitrocks
     Private Sub Button9_Click(sender As Object, e As EventArgs)
         product15Qty += 1
         TextBox5.Text = product15Qty.ToString()
-        Button8.Enabled = True
+        minus_btn5.Enabled = True
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs)
         If product15Qty > 0 Then
             product15Qty -= 1
             TextBox5.Text = product15Qty.ToString()
-            If product15Qty <= 0 Then Button8.Enabled = False
+            If product15Qty <= 0 Then minus_btn5.Enabled = False
         End If
     End Sub
 
@@ -480,14 +476,14 @@ Public Class circuitrocks
     Private Sub Button6_Click(sender As Object, e As EventArgs)
         product16Qty += 1
         TextBox6.Text = product16Qty.ToString()
-        Button5.Enabled = True
+        minus_btn4.Enabled = True
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs)
         If product16Qty > 0 Then
             product16Qty -= 1
             TextBox6.Text = product16Qty.ToString()
-            If product16Qty <= 0 Then Button5.Enabled = False
+            If product16Qty <= 0 Then minus_btn4.Enabled = False
         End If
     End Sub
 
@@ -618,14 +614,14 @@ Public Class circuitrocks
     Private Sub plus_btn4_Click(sender As Object, e As EventArgs)
         product18Qty += 1
         TextBox8.Text = product18Qty.ToString()
-        minus_btn4.Enabled = True
+        minus_btn7.Enabled = True
     End Sub
 
     Private Sub minus_btn4_Click(sender As Object, e As EventArgs)
         If product18Qty > 0 Then
             product18Qty -= 1
             TextBox8.Text = product18Qty.ToString()
-            If product18Qty <= 0 Then minus_btn4.Enabled = False
+            If product18Qty <= 0 Then minus_btn7.Enabled = False
         End If
     End Sub
 
@@ -687,14 +683,14 @@ Public Class circuitrocks
     Private Sub plus_btn5_Click(sender As Object, e As EventArgs)
         product19Qty += 1
         TextBox9.Text = product19Qty.ToString()
-        minus_btn5.Enabled = True
+        minus_btn8.Enabled = True
     End Sub
 
     Private Sub minus_btn5_Click(sender As Object, e As EventArgs)
         If product19Qty > 0 Then
             product19Qty -= 1
             TextBox9.Text = product19Qty.ToString()
-            If product19Qty <= 0 Then minus_btn5.Enabled = False
+            If product19Qty <= 0 Then minus_btn8.Enabled = False
         End If
     End Sub
 
@@ -756,14 +752,14 @@ Public Class circuitrocks
     Private Sub plus_btn6_Click(sender As Object, e As EventArgs)
         product20Qty += 1
         TextBox10.Text = product20Qty.ToString()
-        minus_btn6.Enabled = True
+        minus_btn9.Enabled = True
     End Sub
 
     Private Sub minus_btn6_Click(sender As Object, e As EventArgs)
         If product20Qty > 0 Then
             product20Qty -= 1
             TextBox10.Text = product20Qty.ToString()
-            If product20Qty <= 0 Then minus_btn6.Enabled = False
+            If product20Qty <= 0 Then minus_btn9.Enabled = False
         End If
     End Sub
 
@@ -825,14 +821,14 @@ Public Class circuitrocks
     Private Sub Button12_Click(sender As Object, e As EventArgs)
         product21Qty += 1
         TextBox11.Text = product21Qty.ToString()
-        Button11.Enabled = True
+        addtocart_btn12.Enabled = True
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs)
         If product21Qty > 0 Then
             product21Qty -= 1
             TextBox11.Text = product21Qty.ToString()
-            If product21Qty <= 0 Then Button11.Enabled = False
+            If product21Qty <= 0 Then addtocart_btn12.Enabled = False
         End If
     End Sub
 
@@ -894,14 +890,14 @@ Public Class circuitrocks
     Private Sub Button30_Click(sender As Object, e As EventArgs)
         product22Qty += 1
         TextBox12.Text = product22Qty.ToString()
-        Button29.Enabled = True
+        addtocart_btn18.Enabled = True
     End Sub
 
     Private Sub Button29_Click(sender As Object, e As EventArgs)
         If product22Qty > 0 Then
             product22Qty -= 1
             TextBox12.Text = product22Qty.ToString()
-            If product22Qty <= 0 Then Button29.Enabled = False
+            If product22Qty <= 0 Then addtocart_btn18.Enabled = False
         End If
     End Sub
 
@@ -963,14 +959,14 @@ Public Class circuitrocks
     Private Sub Button27_Click(sender As Object, e As EventArgs)
         product23Qty += 1
         TextBox13.Text = product23Qty.ToString()
-        Button26.Enabled = True
+        addtocart_btn17.Enabled = True
     End Sub
 
     Private Sub Button26_Click(sender As Object, e As EventArgs)
         If product23Qty > 0 Then
             product23Qty -= 1
             TextBox13.Text = product23Qty.ToString()
-            If product23Qty <= 0 Then Button26.Enabled = False
+            If product23Qty <= 0 Then addtocart_btn17.Enabled = False
         End If
     End Sub
 
@@ -1032,14 +1028,14 @@ Public Class circuitrocks
     Private Sub Button24_Click(sender As Object, e As EventArgs)
         product24Qty += 1
         TextBox14.Text = product24Qty.ToString()
-        Button23.Enabled = True
+        addtocart_btn16.Enabled = True
     End Sub
 
     Private Sub Button23_Click(sender As Object, e As EventArgs)
         If product24Qty > 0 Then
             product24Qty -= 1
             TextBox14.Text = product24Qty.ToString()
-            If product24Qty <= 0 Then Button23.Enabled = False
+            If product24Qty <= 0 Then addtocart_btn16.Enabled = False
         End If
     End Sub
 
@@ -1101,14 +1097,14 @@ Public Class circuitrocks
     Private Sub Button21_Click(sender As Object, e As EventArgs)
         product25Qty += 1
         TextBox15.Text = product25Qty.ToString()
-        Button20.Enabled = True
+        addtocart_btn15.Enabled = True
     End Sub
 
     Private Sub Button20_Click(sender As Object, e As EventArgs)
         If product25Qty > 0 Then
             product25Qty -= 1
             TextBox15.Text = product25Qty.ToString()
-            If product25Qty <= 0 Then Button20.Enabled = False
+            If product25Qty <= 0 Then addtocart_btn15.Enabled = False
         End If
     End Sub
 
@@ -1171,14 +1167,14 @@ Public Class circuitrocks
         ' Increments quantity for Product 26
         product26Qty += 1
         TextBox16.Text = product26Qty.ToString()
-        Button17.Enabled = True
+        addtocart_btn14.Enabled = True
     End Sub
 
     Private Sub Button17_Click(sender As Object, e As EventArgs)
         If product26Qty > 0 Then
             product26Qty -= 1
             TextBox16.Text = product26Qty.ToString()
-            If product26Qty <= 0 Then Button17.Enabled = False
+            If product26Qty <= 0 Then addtocart_btn14.Enabled = False
         End If
     End Sub
 
@@ -1240,14 +1236,14 @@ Public Class circuitrocks
     Private Sub Button15_Click(sender As Object, e As EventArgs)
         product27Qty += 1
         TextBox17.Text = product27Qty.ToString()
-        Button14.Enabled = True
+        addtocart_btn13.Enabled = True
     End Sub
 
     Private Sub Button14_Click(sender As Object, e As EventArgs)
         If product27Qty > 0 Then
             product27Qty -= 1
             TextBox17.Text = product27Qty.ToString()
-            If product27Qty <= 0 Then Button14.Enabled = False
+            If product27Qty <= 0 Then addtocart_btn13.Enabled = False
         End If
     End Sub
 
@@ -1378,14 +1374,14 @@ Public Class circuitrocks
     Private Sub Button48_Click(sender As Object, e As EventArgs)
         product29Qty += 1
         TextBox19.Text = product29Qty.ToString()
-        Button47.Enabled = True
+        addtocart_btn24.Enabled = True
     End Sub
 
     Private Sub Button47_Click(sender As Object, e As EventArgs)
         If product29Qty > 0 Then
             product29Qty -= 1
             TextBox19.Text = product29Qty.ToString()
-            If product29Qty <= 0 Then Button47.Enabled = False
+            If product29Qty <= 0 Then addtocart_btn24.Enabled = False
         End If
     End Sub
 
@@ -1447,14 +1443,14 @@ Public Class circuitrocks
     Private Sub Button45_Click(sender As Object, e As EventArgs)
         product30Qty += 1
         TextBox20.Text = product30Qty.ToString()
-        Button44.Enabled = True
+        addtocart_btn23.Enabled = True
     End Sub
 
     Private Sub Button44_Click(sender As Object, e As EventArgs)
         If product30Qty > 0 Then
             product30Qty -= 1
             TextBox20.Text = product30Qty.ToString()
-            If product30Qty <= 0 Then Button44.Enabled = False
+            If product30Qty <= 0 Then addtocart_btn23.Enabled = False
         End If
     End Sub
 
@@ -1516,14 +1512,14 @@ Public Class circuitrocks
     Private Sub Button42_Click(sender As Object, e As EventArgs)
         product31Qty += 1
         TextBox21.Text = product31Qty.ToString()
-        Button41.Enabled = True
+        addtocart_btn22.Enabled = True
     End Sub
 
     Private Sub Button41_Click(sender As Object, e As EventArgs)
         If product31Qty > 0 Then
             product31Qty -= 1
             TextBox21.Text = product31Qty.ToString()
-            If product31Qty <= 0 Then Button41.Enabled = False
+            If product31Qty <= 0 Then addtocart_btn22.Enabled = False
         End If
     End Sub
 
@@ -1585,14 +1581,14 @@ Public Class circuitrocks
     Private Sub Button39_Click(sender As Object, e As EventArgs)
         product32Qty += 1
         TextBox22.Text = product32Qty.ToString()
-        Button38.Enabled = True
+        addtocart_btn21.Enabled = True
     End Sub
 
     Private Sub Button38_Click(sender As Object, e As EventArgs)
         If product32Qty > 0 Then
             product32Qty -= 1
             TextBox22.Text = product32Qty.ToString()
-            If product32Qty <= 0 Then Button38.Enabled = False
+            If product32Qty <= 0 Then addtocart_btn21.Enabled = False
         End If
     End Sub
 
@@ -1654,14 +1650,14 @@ Public Class circuitrocks
     Private Sub Button36_Click(sender As Object, e As EventArgs)
         product33Qty += 1
         TextBox23.Text = product33Qty.ToString()
-        Button35.Enabled = True
+        addtocart_btn20.Enabled = True
     End Sub
 
     Private Sub Button35_Click(sender As Object, e As EventArgs)
         If product33Qty > 0 Then
             product33Qty -= 1
             TextBox23.Text = product33Qty.ToString()
-            If product33Qty <= 0 Then Button35.Enabled = False
+            If product33Qty <= 0 Then addtocart_btn20.Enabled = False
         End If
 
     End Sub
@@ -1724,14 +1720,14 @@ Public Class circuitrocks
     Private Sub Button33_Click(sender As Object, e As EventArgs)
         product34Qty += 1
         TextBox24.Text = product34Qty.ToString()
-        Button32.Enabled = True
+        addtocart_btn19.Enabled = True
     End Sub
 
     Private Sub Button32_Click(sender As Object, e As EventArgs)
         If product34Qty > 0 Then
             product34Qty -= 1
             TextBox24.Text = product34Qty.ToString()
-            If product34Qty <= 0 Then Button32.Enabled = False
+            If product34Qty <= 0 Then addtocart_btn19.Enabled = False
         End If
     End Sub
 

@@ -131,7 +131,7 @@ Partial Class breadboards
         Me.Label4.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label4.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(540, 299)
+        Me.Label4.Location = New System.Drawing.Point(539, 298)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(111, 41)
@@ -144,7 +144,7 @@ Partial Class breadboards
         Me.Label3.BackColor = System.Drawing.Color.Gainsboro
         Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(656, 370)
+        Me.Label3.Location = New System.Drawing.Point(655, 369)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(79, 19)
@@ -154,7 +154,7 @@ Partial Class breadboards
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(519, 103)
+        Me.Label2.Location = New System.Drawing.Point(518, 102)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(321, 122)
@@ -166,7 +166,7 @@ Partial Class breadboards
         Me.minus_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.minus_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.minus_btn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.minus_btn.Location = New System.Drawing.Point(540, 393)
+        Me.minus_btn.Location = New System.Drawing.Point(539, 392)
         Me.minus_btn.Margin = New System.Windows.Forms.Padding(2)
         Me.minus_btn.Name = "minus_btn"
         Me.minus_btn.Size = New System.Drawing.Size(47, 36)
@@ -179,7 +179,7 @@ Partial Class breadboards
         Me.plus_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.plus_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.plus_btn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.plus_btn.Location = New System.Drawing.Point(800, 392)
+        Me.plus_btn.Location = New System.Drawing.Point(799, 392)
         Me.plus_btn.Margin = New System.Windows.Forms.Padding(2)
         Me.plus_btn.Name = "plus_btn"
         Me.plus_btn.Size = New System.Drawing.Size(47, 36)
@@ -191,7 +191,7 @@ Partial Class breadboards
         '
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(591, 394)
+        Me.TextBox1.Location = New System.Drawing.Point(590, 393)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
@@ -204,7 +204,7 @@ Partial Class breadboards
         Me.addtocart_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.addtocart_btn.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addtocart_btn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.addtocart_btn.Location = New System.Drawing.Point(540, 441)
+        Me.addtocart_btn.Location = New System.Drawing.Point(539, 440)
         Me.addtocart_btn.Margin = New System.Windows.Forms.Padding(2)
         Me.addtocart_btn.Name = "addtocart_btn"
         Me.addtocart_btn.Size = New System.Drawing.Size(307, 54)
@@ -229,7 +229,7 @@ Partial Class breadboards
         Me.minus_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.minus_btn1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.minus_btn1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.minus_btn1.Location = New System.Drawing.Point(540, 845)
+        Me.minus_btn1.Location = New System.Drawing.Point(541, 844)
         Me.minus_btn1.Margin = New System.Windows.Forms.Padding(2)
         Me.minus_btn1.Name = "minus_btn1"
         Me.minus_btn1.Size = New System.Drawing.Size(47, 36)
@@ -242,7 +242,7 @@ Partial Class breadboards
         Me.plus_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.plus_btn1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.plus_btn1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.plus_btn1.Location = New System.Drawing.Point(800, 845)
+        Me.plus_btn1.Location = New System.Drawing.Point(801, 844)
         Me.plus_btn1.Margin = New System.Windows.Forms.Padding(2)
         Me.plus_btn1.Name = "plus_btn1"
         Me.plus_btn1.Size = New System.Drawing.Size(47, 36)
@@ -254,7 +254,7 @@ Partial Class breadboards
         '
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(591, 846)
+        Me.TextBox2.Location = New System.Drawing.Point(592, 845)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
@@ -266,7 +266,7 @@ Partial Class breadboards
         Me.addtocart_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.addtocart_btn1.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addtocart_btn1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.addtocart_btn1.Location = New System.Drawing.Point(540, 893)
+        Me.addtocart_btn1.Location = New System.Drawing.Point(541, 892)
         Me.addtocart_btn1.Margin = New System.Windows.Forms.Padding(2)
         Me.addtocart_btn1.Name = "addtocart_btn1"
         Me.addtocart_btn1.Size = New System.Drawing.Size(307, 54)
@@ -291,7 +291,7 @@ Partial Class breadboards
         Me.minus_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.minus_btn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.minus_btn2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.minus_btn2.Location = New System.Drawing.Point(538, 1299)
+        Me.minus_btn2.Location = New System.Drawing.Point(539, 1299)
         Me.minus_btn2.Margin = New System.Windows.Forms.Padding(2)
         Me.minus_btn2.Name = "minus_btn2"
         Me.minus_btn2.Size = New System.Drawing.Size(47, 36)
@@ -304,7 +304,7 @@ Partial Class breadboards
         Me.plus_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.plus_btn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.plus_btn2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.plus_btn2.Location = New System.Drawing.Point(800, 1299)
+        Me.plus_btn2.Location = New System.Drawing.Point(801, 1299)
         Me.plus_btn2.Margin = New System.Windows.Forms.Padding(2)
         Me.plus_btn2.Name = "plus_btn2"
         Me.plus_btn2.Size = New System.Drawing.Size(47, 36)
@@ -316,7 +316,7 @@ Partial Class breadboards
         '
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(589, 1300)
+        Me.TextBox3.Location = New System.Drawing.Point(590, 1300)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
@@ -328,7 +328,7 @@ Partial Class breadboards
         Me.addtocart_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.addtocart_btn2.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addtocart_btn2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.addtocart_btn2.Location = New System.Drawing.Point(538, 1348)
+        Me.addtocart_btn2.Location = New System.Drawing.Point(539, 1348)
         Me.addtocart_btn2.Margin = New System.Windows.Forms.Padding(2)
         Me.addtocart_btn2.Name = "addtocart_btn2"
         Me.addtocart_btn2.Size = New System.Drawing.Size(309, 54)
@@ -353,7 +353,7 @@ Partial Class breadboards
         Me.minus_btn3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.minus_btn3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.minus_btn3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.minus_btn3.Location = New System.Drawing.Point(538, 1754)
+        Me.minus_btn3.Location = New System.Drawing.Point(539, 1754)
         Me.minus_btn3.Margin = New System.Windows.Forms.Padding(2)
         Me.minus_btn3.Name = "minus_btn3"
         Me.minus_btn3.Size = New System.Drawing.Size(47, 36)
@@ -366,7 +366,7 @@ Partial Class breadboards
         Me.plus_btn3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.plus_btn3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.plus_btn3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.plus_btn3.Location = New System.Drawing.Point(800, 1754)
+        Me.plus_btn3.Location = New System.Drawing.Point(801, 1754)
         Me.plus_btn3.Margin = New System.Windows.Forms.Padding(2)
         Me.plus_btn3.Name = "plus_btn3"
         Me.plus_btn3.Size = New System.Drawing.Size(47, 36)
@@ -378,7 +378,7 @@ Partial Class breadboards
         '
         Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(589, 1755)
+        Me.TextBox4.Location = New System.Drawing.Point(590, 1755)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
@@ -390,7 +390,7 @@ Partial Class breadboards
         Me.addtocart_btn3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.addtocart_btn3.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addtocart_btn3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.addtocart_btn3.Location = New System.Drawing.Point(538, 1803)
+        Me.addtocart_btn3.Location = New System.Drawing.Point(539, 1803)
         Me.addtocart_btn3.Margin = New System.Windows.Forms.Padding(2)
         Me.addtocart_btn3.Name = "addtocart_btn3"
         Me.addtocart_btn3.Size = New System.Drawing.Size(309, 54)
@@ -415,7 +415,7 @@ Partial Class breadboards
         Me.minus_btn4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.minus_btn4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.minus_btn4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.minus_btn4.Location = New System.Drawing.Point(538, 2207)
+        Me.minus_btn4.Location = New System.Drawing.Point(539, 2207)
         Me.minus_btn4.Margin = New System.Windows.Forms.Padding(2)
         Me.minus_btn4.Name = "minus_btn4"
         Me.minus_btn4.Size = New System.Drawing.Size(47, 36)
@@ -428,7 +428,7 @@ Partial Class breadboards
         Me.plus_btn4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.plus_btn4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.plus_btn4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.plus_btn4.Location = New System.Drawing.Point(800, 2207)
+        Me.plus_btn4.Location = New System.Drawing.Point(801, 2207)
         Me.plus_btn4.Margin = New System.Windows.Forms.Padding(2)
         Me.plus_btn4.Name = "plus_btn4"
         Me.plus_btn4.Size = New System.Drawing.Size(47, 36)
@@ -440,7 +440,7 @@ Partial Class breadboards
         '
         Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(589, 2208)
+        Me.TextBox5.Location = New System.Drawing.Point(590, 2208)
         Me.TextBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.ReadOnly = True
@@ -452,7 +452,7 @@ Partial Class breadboards
         Me.addtocart_btn4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.addtocart_btn4.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addtocart_btn4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.addtocart_btn4.Location = New System.Drawing.Point(538, 2256)
+        Me.addtocart_btn4.Location = New System.Drawing.Point(539, 2256)
         Me.addtocart_btn4.Margin = New System.Windows.Forms.Padding(2)
         Me.addtocart_btn4.Name = "addtocart_btn4"
         Me.addtocart_btn4.Size = New System.Drawing.Size(309, 54)
@@ -477,7 +477,7 @@ Partial Class breadboards
         Me.minus_btn5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.minus_btn5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.minus_btn5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.minus_btn5.Location = New System.Drawing.Point(540, 2663)
+        Me.minus_btn5.Location = New System.Drawing.Point(539, 2663)
         Me.minus_btn5.Margin = New System.Windows.Forms.Padding(2)
         Me.minus_btn5.Name = "minus_btn5"
         Me.minus_btn5.Size = New System.Drawing.Size(47, 36)
@@ -490,7 +490,7 @@ Partial Class breadboards
         Me.plus_btn5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.plus_btn5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.plus_btn5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.plus_btn5.Location = New System.Drawing.Point(800, 2663)
+        Me.plus_btn5.Location = New System.Drawing.Point(799, 2663)
         Me.plus_btn5.Margin = New System.Windows.Forms.Padding(2)
         Me.plus_btn5.Name = "plus_btn5"
         Me.plus_btn5.Size = New System.Drawing.Size(47, 36)
@@ -502,7 +502,7 @@ Partial Class breadboards
         '
         Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(591, 2664)
+        Me.TextBox6.Location = New System.Drawing.Point(590, 2664)
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.ReadOnly = True
@@ -514,7 +514,7 @@ Partial Class breadboards
         Me.addtocart_btn5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.addtocart_btn5.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addtocart_btn5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.addtocart_btn5.Location = New System.Drawing.Point(540, 2711)
+        Me.addtocart_btn5.Location = New System.Drawing.Point(539, 2711)
         Me.addtocart_btn5.Margin = New System.Windows.Forms.Padding(2)
         Me.addtocart_btn5.Name = "addtocart_btn5"
         Me.addtocart_btn5.Size = New System.Drawing.Size(307, 54)
@@ -539,7 +539,7 @@ Partial Class breadboards
         Me.minus_btn6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.minus_btn6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.minus_btn6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.minus_btn6.Location = New System.Drawing.Point(540, 3116)
+        Me.minus_btn6.Location = New System.Drawing.Point(539, 3116)
         Me.minus_btn6.Margin = New System.Windows.Forms.Padding(2)
         Me.minus_btn6.Name = "minus_btn6"
         Me.minus_btn6.Size = New System.Drawing.Size(47, 36)
@@ -552,7 +552,7 @@ Partial Class breadboards
         Me.plus_btn6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.plus_btn6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.plus_btn6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.plus_btn6.Location = New System.Drawing.Point(802, 3116)
+        Me.plus_btn6.Location = New System.Drawing.Point(801, 3116)
         Me.plus_btn6.Margin = New System.Windows.Forms.Padding(2)
         Me.plus_btn6.Name = "plus_btn6"
         Me.plus_btn6.Size = New System.Drawing.Size(47, 36)
@@ -564,7 +564,7 @@ Partial Class breadboards
         '
         Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(591, 3117)
+        Me.TextBox7.Location = New System.Drawing.Point(590, 3117)
         Me.TextBox7.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
@@ -576,7 +576,7 @@ Partial Class breadboards
         Me.addtocart_btn6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.addtocart_btn6.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addtocart_btn6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.addtocart_btn6.Location = New System.Drawing.Point(540, 3164)
+        Me.addtocart_btn6.Location = New System.Drawing.Point(539, 3164)
         Me.addtocart_btn6.Margin = New System.Windows.Forms.Padding(2)
         Me.addtocart_btn6.Name = "addtocart_btn6"
         Me.addtocart_btn6.Size = New System.Drawing.Size(309, 54)
@@ -624,7 +624,7 @@ Partial Class breadboards
         'PictureBox8
         '
         Me.PictureBox8.BackColor = System.Drawing.Color.Gainsboro
-        Me.PictureBox8.Location = New System.Drawing.Point(525, 361)
+        Me.PictureBox8.Location = New System.Drawing.Point(524, 360)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(337, 149)
         Me.PictureBox8.TabIndex = 73
@@ -635,7 +635,7 @@ Partial Class breadboards
         Me.PictureBox9.BackColor = System.Drawing.Color.Gainsboro
         Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox9.Location = New System.Drawing.Point(529, 299)
+        Me.PictureBox9.Location = New System.Drawing.Point(528, 298)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(12, 41)
         Me.PictureBox9.TabIndex = 74
@@ -644,7 +644,7 @@ Partial Class breadboards
         'Label5
         '
         Me.Label5.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(525, 225)
+        Me.Label5.Location = New System.Drawing.Point(524, 224)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(337, 63)
         Me.Label5.TabIndex = 75
@@ -654,7 +654,7 @@ Partial Class breadboards
         'Label6
         '
         Me.Label6.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(523, 678)
+        Me.Label6.Location = New System.Drawing.Point(524, 677)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(337, 63)
         Me.Label6.TabIndex = 81
@@ -666,7 +666,7 @@ Partial Class breadboards
         Me.PictureBox10.BackColor = System.Drawing.Color.Gainsboro
         Me.PictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox10.Location = New System.Drawing.Point(527, 752)
+        Me.PictureBox10.Location = New System.Drawing.Point(528, 751)
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.Size = New System.Drawing.Size(12, 41)
         Me.PictureBox10.TabIndex = 80
@@ -678,7 +678,7 @@ Partial Class breadboards
         Me.Label7.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label7.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(538, 752)
+        Me.Label7.Location = New System.Drawing.Point(539, 751)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(111, 41)
@@ -691,7 +691,7 @@ Partial Class breadboards
         Me.Label8.BackColor = System.Drawing.Color.Gainsboro
         Me.Label8.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(654, 821)
+        Me.Label8.Location = New System.Drawing.Point(655, 820)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(79, 19)
@@ -701,7 +701,7 @@ Partial Class breadboards
         'Label9
         '
         Me.Label9.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(515, 557)
+        Me.Label9.Location = New System.Drawing.Point(518, 556)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(321, 122)
@@ -711,7 +711,7 @@ Partial Class breadboards
         'PictureBox11
         '
         Me.PictureBox11.BackColor = System.Drawing.Color.Gainsboro
-        Me.PictureBox11.Location = New System.Drawing.Point(523, 813)
+        Me.PictureBox11.Location = New System.Drawing.Point(524, 812)
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(337, 149)
         Me.PictureBox11.TabIndex = 79
@@ -720,7 +720,7 @@ Partial Class breadboards
         'Label10
         '
         Me.Label10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(523, 1131)
+        Me.Label10.Location = New System.Drawing.Point(524, 1131)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(337, 63)
         Me.Label10.TabIndex = 87
@@ -731,7 +731,7 @@ Partial Class breadboards
         Me.PictureBox12.BackColor = System.Drawing.Color.Gainsboro
         Me.PictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox12.Location = New System.Drawing.Point(527, 1205)
+        Me.PictureBox12.Location = New System.Drawing.Point(528, 1205)
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.Size = New System.Drawing.Size(12, 41)
         Me.PictureBox12.TabIndex = 86
@@ -743,7 +743,7 @@ Partial Class breadboards
         Me.Label11.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label11.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(538, 1205)
+        Me.Label11.Location = New System.Drawing.Point(539, 1205)
         Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(111, 41)
@@ -756,7 +756,7 @@ Partial Class breadboards
         Me.Label12.BackColor = System.Drawing.Color.Gainsboro
         Me.Label12.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(654, 1275)
+        Me.Label12.Location = New System.Drawing.Point(655, 1275)
         Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(79, 19)
@@ -766,7 +766,7 @@ Partial Class breadboards
         'Label13
         '
         Me.Label13.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(515, 1009)
+        Me.Label13.Location = New System.Drawing.Point(518, 1009)
         Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(345, 122)
@@ -776,7 +776,7 @@ Partial Class breadboards
         'PictureBox13
         '
         Me.PictureBox13.BackColor = System.Drawing.Color.Gainsboro
-        Me.PictureBox13.Location = New System.Drawing.Point(523, 1267)
+        Me.PictureBox13.Location = New System.Drawing.Point(524, 1267)
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.Size = New System.Drawing.Size(337, 149)
         Me.PictureBox13.TabIndex = 85
@@ -787,7 +787,7 @@ Partial Class breadboards
         Me.PictureBox14.BackColor = System.Drawing.Color.Gainsboro
         Me.PictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox14.Location = New System.Drawing.Point(527, 1660)
+        Me.PictureBox14.Location = New System.Drawing.Point(528, 1660)
         Me.PictureBox14.Name = "PictureBox14"
         Me.PictureBox14.Size = New System.Drawing.Size(12, 41)
         Me.PictureBox14.TabIndex = 92
@@ -799,7 +799,7 @@ Partial Class breadboards
         Me.Label15.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label15.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(538, 1660)
+        Me.Label15.Location = New System.Drawing.Point(539, 1660)
         Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(111, 41)
@@ -812,7 +812,7 @@ Partial Class breadboards
         Me.Label16.BackColor = System.Drawing.Color.Gainsboro
         Me.Label16.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label16.Location = New System.Drawing.Point(654, 1730)
+        Me.Label16.Location = New System.Drawing.Point(655, 1730)
         Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(79, 19)
@@ -822,7 +822,7 @@ Partial Class breadboards
         'Label17
         '
         Me.Label17.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(515, 1464)
+        Me.Label17.Location = New System.Drawing.Point(518, 1464)
         Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(345, 174)
@@ -832,7 +832,7 @@ Partial Class breadboards
         'PictureBox15
         '
         Me.PictureBox15.BackColor = System.Drawing.Color.Gainsboro
-        Me.PictureBox15.Location = New System.Drawing.Point(523, 1722)
+        Me.PictureBox15.Location = New System.Drawing.Point(524, 1722)
         Me.PictureBox15.Name = "PictureBox15"
         Me.PictureBox15.Size = New System.Drawing.Size(337, 149)
         Me.PictureBox15.TabIndex = 91
@@ -841,7 +841,7 @@ Partial Class breadboards
         'Label18
         '
         Me.Label18.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(523, 2040)
+        Me.Label18.Location = New System.Drawing.Point(524, 2040)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(337, 63)
         Me.Label18.TabIndex = 99
@@ -852,7 +852,7 @@ Partial Class breadboards
         Me.PictureBox16.BackColor = System.Drawing.Color.Gainsboro
         Me.PictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox16.Location = New System.Drawing.Point(527, 2114)
+        Me.PictureBox16.Location = New System.Drawing.Point(528, 2114)
         Me.PictureBox16.Name = "PictureBox16"
         Me.PictureBox16.Size = New System.Drawing.Size(12, 41)
         Me.PictureBox16.TabIndex = 98
@@ -864,7 +864,7 @@ Partial Class breadboards
         Me.Label19.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label19.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(538, 2114)
+        Me.Label19.Location = New System.Drawing.Point(539, 2114)
         Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(111, 41)
@@ -877,7 +877,7 @@ Partial Class breadboards
         Me.Label20.BackColor = System.Drawing.Color.Gainsboro
         Me.Label20.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label20.Location = New System.Drawing.Point(654, 2183)
+        Me.Label20.Location = New System.Drawing.Point(655, 2183)
         Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(79, 19)
@@ -887,7 +887,7 @@ Partial Class breadboards
         'Label21
         '
         Me.Label21.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(515, 1918)
+        Me.Label21.Location = New System.Drawing.Point(518, 1918)
         Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(308, 122)
@@ -897,7 +897,7 @@ Partial Class breadboards
         'PictureBox17
         '
         Me.PictureBox17.BackColor = System.Drawing.Color.Gainsboro
-        Me.PictureBox17.Location = New System.Drawing.Point(523, 2175)
+        Me.PictureBox17.Location = New System.Drawing.Point(524, 2175)
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.Size = New System.Drawing.Size(337, 149)
         Me.PictureBox17.TabIndex = 97
@@ -906,7 +906,7 @@ Partial Class breadboards
         'Label22
         '
         Me.Label22.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(525, 2494)
+        Me.Label22.Location = New System.Drawing.Point(524, 2494)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(337, 63)
         Me.Label22.TabIndex = 105
@@ -917,7 +917,7 @@ Partial Class breadboards
         Me.PictureBox18.BackColor = System.Drawing.Color.Gainsboro
         Me.PictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox18.Location = New System.Drawing.Point(529, 2568)
+        Me.PictureBox18.Location = New System.Drawing.Point(528, 2568)
         Me.PictureBox18.Name = "PictureBox18"
         Me.PictureBox18.Size = New System.Drawing.Size(12, 41)
         Me.PictureBox18.TabIndex = 104
@@ -929,7 +929,7 @@ Partial Class breadboards
         Me.Label23.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label23.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(540, 2568)
+        Me.Label23.Location = New System.Drawing.Point(539, 2568)
         Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(111, 41)
@@ -942,7 +942,7 @@ Partial Class breadboards
         Me.Label24.BackColor = System.Drawing.Color.Gainsboro
         Me.Label24.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label24.Location = New System.Drawing.Point(656, 2639)
+        Me.Label24.Location = New System.Drawing.Point(655, 2639)
         Me.Label24.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(79, 19)
@@ -952,7 +952,7 @@ Partial Class breadboards
         'Label25
         '
         Me.Label25.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(517, 2372)
+        Me.Label25.Location = New System.Drawing.Point(518, 2372)
         Me.Label25.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(345, 122)
@@ -962,7 +962,7 @@ Partial Class breadboards
         'PictureBox19
         '
         Me.PictureBox19.BackColor = System.Drawing.Color.Gainsboro
-        Me.PictureBox19.Location = New System.Drawing.Point(525, 2630)
+        Me.PictureBox19.Location = New System.Drawing.Point(524, 2630)
         Me.PictureBox19.Name = "PictureBox19"
         Me.PictureBox19.Size = New System.Drawing.Size(337, 149)
         Me.PictureBox19.TabIndex = 103
@@ -971,7 +971,7 @@ Partial Class breadboards
         'Label26
         '
         Me.Label26.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(525, 2948)
+        Me.Label26.Location = New System.Drawing.Point(524, 2948)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(337, 63)
         Me.Label26.TabIndex = 111
@@ -983,7 +983,7 @@ Partial Class breadboards
         Me.PictureBox20.BackColor = System.Drawing.Color.Gainsboro
         Me.PictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox20.Location = New System.Drawing.Point(529, 3022)
+        Me.PictureBox20.Location = New System.Drawing.Point(528, 3022)
         Me.PictureBox20.Name = "PictureBox20"
         Me.PictureBox20.Size = New System.Drawing.Size(12, 41)
         Me.PictureBox20.TabIndex = 110
@@ -995,7 +995,7 @@ Partial Class breadboards
         Me.Label27.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label27.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(540, 3022)
+        Me.Label27.Location = New System.Drawing.Point(539, 3022)
         Me.Label27.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(111, 41)
@@ -1008,7 +1008,7 @@ Partial Class breadboards
         Me.Label28.BackColor = System.Drawing.Color.Gainsboro
         Me.Label28.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label28.Location = New System.Drawing.Point(656, 3092)
+        Me.Label28.Location = New System.Drawing.Point(655, 3092)
         Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(79, 19)
@@ -1018,7 +1018,7 @@ Partial Class breadboards
         'Label29
         '
         Me.Label29.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(517, 2826)
+        Me.Label29.Location = New System.Drawing.Point(518, 2826)
         Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(345, 122)
@@ -1028,7 +1028,7 @@ Partial Class breadboards
         'PictureBox21
         '
         Me.PictureBox21.BackColor = System.Drawing.Color.Gainsboro
-        Me.PictureBox21.Location = New System.Drawing.Point(525, 3084)
+        Me.PictureBox21.Location = New System.Drawing.Point(524, 3084)
         Me.PictureBox21.Name = "PictureBox21"
         Me.PictureBox21.Size = New System.Drawing.Size(337, 149)
         Me.PictureBox21.TabIndex = 109
