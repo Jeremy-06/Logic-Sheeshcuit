@@ -585,7 +585,7 @@ Partial Class makerlab
         'Label18
         '
         Me.Label18.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(524, 1988)
+        Me.Label18.Location = New System.Drawing.Point(524, 1989)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(337, 115)
         Me.Label18.TabIndex = 252

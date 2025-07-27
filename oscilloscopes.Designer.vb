@@ -226,7 +226,7 @@ Partial Class oscilloscopes
         'Label10
         '
         Me.Label10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(711, 751)
+        Me.Label10.Location = New System.Drawing.Point(711, 752)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(171, 45)
         Me.Label10.TabIndex = 224
@@ -237,7 +237,7 @@ Partial Class oscilloscopes
         Me.minus_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.minus_btn1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.minus_btn1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.minus_btn1.Location = New System.Drawing.Point(541, 844)
+        Me.minus_btn1.Location = New System.Drawing.Point(541, 845)
         Me.minus_btn1.Margin = New System.Windows.Forms.Padding(2)
         Me.minus_btn1.Name = "minus_btn1"
         Me.minus_btn1.Size = New System.Drawing.Size(47, 36)
@@ -250,7 +250,7 @@ Partial Class oscilloscopes
         Me.plus_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.plus_btn1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.plus_btn1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.plus_btn1.Location = New System.Drawing.Point(801, 844)
+        Me.plus_btn1.Location = New System.Drawing.Point(801, 845)
         Me.plus_btn1.Margin = New System.Windows.Forms.Padding(2)
         Me.plus_btn1.Name = "plus_btn1"
         Me.plus_btn1.Size = New System.Drawing.Size(47, 36)
@@ -262,7 +262,7 @@ Partial Class oscilloscopes
         '
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(592, 845)
+        Me.TextBox2.Location = New System.Drawing.Point(592, 846)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
@@ -274,7 +274,7 @@ Partial Class oscilloscopes
         Me.addtocart_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.addtocart_btn1.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addtocart_btn1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.addtocart_btn1.Location = New System.Drawing.Point(541, 892)
+        Me.addtocart_btn1.Location = New System.Drawing.Point(541, 893)
         Me.addtocart_btn1.Margin = New System.Windows.Forms.Padding(2)
         Me.addtocart_btn1.Name = "addtocart_btn1"
         Me.addtocart_btn1.Size = New System.Drawing.Size(307, 54)
@@ -285,7 +285,7 @@ Partial Class oscilloscopes
         'Label6
         '
         Me.Label6.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(629, 683)
+        Me.Label6.Location = New System.Drawing.Point(629, 684)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(217, 54)
         Me.Label6.TabIndex = 223
@@ -296,7 +296,7 @@ Partial Class oscilloscopes
         Me.PictureBox10.BackColor = System.Drawing.Color.Gainsboro
         Me.PictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox10.Location = New System.Drawing.Point(528, 751)
+        Me.PictureBox10.Location = New System.Drawing.Point(528, 752)
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.Size = New System.Drawing.Size(12, 41)
         Me.PictureBox10.TabIndex = 222
@@ -308,7 +308,7 @@ Partial Class oscilloscopes
         Me.Label7.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label7.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(539, 751)
+        Me.Label7.Location = New System.Drawing.Point(539, 752)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(167, 41)
@@ -321,7 +321,7 @@ Partial Class oscilloscopes
         Me.Label8.BackColor = System.Drawing.Color.Gainsboro
         Me.Label8.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(655, 820)
+        Me.Label8.Location = New System.Drawing.Point(655, 821)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(79, 19)
@@ -331,7 +331,7 @@ Partial Class oscilloscopes
         'Label9
         '
         Me.Label9.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(518, 556)
+        Me.Label9.Location = New System.Drawing.Point(518, 557)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(354, 180)
@@ -341,7 +341,7 @@ Partial Class oscilloscopes
         'PictureBox11
         '
         Me.PictureBox11.BackColor = System.Drawing.Color.Gainsboro
-        Me.PictureBox11.Location = New System.Drawing.Point(524, 812)
+        Me.PictureBox11.Location = New System.Drawing.Point(524, 813)
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(337, 149)
         Me.PictureBox11.TabIndex = 221
