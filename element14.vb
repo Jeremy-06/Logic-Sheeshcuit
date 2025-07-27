@@ -135,7 +135,7 @@ Public Class element14
         End If
     End Sub
 
-    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs) 
+    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs)
         If Not ValidateCustomer() Then Return
         Dim customerId = login.customerId
         Dim productId As Integer = 36
@@ -200,13 +200,13 @@ Public Class element14
         End Try
     End Sub
 
-    Private Sub plus_btn1_Click(sender As Object, e As EventArgs) 
+    Private Sub plus_btn1_Click(sender As Object, e As EventArgs)
         product36Qty += 1
         TextBox2.Text = product36Qty.ToString()
         minus_btn1.Enabled = True
     End Sub
 
-    Private Sub minus_btn1_Click(sender As Object, e As EventArgs) 
+    Private Sub minus_btn1_Click(sender As Object, e As EventArgs)
         If product36Qty > 0 Then
             product36Qty -= 1
             TextBox2.Text = product36Qty.ToString()
