@@ -64,6 +64,33 @@ Public Class breadboards
         End Try
     End Function
 
+    Private Function HasSufficientStock(productId As Integer, requestedQty As Integer) As Boolean
+        Dim availableStock As Integer = 0
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+            query = $"SELECT productStock FROM inventory WHERE products_productId = {productId} LIMIT 1"
+            cmd = New MySqlCommand(query, conn)
+            Dim result = cmd.ExecuteScalar()
+            If result IsNot Nothing Then
+                availableStock = Convert.ToInt32(result)
+            End If
+            If requestedQty > availableStock Then
+                MessageBox.Show($"Not enough stock available. Only {availableStock} left in stock.", "Insufficient Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return False
+            End If
+            Return True
+        Catch ex As Exception
+            MessageBox.Show("Error checking stock: " & ex.Message)
+            Return False
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+    End Function
+
     ' Utility to clear all product quantities and textboxes
     Private Sub clearQty()
         product14Qty = 0
@@ -103,6 +130,7 @@ Public Class breadboards
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then Return
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -169,6 +197,7 @@ Public Class breadboards
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then Return
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -235,6 +264,7 @@ Public Class breadboards
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then Return
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -301,6 +331,7 @@ Public Class breadboards
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then Return
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -367,6 +398,7 @@ Public Class breadboards
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then Return
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -433,6 +465,7 @@ Public Class breadboards
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then Return
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -499,6 +532,7 @@ Public Class breadboards
             MessageBox.Show("Please enter a quantity greater than 0.")
             Return
         End If
+        If Not HasSufficientStock(productId, newQty) Then Return
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
