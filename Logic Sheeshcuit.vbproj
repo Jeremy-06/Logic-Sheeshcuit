@@ -14,6 +14,21 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -110,12 +125,6 @@
     <Compile Include="datacart.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dataeditor.Designer.vb">
-      <DependentUpon>dataeditor.vb</DependentUpon>
-    </Compile>
-    <Compile Include="dataeditor.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="dataexpenses.Designer.vb">
       <DependentUpon>dataexpenses.vb</DependentUpon>
     </Compile>
@@ -132,12 +141,6 @@
       <DependentUpon>datausers.vb</DependentUpon>
     </Compile>
     <Compile Include="datausers.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="dbreader.Designer.vb">
-      <DependentUpon>dbreader.vb</DependentUpon>
-    </Compile>
-    <Compile Include="dbreader.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="digitaldisplays.Designer.vb">
@@ -163,6 +166,12 @@
       <DependentUpon>datainventory.vb</DependentUpon>
     </Compile>
     <Compile Include="datainventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventorymanager.Designer.vb">
+      <DependentUpon>inventorymanager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="inventorymanager.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="led.Designer.vb">
@@ -198,6 +207,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ordermanager.Designer.vb">
+      <DependentUpon>ordermanager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ordermanager.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="orders.Designer.vb">
       <DependentUpon>orders.vb</DependentUpon>
@@ -272,18 +287,6 @@
     <Compile Include="datasales.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="schemamaintainer.Designer.vb">
-      <DependentUpon>schemamaintainer.vb</DependentUpon>
-    </Compile>
-    <Compile Include="schemamaintainer.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="security.Designer.vb">
-      <DependentUpon>security.vb</DependentUpon>
-    </Compile>
-    <Compile Include="security.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="signup.Designer.vb">
       <DependentUpon>signup.vb</DependentUpon>
     </Compile>
@@ -340,9 +343,6 @@
     <EmbeddedResource Include="datacart.resx">
       <DependentUpon>datacart.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dataeditor.resx">
-      <DependentUpon>dataeditor.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="dataexpenses.resx">
       <DependentUpon>dataexpenses.vb</DependentUpon>
     </EmbeddedResource>
@@ -351,9 +351,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="datausers.resx">
       <DependentUpon>datausers.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="dbreader.resx">
-      <DependentUpon>dbreader.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="digitaldisplays.resx">
       <DependentUpon>digitaldisplays.vb</DependentUpon>
@@ -366,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="datainventory.resx">
       <DependentUpon>datainventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventorymanager.resx">
+      <DependentUpon>inventorymanager.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="led.resx">
       <DependentUpon>led.vb</DependentUpon>
@@ -381,6 +381,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ordermanager.resx">
+      <DependentUpon>ordermanager.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="orders.resx">
       <DependentUpon>orders.vb</DependentUpon>
@@ -417,12 +420,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="datasales.resx">
       <DependentUpon>datasales.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="schemamaintainer.resx">
-      <DependentUpon>schemamaintainer.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="security.resx">
-      <DependentUpon>security.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.vb</DependentUpon>
@@ -628,6 +625,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cart Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Order Manager Form1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory Manager Form.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
