@@ -4,6 +4,7 @@ Imports System.Text
 
 Public Class login
     Public Shared customerId As Integer = 0
+    Public Shared userRole As String = ""
 
     ' Database connection objects
     Private conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
@@ -54,12 +55,13 @@ Public Class login
             End If
 
             ' Check if username and password match in users table (hashed)
-            query = $"SELECT userId FROM users WHERE username = '{username}' AND password = '{hashedPassword}'"
+            query = $"SELECT userId, userRole FROM users WHERE username = '{username}' AND password = '{hashedPassword}'"
             cmd = New MySqlCommand(query, conn)
             reader = cmd.ExecuteReader()
 
             If reader.Read() Then
                 Dim userId As Integer = reader.GetInt32("userId")
+                Dim userRole As String = reader.GetString("userRole")
                 reader.Close()
 
                 ' Get customer ID from customers table
@@ -70,6 +72,14 @@ Public Class login
                 If reader.Read() Then
                     customerId = reader.GetInt32("customerId") ' Set the shared variable
                     reader.Close()
+
+                    ' Set the user role
+                    login.userRole = userRole
+
+                    If Not String.IsNullOrEmpty(login.userRole) AndAlso login.userRole <> "customer" Then
+                        home.Button1.Enabled = True
+                        home.Button1.Visible = True
+                    End If
 
                     ' Clear the textboxes
                     TextBox1.Clear()

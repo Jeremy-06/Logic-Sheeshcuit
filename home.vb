@@ -186,6 +186,11 @@ Public Class home
                 conn.Close()
             End If
         End Try
+
+        ' Disable Button1 by default, only enable for non-customer users
+        Button1.Visible = False
+        Button1.Enabled = False
+
     End Sub
 
     Private searchResults As New List(Of Label)
@@ -302,5 +307,14 @@ Public Class home
 
     Private lastSearchTerm As String = ""
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ' Check if user is not a customer
+        If login.userRole = "customer" Then
+            MessageBox.Show("Access denied. Admin privileges required.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        ordermanager.Show()
+    End Sub
 End Class
 

@@ -201,6 +201,7 @@ Partial Class home
         Me.usericon = New System.Windows.Forms.PictureBox()
         Me.PictureBox41 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -2269,6 +2270,15 @@ Partial Class home
         'Timer1
         '
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(439, 155)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 15
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2276,6 +2286,7 @@ Partial Class home
         Me.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.Home_Form
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(984, 661)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox41)
         Me.Controls.Add(Me.usericon)
         Me.Controls.Add(Me.PictureBox39)
@@ -2521,4 +2532,5 @@ Partial Class home
     Friend WithEvents Label95 As Label
     Friend WithEvents Label96 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Button1 As Button
 End Class

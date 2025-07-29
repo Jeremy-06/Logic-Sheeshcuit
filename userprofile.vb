@@ -38,6 +38,8 @@ Public Class userprofile
 
                 ' Set Label4 to Phone
                 Label4.Text = "Phone: " & reader.GetString("customerPhone")
+
+                Label5.Text = login.userRole ' Display user role
             Else
                 MessageBox.Show("Customer information not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
@@ -68,6 +70,7 @@ Public Class userprofile
             MessageBox.Show("You have been logged out successfully.", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information)
             login.Show()
             Me.Hide()
+            home.Button1.Visible = False
         End If
     End Sub
 End Class
