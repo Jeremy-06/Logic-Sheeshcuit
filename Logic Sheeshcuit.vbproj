@@ -137,10 +137,10 @@
     <Compile Include="dataorderitems.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dataorderr.Designer.vb">
-      <DependentUpon>dataorderr.vb</DependentUpon>
+    <Compile Include="dataorders.Designer.vb">
+      <DependentUpon>dataorders.vb</DependentUpon>
     </Compile>
-    <Compile Include="dataorderr.vb">
+    <Compile Include="dataorders.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="datausers.Designer.vb">
@@ -232,10 +232,6 @@
     <Compile Include="receipt.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dataorders.Designer.vb">
-      <DependentUpon>dataorders.vb</DependentUpon>
-    </Compile>
-    <Compile Include="dataorders.vb" />
     <Compile Include=".Designer.vb">
       <DependentUpon>makerlab.vb</DependentUpon>
       <SubType>Form</SubType>
@@ -353,8 +349,8 @@
     <EmbeddedResource Include="dataorderitems.resx">
       <DependentUpon>dataorderitems.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dataorderr.resx">
-      <DependentUpon>dataorderr.vb</DependentUpon>
+    <EmbeddedResource Include="dataorders.resx">
+      <DependentUpon>dataorders.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="datausers.resx">
       <DependentUpon>datausers.vb</DependentUpon>
@@ -397,9 +393,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="receipt.resx">
       <DependentUpon>receipt.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="dataorders.resx">
-      <DependentUpon>dataorders.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="makerlab.resx">
       <DependentUpon>makerlab.vb</DependentUpon>
