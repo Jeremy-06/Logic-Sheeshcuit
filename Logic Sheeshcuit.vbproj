@@ -137,6 +137,12 @@
     <Compile Include="dataorderitems.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dataorderr.Designer.vb">
+      <DependentUpon>dataorderr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dataorderr.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="datausers.Designer.vb">
       <DependentUpon>datausers.vb</DependentUpon>
     </Compile>
@@ -346,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dataorderitems.resx">
       <DependentUpon>dataorderitems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dataorderr.resx">
+      <DependentUpon>dataorderr.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="datausers.resx">
       <DependentUpon>datausers.vb</DependentUpon>
