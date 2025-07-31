@@ -2272,9 +2272,10 @@ Partial Class home
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(439, 155)
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(417, 594)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(150, 30)
         Me.Button1.TabIndex = 15
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
