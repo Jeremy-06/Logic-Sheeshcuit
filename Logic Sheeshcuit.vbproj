@@ -119,6 +119,12 @@
     <Compile Include="cart.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="crystalreport.Designer.vb">
+      <DependentUpon>crystalreport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crystalreport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="datacart.Designer.vb">
       <DependentUpon>datacart.vb</DependentUpon>
     </Compile>
@@ -147,6 +153,12 @@
       <DependentUpon>digitaldisplays.vb</DependentUpon>
     </Compile>
     <Compile Include="digitaldisplays.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="expensesreport.Designer.vb">
+      <DependentUpon>expensesreport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="expensesreport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="home.vb">
@@ -287,6 +299,12 @@
     <Compile Include="datasales.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="salesreport.Designer.vb">
+      <DependentUpon>salesreport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="salesreport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="signup.Designer.vb">
       <DependentUpon>signup.vb</DependentUpon>
     </Compile>
@@ -340,6 +358,9 @@
     <EmbeddedResource Include="cart.resx">
       <DependentUpon>cart.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="crystalreport.resx">
+      <DependentUpon>crystalreport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="datacart.resx">
       <DependentUpon>datacart.vb</DependentUpon>
     </EmbeddedResource>
@@ -354,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="digitaldisplays.resx">
       <DependentUpon>digitaldisplays.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="expensesreport.resx">
+      <DependentUpon>expensesreport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.vb</DependentUpon>
@@ -420,6 +444,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="datasales.resx">
       <DependentUpon>datasales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salesreport.resx">
+      <DependentUpon>salesreport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.vb</DependentUpon>

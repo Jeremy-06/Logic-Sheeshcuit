@@ -26,89 +26,67 @@ Partial Class receipt
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(receipt))
         Me.lblReceiptTitle = New System.Windows.Forms.Label()
         Me.lblOrderId = New System.Windows.Forms.Label()
         Me.lblOrderDate = New System.Windows.Forms.Label()
         Me.lblCustomerName = New System.Windows.Forms.Label()
-        Me.lblCustomerEmail = New System.Windows.Forms.Label()
         Me.lblCustomerPhone = New System.Windows.Forms.Label()
-        Me.lblStatus = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.lblTotal = New System.Windows.Forms.Label()
-        Me.btnPrint = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblAddress = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblReceiptTitle
         '
         Me.lblReceiptTitle.AutoSize = True
-        Me.lblReceiptTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblReceiptTitle.Location = New System.Drawing.Point(200, 20)
+        Me.lblReceiptTitle.Font = New System.Drawing.Font("Sitka Subheading", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblReceiptTitle.Location = New System.Drawing.Point(117, 19)
         Me.lblReceiptTitle.Name = "lblReceiptTitle"
-        Me.lblReceiptTitle.Size = New System.Drawing.Size(120, 31)
+        Me.lblReceiptTitle.Size = New System.Drawing.Size(128, 39)
         Me.lblReceiptTitle.TabIndex = 0
         Me.lblReceiptTitle.Text = "RECEIPT"
         '
         'lblOrderId
         '
-        Me.lblOrderId.AutoSize = True
-        Me.lblOrderId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblOrderId.Location = New System.Drawing.Point(30, 70)
+        Me.lblOrderId.BackColor = System.Drawing.Color.White
+        Me.lblOrderId.Font = New System.Drawing.Font("Bahnschrift", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOrderId.Location = New System.Drawing.Point(203, 70)
         Me.lblOrderId.Name = "lblOrderId"
-        Me.lblOrderId.Size = New System.Drawing.Size(100, 20)
+        Me.lblOrderId.Size = New System.Drawing.Size(52, 28)
         Me.lblOrderId.TabIndex = 1
-        Me.lblOrderId.Text = "Order ID: 123"
         '
         'lblOrderDate
         '
-        Me.lblOrderDate.AutoSize = True
-        Me.lblOrderDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblOrderDate.Location = New System.Drawing.Point(30, 100)
+        Me.lblOrderDate.BackColor = System.Drawing.Color.White
+        Me.lblOrderDate.Font = New System.Drawing.Font("Microsoft Yi Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOrderDate.Location = New System.Drawing.Point(174, 176)
         Me.lblOrderDate.Name = "lblOrderDate"
-        Me.lblOrderDate.Size = New System.Drawing.Size(120, 20)
+        Me.lblOrderDate.Size = New System.Drawing.Size(126, 20)
         Me.lblOrderDate.TabIndex = 2
-        Me.lblOrderDate.Text = "Date: January 27, 2025"
         '
         'lblCustomerName
         '
-        Me.lblCustomerName.AutoSize = True
-        Me.lblCustomerName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCustomerName.Location = New System.Drawing.Point(30, 130)
+        Me.lblCustomerName.BackColor = System.Drawing.Color.White
+        Me.lblCustomerName.Font = New System.Drawing.Font("Microsoft Yi Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCustomerName.Location = New System.Drawing.Point(44, 176)
         Me.lblCustomerName.Name = "lblCustomerName"
-        Me.lblCustomerName.Size = New System.Drawing.Size(150, 20)
+        Me.lblCustomerName.Size = New System.Drawing.Size(152, 20)
         Me.lblCustomerName.TabIndex = 3
-        Me.lblCustomerName.Text = "Customer: John Doe"
-        '
-        'lblCustomerEmail
-        '
-        Me.lblCustomerEmail.AutoSize = True
-        Me.lblCustomerEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCustomerEmail.Location = New System.Drawing.Point(30, 160)
-        Me.lblCustomerEmail.Name = "lblCustomerEmail"
-        Me.lblCustomerEmail.Size = New System.Drawing.Size(180, 20)
-        Me.lblCustomerEmail.TabIndex = 4
-        Me.lblCustomerEmail.Text = "Email: john@example.com"
         '
         'lblCustomerPhone
         '
-        Me.lblCustomerPhone.AutoSize = True
-        Me.lblCustomerPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCustomerPhone.Location = New System.Drawing.Point(30, 190)
+        Me.lblCustomerPhone.BackColor = System.Drawing.Color.White
+        Me.lblCustomerPhone.Font = New System.Drawing.Font("Microsoft Yi Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCustomerPhone.Location = New System.Drawing.Point(41, 134)
         Me.lblCustomerPhone.Name = "lblCustomerPhone"
-        Me.lblCustomerPhone.Size = New System.Drawing.Size(150, 20)
+        Me.lblCustomerPhone.Size = New System.Drawing.Size(259, 20)
         Me.lblCustomerPhone.TabIndex = 5
-        Me.lblCustomerPhone.Text = "Phone: 123-456-7890"
-        '
-        'lblStatus
-        '
-        Me.lblStatus.AutoSize = True
-        Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStatus.Location = New System.Drawing.Point(30, 220)
-        Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(100, 20)
-        Me.lblStatus.TabIndex = 6
-        Me.lblStatus.Text = "Status: Paid"
         '
         'DataGridView1
         '
@@ -137,7 +115,7 @@ Partial Class receipt
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlText
-        Me.DataGridView1.Location = New System.Drawing.Point(30, 260)
+        Me.DataGridView1.Location = New System.Drawing.Point(44, 212)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
@@ -155,65 +133,90 @@ Partial Class receipt
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(460, 200)
+        Me.DataGridView1.Size = New System.Drawing.Size(256, 83)
         Me.DataGridView1.TabIndex = 7
         '
         'lblTotal
         '
-        Me.lblTotal.AutoSize = True
-        Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotal.Location = New System.Drawing.Point(30, 480)
+        Me.lblTotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblTotal.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotal.ForeColor = System.Drawing.Color.White
+        Me.lblTotal.Location = New System.Drawing.Point(86, 411)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(120, 26)
+        Me.lblTotal.Size = New System.Drawing.Size(170, 29)
         Me.lblTotal.TabIndex = 8
-        Me.lblTotal.Text = "Total: ₱0.00"
+        Me.lblTotal.Text = "₱0.00"
+        Me.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'btnPrint
+        'btnSave
         '
-        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrint.Location = New System.Drawing.Point(30, 520)
-        Me.btnPrint.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(150, 40)
-        Me.btnPrint.TabIndex = 9
-        Me.btnPrint.Text = "Print Receipt"
-        Me.btnPrint.UseVisualStyleBackColor = True
+        Me.btnSave.BackColor = System.Drawing.Color.White
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSave.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.Location = New System.Drawing.Point(30, 520)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(130, 40)
+        Me.btnSave.TabIndex = 9
+        Me.btnSave.Text = "Save Receipt"
+        Me.btnSave.UseVisualStyleBackColor = False
         '
         'btnClose
         '
+        Me.btnClose.BackColor = System.Drawing.Color.White
         Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClose.Location = New System.Drawing.Point(200, 520)
+        Me.btnClose.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClose.Location = New System.Drawing.Point(177, 520)
         Me.btnClose.Margin = New System.Windows.Forms.Padding(2)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(150, 40)
+        Me.btnClose.Size = New System.Drawing.Size(136, 40)
         Me.btnClose.TabIndex = 10
         Me.btnClose.Text = "Close"
-        Me.btnClose.UseVisualStyleBackColor = True
+        Me.btnClose.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(30, 59)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(283, 450)
+        Me.PictureBox1.TabIndex = 11
+        Me.PictureBox1.TabStop = False
+        '
+        'lblAddress
+        '
+        Me.lblAddress.BackColor = System.Drawing.Color.White
+        Me.lblAddress.Font = New System.Drawing.Font("Microsoft Yi Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAddress.Location = New System.Drawing.Point(41, 114)
+        Me.lblAddress.Name = "lblAddress"
+        Me.lblAddress.Size = New System.Drawing.Size(259, 20)
+        Me.lblAddress.TabIndex = 12
         '
         'receipt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(520, 580)
+        Me.ClientSize = New System.Drawing.Size(347, 580)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblAddress)
         Me.Controls.Add(Me.btnClose)
-        Me.Controls.Add(Me.btnPrint)
+        Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.lblTotal)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.lblStatus)
         Me.Controls.Add(Me.lblCustomerPhone)
-        Me.Controls.Add(Me.lblCustomerEmail)
         Me.Controls.Add(Me.lblCustomerName)
         Me.Controls.Add(Me.lblOrderDate)
         Me.Controls.Add(Me.lblOrderId)
         Me.Controls.Add(Me.lblReceiptTitle)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "receipt"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Receipt"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -223,11 +226,11 @@ Partial Class receipt
     Friend WithEvents lblOrderId As Label
     Friend WithEvents lblOrderDate As Label
     Friend WithEvents lblCustomerName As Label
-    Friend WithEvents lblCustomerEmail As Label
     Friend WithEvents lblCustomerPhone As Label
-    Friend WithEvents lblStatus As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents lblTotal As Label
-    Friend WithEvents btnPrint As Button
+    Friend WithEvents btnSave As Button
     Friend WithEvents btnClose As Button
-End Class 
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblAddress As Label
+End Class

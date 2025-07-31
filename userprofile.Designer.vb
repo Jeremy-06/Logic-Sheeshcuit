@@ -32,7 +32,7 @@ Partial Class userprofile
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(395, 12)
+        Me.Button1.Location = New System.Drawing.Point(12, 615)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 34)
         Me.Button1.TabIndex = 0
@@ -41,7 +41,7 @@ Partial Class userprofile
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(395, 52)
+        Me.Button2.Location = New System.Drawing.Point(397, 615)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 34)
         Me.Button2.TabIndex = 1

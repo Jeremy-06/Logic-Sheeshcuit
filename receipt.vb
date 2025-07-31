@@ -130,7 +130,7 @@ Public Class receipt
         End Try
     End Sub
 
-    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         ' Print functionality can be added here
         MessageBox.Show("Print functionality would be implemented here.")
     End Sub
