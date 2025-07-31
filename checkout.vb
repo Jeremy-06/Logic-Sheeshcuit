@@ -130,6 +130,11 @@ Public Class checkout
                 query = $"UPDATE orderitems SET orders_orderId = {newOrderId} WHERE orders_orderId = {oldOrderId} AND products_productId = {productId}"
                 cmd = New MySqlCommand(query, conn)
                 cmd.ExecuteNonQuery()
+
+                ' Subtract purchased quantity from inventory stock
+                query = $"UPDATE inventory SET productStock = productStock - {quantity} WHERE products_productId = {productId}"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
             Next
 
             ' Delete checkout orders that have no more items

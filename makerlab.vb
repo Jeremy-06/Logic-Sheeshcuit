@@ -57,13 +57,62 @@ Public Class makerlab
         End Try
     End Function
 
+    Private Function HasSufficientStock(productId As Integer, requestedQty As Integer) As Boolean
+        Dim availableStock As Integer = 0
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+
+            ' Query the inventory for the product's stock
+            query = $"SELECT productStock FROM inventory WHERE products_productId = {productId} LIMIT 1"
+            cmd = New MySqlCommand(query, conn)
+            Dim result = cmd.ExecuteScalar()
+            If result IsNot Nothing Then
+                availableStock = Convert.ToInt32(result)
+            End If
+
+            If requestedQty > availableStock Then
+                MessageBox.Show($"Not enough stock available. Only {availableStock} left in stock.", "Insufficient Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return False
+            End If
+
+            Return True
+
+        Catch ex As Exception
+            MessageBox.Show("Error checking stock: " & ex.Message)
+            Return False
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+    End Function
+
     Private Sub clearQty()
+        ' Reset quantity variables
+        product1Qty = 0
+        product2Qty = 0
+        product3Qty = 0
+        product7Qty = 0
+        product9Qty = 0
+        product12Qty = 0
+
+        ' Clear text boxes
         TextBox1.Text = 0
         TextBox2.Text = 0
         TextBox3.Text = 0
         TextBox4.Text = 0
         TextBox5.Text = 0
         TextBox6.Text = 0
+
+        ' Disable minus buttons since quantities are 0
+        minus_btn.Enabled = False
+        minus_btn1.Enabled = False
+        minus_btn2.Enabled = False
+        minus_btn3.Enabled = False
+        minus_btn4.Enabled = False
+        minus_btn5.Enabled = False
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Back.Click
@@ -72,7 +121,7 @@ Public Class makerlab
     End Sub
 
     ' PRODUCT 1 
-    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs)
+    Private Sub addtocart_btn_Click_1(sender As Object, e As EventArgs) Handles addtocart_btn.Click
         ' Validate customer first
         If Not ValidateCustomer() Then
             Return
@@ -89,6 +138,10 @@ Public Class makerlab
 
         If newQty <= 0 Then
             MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+
+        If Not HasSufficientStock(productId, newQty) Then
             Return
         End If
 
@@ -145,13 +198,13 @@ Public Class makerlab
         End Try
     End Sub
 
-    Private Sub plus_btn_Click(sender As Object, e As EventArgs)
+    Private Sub plus_btn_Click_1(sender As Object, e As EventArgs) Handles plus_btn.Click
         product1Qty += 1
         TextBox1.Text = product1Qty.ToString()
         minus_btn.Enabled = True ' Always enable minus button when quantity > 0
     End Sub
 
-    Private Sub minus_btn_Click(sender As Object, e As EventArgs)
+    Private Sub minus_btn_Click_1(sender As Object, e As EventArgs) Handles minus_btn.Click
         If product1Qty > 0 Then
             product1Qty -= 1
             TextBox1.Text = product1Qty.ToString()
@@ -162,7 +215,7 @@ Public Class makerlab
     End Sub
 
     ' PRODUCT 2
-    Private Sub addtocart_btn1_Click(sender As Object, e As EventArgs)
+    Private Sub addtocart_btn1_Click_1(sender As Object, e As EventArgs) Handles addtocart_btn1.Click
         ' Validate customer first
         If Not ValidateCustomer() Then
             Return
@@ -182,6 +235,10 @@ Public Class makerlab
             Return
         End If
 
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
+
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -234,13 +291,14 @@ Public Class makerlab
             clearQty()
         End Try
     End Sub
-    Private Sub plus_btn1_Click(sender As Object, e As EventArgs)
+
+    Private Sub plus_btn1_Click_1(sender As Object, e As EventArgs) Handles plus_btn1.Click
         product2Qty += 1
         TextBox2.Text = product2Qty.ToString()
         minus_btn1.Enabled = True ' Always enable minus button when quantity > 0
     End Sub
 
-    Private Sub minus_btn1_Click(sender As Object, e As EventArgs)
+    Private Sub minus_btn1_Click_1(sender As Object, e As EventArgs) Handles minus_btn1.Click
         If product2Qty > 0 Then
             product2Qty -= 1
             TextBox2.Text = product2Qty.ToString()
@@ -251,7 +309,7 @@ Public Class makerlab
     End Sub
 
     ' PRODUCT 3
-    Private Sub addtocart_btn2_Click(sender As Object, e As EventArgs)
+    Private Sub addtocart_btn2_Click_1(sender As Object, e As EventArgs) Handles addtocart_btn2.Click
         ' Validate customer first
         If Not ValidateCustomer() Then
             Return
@@ -271,6 +329,10 @@ Public Class makerlab
             Return
         End If
 
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
+
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -324,13 +386,13 @@ Public Class makerlab
         End Try
     End Sub
 
-    Private Sub plus_btn2_Click(sender As Object, e As EventArgs)
+    Private Sub plus_btn2_Click_1(sender As Object, e As EventArgs) Handles plus_btn2.Click
         product3Qty += 1
         TextBox3.Text = product3Qty.ToString()
         minus_btn2.Enabled = True ' Always enable minus button when quantity > 0
     End Sub
 
-    Private Sub minus_btn2_Click(sender As Object, e As EventArgs)
+    Private Sub minus_btn2_Click_1(sender As Object, e As EventArgs) Handles minus_btn2.Click
         If product3Qty > 0 Then
             product3Qty -= 1
             TextBox3.Text = product3Qty.ToString()
@@ -341,7 +403,7 @@ Public Class makerlab
     End Sub
 
     'PRODUCT 7
-    Private Sub addtocart_btn3_Click(sender As Object, e As EventArgs)
+    Private Sub addtocart_btn3_Click_1(sender As Object, e As EventArgs) Handles addtocart_btn3.Click
         ' Validate customer first
         If Not ValidateCustomer() Then
             Return
@@ -361,6 +423,10 @@ Public Class makerlab
             Return
         End If
 
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
+
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -414,13 +480,13 @@ Public Class makerlab
         End Try
     End Sub
 
-    Private Sub plus_btn3_Click(sender As Object, e As EventArgs)
+    Private Sub plus_btn3_Click_1(sender As Object, e As EventArgs) Handles plus_btn3.Click
         product7Qty += 1
         TextBox4.Text = product7Qty.ToString()
         minus_btn3.Enabled = True ' Always enable minus button when quantity > 0
     End Sub
 
-    Private Sub minus_btn3_Click(sender As Object, e As EventArgs)
+    Private Sub minus_btn3_Click_1(sender As Object, e As EventArgs) Handles minus_btn3.Click
         If product7Qty > 0 Then
             product7Qty -= 1
             TextBox4.Text = product7Qty.ToString()
@@ -431,7 +497,7 @@ Public Class makerlab
     End Sub
 
     'PRODUCT 9
-    Private Sub addtocart_btn4_Click(sender As Object, e As EventArgs)
+    Private Sub addtocart_btn4_Click_1(sender As Object, e As EventArgs) Handles addtocart_btn4.Click
         ' Validate customer first
         If Not ValidateCustomer() Then
             Return
@@ -451,6 +517,10 @@ Public Class makerlab
             Return
         End If
 
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
+
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -504,13 +574,13 @@ Public Class makerlab
         End Try
     End Sub
 
-    Private Sub plus_btn4_Click(sender As Object, e As EventArgs)
+    Private Sub plus_btn4_Click_1(sender As Object, e As EventArgs) Handles plus_btn4.Click
         product9Qty += 1
         TextBox5.Text = product9Qty.ToString()
         minus_btn4.Enabled = True ' Always enable minus button when quantity > 0
     End Sub
 
-    Private Sub minus_btn4_Click(sender As Object, e As EventArgs)
+    Private Sub minus_btn4_Click_1(sender As Object, e As EventArgs) Handles minus_btn4.Click
         If product9Qty > 0 Then
             product9Qty -= 1
             TextBox5.Text = product9Qty.ToString()
@@ -521,7 +591,7 @@ Public Class makerlab
     End Sub
 
     'PRODUCT 12
-    Private Sub addtocart_btn5_Click(sender As Object, e As EventArgs)
+    Private Sub addtocart_btn5_Click_1(sender As Object, e As EventArgs) Handles addtocart_btn5.Click
         ' Validate customer first
         If Not ValidateCustomer() Then
             Return
@@ -541,6 +611,10 @@ Public Class makerlab
             Return
         End If
 
+        If Not HasSufficientStock(productId, newQty) Then
+            Return
+        End If
+
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -594,13 +668,13 @@ Public Class makerlab
         End Try
     End Sub
 
-    Private Sub plus_btn5_Click(sender As Object, e As EventArgs)
+    Private Sub plus_btn5_Click_1(sender As Object, e As EventArgs) Handles plus_btn5.Click
         product12Qty += 1
         TextBox6.Text = product12Qty.ToString()
         minus_btn5.Enabled = True ' Always enable minus button when quantity > 0
     End Sub
 
-    Private Sub minus_btn5_Click(sender As Object, e As EventArgs)
+    Private Sub minus_btn5_Click_1(sender As Object, e As EventArgs) Handles minus_btn5.Click
         If product12Qty > 0 Then
             product12Qty -= 1
             TextBox6.Text = product12Qty.ToString()

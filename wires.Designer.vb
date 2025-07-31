@@ -29,7 +29,6 @@ Partial Class wires
         Me.Label1 = New System.Windows.Forms.Label()
         Me.minus_btn = New System.Windows.Forms.Button()
         Me.plus_btn = New System.Windows.Forms.Button()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.addtocart_btn = New System.Windows.Forms.Button()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.PictureBox18 = New System.Windows.Forms.PictureBox()
@@ -57,6 +56,8 @@ Partial Class wires
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.PictureBox31 = New System.Windows.Forms.PictureBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -147,24 +148,13 @@ Partial Class wires
         Me.plus_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.plus_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.plus_btn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.plus_btn.Location = New System.Drawing.Point(797, 393)
+        Me.plus_btn.Location = New System.Drawing.Point(801, 393)
         Me.plus_btn.Margin = New System.Windows.Forms.Padding(2)
         Me.plus_btn.Name = "plus_btn"
         Me.plus_btn.Size = New System.Drawing.Size(47, 36)
         Me.plus_btn.TabIndex = 354
         Me.plus_btn.Text = "+"
         Me.plus_btn.UseVisualStyleBackColor = True
-        '
-        'TextBox6
-        '
-        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(590, 394)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(205, 35)
-        Me.TextBox6.TabIndex = 353
         '
         'addtocart_btn
         '
@@ -275,7 +265,7 @@ Partial Class wires
         '
         Me.TextBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox25.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox25.Location = New System.Drawing.Point(590, 1301)
+        Me.TextBox25.Location = New System.Drawing.Point(590, 847)
         Me.TextBox25.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox25.Name = "TextBox25"
         Me.TextBox25.ReadOnly = True
@@ -391,7 +381,7 @@ Partial Class wires
         '
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(590, 847)
+        Me.TextBox3.Location = New System.Drawing.Point(590, 1301)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
@@ -478,13 +468,39 @@ Partial Class wires
         Me.PictureBox31.TabIndex = 578
         Me.PictureBox31.TabStop = False
         '
+        'TextBox1
+        '
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(590, 394)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(207, 35)
+        Me.TextBox1.TabIndex = 581
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(590, 847)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(207, 35)
+        Me.TextBox2.TabIndex = 582
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'wires
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(904, 611)
+        Me.ClientSize = New System.Drawing.Size(921, 611)
         Me.ControlBox = False
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.minus_btn1)
         Me.Controls.Add(Me.plus_btn1)
         Me.Controls.Add(Me.TextBox3)
@@ -507,7 +523,6 @@ Partial Class wires
         Me.Controls.Add(Me.PictureBox74)
         Me.Controls.Add(Me.minus_btn)
         Me.Controls.Add(Me.plus_btn)
-        Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.addtocart_btn)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.PictureBox18)
@@ -545,7 +560,6 @@ Partial Class wires
     Friend WithEvents Label1 As Label
     Friend WithEvents minus_btn As Button
     Friend WithEvents plus_btn As Button
-    Friend WithEvents TextBox6 As TextBox
     Friend WithEvents addtocart_btn As Button
     Friend WithEvents Label22 As Label
     Friend WithEvents PictureBox18 As PictureBox
@@ -573,4 +587,6 @@ Partial Class wires
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents PictureBox31 As PictureBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
 End Class

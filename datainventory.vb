@@ -8,7 +8,45 @@ Public Class datainventory
     Dim query As String
 
     Private Sub datainventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        PopulateCategoryComboBox()
+        PopulateSupplierComboBox()
         LoadInventoryData()
+    End Sub
+
+    Private Sub PopulateCategoryComboBox()
+        Try
+            ComboBox1.Items.Clear()
+            conn.Open()
+            query = "SELECT category FROM productCategories ORDER BY category"
+            cmd = New MySqlCommand(query, conn)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+            While reader.Read()
+                ComboBox1.Items.Add(reader("category").ToString())
+            End While
+            reader.Close()
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("Error loading categories: " & ex.Message)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Sub
+
+    Private Sub PopulateSupplierComboBox()
+        Try
+            ComboBox2.Items.Clear()
+            conn.Open()
+            query = "SELECT supplierName FROM suppliers ORDER BY supplierName"
+            cmd = New MySqlCommand(query, conn)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+            While reader.Read()
+                ComboBox2.Items.Add(reader("supplierName").ToString())
+            End While
+            reader.Close()
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("Error loading suppliers: " & ex.Message)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
     End Sub
 
     Private Sub LoadInventoryData()
@@ -49,10 +87,10 @@ Public Class datainventory
                 TextBox1.Text = row.Cells(0).Value.ToString() ' inventoryId
                 TextBox2.Text = row.Cells(1).Value.ToString() ' productId
                 TextBox3.Text = row.Cells(2).Value.ToString() ' productName
-                ComboBox1.Text = row.Cells(3).Value.ToString() ' category
+                ComboBox2.Text = row.Cells(3).Value.ToString() ' category
                 TextBox4.Text = row.Cells(4).Value.ToString() ' productPrice
                 TextBox5.Text = row.Cells(5).Value.ToString() ' productStock
-                ComboBox2.Text = row.Cells(6).Value.ToString() ' supplierName 
+                ComboBox1.Text = row.Cells(6).Value.ToString() ' supplierName 
             End If
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
@@ -62,8 +100,8 @@ Public Class datainventory
     ' INSERT
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            If ComboBox1.SelectedIndex = -1 OrElse
-               ComboBox2.SelectedIndex = -1 OrElse
+            If String.IsNullOrWhiteSpace(ComboBox1.Text) OrElse
+               String.IsNullOrWhiteSpace(ComboBox2.Text) OrElse
                String.IsNullOrWhiteSpace(TextBox3.Text) OrElse
                String.IsNullOrWhiteSpace(TextBox4.Text) OrElse
                String.IsNullOrWhiteSpace(TextBox5.Text) Then
@@ -121,8 +159,9 @@ Public Class datainventory
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
             If String.IsNullOrWhiteSpace(TextBox1.Text) OrElse
-               ComboBox1.SelectedIndex = -1 OrElse
-               ComboBox2.SelectedIndex = -1 OrElse
+               String.IsNullOrWhiteSpace(TextBox2.Text) OrElse
+               String.IsNullOrWhiteSpace(ComboBox1.Text) OrElse
+               String.IsNullOrWhiteSpace(ComboBox2.Text) OrElse
                String.IsNullOrWhiteSpace(TextBox3.Text) OrElse
                String.IsNullOrWhiteSpace(TextBox4.Text) OrElse
                String.IsNullOrWhiteSpace(TextBox5.Text) Then
@@ -131,10 +170,20 @@ Public Class datainventory
             End If
 
             conn.Open()
+            ' Check if category exists
+            query = $"SELECT categoryId FROM productCategories WHERE category = '{ComboBox2.Text}'"
+            cmd = New MySqlCommand(query, conn)
+            Dim catId = cmd.ExecuteScalar()
+            If catId Is Nothing Then
+                MessageBox.Show("Selected category does not exist in the database.")
+                conn.Close()
+                Exit Sub
+            End If
+
             Dim inventoryId As String = TextBox1.Text
             Dim productId As String = TextBox2.Text
             Dim supplierName As String = ComboBox1.Text
-            Dim category As String = ComboBox2.Text
+            ' category variable already set above (from ComboBox2.Text)
             Dim productName As String = TextBox3.Text
             Dim productPrice As String = TextBox4.Text
             Dim productStock As String = TextBox5.Text
@@ -142,7 +191,7 @@ Public Class datainventory
             query = $"UPDATE products 
                       SET productName = '{productName}', 
                           productPrice = '{productPrice}', 
-                          productCategories_categoryId = (SELECT categoryId FROM productCategories WHERE category = '{category}') 
+                          productCategories_categoryId = {catId} 
                       WHERE productId = {productId}"
             cmd = New MySqlCommand(query, conn)
             cmd.ExecuteNonQuery()

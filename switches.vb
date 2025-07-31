@@ -51,37 +51,66 @@ Public Class switches
         End Try
     End Function
 
-    Private Sub addtocart_btn_Click(sender As Object, e As EventArgs)
-        If Not ValidateCustomer() Then Return
-        Dim customerId = login.customerId
-        Dim productId As Integer = 21
-        Dim newQty As Integer
-
-        If Not Integer.TryParse(TextBox1.Text, newQty) Then
-            MessageBox.Show("Please enter a valid number.")
-            Return
-        End If
-
-        If newQty <= 0 Then
-            MessageBox.Show("Please enter a quantity greater than 0.")
-            Return
-        End If
-
+    Private Function HasSufficientStock(productId As Integer, requestedQty As Integer) As Boolean
+        Dim availableStock As Integer = 0
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
+            query = $"SELECT productStock FROM inventory WHERE products_productId = {productId} LIMIT 1"
+            cmd = New MySqlCommand(query, conn)
+            Dim result = cmd.ExecuteScalar()
+            If result IsNot Nothing Then
+                availableStock = Convert.ToInt32(result)
+            End If
+            If requestedQty > availableStock Then
+                MessageBox.Show($"Not enough stock available. Only {availableStock} left in stock.", "Insufficient Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return False
+            End If
+            Return True
+        Catch ex As Exception
+            MessageBox.Show("Error checking stock: " & ex.Message)
+            Return False
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+    End Function
 
+    ' Utility to clear all product quantities and textboxes
+    Private Sub clearQty()
+        product21Qty = 0
+        TextBox1.Text = 0
+        minus_btn.Enabled = False
+    End Sub
+
+    ' PRODUCT 21
+    Private Sub addtocart_btn_Click_1(sender As Object, e As EventArgs) Handles addtocart_btn.Click
+        If Not ValidateCustomer() Then Return
+        Dim customerId = login.customerId
+        Dim productId As Integer = 21
+        Dim newQty As Integer
+        If Not Integer.TryParse(TextBox1.Text, newQty) Then
+            MessageBox.Show("Please enter a valid number.")
+            Return
+        End If
+        If newQty <= 0 Then
+            MessageBox.Show("Please enter a quantity greater than 0.")
+            Return
+        End If
+        If Not HasSufficientStock(productId, newQty) Then Return
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
             query = $"SELECT ca.cartId, ca.productQty AS remainingQty FROM cart ca WHERE ca.products_productId = {productId} AND ca.customers_customerId = {customerId} ORDER BY ca.cartId DESC"
-
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
             da.Fill(ds, "cartcheck")
-
             Dim foundAvailableCart As Boolean = False
             Dim availableCartId As Integer = 0
-
             For Each row As DataRow In ds.Tables("cartcheck").Rows
                 If Convert.ToInt32(row("remainingQty")) > 0 Then
                     foundAvailableCart = True
@@ -89,7 +118,6 @@ Public Class switches
                     Exit For
                 End If
             Next
-
             If foundAvailableCart Then
                 query = $"UPDATE cart SET productQty = productQty + {newQty} WHERE cartId = {availableCartId}"
                 cmd = New MySqlCommand(query, conn)
@@ -101,34 +129,26 @@ Public Class switches
                 cmd.ExecuteNonQuery()
                 MessageBox.Show($"Product added to cart successfully! Quantity: {newQty}")
             End If
-
             cart.refreshData()
-
         Catch ex As Exception
             MessageBox.Show("Error adding product to cart: " & ex.Message)
         Finally
             If conn.State = ConnectionState.Open Then
                 conn.Close()
             End If
-            product21Qty = 0
-            TextBox1.Text = 0
-            minus_btn.Enabled = False
+            clearQty()
         End Try
     End Sub
-
-    Private Sub plus_btn_Click(sender As Object, e As EventArgs)
+    Private Sub plus_btn_Click_1(sender As Object, e As EventArgs) Handles plus_btn.Click
         product21Qty += 1
         TextBox1.Text = product21Qty.ToString()
         minus_btn.Enabled = True
     End Sub
-
-    Private Sub minus_btn_Click(sender As Object, e As EventArgs)
+    Private Sub minus_btn_Click_1(sender As Object, e As EventArgs) Handles minus_btn.Click
         If product21Qty > 0 Then
             product21Qty -= 1
             TextBox1.Text = product21Qty.ToString()
-            If product21Qty <= 0 Then
-                minus_btn.Enabled = False
-            End If
+            If product21Qty <= 0 Then minus_btn.Enabled = False
         End If
     End Sub
 End Class

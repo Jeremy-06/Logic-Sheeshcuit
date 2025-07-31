@@ -266,6 +266,7 @@ Partial Class rscomponents
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(207, 35)
         Me.TextBox3.TabIndex = 263
+        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn2
         '
@@ -338,6 +339,7 @@ Partial Class rscomponents
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(205, 35)
         Me.TextBox2.TabIndex = 257
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn1
         '
@@ -410,6 +412,7 @@ Partial Class rscomponents
         Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(207, 35)
         Me.TextBox4.TabIndex = 273
+        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn3
         '
@@ -640,7 +643,6 @@ Partial Class rscomponents
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(904, 611)
-        Me.ControlBox = False
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox9)
         Me.Controls.Add(Me.Label15)
@@ -691,6 +693,8 @@ Partial Class rscomponents
         Me.Controls.Add(Me.PictureBox2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "rscomponents"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RS Components"

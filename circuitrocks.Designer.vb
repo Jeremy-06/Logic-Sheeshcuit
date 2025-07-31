@@ -776,7 +776,7 @@ Partial Class circuitrocks
         Me.plus_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.plus_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.plus_btn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.plus_btn.Location = New System.Drawing.Point(799, 391)
+        Me.plus_btn.Location = New System.Drawing.Point(799, 392)
         Me.plus_btn.Margin = New System.Windows.Forms.Padding(2)
         Me.plus_btn.Name = "plus_btn"
         Me.plus_btn.Size = New System.Drawing.Size(47, 36)
@@ -1204,6 +1204,7 @@ Partial Class circuitrocks
         Me.TextBox5.ReadOnly = True
         Me.TextBox5.Size = New System.Drawing.Size(205, 35)
         Me.TextBox5.TabIndex = 352
+        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn4
         '
@@ -1320,6 +1321,7 @@ Partial Class circuitrocks
         Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(207, 35)
         Me.TextBox6.TabIndex = 362
+        Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn5
         '
@@ -1444,6 +1446,7 @@ Partial Class circuitrocks
         Me.TextBox7.ReadOnly = True
         Me.TextBox7.Size = New System.Drawing.Size(207, 35)
         Me.TextBox7.TabIndex = 372
+        Me.TextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn6
         '
@@ -1550,6 +1553,7 @@ Partial Class circuitrocks
         Me.TextBox8.ReadOnly = True
         Me.TextBox8.Size = New System.Drawing.Size(207, 35)
         Me.TextBox8.TabIndex = 382
+        Me.TextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn7
         '
@@ -1665,6 +1669,7 @@ Partial Class circuitrocks
         Me.TextBox9.ReadOnly = True
         Me.TextBox9.Size = New System.Drawing.Size(205, 35)
         Me.TextBox9.TabIndex = 392
+        Me.TextBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn8
         '
@@ -1780,6 +1785,7 @@ Partial Class circuitrocks
         Me.TextBox10.ReadOnly = True
         Me.TextBox10.Size = New System.Drawing.Size(207, 35)
         Me.TextBox10.TabIndex = 402
+        Me.TextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn9
         '
@@ -1896,6 +1902,7 @@ Partial Class circuitrocks
         Me.TextBox11.ReadOnly = True
         Me.TextBox11.Size = New System.Drawing.Size(207, 35)
         Me.TextBox11.TabIndex = 412
+        Me.TextBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn10
         '
@@ -2011,6 +2018,7 @@ Partial Class circuitrocks
         Me.TextBox12.ReadOnly = True
         Me.TextBox12.Size = New System.Drawing.Size(207, 35)
         Me.TextBox12.TabIndex = 422
+        Me.TextBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn11
         '
@@ -2126,6 +2134,7 @@ Partial Class circuitrocks
         Me.TextBox13.ReadOnly = True
         Me.TextBox13.Size = New System.Drawing.Size(207, 35)
         Me.TextBox13.TabIndex = 432
+        Me.TextBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn12
         '
@@ -2242,6 +2251,7 @@ Partial Class circuitrocks
         Me.TextBox14.ReadOnly = True
         Me.TextBox14.Size = New System.Drawing.Size(207, 35)
         Me.TextBox14.TabIndex = 442
+        Me.TextBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn13
         '
@@ -2358,6 +2368,7 @@ Partial Class circuitrocks
         Me.TextBox15.ReadOnly = True
         Me.TextBox15.Size = New System.Drawing.Size(207, 35)
         Me.TextBox15.TabIndex = 452
+        Me.TextBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn14
         '
@@ -2474,6 +2485,7 @@ Partial Class circuitrocks
         Me.TextBox16.ReadOnly = True
         Me.TextBox16.Size = New System.Drawing.Size(207, 35)
         Me.TextBox16.TabIndex = 462
+        Me.TextBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn15
         '
@@ -2589,6 +2601,7 @@ Partial Class circuitrocks
         Me.TextBox17.ReadOnly = True
         Me.TextBox17.Size = New System.Drawing.Size(207, 35)
         Me.TextBox17.TabIndex = 472
+        Me.TextBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn16
         '
@@ -2705,6 +2718,7 @@ Partial Class circuitrocks
         Me.TextBox18.ReadOnly = True
         Me.TextBox18.Size = New System.Drawing.Size(207, 35)
         Me.TextBox18.TabIndex = 482
+        Me.TextBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn17
         '
@@ -2820,6 +2834,7 @@ Partial Class circuitrocks
         Me.TextBox19.ReadOnly = True
         Me.TextBox19.Size = New System.Drawing.Size(207, 35)
         Me.TextBox19.TabIndex = 492
+        Me.TextBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn18
         '
@@ -2935,6 +2950,7 @@ Partial Class circuitrocks
         Me.TextBox20.ReadOnly = True
         Me.TextBox20.Size = New System.Drawing.Size(207, 35)
         Me.TextBox20.TabIndex = 502
+        Me.TextBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn19
         '
@@ -3050,6 +3066,7 @@ Partial Class circuitrocks
         Me.TextBox21.ReadOnly = True
         Me.TextBox21.Size = New System.Drawing.Size(207, 35)
         Me.TextBox21.TabIndex = 512
+        Me.TextBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn20
         '
@@ -3165,6 +3182,7 @@ Partial Class circuitrocks
         Me.TextBox22.ReadOnly = True
         Me.TextBox22.Size = New System.Drawing.Size(207, 35)
         Me.TextBox22.TabIndex = 522
+        Me.TextBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn21
         '
@@ -3280,6 +3298,7 @@ Partial Class circuitrocks
         Me.TextBox23.ReadOnly = True
         Me.TextBox23.Size = New System.Drawing.Size(207, 35)
         Me.TextBox23.TabIndex = 532
+        Me.TextBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn22
         '
@@ -3395,6 +3414,7 @@ Partial Class circuitrocks
         Me.TextBox24.ReadOnly = True
         Me.TextBox24.Size = New System.Drawing.Size(207, 35)
         Me.TextBox24.TabIndex = 542
+        Me.TextBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn23
         '
@@ -3510,6 +3530,7 @@ Partial Class circuitrocks
         Me.TextBox25.ReadOnly = True
         Me.TextBox25.Size = New System.Drawing.Size(207, 35)
         Me.TextBox25.TabIndex = 552
+        Me.TextBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn24
         '
@@ -3603,7 +3624,6 @@ Partial Class circuitrocks
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(904, 611)
-        Me.ControlBox = False
         Me.Controls.Add(Me.Label102)
         Me.Controls.Add(Me.minus_btn24)
         Me.Controls.Add(Me.plus_btn24)
@@ -3884,6 +3904,8 @@ Partial Class circuitrocks
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "circuitrocks"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Circuitrocks"

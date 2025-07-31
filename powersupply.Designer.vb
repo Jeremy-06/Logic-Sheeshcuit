@@ -308,6 +308,7 @@ Partial Class powersupply
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(205, 35)
         Me.TextBox2.TabIndex = 216
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn1
         '
@@ -380,6 +381,7 @@ Partial Class powersupply
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(207, 35)
         Me.TextBox3.TabIndex = 226
+        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn2
         '
@@ -452,6 +454,7 @@ Partial Class powersupply
         Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(207, 35)
         Me.TextBox4.TabIndex = 236
+        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn3
         '
@@ -580,7 +583,7 @@ Partial Class powersupply
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(343, 180)
         Me.Label9.TabIndex = 321
-        Me.Label9.Text = "Breadboard Power Supply 3.3V or 5V with USB"
+        Me.Label9.Text = "Breadboard Power Supply 3.3V or 5V with USB Port"
         '
         'Label10
         '

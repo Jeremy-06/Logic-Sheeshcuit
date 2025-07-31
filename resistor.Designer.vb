@@ -317,6 +317,7 @@ Partial Class resistor
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(207, 35)
         Me.TextBox3.TabIndex = 223
+        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn2
         '
@@ -367,6 +368,7 @@ Partial Class resistor
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(205, 35)
         Me.TextBox2.TabIndex = 219
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn1
         '
@@ -461,6 +463,7 @@ Partial Class resistor
         Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(207, 35)
         Me.TextBox4.TabIndex = 237
+        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn3
         '
@@ -533,6 +536,7 @@ Partial Class resistor
         Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(205, 35)
         Me.TextBox6.TabIndex = 253
+        Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn5
         '
@@ -583,6 +587,7 @@ Partial Class resistor
         Me.TextBox5.ReadOnly = True
         Me.TextBox5.Size = New System.Drawing.Size(207, 35)
         Me.TextBox5.TabIndex = 249
+        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'addtocart_btn4
         '
@@ -915,7 +920,7 @@ Partial Class resistor
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(904, 611)
+        Me.ClientSize = New System.Drawing.Size(921, 611)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label66)
         Me.Controls.Add(Me.PictureBox57)
