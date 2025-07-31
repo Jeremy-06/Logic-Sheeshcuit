@@ -58,7 +58,7 @@ Partial Class receipt
         Me.lblOrderId.Font = New System.Drawing.Font("Bahnschrift", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOrderId.Location = New System.Drawing.Point(203, 70)
         Me.lblOrderId.Name = "lblOrderId"
-        Me.lblOrderId.Size = New System.Drawing.Size(52, 28)
+        Me.lblOrderId.Size = New System.Drawing.Size(97, 28)
         Me.lblOrderId.TabIndex = 1
         '
         'lblOrderDate
