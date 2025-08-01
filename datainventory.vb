@@ -53,23 +53,31 @@ Public Class datainventory
         Try
             conn.Open()
             query = "SELECT 
-                        i.inventoryId,
-                        p.productId,
-                        p.productName,
-                        pc.category,  
-                        p.productPrice,
-                        i.productStock,
-                        s.supplierName 
-                     FROM inventory i
-                     JOIN products p ON i.products_productId = p.productId
-                     JOIN productCategories pc ON p.productCategories_categoryId = pc.categoryId
-                     JOIN suppliers s ON i.suppliers_supplierId = s.supplierId
-                     ORDER BY p.productId;"
+                        p.productId, p.productName, p.productPrice,
+                        pc.categoryId, pc.category,
+                        i.inventoryId, i.productStock,
+                        s.supplierId, s.supplierName
+                     FROM products p
+                     JOIN productcategories pc ON p.productCategories_categoryId = pc.categoryId
+                     JOIN inventory i ON p.productId = i.products_productId
+                     JOIN suppliers s ON i.suppliers_supplierId = s.supplierId;"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
             da.Fill(ds, "Inventory")
             DataGridView1.DataSource = ds.Tables("Inventory")
+            
+            ' Set formal column headers
+            DataGridView1.Columns(0).HeaderText = "Product ID"
+            DataGridView1.Columns(1).HeaderText = "Product Name"
+            DataGridView1.Columns(2).HeaderText = "Product Price"
+            DataGridView1.Columns(3).HeaderText = "Category ID"
+            DataGridView1.Columns(4).HeaderText = "Category"
+            DataGridView1.Columns(5).HeaderText = "Inventory ID"
+            DataGridView1.Columns(6).HeaderText = "Product Stock"
+            DataGridView1.Columns(7).HeaderText = "Supplier ID"
+            DataGridView1.Columns(8).HeaderText = "Supplier Name"
+            
             conn.Close()
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
@@ -254,24 +262,32 @@ Public Class datainventory
 
             conn.Open()
             query = "SELECT 
-                        i.inventoryId,
-                        p.productId,
-                        p.productName,
-                        pc.category,  
-                        p.productPrice,
-                        i.productStock,
-                        s.supplierName 
-                     FROM inventory i
-                     JOIN products p ON i.products_productId = p.productId
-                     JOIN productCategories pc ON p.productCategories_categoryId = pc.categoryId
+                        p.productId, p.productName, p.productPrice,
+                        pc.categoryId, pc.category,
+                        i.inventoryId, i.productStock,
+                        s.supplierId, s.supplierName
+                     FROM products p
+                     JOIN productcategories pc ON p.productCategories_categoryId = pc.categoryId
+                     JOIN inventory i ON p.productId = i.products_productId
                      JOIN suppliers s ON i.suppliers_supplierId = s.supplierId
-                     WHERE p.productName LIKE '%" & searchText & "%'
-                     ORDER BY p.productId;"
+                     WHERE p.productName LIKE '%" & searchText & "%';"
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
             da.Fill(ds, "products")
             DataGridView1.DataSource = ds.Tables("products")
+            
+            ' Set formal column headers for search results
+            DataGridView1.Columns(0).HeaderText = "Product ID"
+            DataGridView1.Columns(1).HeaderText = "Product Name"
+            DataGridView1.Columns(2).HeaderText = "Product Price"
+            DataGridView1.Columns(3).HeaderText = "Category ID"
+            DataGridView1.Columns(4).HeaderText = "Category"
+            DataGridView1.Columns(5).HeaderText = "Inventory ID"
+            DataGridView1.Columns(6).HeaderText = "Product Stock"
+            DataGridView1.Columns(7).HeaderText = "Supplier ID"
+            DataGridView1.Columns(8).HeaderText = "Supplier Name"
+            
             conn.Close()
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)

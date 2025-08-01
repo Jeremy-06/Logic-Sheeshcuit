@@ -35,7 +35,7 @@ Partial Class datasets
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(124, 61)
+        Me.Button1.Location = New System.Drawing.Point(94, 61)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(297, 50)
         Me.Button1.TabIndex = 0
@@ -44,7 +44,7 @@ Partial Class datasets
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(124, 117)
+        Me.Button2.Location = New System.Drawing.Point(94, 117)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(297, 50)
         Me.Button2.TabIndex = 1
@@ -53,7 +53,7 @@ Partial Class datasets
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(124, 173)
+        Me.Button3.Location = New System.Drawing.Point(94, 173)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(297, 50)
         Me.Button3.TabIndex = 2
@@ -62,7 +62,7 @@ Partial Class datasets
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(124, 229)
+        Me.Button4.Location = New System.Drawing.Point(94, 229)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(297, 50)
         Me.Button4.TabIndex = 5
@@ -71,7 +71,7 @@ Partial Class datasets
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(124, 285)
+        Me.Button5.Location = New System.Drawing.Point(94, 285)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(297, 50)
         Me.Button5.TabIndex = 4
@@ -80,7 +80,7 @@ Partial Class datasets
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(124, 341)
+        Me.Button6.Location = New System.Drawing.Point(94, 341)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(297, 50)
         Me.Button6.TabIndex = 3
@@ -89,7 +89,7 @@ Partial Class datasets
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(124, 397)
+        Me.Button7.Location = New System.Drawing.Point(94, 397)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(297, 50)
         Me.Button7.TabIndex = 8
@@ -98,7 +98,7 @@ Partial Class datasets
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(124, 453)
+        Me.Button8.Location = New System.Drawing.Point(94, 453)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(297, 50)
         Me.Button8.TabIndex = 7
@@ -107,7 +107,7 @@ Partial Class datasets
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(124, 509)
+        Me.Button9.Location = New System.Drawing.Point(94, 509)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(297, 50)
         Me.Button9.TabIndex = 6
@@ -118,7 +118,7 @@ Partial Class datasets
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(544, 611)
+        Me.ClientSize = New System.Drawing.Size(484, 611)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button9)

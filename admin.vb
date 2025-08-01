@@ -39,6 +39,10 @@ Public Class admin
         home.Show()
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        datasets.Show()
+    End Sub
+
     'meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow
     'meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow
     'meow meow meow meow meo

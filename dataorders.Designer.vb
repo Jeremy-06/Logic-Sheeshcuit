@@ -52,6 +52,7 @@ Partial Class dataorders
         '
         'status
         '
+        Me.status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.status.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.status.FormattingEnabled = True
         Me.status.Location = New System.Drawing.Point(748, 471)
