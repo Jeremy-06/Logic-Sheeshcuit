@@ -149,6 +149,12 @@
     <Compile Include="dataorders.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="datasets.Designer.vb">
+      <DependentUpon>datasets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="datasets.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="datausers.Designer.vb">
       <DependentUpon>datausers.vb</DependentUpon>
     </Compile>
@@ -372,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dataorders.resx">
       <DependentUpon>dataorders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datasets.resx">
+      <DependentUpon>datasets.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="datausers.resx">
       <DependentUpon>datausers.vb</DependentUpon>
