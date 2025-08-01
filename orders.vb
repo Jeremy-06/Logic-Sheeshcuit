@@ -45,7 +45,7 @@ Public Class orders
                         oi.productQty AS numberOfItems,
                         p.productPrice,
                         (p.productPrice * oi.productQty) AS itemTotal,
-                        o.orderDate,
+                        IFNULL(NULLIF(o.orderDate, '0000-00-00'), NULL) AS orderDate,
                         o.orderStatus
                     FROM orders o
                     INNER JOIN customers c ON o.customers_customerId = c.customerId

@@ -1,4 +1,8 @@
 Imports MySql.Data.MySqlClient
+Imports System.Drawing.Imaging
+Imports System.Drawing.Drawing2D
+Imports System.Drawing.Text
+Imports System.Runtime.InteropServices
 
 Public Class receipt
     Dim conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
@@ -19,78 +23,111 @@ Public Class receipt
             End If
             conn.Open()
 
-            ' Get order details
+            ' Get order details with proper date handling and customer address
             query = $"SELECT 
-                        o.orderId,
-                        o.orderDate,
-                        o.orderStatus,
-                        c.customerFName,
-                        c.customerLName,
-                        c.customerEmail,
-                        c.customerPhone
-                    FROM orders o
-                    INNER JOIN customers c ON o.customers_customerId = c.customerId
-                    WHERE o.orderId = {orderId}"
-            
+                            o.orderId,
+                            IFNULL(NULLIF(o.orderDate, '0000-00-00'), NULL) AS orderDate,
+                            o.orderStatus,
+                            c.customerFName,
+                            c.customerLName,
+                            c.customerPhone,
+                            c.customerAddress
+                        FROM orders o
+                        INNER JOIN customers c ON o.customers_customerId = c.customerId
+                        WHERE o.orderId = {orderId}"
+
             cmd = New MySqlCommand(query, conn)
             reader = cmd.ExecuteReader()
-            
+
             If reader.Read() Then
-                ' Populate order header
-                lblOrderId.Text = $"Order ID: {reader("orderId")}"
-                lblOrderDate.Text = $"Date: {Convert.ToDateTime(reader("orderDate")).ToString("MMMM dd, yyyy")}"
+                ' Populate order header with safe date conversion
+                lblOrderId.Text = $"{reader("orderId")}"
+
+                ' Safe date conversion with null checking
+                Dim orderDateValue As Object = reader("orderDate")
+                If orderDateValue IsNot Nothing AndAlso Not Convert.IsDBNull(orderDateValue) AndAlso Not String.IsNullOrEmpty(orderDateValue.ToString()) Then
+                    Try
+                        Dim orderDate As DateTime = Convert.ToDateTime(orderDateValue)
+                        lblOrderDate.Text = $"Date: {orderDate.ToString("MMMM dd, yyyy")}"
+                    Catch ex As Exception
+                        lblOrderDate.Text = "Date: N/A"
+                    End Try
+                Else
+                    lblOrderDate.Text = "Date: N/A"
+                End If
+
                 lblCustomerName.Text = $"Customer: {reader("customerFName")} {reader("customerLName")}"
-                lblCustomerEmail.Text = $"Email: {reader("customerEmail")}"
                 lblCustomerPhone.Text = $"Phone: {reader("customerPhone")}"
-                lblStatus.Text = $"Status: {reader("orderStatus")}"
-                
+
+                ' Add customer address if available
+                Dim customerAddress As Object = reader("customerAddress")
+                If customerAddress IsNot Nothing AndAlso Not Convert.IsDBNull(customerAddress) AndAlso Not String.IsNullOrEmpty(customerAddress.ToString()) Then
+                    lblAddress.Text = $"Address: {customerAddress.ToString()}"
+                Else
+                    lblAddress.Text = "Address: N/A"
+                End If
+
+                ' Store orderStatus before closing reader
+                Dim orderStatus As String = reader("orderStatus").ToString()
+
                 reader.Close()
-                
+
                 ' Get order items
                 query = $"SELECT 
-                            p.productName,
-                            p.productPrice,
-                            oi.productQty,
-                            (p.productPrice * oi.productQty) AS itemTotal
-                        FROM orderitems oi
-                        INNER JOIN products p ON oi.products_productId = p.productId
-                        WHERE oi.orders_orderId = {orderId}
-                        ORDER BY p.productName"
-                
+                                p.productName,
+                                p.productPrice,
+                                oi.productQty,
+                                (p.productPrice * oi.productQty) AS itemTotal
+                            FROM orderitems oi
+                            INNER JOIN products p ON oi.products_productId = p.productId
+                            WHERE oi.orders_orderId = {orderId}
+                            ORDER BY p.productName"
+
                 cmd = New MySqlCommand(query, conn)
                 da = New MySqlDataAdapter(cmd)
                 ds = New DataSet()
                 da.Fill(ds, "items")
-                
+
                 DataGridView1.DataSource = ds.Tables("items")
-                
+
                 ' Configure DataGridView
                 DataGridView1.Columns("productName").HeaderText = "Product"
                 DataGridView1.Columns("productPrice").HeaderText = "Price"
                 DataGridView1.Columns("productQty").HeaderText = "Qty"
                 DataGridView1.Columns("itemTotal").HeaderText = "Total"
-                
+
                 ' Format price columns
                 DataGridView1.Columns("productPrice").DefaultCellStyle.Format = "₱#,##0.00"
                 DataGridView1.Columns("itemTotal").DefaultCellStyle.Format = "₱#,##0.00"
-                
-                ' Calculate total
+
+                ' Calculate total with better error handling
                 Dim total As Decimal = 0
                 For Each row As DataGridViewRow In DataGridView1.Rows
                     If Not row.IsNewRow Then
-                        total += Convert.ToDecimal(row.Cells("itemTotal").Value)
+                        Try
+                            Dim itemTotalValue As Object = row.Cells("itemTotal").Value
+                            If itemTotalValue IsNot Nothing AndAlso Not Convert.IsDBNull(itemTotalValue) Then
+                                total += Convert.ToDecimal(itemTotalValue)
+                            End If
+                        Catch ex As Exception
+                            ' Skip invalid values
+                            Continue For
+                        End Try
                     End If
                 Next
-                
+
                 lblTotal.Text = $"Total: ₱{total:N2}"
-                
-                ' If order is completed, add to sales
-                If lblStatus.Text.Contains("completed") Then
+
+                ' Check if order is completed and add to sales if needed
+                If orderStatus = "completed" Then
                     AddToSales(orderId, total)
                 End If
-                
+
+            Else
+                MessageBox.Show("Order not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Me.Close()
             End If
-            
+
         Catch ex As Exception
             MessageBox.Show("Error loading receipt: " & ex.Message)
         Finally
@@ -113,16 +150,16 @@ Public Class receipt
             Dim existingSales = cmd.ExecuteScalar()
 
             If existingSales Is Nothing Then
-                ' Create sales record
-                query = $"INSERT INTO sales (salesDate, orderId) VALUES (CURDATE(), {orderId})"
+                ' Create sales record with total amount
+                query = $"INSERT INTO sales (salesDate, orderId, totalAmount) VALUES (CURDATE(), {orderId}, {totalAmount})"
                 cmd = New MySqlCommand(query, conn)
                 cmd.ExecuteNonQuery()
-                
-                MessageBox.Show("Order completed and added to sales records.")
+
+                MessageBox.Show("Order completed and added to sales records.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
 
         Catch ex As Exception
-            MessageBox.Show("Error adding to sales: " & ex.Message)
+            MessageBox.Show("Error adding to sales: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             If conn.State = ConnectionState.Open Then
                 conn.Close()
@@ -130,12 +167,236 @@ Public Class receipt
         End Try
     End Sub
 
-    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        ' Print functionality can be added here
-        MessageBox.Show("Print functionality would be implemented here.")
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        ' Try multiple methods to capture the exact form appearance
+        Try
+            SaveReceiptUsingPrintWindow()
+        Catch ex As Exception
+            Try
+                SaveReceiptUsingAlternativeMethod()
+            Catch ex2 As Exception
+                MessageBox.Show("Error saving image: " & ex2.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End Try
+    End Sub
+
+    Private Sub SaveReceiptUsingPrintWindow()
+        Try
+            ' Force complete rendering of all controls
+            Me.Refresh()
+            Application.DoEvents()
+
+            ' Force DataGridView to update and ensure all data is visible
+            DataGridView1.Refresh()
+            DataGridView1.Update()
+            Application.DoEvents()
+
+            ' Ensure all labels are updated
+            lblOrderId.Refresh()
+            lblOrderDate.Refresh()
+            lblCustomerName.Refresh()
+            lblCustomerPhone.Refresh()
+            lblAddress.Refresh()
+            lblTotal.Refresh()
+            Application.DoEvents()
+
+            ' Add longer delay to ensure everything is rendered
+            System.Threading.Thread.Sleep(500)
+
+            Dim bounds As Rectangle = Me.Bounds
+
+            ' Create bitmap with form dimensions
+            Using bmp As New Bitmap(bounds.Width, bounds.Height)
+                ' Create graphics object for the bitmap
+                Using g As Graphics = Graphics.FromImage(bmp)
+                    ' Set high quality rendering
+                    g.SmoothingMode = Drawing.Drawing2D.SmoothingMode.AntiAlias
+                    g.TextRenderingHint = Drawing.Text.TextRenderingHint.ClearTypeGridFit
+                    g.InterpolationMode = Drawing.Drawing2D.InterpolationMode.HighQualityBicubic
+
+                    ' Clear the bitmap with white background first
+                    g.Clear(Color.White)
+
+                    ' Use PrintWindow to capture the exact form appearance
+                    Dim hdc As IntPtr = g.GetHdc()
+                    Try
+                        PrintWindow(Me.Handle, hdc, 0)
+                    Finally
+                        g.ReleaseHdc(hdc)
+                    End Try
+                End Using
+
+                Dim sfd As New SaveFileDialog()
+                sfd.Filter = "PNG Image|*.png"
+                sfd.Title = "Save Receipt as Image"
+                sfd.FileName = $"Receipt_{lblOrderId.Text}.png"
+
+                If sfd.ShowDialog() = DialogResult.OK Then
+                    bmp.Save(sfd.FileName, Imaging.ImageFormat.Png)
+                    MessageBox.Show("Receipt saved as image successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error saving image: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub SaveReceiptUsingAlternativeMethod()
+        Try
+            ' Force complete rendering of all controls
+            Me.Refresh()
+            Application.DoEvents()
+
+            ' Force DataGridView to update and ensure all data is visible
+            DataGridView1.Refresh()
+            DataGridView1.Update()
+            Application.DoEvents()
+
+            ' Ensure all labels are updated
+            lblOrderId.Refresh()
+            lblOrderDate.Refresh()
+            lblCustomerName.Refresh()
+            lblCustomerPhone.Refresh()
+            lblAddress.Refresh()
+            lblTotal.Refresh()
+            Application.DoEvents()
+
+            ' Add longer delay to ensure everything is rendered
+            System.Threading.Thread.Sleep(500)
+
+            Dim bounds As Rectangle = Me.Bounds
+
+            ' Create bitmap with form dimensions
+            Using bmp As New Bitmap(bounds.Width, bounds.Height)
+                ' Create graphics object for the bitmap
+                Using g As Graphics = Graphics.FromImage(bmp)
+                    ' Set high quality rendering
+                    g.SmoothingMode = Drawing.Drawing2D.SmoothingMode.AntiAlias
+                    g.TextRenderingHint = Drawing.Text.TextRenderingHint.ClearTypeGridFit
+                    g.InterpolationMode = Drawing.Drawing2D.InterpolationMode.HighQualityBicubic
+
+                    ' Clear the bitmap with white background first
+                    g.Clear(Color.White)
+
+                    ' Draw the entire form to the bitmap
+                    Me.DrawToBitmap(bmp, New Rectangle(0, 0, bounds.Width, bounds.Height))
+                End Using
+
+                Dim sfd As New SaveFileDialog()
+                sfd.Filter = "PNG Image|*.png"
+                sfd.Title = "Save Receipt as Image"
+                sfd.FileName = $"Receipt_{lblOrderId.Text}.png"
+
+                If sfd.ShowDialog() = DialogResult.OK Then
+                    bmp.Save(sfd.FileName, Imaging.ImageFormat.Png)
+                    MessageBox.Show("Receipt saved as image successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error saving image: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    ' Windows API declaration for PrintWindow
+    <System.Runtime.InteropServices.DllImport("user32.dll")>
+    Private Shared Function PrintWindow(hwnd As IntPtr, hdcBlt As IntPtr, nFlags As Integer) As Boolean
+    End Function
+
+    Private Sub SaveReceiptAsImageManual()
+        Try
+            ' Force complete rendering of all controls
+            Me.Refresh()
+            Application.DoEvents()
+
+            ' Force DataGridView to update
+            DataGridView1.Refresh()
+            Application.DoEvents()
+
+            ' Ensure all labels are updated
+            lblOrderId.Refresh()
+            lblOrderDate.Refresh()
+            lblCustomerName.Refresh()
+            lblCustomerPhone.Refresh()
+            lblAddress.Refresh()
+            lblTotal.Refresh()
+            Application.DoEvents()
+
+            ' Add longer delay to ensure everything is rendered
+            System.Threading.Thread.Sleep(300)
+
+            Dim bounds As Rectangle = Me.Bounds
+
+            ' Create bitmap with form dimensions
+            Using bmp As New Bitmap(bounds.Width, bounds.Height)
+                ' Create graphics object for the bitmap
+                Using g As Graphics = Graphics.FromImage(bmp)
+                    ' Set high quality rendering
+                    g.SmoothingMode = Drawing.Drawing2D.SmoothingMode.AntiAlias
+                    g.TextRenderingHint = Drawing.Text.TextRenderingHint.ClearTypeGridFit
+                    g.InterpolationMode = Drawing.Drawing2D.InterpolationMode.HighQualityBicubic
+
+                    ' Clear the bitmap with white background first
+                    g.Clear(Color.White)
+
+                    ' Draw the entire form to the bitmap
+                    Me.DrawToBitmap(bmp, New Rectangle(0, 0, bounds.Width, bounds.Height))
+                End Using
+
+                Dim sfd As New SaveFileDialog()
+                sfd.Filter = "PNG Image|*.png"
+                sfd.Title = "Save Receipt as Image"
+                sfd.FileName = $"Receipt_{lblOrderId.Text}.png"
+
+                If sfd.ShowDialog() = DialogResult.OK Then
+                    bmp.Save(sfd.FileName, Imaging.ImageFormat.Png)
+                    MessageBox.Show("Receipt saved as image successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error saving image: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub DrawDataGridViewContent(g As Graphics)
+        Try
+            ' Get DataGridView position relative to form
+            Dim gridLocation As Point = DataGridView1.PointToScreen(New Point(0, 0))
+            Dim formLocation As Point = Me.PointToScreen(New Point(0, 0))
+            Dim relativeX As Integer = gridLocation.X - formLocation.X
+            Dim relativeY As Integer = gridLocation.Y - formLocation.Y
+
+            ' Draw DataGridView content manually
+            Using gridFont As New Font("Microsoft Sans Serif", 10)
+                Dim rowHeight As Integer = 24
+                Dim startY As Integer = relativeY + DataGridView1.ColumnHeadersHeight
+
+                For i As Integer = 0 To DataGridView1.Rows.Count - 1
+                    If Not DataGridView1.Rows(i).IsNewRow Then
+                        Dim row As DataGridViewRow = DataGridView1.Rows(i)
+                        Dim currentY As Integer = startY + (i * rowHeight)
+
+                        ' Draw each cell content
+                        For j As Integer = 0 To DataGridView1.Columns.Count - 1
+                            Dim cell As DataGridViewCell = row.Cells(j)
+                            Dim column As DataGridViewColumn = DataGridView1.Columns(j)
+
+                            If cell.Value IsNot Nothing Then
+                                Dim cellText As String = cell.Value.ToString()
+                                Dim cellX As Integer = relativeX + column.DisplayIndex * (DataGridView1.Width / DataGridView1.Columns.Count)
+
+                                ' Draw cell text
+                                g.DrawString(cellText, gridFont, Brushes.Black, cellX + 5, currentY + 2)
+                            End If
+                        Next
+                    End If
+                Next
+            End Using
+        Catch ex As Exception
+            ' Ignore errors in manual drawing, fall back to automatic capture
+        End Try
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Me.Close()
-    End Sub
-End Class 
+            Me.Close()
+        End Sub
+End Class
