@@ -35,7 +35,7 @@ Partial Class datasets
         '
         'dsInventory_btn
         '
-        Me.dsInventory_btn.Location = New System.Drawing.Point(94, 61)
+        Me.dsInventory_btn.Location = New System.Drawing.Point(42, 61)
         Me.dsInventory_btn.Name = "dsInventory_btn"
         Me.dsInventory_btn.Size = New System.Drawing.Size(300, 50)
         Me.dsInventory_btn.TabIndex = 0
@@ -44,7 +44,7 @@ Partial Class datasets
         '
         'dsCart_btn
         '
-        Me.dsCart_btn.Location = New System.Drawing.Point(94, 172)
+        Me.dsCart_btn.Location = New System.Drawing.Point(42, 172)
         Me.dsCart_btn.Name = "dsCart_btn"
         Me.dsCart_btn.Size = New System.Drawing.Size(300, 50)
         Me.dsCart_btn.TabIndex = 1
@@ -53,7 +53,7 @@ Partial Class datasets
         '
         'dsManage_orders_btn
         '
-        Me.dsManage_orders_btn.Location = New System.Drawing.Point(94, 228)
+        Me.dsManage_orders_btn.Location = New System.Drawing.Point(42, 228)
         Me.dsManage_orders_btn.Name = "dsManage_orders_btn"
         Me.dsManage_orders_btn.Size = New System.Drawing.Size(300, 50)
         Me.dsManage_orders_btn.TabIndex = 5
@@ -62,7 +62,7 @@ Partial Class datasets
         '
         'dsSales_btn
         '
-        Me.dsSales_btn.Location = New System.Drawing.Point(94, 284)
+        Me.dsSales_btn.Location = New System.Drawing.Point(42, 284)
         Me.dsSales_btn.Name = "dsSales_btn"
         Me.dsSales_btn.Size = New System.Drawing.Size(300, 50)
         Me.dsSales_btn.TabIndex = 3
@@ -71,7 +71,7 @@ Partial Class datasets
         '
         'dsExpenses_btn
         '
-        Me.dsExpenses_btn.Location = New System.Drawing.Point(94, 340)
+        Me.dsExpenses_btn.Location = New System.Drawing.Point(42, 340)
         Me.dsExpenses_btn.Name = "dsExpenses_btn"
         Me.dsExpenses_btn.Size = New System.Drawing.Size(300, 50)
         Me.dsExpenses_btn.TabIndex = 8
@@ -80,7 +80,7 @@ Partial Class datasets
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(94, 452)
+        Me.Button8.Location = New System.Drawing.Point(42, 452)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(300, 50)
         Me.Button8.TabIndex = 7
@@ -89,7 +89,7 @@ Partial Class datasets
         '
         'dsUsers_btn
         '
-        Me.dsUsers_btn.Location = New System.Drawing.Point(94, 396)
+        Me.dsUsers_btn.Location = New System.Drawing.Point(42, 396)
         Me.dsUsers_btn.Name = "dsUsers_btn"
         Me.dsUsers_btn.Size = New System.Drawing.Size(300, 50)
         Me.dsUsers_btn.TabIndex = 6
@@ -98,7 +98,7 @@ Partial Class datasets
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(94, 117)
+        Me.Button1.Location = New System.Drawing.Point(42, 117)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(145, 50)
         Me.Button1.TabIndex = 9
@@ -107,7 +107,7 @@ Partial Class datasets
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(248, 117)
+        Me.Button2.Location = New System.Drawing.Point(196, 117)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(145, 50)
         Me.Button2.TabIndex = 10
@@ -118,7 +118,7 @@ Partial Class datasets
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(484, 611)
+        Me.ClientSize = New System.Drawing.Size(384, 561)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dsExpenses_btn)
