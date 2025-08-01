@@ -313,8 +313,11 @@ Public Class home
             MessageBox.Show("Access denied. Admin privileges required.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
+        If login.userRole = "admin" Then
+            admin.Show()
 
-        ordermanager.Show()
+        End If
+        'ordermanager.Show()
     End Sub
 End Class
 

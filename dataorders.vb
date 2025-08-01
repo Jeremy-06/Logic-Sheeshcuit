@@ -17,12 +17,12 @@ Public Class dataorders
             conn.Open()
             query = "SELECT 
                          o.orderId,
-                         o.customers_customerId,
                          CONCAT(c.customerFname, ' ', c.customerLname) AS customerName,
-                         c.customerAddress,
                          c.customerPhone,
                          p.productName,
+                         oi.productQty,
                          (oi.productQty * p.productPrice) AS totalAmount,
+                         o.orderStatus,
                          DATE_FORMAT(o.orderDate, '%m/%d/%Y') AS orderDate
                       FROM orders o
                       JOIN customers c ON o.customers_customerId = c.customerId
@@ -35,14 +35,14 @@ Public Class dataorders
             da.Fill(ds, "Orders")
             DataGridView1.DataSource = ds.Tables("Orders")
 
-            ' Set column headers
+            ' Set column headers for cleaner display
             DataGridView1.Columns(0).HeaderText = "Order ID"
-            DataGridView1.Columns(1).HeaderText = "Customer ID"
-            DataGridView1.Columns(2).HeaderText = "Customer Name"
-            DataGridView1.Columns(3).HeaderText = "Address"
-            DataGridView1.Columns(4).HeaderText = "Customer Phone"
-            DataGridView1.Columns(5).HeaderText = "Product Name"
-            DataGridView1.Columns(6).HeaderText = "Total Amount"
+            DataGridView1.Columns(1).HeaderText = "Customer Name"
+            DataGridView1.Columns(2).HeaderText = "Phone"
+            DataGridView1.Columns(3).HeaderText = "Product"
+            DataGridView1.Columns(4).HeaderText = "Quantity"
+            DataGridView1.Columns(5).HeaderText = "Total Amount"
+            DataGridView1.Columns(6).HeaderText = "Status"
             DataGridView1.Columns(7).HeaderText = "Order Date"
 
             conn.Close()
@@ -55,10 +55,10 @@ Public Class dataorders
     Private Sub PopulateStatusComboBox()
         Try
             status.Items.Clear()
-            status.Items.Add("Pending")
-            status.Items.Add("Paid")
-            status.Items.Add("Completed")
-            status.Items.Add("Cancelled")
+            status.Items.Add("pending")
+            status.Items.Add("paid")
+            status.Items.Add("completed")
+            status.Items.Add("cancelled")
         Catch ex As Exception
             MessageBox.Show("Error populating status: " + ex.Message)
         End Try
@@ -69,19 +69,35 @@ Public Class dataorders
             If e.RowIndex >= 0 Then
                 Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
                 orderID.Text = row.Cells(0).Value.ToString()
-                customerID.Text = row.Cells(1).Value.ToString()
-                customerName.Text = row.Cells(2).Value.ToString()
-                address.Text = row.Cells(3).Value.ToString()
-                phone.Text = row.Cells(4).Value.ToString()
-                productName.Text = row.Cells(5).Value.ToString()
-                total.Text = row.Cells(6).Value.ToString()
+                customerName.Text = row.Cells(1).Value.ToString()
+                phone.Text = row.Cells(2).Value.ToString()
+                productName.Text = row.Cells(3).Value.ToString()
+                total.Text = row.Cells(5).Value.ToString()
                 orderDate.Text = row.Cells(7).Value.ToString()
+                status.Text = row.Cells(6).Value.ToString()
 
-                ' Get order status
-                GetOrderStatus(row.Cells(0).Value.ToString())
+                ' Get customer ID for the selected order
+                GetCustomerID(row.Cells(0).Value.ToString())
             End If
         Catch ex As Exception
             MessageBox.Show("Error selecting row: " + ex.Message)
+        End Try
+    End Sub
+
+    Private Sub GetCustomerID(orderId As String)
+        Try
+            conn.Open()
+            query = "SELECT customers_customerId FROM orders WHERE orderId = " + orderId
+            cmd = New MySqlCommand(query, conn)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+            If reader.Read() Then
+                customerID.Text = reader("customers_customerId").ToString()
+            End If
+            reader.Close()
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("Error getting customer ID: " + ex.Message)
+            If conn.State = ConnectionState.Open Then conn.Close()
         End Try
     End Sub
 
@@ -115,16 +131,76 @@ Public Class dataorders
 
             Dim result = cmd.ExecuteNonQuery()
             If result > 0 Then
+                ' If status is changed to "completed", add to sales
+                If status.Text.ToLower() = "completed" Then
+                    Dim totalAmount As Decimal = 0
+                    If Decimal.TryParse(total.Text.Replace("₱", "").Replace(",", ""), totalAmount) Then
+                        AddToSales(Convert.ToInt32(orderID.Text), totalAmount)
+                    Else
+                        MessageBox.Show("Warning: Could not parse total amount for sales record.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    End If
+                End If
+
                 MessageBox.Show("Order updated successfully!")
-                LoadOrdersData()
+                conn.Close()
+
+                ' Refresh the data grid
+                RefreshDataGrid()
+
+                ' Clear the form inputs
                 ClearInputs()
             Else
                 MessageBox.Show("Failed to update order")
+                conn.Close()
             End If
-            conn.Close()
         Catch ex As Exception
             MessageBox.Show("Error updating order: " + ex.Message)
             If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Sub
+
+    Private Sub AddToSales(orderId As Integer, totalAmount As Decimal)
+        Try
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+            conn.Open()
+
+            ' Check if sales record already exists
+            query = $"SELECT salesId FROM sales WHERE orderId = {orderId}"
+            cmd = New MySqlCommand(query, conn)
+            Dim existingSales = cmd.ExecuteScalar()
+
+            If existingSales Is Nothing Then
+                ' Create sales record (without totalAmount since it's not in the table structure)
+                query = $"INSERT INTO sales (salesDate, orderId) VALUES (CURDATE(), {orderId})"
+                cmd = New MySqlCommand(query, conn)
+                cmd.ExecuteNonQuery()
+
+                MessageBox.Show("Order completed and added to sales records.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show("Error adding to sales: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+    End Sub
+
+    Private Sub RefreshDataGrid()
+        Try
+            ' Clear existing data
+            DataGridView1.DataSource = Nothing
+
+            ' Reload the data
+            LoadOrdersData()
+
+            ' Force the grid to refresh
+            DataGridView1.Refresh()
+        Catch ex As Exception
+            MessageBox.Show("Error refreshing data: " + ex.Message)
         End Try
     End Sub
 
@@ -151,12 +227,17 @@ Public Class dataorders
                 Dim result = cmd.ExecuteNonQuery()
                 If result > 0 Then
                     MessageBox.Show("Order deleted successfully!")
-                    LoadOrdersData()
+                    conn.Close()
+
+                    ' Refresh the data grid
+                    RefreshDataGrid()
+
+                    ' Clear the form inputs
                     ClearInputs()
                 Else
                     MessageBox.Show("Failed to delete order")
+                    conn.Close()
                 End If
-                conn.Close()
             End If
         Catch ex As Exception
             MessageBox.Show("Error deleting order: " + ex.Message)
@@ -165,7 +246,7 @@ Public Class dataorders
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        LoadOrdersData()
+        RefreshDataGrid()
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
@@ -176,7 +257,6 @@ Public Class dataorders
         orderID.Clear()
         customerID.Clear()
         customerName.Clear()
-        address.Clear()
         phone.Clear()
         productName.Clear()
         total.Clear()
@@ -191,12 +271,12 @@ Public Class dataorders
                 conn.Open()
                 query = "SELECT 
                              o.orderId,
-                             o.customers_customerId,
                              CONCAT(c.customerFname, ' ', c.customerLname) AS customerName,
-                             c.customerAddress,
                              c.customerPhone,
                              p.productName,
+                             oi.productQty,
                              (oi.productQty * p.productPrice) AS totalAmount,
+                             o.orderStatus,
                              DATE_FORMAT(o.orderDate, '%m/%d/%Y') AS orderDate
                           FROM orders o
                           JOIN customers c ON o.customers_customerId = c.customerId
@@ -205,6 +285,7 @@ Public Class dataorders
                           WHERE o.orderId LIKE '%" + TextBox4.Text + "%' 
                           OR CONCAT(c.customerFname, ' ', c.customerLname) LIKE '%" + TextBox4.Text + "%'
                           OR p.productName LIKE '%" + TextBox4.Text + "%'
+                          OR o.orderStatus LIKE '%" + TextBox4.Text + "%'
                           ORDER BY o.orderId DESC;"
                 cmd = New MySqlCommand(query, conn)
                 da = New MySqlDataAdapter(cmd)

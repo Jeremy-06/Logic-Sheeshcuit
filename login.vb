@@ -64,35 +64,42 @@ Public Class login
                 Dim userRole As String = reader.GetString("userRole")
                 reader.Close()
 
-                ' Get customer ID from customers table
-                query = $"SELECT customerId FROM customers WHERE userId = {userId}"
-                cmd = New MySqlCommand(query, conn)
-                reader = cmd.ExecuteReader()
+                ' Set the user role first
+                login.userRole = userRole
 
-                If reader.Read() Then
-                    customerId = reader.GetInt32("customerId") ' Set the shared variable
-                    reader.Close()
+                ' Try to get customer ID from customers table (only for customer accounts)
+                If userRole.ToLower() = "customer" Then
+                    query = $"SELECT customerId FROM customers WHERE userId = {userId}"
+                    cmd = New MySqlCommand(query, conn)
+                    reader = cmd.ExecuteReader()
 
-                    ' Set the user role
-                    login.userRole = userRole
-
-                    If Not String.IsNullOrEmpty(login.userRole) AndAlso login.userRole <> "customer" Then
-                        home.Button1.Enabled = True
-                        home.Button1.Visible = True
+                    If reader.Read() Then
+                        customerId = reader.GetInt32("customerId") ' Set the shared variable
+                        reader.Close()
+                    Else
+                        reader.Close()
+                        MessageBox.Show("Customer information not found.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Return
                     End If
-
-                    ' Clear the textboxes
-                    TextBox1.Clear()
-                    TextBox2.Clear()
-
-                    ' Show success message and proceed to home
-                    MessageBox.Show("Login successful!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Me.Hide()
-                    home.Show()
                 Else
-                    reader.Close()
-                    MessageBox.Show("Customer information not found.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    ' For non-customer accounts (admin, auditor, etc.), set customerId to 0
+                    customerId = 0
                 End If
+
+                ' Enable admin button for non-customer roles
+                If Not String.IsNullOrEmpty(login.userRole) AndAlso login.userRole.ToLower() <> "customer" Then
+                    home.Button1.Enabled = True
+                    home.Button1.Visible = True
+                End If
+
+                ' Clear the textboxes
+                TextBox1.Clear()
+                TextBox2.Clear()
+
+                ' Show success message and proceed to home
+                MessageBox.Show("Login successful!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Me.Hide()
+                home.Show()
             Else
                 reader.Close()
                 MessageBox.Show("Invalid username or password.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
