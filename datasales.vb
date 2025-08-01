@@ -74,7 +74,7 @@ Public Class datasales
         LoadSalesData()
     End Sub
 
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs)
         Try
             If e.RowIndex >= 0 Then
                 Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
@@ -89,12 +89,12 @@ Public Class datasales
     End Sub
 
     ' Refresh button
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         RefreshData()
     End Sub
 
     ' Export to CSV (optional)
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         Try
             Dim saveFileDialog As New SaveFileDialog()
             saveFileDialog.Filter = "CSV files (*.csv)|*.csv"
