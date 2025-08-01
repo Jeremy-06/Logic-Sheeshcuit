@@ -127,7 +127,7 @@ Public Class cart
     Private Sub LoadSelectedItem(row As DataGridViewRow)
         Try
             ' Load item details into form controls
-            TextBox1.Text = row.Cells("productName").Value.ToString()
+            Label4.Text = row.Cells("productName").Value.ToString()
             TextBox2.Text = row.Cells("productPrice").Value.ToString()
 
             selectedCartId = Convert.ToInt32(row.Cells("cartId").Value)
@@ -439,14 +439,13 @@ Public Class cart
         Me.Close()
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        ' Refresh button
-        LoadCartData()
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         ' Close button
         Me.Close()
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        LoadCartData()
     End Sub
 
     ' Helper methods
@@ -463,7 +462,7 @@ Public Class cart
     End Sub
 
     Private Sub ClearInputs()
-        TextBox1.Clear()
+        Label4.Text = ""
         TextBox2.Clear()
         TextBox3.Clear()
         PictureBox1.Image = Nothing
@@ -480,5 +479,9 @@ Public Class cart
     ' Public method for backward compatibility with other forms
     Public Sub refreshData()
         LoadCartData()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        DataGridView1.SelectAll()
     End Sub
 End Class

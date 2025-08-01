@@ -170,7 +170,7 @@ Public Class orders
         LoadOrders("completed")
     End Sub
 
-    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         LoadOrders()
     End Sub
 

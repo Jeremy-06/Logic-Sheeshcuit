@@ -46,7 +46,7 @@ Partial Class receipt
         '
         Me.lblReceiptTitle.AutoSize = True
         Me.lblReceiptTitle.Font = New System.Drawing.Font("Sitka Subheading", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblReceiptTitle.Location = New System.Drawing.Point(117, 19)
+        Me.lblReceiptTitle.Location = New System.Drawing.Point(109, 19)
         Me.lblReceiptTitle.Name = "lblReceiptTitle"
         Me.lblReceiptTitle.Size = New System.Drawing.Size(128, 39)
         Me.lblReceiptTitle.TabIndex = 0
