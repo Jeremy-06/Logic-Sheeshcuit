@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class home
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class home
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(home))
@@ -193,15 +193,28 @@ Partial Class home
         Me.CapacitorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OscilloscopesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox38 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox39 = New System.Windows.Forms.PictureBox()
-        Me.usericon = New System.Windows.Forms.PictureBox()
-        Me.PictureBox41 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
+        Me.MenuStrip3 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip4 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label113 = New System.Windows.Forms.Label()
+        Me.Label114 = New System.Windows.Forms.Label()
+        Me.usericon = New System.Windows.Forms.PictureBox()
+        Me.PictureBox39 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox40 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox41 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox38 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.PictureBox42 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox43 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox44 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox45 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -241,10 +254,18 @@ Partial Class home
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip2.SuspendLayout()
+        Me.MenuStrip3.SuspendLayout()
+        Me.MenuStrip4.SuspendLayout()
         CType(Me.usericon, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox43, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox44, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -399,10 +420,10 @@ Partial Class home
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(56, 202)
+        Me.Panel1.Location = New System.Drawing.Point(47, 244)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(880, 404)
+        Me.Panel1.Size = New System.Drawing.Size(889, 370)
         Me.Panel1.TabIndex = 0
         '
         'Label116
@@ -2067,15 +2088,15 @@ Partial Class home
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.Gainsboro
+        Me.MenuStrip1.BackColor = System.Drawing.Color.LightGray
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuStrip1.Font = New System.Drawing.Font("Cambria", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PRODUCTSToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(141, 49)
+        Me.MenuStrip1.Location = New System.Drawing.Point(227, 12)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(124, 33)
+        Me.MenuStrip1.Size = New System.Drawing.Size(129, 37)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -2083,115 +2104,299 @@ Partial Class home
         '
         Me.PRODUCTSToolStripMenuItem.BackColor = System.Drawing.Color.Transparent
         Me.PRODUCTSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SupplierToolStripMenuItem, Me.CatToolStripMenuItem})
+        Me.PRODUCTSToolStripMenuItem.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PRODUCTSToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.PRODUCTSToolStripMenuItem.Name = "PRODUCTSToolStripMenuItem"
-        Me.PRODUCTSToolStripMenuItem.Size = New System.Drawing.Size(118, 29)
-        Me.PRODUCTSToolStripMenuItem.Text = "PRODUCTS"
+        Me.PRODUCTSToolStripMenuItem.Size = New System.Drawing.Size(123, 33)
+        Me.PRODUCTSToolStripMenuItem.Text = "Products"
         '
         'SupplierToolStripMenuItem
         '
         Me.SupplierToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MakerlabToolStripMenuItem, Me.CircuitrocksToolStripMenuItem, Me.Element14ToolStripMenuItem, Me.RSComponentsToolStripMenuItem})
         Me.SupplierToolStripMenuItem.Name = "SupplierToolStripMenuItem"
-        Me.SupplierToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
+        Me.SupplierToolStripMenuItem.Size = New System.Drawing.Size(240, 34)
         Me.SupplierToolStripMenuItem.Text = "BY SUPPLIER"
         '
         'MakerlabToolStripMenuItem
         '
         Me.MakerlabToolStripMenuItem.Name = "MakerlabToolStripMenuItem"
-        Me.MakerlabToolStripMenuItem.Size = New System.Drawing.Size(259, 30)
+        Me.MakerlabToolStripMenuItem.Size = New System.Drawing.Size(319, 34)
         Me.MakerlabToolStripMenuItem.Text = "Makerlab Electronics"
         '
         'CircuitrocksToolStripMenuItem
         '
         Me.CircuitrocksToolStripMenuItem.Name = "CircuitrocksToolStripMenuItem"
-        Me.CircuitrocksToolStripMenuItem.Size = New System.Drawing.Size(259, 30)
+        Me.CircuitrocksToolStripMenuItem.Size = New System.Drawing.Size(319, 34)
         Me.CircuitrocksToolStripMenuItem.Text = "Circuitrocks"
         '
         'Element14ToolStripMenuItem
         '
         Me.Element14ToolStripMenuItem.Name = "Element14ToolStripMenuItem"
-        Me.Element14ToolStripMenuItem.Size = New System.Drawing.Size(259, 30)
+        Me.Element14ToolStripMenuItem.Size = New System.Drawing.Size(319, 34)
         Me.Element14ToolStripMenuItem.Text = "element14"
         '
         'RSComponentsToolStripMenuItem
         '
         Me.RSComponentsToolStripMenuItem.Name = "RSComponentsToolStripMenuItem"
-        Me.RSComponentsToolStripMenuItem.Size = New System.Drawing.Size(259, 30)
+        Me.RSComponentsToolStripMenuItem.Size = New System.Drawing.Size(319, 34)
         Me.RSComponentsToolStripMenuItem.Text = "RS Components"
         '
         'CatToolStripMenuItem
         '
         Me.CatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DisplayToolStripMenuItem, Me.ICToolStripMenuItem, Me.LEDsToolStripMenuItem, Me.PowerSupplyAndModuleToolStripMenuItem, Me.WiresAndCablesToolStripMenuItem, Me.BreadboardsToolStripMenuItem, Me.SwitchesToolStripMenuItem, Me.ResistorsToolStripMenuItem, Me.CapacitorsToolStripMenuItem, Me.OscilloscopesToolStripMenuItem})
         Me.CatToolStripMenuItem.Name = "CatToolStripMenuItem"
-        Me.CatToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
+        Me.CatToolStripMenuItem.Size = New System.Drawing.Size(240, 34)
         Me.CatToolStripMenuItem.Text = "BY CATEGORY"
         '
         'DisplayToolStripMenuItem
         '
         Me.DisplayToolStripMenuItem.Name = "DisplayToolStripMenuItem"
-        Me.DisplayToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
+        Me.DisplayToolStripMenuItem.Size = New System.Drawing.Size(384, 34)
         Me.DisplayToolStripMenuItem.Text = "Digital Displays"
         '
         'ICToolStripMenuItem
         '
         Me.ICToolStripMenuItem.Name = "ICToolStripMenuItem"
-        Me.ICToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
+        Me.ICToolStripMenuItem.Size = New System.Drawing.Size(384, 34)
         Me.ICToolStripMenuItem.Text = "Integrated Circuits"
         '
         'LEDsToolStripMenuItem
         '
         Me.LEDsToolStripMenuItem.Name = "LEDsToolStripMenuItem"
-        Me.LEDsToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
+        Me.LEDsToolStripMenuItem.Size = New System.Drawing.Size(384, 34)
         Me.LEDsToolStripMenuItem.Text = "LEDs"
         '
         'PowerSupplyAndModuleToolStripMenuItem
         '
         Me.PowerSupplyAndModuleToolStripMenuItem.Name = "PowerSupplyAndModuleToolStripMenuItem"
-        Me.PowerSupplyAndModuleToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
+        Me.PowerSupplyAndModuleToolStripMenuItem.Size = New System.Drawing.Size(384, 34)
         Me.PowerSupplyAndModuleToolStripMenuItem.Text = "Power Supply and Modules"
         '
         'WiresAndCablesToolStripMenuItem
         '
         Me.WiresAndCablesToolStripMenuItem.Name = "WiresAndCablesToolStripMenuItem"
-        Me.WiresAndCablesToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
+        Me.WiresAndCablesToolStripMenuItem.Size = New System.Drawing.Size(384, 34)
         Me.WiresAndCablesToolStripMenuItem.Text = "Wires and Cables"
         '
         'BreadboardsToolStripMenuItem
         '
         Me.BreadboardsToolStripMenuItem.Name = "BreadboardsToolStripMenuItem"
-        Me.BreadboardsToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
+        Me.BreadboardsToolStripMenuItem.Size = New System.Drawing.Size(384, 34)
         Me.BreadboardsToolStripMenuItem.Text = "Breadboards"
         '
         'SwitchesToolStripMenuItem
         '
         Me.SwitchesToolStripMenuItem.Name = "SwitchesToolStripMenuItem"
-        Me.SwitchesToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
+        Me.SwitchesToolStripMenuItem.Size = New System.Drawing.Size(384, 34)
         Me.SwitchesToolStripMenuItem.Text = "Switches"
         '
         'ResistorsToolStripMenuItem
         '
         Me.ResistorsToolStripMenuItem.Name = "ResistorsToolStripMenuItem"
-        Me.ResistorsToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
+        Me.ResistorsToolStripMenuItem.Size = New System.Drawing.Size(384, 34)
         Me.ResistorsToolStripMenuItem.Text = "Resistors"
         '
         'CapacitorsToolStripMenuItem
         '
         Me.CapacitorsToolStripMenuItem.Name = "CapacitorsToolStripMenuItem"
-        Me.CapacitorsToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
+        Me.CapacitorsToolStripMenuItem.Size = New System.Drawing.Size(384, 34)
         Me.CapacitorsToolStripMenuItem.Text = "Capacitors"
         '
         'OscilloscopesToolStripMenuItem
         '
         Me.OscilloscopesToolStripMenuItem.Name = "OscilloscopesToolStripMenuItem"
-        Me.OscilloscopesToolStripMenuItem.Size = New System.Drawing.Size(313, 30)
+        Me.OscilloscopesToolStripMenuItem.Size = New System.Drawing.Size(384, 34)
         Me.OscilloscopesToolStripMenuItem.Text = "Oscilloscopes"
         '
         'TextBox1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Font = New System.Drawing.Font("Trebuchet MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(727, 155)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(180, 29)
+        Me.TextBox1.Size = New System.Drawing.Size(180, 30)
         Me.TextBox1.TabIndex = 5
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Trebuchet MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(54, 157)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(145, 24)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Total Products :"
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Trebuchet MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(198, 157)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(54, 25)
+        Me.Label2.TabIndex = 9
+        '
+        'Timer1
+        '
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Silver
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(412, 599)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(150, 30)
+        Me.Button1.TabIndex = 15
+        Me.Button1.Text = "EDIT"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'HomeToolStripMenuItem
+        '
+        Me.HomeToolStripMenuItem.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HomeToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(90, 33)
+        Me.HomeToolStripMenuItem.Text = "Home"
+        '
+        'MenuStrip2
+        '
+        Me.MenuStrip2.BackColor = System.Drawing.Color.LightGray
+        Me.MenuStrip2.Dock = System.Windows.Forms.DockStyle.None
+        Me.MenuStrip2.Font = New System.Drawing.Font("SimSun", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem})
+        Me.MenuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
+        Me.MenuStrip2.Location = New System.Drawing.Point(57, 12)
+        Me.MenuStrip2.Name = "MenuStrip2"
+        Me.MenuStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
+        Me.MenuStrip2.Size = New System.Drawing.Size(98, 37)
+        Me.MenuStrip2.TabIndex = 17
+        '
+        'MenuStrip3
+        '
+        Me.MenuStrip3.AutoSize = False
+        Me.MenuStrip3.BackColor = System.Drawing.Color.LightGray
+        Me.MenuStrip3.Dock = System.Windows.Forms.DockStyle.None
+        Me.MenuStrip3.Font = New System.Drawing.Font("SimSun", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
+        Me.MenuStrip3.Location = New System.Drawing.Point(723, 12)
+        Me.MenuStrip3.Name = "MenuStrip3"
+        Me.MenuStrip3.Size = New System.Drawing.Size(82, 34)
+        Me.MenuStrip3.TabIndex = 18
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(73, 30)
+        Me.ToolStripMenuItem1.Text = "Cart"
+        '
+        'MenuStrip4
+        '
+        Me.MenuStrip4.AutoSize = False
+        Me.MenuStrip4.BackColor = System.Drawing.Color.LightGray
+        Me.MenuStrip4.Dock = System.Windows.Forms.DockStyle.None
+        Me.MenuStrip4.Font = New System.Drawing.Font("SimSun", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
+        Me.MenuStrip4.Location = New System.Drawing.Point(868, 12)
+        Me.MenuStrip4.Name = "MenuStrip4"
+        Me.MenuStrip4.Size = New System.Drawing.Size(109, 34)
+        Me.MenuStrip4.TabIndex = 19
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripMenuItem2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(100, 30)
+        Me.ToolStripMenuItem2.Text = "Profile"
+        '
+        'Label113
+        '
+        Me.Label113.AutoSize = True
+        Me.Label113.BackColor = System.Drawing.Color.LightGray
+        Me.Label113.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label113.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label113.Location = New System.Drawing.Point(388, 14)
+        Me.Label113.Name = "Label113"
+        Me.Label113.Size = New System.Drawing.Size(134, 29)
+        Me.Label113.TabIndex = 20
+        Me.Label113.Text = "Contact Us"
+        '
+        'Label114
+        '
+        Me.Label114.AutoSize = True
+        Me.Label114.BackColor = System.Drawing.Color.LightGray
+        Me.Label114.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label114.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label114.Location = New System.Drawing.Point(524, 17)
+        Me.Label114.Name = "Label114"
+        Me.Label114.Size = New System.Drawing.Size(118, 22)
+        Me.Label114.TabIndex = 21
+        Me.Label114.Text = "+63943327537"
+        '
+        'usericon
+        '
+        Me.usericon.BackColor = System.Drawing.Color.Transparent
+        Me.usericon.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.User_Icon
+        Me.usericon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.usericon.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.usericon.Location = New System.Drawing.Point(826, 9)
+        Me.usericon.Name = "usericon"
+        Me.usericon.Size = New System.Drawing.Size(43, 40)
+        Me.usericon.TabIndex = 12
+        Me.usericon.TabStop = False
+        '
+        'PictureBox39
+        '
+        Me.PictureBox39.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox39.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.Cart_Icon
+        Me.PictureBox39.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox39.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox39.Location = New System.Drawing.Point(678, 9)
+        Me.PictureBox39.Name = "PictureBox39"
+        Me.PictureBox39.Size = New System.Drawing.Size(45, 40)
+        Me.PictureBox39.TabIndex = 11
+        Me.PictureBox39.TabStop = False
+        '
+        'PictureBox40
+        '
+        Me.PictureBox40.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox40.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.Products_Icon
+        Me.PictureBox40.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox40.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox40.Location = New System.Drawing.Point(179, 9)
+        Me.PictureBox40.Name = "PictureBox40"
+        Me.PictureBox40.Size = New System.Drawing.Size(45, 40)
+        Me.PictureBox40.TabIndex = 16
+        Me.PictureBox40.TabStop = False
+        '
+        'PictureBox41
+        '
+        Me.PictureBox41.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox41.BackgroundImage = CType(resources.GetObject("PictureBox41.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox41.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox41.Location = New System.Drawing.Point(302, 100)
+        Me.PictureBox41.Name = "PictureBox41"
+        Me.PictureBox41.Size = New System.Drawing.Size(376, 108)
+        Me.PictureBox41.TabIndex = 14
+        Me.PictureBox41.TabStop = False
+        '
+        'PictureBox38
+        '
+        Me.PictureBox38.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox38.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.Home_Icon
+        Me.PictureBox38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox38.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox38.Location = New System.Drawing.Point(13, 9)
+        Me.PictureBox38.Name = "PictureBox38"
+        Me.PictureBox38.Size = New System.Drawing.Size(45, 40)
+        Me.PictureBox38.TabIndex = 10
+        Me.PictureBox38.TabStop = False
         '
         'Button3
         '
@@ -2203,94 +2408,62 @@ Partial Class home
         Me.Button3.TabIndex = 6
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Label1
+        'PictureBox42
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(58, 157)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(140, 24)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Total Products :"
+        Me.PictureBox42.BackColor = System.Drawing.Color.LightGray
+        Me.PictureBox42.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox42.Location = New System.Drawing.Point(-1, 1)
+        Me.PictureBox42.Name = "PictureBox42"
+        Me.PictureBox42.Size = New System.Drawing.Size(162, 55)
+        Me.PictureBox42.TabIndex = 22
+        Me.PictureBox42.TabStop = False
         '
-        'Label2
+        'PictureBox43
         '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(200, 157)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 25)
-        Me.Label2.TabIndex = 9
+        Me.PictureBox43.BackColor = System.Drawing.Color.LightGray
+        Me.PictureBox43.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox43.Location = New System.Drawing.Point(166, 1)
+        Me.PictureBox43.Name = "PictureBox43"
+        Me.PictureBox43.Size = New System.Drawing.Size(196, 55)
+        Me.PictureBox43.TabIndex = 23
+        Me.PictureBox43.TabStop = False
         '
-        'PictureBox38
+        'PictureBox44
         '
-        Me.PictureBox38.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox38.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.Home_Icon
-        Me.PictureBox38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox38.Location = New System.Drawing.Point(56, 36)
-        Me.PictureBox38.Name = "PictureBox38"
-        Me.PictureBox38.Size = New System.Drawing.Size(63, 58)
-        Me.PictureBox38.TabIndex = 10
-        Me.PictureBox38.TabStop = False
+        Me.PictureBox44.BackColor = System.Drawing.Color.LightGray
+        Me.PictureBox44.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox44.Location = New System.Drawing.Point(667, 1)
+        Me.PictureBox44.Name = "PictureBox44"
+        Me.PictureBox44.Size = New System.Drawing.Size(142, 55)
+        Me.PictureBox44.TabIndex = 24
+        Me.PictureBox44.TabStop = False
         '
-        'PictureBox39
+        'PictureBox45
         '
-        Me.PictureBox39.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox39.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.Cart_Icon
-        Me.PictureBox39.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox39.Location = New System.Drawing.Point(795, 40)
-        Me.PictureBox39.Name = "PictureBox39"
-        Me.PictureBox39.Size = New System.Drawing.Size(63, 50)
-        Me.PictureBox39.TabIndex = 11
-        Me.PictureBox39.TabStop = False
-        '
-        'usericon
-        '
-        Me.usericon.BackColor = System.Drawing.Color.Transparent
-        Me.usericon.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.User_Icon
-        Me.usericon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.usericon.Location = New System.Drawing.Point(873, 36)
-        Me.usericon.Name = "usericon"
-        Me.usericon.Size = New System.Drawing.Size(63, 58)
-        Me.usericon.TabIndex = 12
-        Me.usericon.TabStop = False
-        '
-        'PictureBox41
-        '
-        Me.PictureBox41.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox41.BackgroundImage = CType(resources.GetObject("PictureBox41.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox41.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox41.Location = New System.Drawing.Point(341, 36)
-        Me.PictureBox41.Name = "PictureBox41"
-        Me.PictureBox41.Size = New System.Drawing.Size(312, 85)
-        Me.PictureBox41.TabIndex = 14
-        Me.PictureBox41.TabStop = False
-        '
-        'Timer1
-        '
-        '
-        'Button1
-        '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(417, 594)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(150, 30)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.PictureBox45.BackColor = System.Drawing.Color.LightGray
+        Me.PictureBox45.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox45.Location = New System.Drawing.Point(813, 1)
+        Me.PictureBox45.Name = "PictureBox45"
+        Me.PictureBox45.Size = New System.Drawing.Size(168, 55)
+        Me.PictureBox45.TabIndex = 25
+        Me.PictureBox45.TabStop = False
         '
         'home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.Home_Form
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(984, 661)
+        Me.Controls.Add(Me.Label114)
+        Me.Controls.Add(Me.Label113)
+        Me.Controls.Add(Me.usericon)
+        Me.Controls.Add(Me.MenuStrip4)
+        Me.Controls.Add(Me.PictureBox39)
+        Me.Controls.Add(Me.MenuStrip3)
+        Me.Controls.Add(Me.PictureBox40)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox41)
-        Me.Controls.Add(Me.usericon)
-        Me.Controls.Add(Me.PictureBox39)
         Me.Controls.Add(Me.PictureBox38)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -2298,6 +2471,11 @@ Partial Class home
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.MenuStrip2)
+        Me.Controls.Add(Me.PictureBox42)
+        Me.Controls.Add(Me.PictureBox43)
+        Me.Controls.Add(Me.PictureBox44)
+        Me.Controls.Add(Me.PictureBox45)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
@@ -2347,10 +2525,21 @@ Partial Class home
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip2.ResumeLayout(False)
+        Me.MenuStrip2.PerformLayout()
+        Me.MenuStrip3.ResumeLayout(False)
+        Me.MenuStrip3.PerformLayout()
+        Me.MenuStrip4.ResumeLayout(False)
+        Me.MenuStrip4.PerformLayout()
         CType(Me.usericon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox43, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox44, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2534,4 +2723,17 @@ Partial Class home
     Friend WithEvents Label96 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Button1 As Button
+    Friend WithEvents PictureBox40 As PictureBox
+    Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MenuStrip2 As MenuStrip
+    Friend WithEvents MenuStrip3 As MenuStrip
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents MenuStrip4 As MenuStrip
+    Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents Label113 As Label
+    Friend WithEvents Label114 As Label
+    Friend WithEvents PictureBox42 As PictureBox
+    Friend WithEvents PictureBox43 As PictureBox
+    Friend WithEvents PictureBox44 As PictureBox
+    Friend WithEvents PictureBox45 As PictureBox
 End Class

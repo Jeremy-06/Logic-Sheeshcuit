@@ -704,5 +704,17 @@
   <ItemGroup>
     <None Include="Resources\User Dark Theme.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home Form1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Products Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home Form2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home Form3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
