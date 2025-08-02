@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class userprofile
+Public Class customerprofile
     ' Database connection objects
     Private conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
     Private cmd As MySqlCommand
@@ -82,7 +82,5 @@ Public Class userprofile
 
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
 
-    End Sub
 End Class
