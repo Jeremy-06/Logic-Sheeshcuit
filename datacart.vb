@@ -44,7 +44,7 @@ Public Class datacart
         LoadInventoryData()
     End Sub
 
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs)
         Try
             If e.RowIndex >= 0 Then
                 Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
