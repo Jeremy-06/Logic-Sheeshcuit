@@ -8,46 +8,50 @@ Public Class datainventory
     Dim query As String
 
     Private Sub datainventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        PopulateCategoryComboBox()
-        PopulateSupplierComboBox()
+        'PopulateCategoryComboBox()
+        'PopulateSupplierComboBox()
         LoadInventoryData()
+
+        ' Add event handlers to maintain highlighting
+        AddHandler DataGridView1.Sorted, AddressOf DataGridView1_Sorted
+        AddHandler DataGridView1.DataSourceChanged, AddressOf DataGridView1_DataSourceChanged
     End Sub
 
-    Private Sub PopulateCategoryComboBox()
-        Try
-            ComboBox1.Items.Clear()
-            conn.Open()
-            query = "SELECT category FROM productCategories ORDER BY category"
-            cmd = New MySqlCommand(query, conn)
-            Dim reader As MySqlDataReader = cmd.ExecuteReader()
-            While reader.Read()
-                ComboBox1.Items.Add(reader("category").ToString())
-            End While
-            reader.Close()
-            conn.Close()
-        Catch ex As Exception
-            MessageBox.Show("Error loading categories: " & ex.Message)
-            If conn.State = ConnectionState.Open Then conn.Close()
-        End Try
-    End Sub
+    'Private Sub PopulateCategoryComboBox()
+    '    Try
+    '        ComboBox1.Items.Clear()
+    '        conn.Open()
+    '        query = "SELECT category FROM productCategories ORDER BY category"
+    '        cmd = New MySqlCommand(query, conn)
+    '        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+    '        While reader.Read()
+    '            ComboBox1.Items.Add(reader("category").ToString())
+    '        End While
+    '        reader.Close()
+    '        conn.Close()
+    '    Catch ex As Exception
+    '        MessageBox.Show("Error loading categories: " & ex.Message)
+    '        If conn.State = ConnectionState.Open Then conn.Close()
+    '    End Try
+    'End Sub
 
-    Private Sub PopulateSupplierComboBox()
-        Try
-            ComboBox2.Items.Clear()
-            conn.Open()
-            query = "SELECT supplierName FROM suppliers ORDER BY supplierName"
-            cmd = New MySqlCommand(query, conn)
-            Dim reader As MySqlDataReader = cmd.ExecuteReader()
-            While reader.Read()
-                ComboBox2.Items.Add(reader("supplierName").ToString())
-            End While
-            reader.Close()
-            conn.Close()
-        Catch ex As Exception
-            MessageBox.Show("Error loading suppliers: " & ex.Message)
-            If conn.State = ConnectionState.Open Then conn.Close()
-        End Try
-    End Sub
+    'Private Sub PopulateSupplierComboBox()
+    '    Try
+    '        ComboBox2.Items.Clear()
+    '        conn.Open()
+    '        query = "SELECT supplierName FROM suppliers ORDER BY supplierName"
+    '        cmd = New MySqlCommand(query, conn)
+    '        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+    '        While reader.Read()
+    '            ComboBox2.Items.Add(reader("supplierName").ToString())
+    '        End While
+    '        reader.Close()
+    '        conn.Close()
+    '    Catch ex As Exception
+    '        MessageBox.Show("Error loading suppliers: " & ex.Message)
+    '        If conn.State = ConnectionState.Open Then conn.Close()
+    '    End Try
+    'End Sub
 
     Private Sub LoadInventoryData()
         Try
@@ -66,7 +70,7 @@ Public Class datainventory
             ds = New DataSet()
             da.Fill(ds, "Inventory")
             DataGridView1.DataSource = ds.Tables("Inventory")
-            
+
             ' Set formal column headers
             DataGridView1.Columns(0).HeaderText = "Product ID"
             DataGridView1.Columns(1).HeaderText = "Product Name"
@@ -77,221 +81,255 @@ Public Class datainventory
             DataGridView1.Columns(6).HeaderText = "Product Stock"
             DataGridView1.Columns(7).HeaderText = "Supplier ID"
             DataGridView1.Columns(8).HeaderText = "Supplier Name"
-            
+
+            HighlightLowStockItems()
+
             conn.Close()
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         End Try
+    End Sub
+
+    ' Highlights rows with stock < 10 in light red
+    Private Sub HighlightLowStockItems()
+        Try
+            For Each row As DataGridViewRow In DataGridView1.Rows
+                If Not row.IsNewRow AndAlso row.Cells.Count > 6 Then
+                    Dim stockValue As Object = row.Cells(6).Value
+
+                    If stockValue IsNot Nothing AndAlso IsNumeric(stockValue) Then
+                        Dim stock As Integer = Convert.ToInt32(stockValue)
+
+                        If stock < 10 Then
+                            row.DefaultCellStyle.BackColor = Color.LightCoral
+                        Else
+                            row.DefaultCellStyle.BackColor = Color.White
+                        End If
+                    End If
+                End If
+            Next
+        Catch ex As Exception
+            MessageBox.Show("Error highlighting low stock items: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub DataGridView1_Sorted(sender As Object, e As EventArgs)
+        HighlightLowStockItems()
+    End Sub
+
+    Private Sub DataGridView1_DataSourceChanged(sender As Object, e As EventArgs)
+        HighlightLowStockItems()
     End Sub
 
     Private Sub RefreshData()
         LoadInventoryData()
+        HighlightLowStockItems()
     End Sub
 
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        Try
-            If e.RowIndex >= 0 Then
-                Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
-                TextBox1.Text = row.Cells(0).Value.ToString() ' inventoryId
-                TextBox2.Text = row.Cells(1).Value.ToString() ' productId
-                TextBox3.Text = row.Cells(2).Value.ToString() ' productName
-                ComboBox2.Text = row.Cells(3).Value.ToString() ' category
-                TextBox4.Text = row.Cells(4).Value.ToString() ' productPrice
-                TextBox5.Text = row.Cells(5).Value.ToString() ' productStock
-                ComboBox1.Text = row.Cells(6).Value.ToString() ' supplierName 
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-        End Try
-    End Sub
+    'Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs)
+    '    Try
+    '        If e.RowIndex >= 0 Then
+    '            Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+    '            TextBox1.Text = row.Cells(0).Value.ToString() ' inventoryId
+    '            TextBox2.Text = row.Cells(1).Value.ToString() ' productId
+    '            TextBox3.Text = row.Cells(2).Value.ToString() ' productName
+    '            ComboBox2.Text = row.Cells(3).Value.ToString() ' category
+    '            TextBox4.Text = row.Cells(4).Value.ToString() ' productPrice
+    '            TextBox5.Text = row.Cells(5).Value.ToString() ' productStock
+    '            ComboBox1.Text = row.Cells(6).Value.ToString() ' supplierName 
+    '        End If
+    '    Catch ex As Exception
+    '        MessageBox.Show("Error: " & ex.Message)
+    '    End Try
+    'End Sub
 
-    ' INSERT
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Try
-            If String.IsNullOrWhiteSpace(ComboBox1.Text) OrElse
-               String.IsNullOrWhiteSpace(ComboBox2.Text) OrElse
-               String.IsNullOrWhiteSpace(TextBox3.Text) OrElse
-               String.IsNullOrWhiteSpace(TextBox4.Text) OrElse
-               String.IsNullOrWhiteSpace(TextBox5.Text) Then
-                MessageBox.Show("Please fill in all fields before inserting.")
-                Exit Sub
-            End If
+    '' INSERT
+    'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    '    Try
+    '        If String.IsNullOrWhiteSpace(ComboBox1.Text) OrElse
+    '           String.IsNullOrWhiteSpace(ComboBox2.Text) OrElse
+    '           String.IsNullOrWhiteSpace(TextBox3.Text) OrElse
+    '           String.IsNullOrWhiteSpace(TextBox4.Text) OrElse
+    '           String.IsNullOrWhiteSpace(TextBox5.Text) Then
+    '            MessageBox.Show("Please fill in all fields before inserting.")
+    '            Exit Sub
+    '        End If
 
-            conn.Open()
-            Dim supplierName As String = ComboBox1.Text
-            Dim category As String = ComboBox2.Text
-            Dim productName As String = TextBox3.Text
-            Dim productPrice As String = TextBox4.Text
-            Dim productStock As String = TextBox5.Text
+    '        conn.Open()
+    '        Dim supplierName As String = ComboBox1.Text
+    '        Dim category As String = ComboBox2.Text
+    '        Dim productName As String = TextBox3.Text
+    '        Dim productPrice As String = TextBox4.Text
+    '        Dim productStock As String = TextBox5.Text
 
-            query = $"INSERT INTO products (productName, productPrice, productCategories_categoryId) 
-                      VALUES ('{productName}', '{productPrice}', 
-                      (SELECT categoryId FROM productCategories WHERE category = '{category}'))"
-            cmd = New MySqlCommand(query, conn)
-            cmd.ExecuteNonQuery()
+    '        query = $"INSERT INTO products (productName, productPrice, productCategories_categoryId) 
+    '                  VALUES ('{productName}', '{productPrice}', 
+    '                  (SELECT categoryId FROM productCategories WHERE category = '{category}'))"
+    '        cmd = New MySqlCommand(query, conn)
+    '        cmd.ExecuteNonQuery()
 
-            query = "SELECT LAST_INSERT_ID();"
-            cmd = New MySqlCommand(query, conn)
-            Dim newProductId As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+    '        query = "SELECT LAST_INSERT_ID();"
+    '        cmd = New MySqlCommand(query, conn)
+    '        Dim newProductId As Integer = Convert.ToInt32(cmd.ExecuteScalar())
 
-            query = $"INSERT INTO inventory (products_productId, suppliers_supplierId, productStock) 
-                      VALUES ({newProductId}, 
-                      (SELECT supplierId FROM suppliers WHERE supplierName = '{supplierName}'), 
-                      '{productStock}')"
-            cmd = New MySqlCommand(query, conn)
-            cmd.ExecuteNonQuery()
+    '        query = $"INSERT INTO inventory (products_productId, suppliers_supplierId, productStock) 
+    '                  VALUES ({newProductId}, 
+    '                  (SELECT supplierId FROM suppliers WHERE supplierName = '{supplierName}'), 
+    '                  '{productStock}')"
+    '        cmd = New MySqlCommand(query, conn)
+    '        cmd.ExecuteNonQuery()
 
-            MessageBox.Show("Product inserted successfully.")
-            conn.Close()
-            RefreshData()
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-            If conn.State = ConnectionState.Open Then conn.Close()
-        End Try
-    End Sub
+    '        MessageBox.Show("Product inserted successfully.")
+    '        conn.Close()
+    '        RefreshData()
+    '    Catch ex As Exception
+    '        MessageBox.Show("Error: " & ex.Message)
+    '        If conn.State = ConnectionState.Open Then conn.Close()
+    '    End Try
+    'End Sub
 
-    ' CLEAR
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        ComboBox1.SelectedIndex = -1
-        ComboBox2.SelectedIndex = -1
-        TextBox1.Clear()
-        TextBox2.Clear()
-        TextBox3.Clear()
-        TextBox4.Clear()
-        TextBox5.Clear()
-        TextBox6.Clear()
-        RefreshData()
-    End Sub
+    '' CLEAR
+    'Private Sub Button5_Click(sender As Object, e As EventArgs)
+    '    ComboBox1.SelectedIndex = -1
+    '    ComboBox2.SelectedIndex = -1
+    '    TextBox1.Clear()
+    '    TextBox2.Clear()
+    '    TextBox3.Clear()
+    '    TextBox4.Clear()
+    '    TextBox5.Clear()
+    '    TextBox6.Clear()
+    '    RefreshData()
+    'End Sub
 
-    ' UPDATE
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Try
-            If String.IsNullOrWhiteSpace(TextBox1.Text) OrElse
-               String.IsNullOrWhiteSpace(TextBox2.Text) OrElse
-               String.IsNullOrWhiteSpace(ComboBox1.Text) OrElse
-               String.IsNullOrWhiteSpace(ComboBox2.Text) OrElse
-               String.IsNullOrWhiteSpace(TextBox3.Text) OrElse
-               String.IsNullOrWhiteSpace(TextBox4.Text) OrElse
-               String.IsNullOrWhiteSpace(TextBox5.Text) Then
-                MessageBox.Show("Please select a product and fill in all fields before updating.")
-                Exit Sub
-            End If
+    '' UPDATE
+    'Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    '    Try
+    '        If String.IsNullOrWhiteSpace(TextBox1.Text) OrElse
+    '           String.IsNullOrWhiteSpace(TextBox2.Text) OrElse
+    '           String.IsNullOrWhiteSpace(ComboBox1.Text) OrElse
+    '           String.IsNullOrWhiteSpace(ComboBox2.Text) OrElse
+    '           String.IsNullOrWhiteSpace(TextBox3.Text) OrElse
+    '           String.IsNullOrWhiteSpace(TextBox4.Text) OrElse
+    '           String.IsNullOrWhiteSpace(TextBox5.Text) Then
+    '            MessageBox.Show("Please select a product and fill in all fields before updating.")
+    '            Exit Sub
+    '        End If
 
-            conn.Open()
-            ' Check if category exists
-            query = $"SELECT categoryId FROM productCategories WHERE category = '{ComboBox2.Text}'"
-            cmd = New MySqlCommand(query, conn)
-            Dim catId = cmd.ExecuteScalar()
-            If catId Is Nothing Then
-                MessageBox.Show("Selected category does not exist in the database.")
-                conn.Close()
-                Exit Sub
-            End If
+    '        conn.Open()
+    '        ' Check if category exists
+    '        query = $"SELECT categoryId FROM productCategories WHERE category = '{ComboBox2.Text}'"
+    '        cmd = New MySqlCommand(query, conn)
+    '        Dim catId = cmd.ExecuteScalar()
+    '        If catId Is Nothing Then
+    '            MessageBox.Show("Selected category does not exist in the database.")
+    '            conn.Close()
+    '            Exit Sub
+    '        End If
 
-            Dim inventoryId As String = TextBox1.Text
-            Dim productId As String = TextBox2.Text
-            Dim supplierName As String = ComboBox1.Text
-            ' category variable already set above (from ComboBox2.Text)
-            Dim productName As String = TextBox3.Text
-            Dim productPrice As String = TextBox4.Text
-            Dim productStock As String = TextBox5.Text
+    '        Dim inventoryId As String = TextBox1.Text
+    '        Dim productId As String = TextBox2.Text
+    '        Dim supplierName As String = ComboBox1.Text
+    '        ' category variable already set above (from ComboBox2.Text)
+    '        Dim productName As String = TextBox3.Text
+    '        Dim productPrice As String = TextBox4.Text
+    '        Dim productStock As String = TextBox5.Text
 
-            query = $"UPDATE products 
-                      SET productName = '{productName}', 
-                          productPrice = '{productPrice}', 
-                          productCategories_categoryId = {catId} 
-                      WHERE productId = {productId}"
-            cmd = New MySqlCommand(query, conn)
-            cmd.ExecuteNonQuery()
+    '        query = $"UPDATE products 
+    '                  SET productName = '{productName}', 
+    '                      productPrice = '{productPrice}', 
+    '                      productCategories_categoryId = {catId} 
+    '                  WHERE productId = {productId}"
+    '        cmd = New MySqlCommand(query, conn)
+    '        cmd.ExecuteNonQuery()
 
-            query = $"UPDATE inventory 
-                      SET suppliers_supplierId = (SELECT supplierId FROM suppliers WHERE supplierName = '{supplierName}'), 
-                          productStock = '{productStock}' 
-                      WHERE inventoryId = {inventoryId}"
-            cmd = New MySqlCommand(query, conn)
-            cmd.ExecuteNonQuery()
+    '        query = $"UPDATE inventory 
+    '                  SET suppliers_supplierId = (SELECT supplierId FROM suppliers WHERE supplierName = '{supplierName}'), 
+    '                      productStock = '{productStock}' 
+    '                  WHERE inventoryId = {inventoryId}"
+    '        cmd = New MySqlCommand(query, conn)
+    '        cmd.ExecuteNonQuery()
 
-            MessageBox.Show("Product updated successfully.")
-            conn.Close()
-            RefreshData()
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-            If conn.State = ConnectionState.Open Then conn.Close()
-        End Try
-    End Sub
+    '        MessageBox.Show("Product updated successfully.")
+    '        conn.Close()
+    '        RefreshData()
+    '    Catch ex As Exception
+    '        MessageBox.Show("Error: " & ex.Message)
+    '        If conn.State = ConnectionState.Open Then conn.Close()
+    '    End Try
+    'End Sub
 
-    ' DELETE
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Try
-            If String.IsNullOrWhiteSpace(TextBox2.Text) Then
-                MessageBox.Show("Please select a product to delete.")
-                Exit Sub
-            End If
+    '' DELETE
+    'Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    '    Try
+    '        If String.IsNullOrWhiteSpace(TextBox2.Text) Then
+    '            MessageBox.Show("Please select a product to delete.")
+    '            Exit Sub
+    '        End If
 
-            Dim inventoryId As String = TextBox1.Text
-            Dim productId As String = TextBox2.Text
-            Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete this product?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-            If result = DialogResult.No Then Exit Sub
+    '        Dim inventoryId As String = TextBox1.Text
+    '        Dim productId As String = TextBox2.Text
+    '        Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete this product?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+    '        If result = DialogResult.No Then Exit Sub
 
-            conn.Open()
-            query = $"DELETE FROM inventory WHERE inventoryId= {inventoryId}"
-            cmd = New MySqlCommand(query, conn)
-            cmd.ExecuteNonQuery()
+    '        conn.Open()
+    '        query = $"DELETE FROM inventory WHERE inventoryId= {inventoryId}"
+    '        cmd = New MySqlCommand(query, conn)
+    '        cmd.ExecuteNonQuery()
 
-            query = $"DELETE FROM products WHERE productId = {productId}"
-            cmd = New MySqlCommand(query, conn)
-            cmd.ExecuteNonQuery()
+    '        query = $"DELETE FROM products WHERE productId = {productId}"
+    '        cmd = New MySqlCommand(query, conn)
+    '        cmd.ExecuteNonQuery()
 
-            MessageBox.Show("Product deleted successfully.")
-            conn.Close()
-            RefreshData()
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-            If conn.State = ConnectionState.Open Then conn.Close()
-        End Try
-    End Sub
+    '        MessageBox.Show("Product deleted successfully.")
+    '        conn.Close()
+    '        RefreshData()
+    '    Catch ex As Exception
+    '        MessageBox.Show("Error: " & ex.Message)
+    '        If conn.State = ConnectionState.Open Then conn.Close()
+    '    End Try
+    'End Sub
 
-    ' SEARCH
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Try
-            Dim searchText As String = TextBox6.Text.Trim()
-            If String.IsNullOrWhiteSpace(searchText) Then
-                MessageBox.Show("Please enter a product name to search.")
-                Exit Sub
-            End If
+    '' SEARCH
+    'Private Sub Button4_Click(sender As Object, e As EventArgs)
+    '    Try
+    '        Dim searchText As String = TextBox6.Text.Trim()
+    '        If String.IsNullOrWhiteSpace(searchText) Then
+    '            MessageBox.Show("Please enter a product name to search.")
+    '            Exit Sub
+    '        End If
 
-            conn.Open()
-            query = "SELECT 
-                        p.productId, p.productName, p.productPrice,
-                        pc.categoryId, pc.category,
-                        i.inventoryId, i.productStock,
-                        s.supplierId, s.supplierName
-                     FROM products p
-                     JOIN productcategories pc ON p.productCategories_categoryId = pc.categoryId
-                     JOIN inventory i ON p.productId = i.products_productId
-                     JOIN suppliers s ON i.suppliers_supplierId = s.supplierId
-                     WHERE p.productName LIKE '%" & searchText & "%';"
-            cmd = New MySqlCommand(query, conn)
-            da = New MySqlDataAdapter(cmd)
-            ds = New DataSet()
-            da.Fill(ds, "products")
-            DataGridView1.DataSource = ds.Tables("products")
-            
-            ' Set formal column headers for search results
-            DataGridView1.Columns(0).HeaderText = "Product ID"
-            DataGridView1.Columns(1).HeaderText = "Product Name"
-            DataGridView1.Columns(2).HeaderText = "Product Price"
-            DataGridView1.Columns(3).HeaderText = "Category ID"
-            DataGridView1.Columns(4).HeaderText = "Category"
-            DataGridView1.Columns(5).HeaderText = "Inventory ID"
-            DataGridView1.Columns(6).HeaderText = "Product Stock"
-            DataGridView1.Columns(7).HeaderText = "Supplier ID"
-            DataGridView1.Columns(8).HeaderText = "Supplier Name"
-            
-            conn.Close()
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-            If conn.State = ConnectionState.Open Then conn.Close()
-        End Try
-    End Sub
+    '        conn.Open()
+    '        query = "SELECT 
+    '                    p.productId, p.productName, p.productPrice,
+    '                    pc.categoryId, pc.category,
+    '                    i.inventoryId, i.productStock,
+    '                    s.supplierId, s.supplierName
+    '                 FROM products p
+    '                 JOIN productcategories pc ON p.productCategories_categoryId = pc.categoryId
+    '                 JOIN inventory i ON p.productId = i.products_productId
+    '                 JOIN suppliers s ON i.suppliers_supplierId = s.supplierId
+    '                 WHERE p.productName LIKE '%" & searchText & "%';"
+    '        cmd = New MySqlCommand(query, conn)
+    '        da = New MySqlDataAdapter(cmd)
+    '        ds = New DataSet()
+    '        da.Fill(ds, "products")
+    '        DataGridView1.DataSource = ds.Tables("products")
+
+    '        ' Set formal column headers for search results
+    '        DataGridView1.Columns(0).HeaderText = "Product ID"
+    '        DataGridView1.Columns(1).HeaderText = "Product Name"
+    '        DataGridView1.Columns(2).HeaderText = "Product Price"
+    '        DataGridView1.Columns(3).HeaderText = "Category ID"
+    '        DataGridView1.Columns(4).HeaderText = "Category"
+    '        DataGridView1.Columns(5).HeaderText = "Inventory ID"
+    '        DataGridView1.Columns(6).HeaderText = "Product Stock"
+    '        DataGridView1.Columns(7).HeaderText = "Supplier ID"
+    '        DataGridView1.Columns(8).HeaderText = "Supplier Name"
+
+    '        conn.Close()
+    '    Catch ex As Exception
+    '        MessageBox.Show("Error: " & ex.Message)
+    '        If conn.State = ConnectionState.Open Then conn.Close()
+    '    End Try
+    'End Sub
 End Class
