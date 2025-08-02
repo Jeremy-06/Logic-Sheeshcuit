@@ -1,7 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class customerprofile
-    ' Database connection objects
     Private conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
     Private cmd As MySqlCommand
     Private da As MySqlDataAdapter
@@ -25,21 +24,18 @@ Public Class customerprofile
             reader = cmd.ExecuteReader()
 
             If reader.Read() Then
-                ' Set Label1 to Customer ID
-                customerIdlbl.Text = "Customer ID: " & reader.GetInt32("customerId").ToString()
+                customerIdlbl.Text = reader.GetInt32("customerId").ToString()
 
                 ' Set Label2 to First Name + Last Name (concatenated)
                 Dim firstName As String = reader.GetString("customerFname")
                 Dim lastName As String = reader.GetString("customerLname")
-                usernamelbl.Text = "Name: " & firstName & " " & lastName
+                usernamelbl.Text = firstName & " " & lastName
 
-                ' Set Label3 to Address
                 addresslbl.Text = "Address: " & reader.GetString("customerAddress")
 
-                ' Set Label4 to Phone
                 phonelbl.Text = "Phone: " & reader.GetString("customerPhone")
 
-                rolelbl.Text = login.userRole ' Display user role
+                rolelbl.Text = login.userRole
             Else
                 MessageBox.Show("Customer information not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
@@ -82,5 +78,7 @@ Public Class customerprofile
 
     End Sub
 
-
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
 End Class

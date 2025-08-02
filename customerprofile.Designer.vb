@@ -83,7 +83,7 @@ Partial Class customerprofile
         Me.usernamelbl.Name = "usernamelbl"
         Me.usernamelbl.Size = New System.Drawing.Size(212, 34)
         Me.usernamelbl.TabIndex = 3
-        Me.usernamelbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.usernamelbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'addresslbl
         '
@@ -327,7 +327,7 @@ Partial Class customerprofile
         Me.Button1.TabIndex = 26
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'userprofile
+        'customerprofile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -362,7 +362,7 @@ Partial Class customerprofile
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Name = "userprofile"
+        Me.Name = "customerprofile"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " "
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

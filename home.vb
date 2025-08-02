@@ -163,7 +163,7 @@ Public Class home
                 Return
             End If
 
-            userprofile.Show()
+            customerprofile.Show()
         Catch ex As Exception
             MessageBox.Show("Error checking user: " & ex.Message)
             login.Show()
