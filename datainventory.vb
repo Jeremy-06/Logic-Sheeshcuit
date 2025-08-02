@@ -10,11 +10,16 @@ Public Class datainventory
     Private Sub datainventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PopulateCategoryComboBox()
         PopulateSupplierComboBox()
+        PopulateSearchComboBox()
         LoadInventoryData()
 
         ' Add event handlers to maintain highlighting
         AddHandler DataGridView1.Sorted, AddressOf DataGridView1_Sorted
         AddHandler DataGridView1.DataSourceChanged, AddressOf DataGridView1_DataSourceChanged
+        
+        ' Add event handlers for numeric validation
+        AddHandler TextBox3.KeyPress, AddressOf TextBox3_KeyPress ' Product Price
+        AddHandler TextBox5.KeyPress, AddressOf TextBox5_KeyPress ' Product Stock
     End Sub
 
     Private Sub PopulateCategoryComboBox()
@@ -50,6 +55,19 @@ Public Class datainventory
         Catch ex As Exception
             MessageBox.Show("Error loading suppliers: " & ex.Message)
             If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Sub
+
+    Private Sub PopulateSearchComboBox()
+        Try
+            ComboBox3.Items.Clear()
+            ComboBox3.Items.Add("Product Name")
+            ComboBox3.Items.Add("Product ID")
+            ComboBox3.Items.Add("Category")
+            ComboBox3.Items.Add("Supplier Name")
+            ComboBox3.SelectedIndex = 0 ' Default to first item
+        Catch ex As Exception
+            MessageBox.Show("Error populating search combo box: " & ex.Message)
         End Try
     End Sub
 
@@ -103,7 +121,7 @@ Public Class datainventory
                         Dim stock As Integer = Convert.ToInt32(stockValue)
 
                         If stock < 10 Then
-                            row.DefaultCellStyle.BackColor = Color.LightCoral
+                            row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 230, 230) ' Pastel Red
                         Else
                             row.DefaultCellStyle.BackColor = Color.White
                         End If
@@ -132,6 +150,7 @@ Public Class datainventory
         ' Clear all inputs
         ComboBox1.SelectedIndex = -1
         ComboBox2.SelectedIndex = -1
+        ComboBox3.SelectedIndex = 0 ' Reset search type to default
         TextBox1.Clear()
         TextBox2.Clear()
         TextBox3.Clear()
@@ -444,46 +463,102 @@ Public Class datainventory
 
     ' SEARCH
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        ' Search button functionality (same as text changed)
+        TextBox6_TextChanged(sender, e)
+    End Sub
+
+    Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles TextBox6.TextChanged
+        ' Search functionality based on selected combo box item
         Try
-            Dim searchText As String = TextBox6.Text.Trim()
-            If String.IsNullOrWhiteSpace(searchText) Then
-                MessageBox.Show("Please enter a product name to search.")
-                Exit Sub
+            If Not String.IsNullOrEmpty(TextBox6.Text) Then
+                If conn.State <> ConnectionState.Open Then conn.Open()
+
+                Dim searchType As String = If(ComboBox3.SelectedItem IsNot Nothing, ComboBox3.SelectedItem.ToString(), "Product Name")
+                Dim searchCondition As String = ""
+
+                Select Case searchType
+                    Case "Product Name"
+                        searchCondition = $"p.productName LIKE '%{TextBox6.Text}%'"
+                    Case "Product ID"
+                        ' Only allow numbers for Product ID
+                        If IsNumeric(TextBox6.Text) Then
+                            searchCondition = $"p.productId = {TextBox6.Text}"
+                        Else
+                            MessageBox.Show("Product ID must be a number only.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            TextBox6.Text = ""
+                            If conn.State = ConnectionState.Open Then conn.Close()
+                            Return
+                        End If
+                    Case "Category"
+                        searchCondition = $"pc.category LIKE '%{TextBox6.Text}%'"
+                    Case "Supplier Name"
+                        searchCondition = $"s.supplierName LIKE '%{TextBox6.Text}%'"
+                    Case Else
+                        searchCondition = $"p.productName LIKE '%{TextBox6.Text}%'"
+                End Select
+
+                query = $"SELECT 
+                            p.productId, p.productName, p.productPrice,
+                            pc.categoryId, pc.category,
+                            i.inventoryId, i.productStock,
+                            s.supplierId, s.supplierName
+                         FROM products p
+                         JOIN productcategories pc ON p.productCategories_categoryId = pc.categoryId
+                         JOIN inventory i ON p.productId = i.products_productId
+                         JOIN suppliers s ON i.suppliers_supplierId = s.supplierId
+                         WHERE {searchCondition}
+                         ORDER BY p.productId;"
+                cmd = New MySqlCommand(query, conn)
+                da = New MySqlDataAdapter(cmd)
+                ds = New DataSet()
+                da.Fill(ds, "Inventory")
+                DataGridView1.DataSource = ds.Tables("Inventory")
+
+                ' Set formal column headers
+                DataGridView1.Columns(0).HeaderText = "Product ID"
+                DataGridView1.Columns(1).HeaderText = "Product Name"
+                DataGridView1.Columns(2).HeaderText = "Product Price"
+                DataGridView1.Columns(3).HeaderText = "Category ID"
+                DataGridView1.Columns(4).HeaderText = "Category"
+                DataGridView1.Columns(5).HeaderText = "Inventory ID"
+                DataGridView1.Columns(6).HeaderText = "Product Stock"
+                DataGridView1.Columns(7).HeaderText = "Supplier ID"
+                DataGridView1.Columns(8).HeaderText = "Supplier Name"
+
+                HighlightLowStockItems()
+                If conn.State = ConnectionState.Open Then conn.Close()
+            Else
+                LoadInventoryData()
             End If
-
-            If conn.State <> ConnectionState.Open Then conn.Open()
-            query = "SELECT 
-                        p.productId, p.productName, p.productPrice,
-                        pc.categoryId, pc.category,
-                        i.inventoryId, i.productStock,
-                        s.supplierId, s.supplierName
-                     FROM products p
-                     JOIN productcategories pc ON p.productCategories_categoryId = pc.categoryId
-                     JOIN inventory i ON p.productId = i.products_productId
-                     JOIN suppliers s ON i.suppliers_supplierId = s.supplierId
-                     WHERE p.productName LIKE '%" & searchText & "%';"
-            cmd = New MySqlCommand(query, conn)
-            da = New MySqlDataAdapter(cmd)
-            ds = New DataSet()
-            da.Fill(ds, "products")
-            DataGridView1.DataSource = ds.Tables("products")
-
-            ' Set formal column headers for search results
-            DataGridView1.Columns(0).HeaderText = "Product ID"
-            DataGridView1.Columns(1).HeaderText = "Product Name"
-            DataGridView1.Columns(2).HeaderText = "Product Price"
-            DataGridView1.Columns(3).HeaderText = "Category ID"
-            DataGridView1.Columns(4).HeaderText = "Category"
-            DataGridView1.Columns(5).HeaderText = "Inventory ID"
-            DataGridView1.Columns(6).HeaderText = "Product Stock"
-            DataGridView1.Columns(7).HeaderText = "Supplier ID"
-            DataGridView1.Columns(8).HeaderText = "Supplier Name"
-
-            HighlightLowStockItems()
-            If conn.State = ConnectionState.Open Then conn.Close()
         Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
+            MessageBox.Show("Error searching: " & ex.Message)
             If conn.State = ConnectionState.Open Then conn.Close()
         End Try
+    End Sub
+
+    Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
+        ' If there's text in the search box, perform search with new criteria
+        If Not String.IsNullOrEmpty(TextBox6.Text) Then
+            TextBox6_TextChanged(sender, e)
+        End If
+    End Sub
+
+    Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs)
+        ' Allow numbers, decimal point, backspace, and delete
+        If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) AndAlso e.KeyChar <> "."c Then
+            e.Handled = True
+        End If
+        
+        ' Allow only one decimal point
+        If e.KeyChar = "."c AndAlso DirectCast(sender, TextBox).Text.IndexOf("."c) > -1 Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TextBox5_KeyPress(sender As Object, e As KeyPressEventArgs)
+        ' Allow only numbers, backspace, and delete
+        If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then
+            e.Handled = True
+        End If
     End Sub
 End Class

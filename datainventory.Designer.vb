@@ -22,7 +22,7 @@ Partial Class datainventory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(datainventory))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -46,6 +46,7 @@ Partial Class datainventory
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -104,18 +105,18 @@ Partial Class datainventory
         Me.DataGridView1.AllowUserToResizeRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlText
-        Me.DataGridView1.Location = New System.Drawing.Point(44, 79)
+        Me.DataGridView1.Location = New System.Drawing.Point(45, 80)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
@@ -282,10 +283,10 @@ Partial Class datainventory
         '
         Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(401, 39)
+        Me.TextBox6.Location = New System.Drawing.Point(543, 39)
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(424, 29)
+        Me.TextBox6.Size = New System.Drawing.Size(282, 29)
         Me.TextBox6.TabIndex = 196
         '
         'PictureBox2
@@ -298,12 +299,24 @@ Partial Class datainventory
         Me.PictureBox2.TabIndex = 197
         Me.PictureBox2.TabStop = False
         '
+        'ComboBox3
+        '
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"Product Name", "Customer Name", "Order ID", "Status", "Month", "Year"})
+        Me.ComboBox3.Location = New System.Drawing.Point(402, 40)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(136, 28)
+        Me.ComboBox3.TabIndex = 202
+        '
         'datainventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(932, 611)
+        Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.TextBox6)
@@ -326,6 +339,7 @@ Partial Class datainventory
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -360,4 +374,5 @@ Partial Class datainventory
     Friend WithEvents Button4 As Button
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents ComboBox3 As ComboBox
 End Class
