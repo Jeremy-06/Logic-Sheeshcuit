@@ -26,20 +26,20 @@ Public Class userprofile
 
             If reader.Read() Then
                 ' Set Label1 to Customer ID
-                Label1.Text = "Customer ID: " & reader.GetInt32("customerId").ToString()
+                customerIdlbl.Text = "Customer ID: " & reader.GetInt32("customerId").ToString()
 
                 ' Set Label2 to First Name + Last Name (concatenated)
                 Dim firstName As String = reader.GetString("customerFname")
                 Dim lastName As String = reader.GetString("customerLname")
-                Label2.Text = "Name: " & firstName & " " & lastName
+                usernamelbl.Text = "Name: " & firstName & " " & lastName
 
                 ' Set Label3 to Address
-                Label3.Text = "Address: " & reader.GetString("customerAddress")
+                addresslbl.Text = "Address: " & reader.GetString("customerAddress")
 
                 ' Set Label4 to Phone
-                Label4.Text = "Phone: " & reader.GetString("customerPhone")
+                phonelbl.Text = "Phone: " & reader.GetString("customerPhone")
 
-                Label5.Text = login.userRole ' Display user role
+                rolelbl.Text = login.userRole ' Display user role
             Else
                 MessageBox.Show("Customer information not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
@@ -58,7 +58,7 @@ Public Class userprofile
         End Try
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.Hide()
     End Sub
 
@@ -72,5 +72,17 @@ Public Class userprofile
             Me.Hide()
             home.Button1.Visible = False
         End If
+    End Sub
+
+    Private Sub lighttheme_Click(sender As Object, e As EventArgs) Handles lightTheme.Click
+
+    End Sub
+
+    Private Sub darktheme_Click(sender As Object, e As EventArgs) Handles darkTheme.Click
+
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
     End Sub
 End Class

@@ -121,9 +121,6 @@
   <data name="Product_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 36.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DB_Reader_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DB Reader Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Product_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -132,9 +129,6 @@
   </data>
   <data name="Product_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Security_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Security Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Home Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -192,9 +186,6 @@
   </data>
   <data name="Product_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Schema_Maintainer_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Schema Maintainer Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Order Manager Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Order Manager Form1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,9 +271,6 @@
   <data name="DB Edit Data Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DB Edit Data Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Data_Editor_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Data Editor Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Product_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product 30.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -294,5 +282,29 @@
   </data>
   <data name="Inventory Manager Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inventory Manager Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Customer_Dark_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customer Dark Theme.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Customer_Light_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customer Light Theme.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dark_Back_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dark Back Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dark_Log_Out_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dark Log Out Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Light_Back_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Light Back Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Light_Log_Out_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Light Log Out Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User_Dark_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User Dark Theme.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User_Light_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User Light Theme.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

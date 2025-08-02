@@ -680,5 +680,29 @@
   <ItemGroup>
     <None Include="Resources\Inventory Manager Form.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Light Theme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer Dark Theme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer Light Theme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark Back Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark Log Out Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Light Back Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Light Log Out Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Dark Theme.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
