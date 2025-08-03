@@ -245,6 +245,12 @@
     <Compile Include="orders.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="productcategories.Designer.vb">
+      <DependentUpon>productcategories.vb</DependentUpon>
+    </Compile>
+    <Compile Include="productcategories.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="receipt.Designer.vb">
       <DependentUpon>receipt.vb</DependentUpon>
     </Compile>
@@ -328,6 +334,12 @@
       <DependentUpon>signup2.vb</DependentUpon>
     </Compile>
     <Compile Include="signup2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="suppliers.Designer.vb">
+      <DependentUpon>suppliers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="suppliers.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="switches.Designer.vb">
@@ -425,6 +437,9 @@
     <EmbeddedResource Include="orders.resx">
       <DependentUpon>orders.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="productcategories.resx">
+      <DependentUpon>productcategories.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="receipt.resx">
       <DependentUpon>receipt.vb</DependentUpon>
     </EmbeddedResource>
@@ -466,6 +481,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="signup2.resx">
       <DependentUpon>signup2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="suppliers.resx">
+      <DependentUpon>suppliers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="switches.resx">
       <DependentUpon>switches.vb</DependentUpon>
