@@ -2,108 +2,21 @@
 Imports System.Data
 
 Public Class salesreport
+    ' Database connection
     Private conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
     Private cmd As MySqlCommand
     Private da As MySqlDataAdapter
     Private ds As DataSet
 
     Private Sub salesreport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Set date constraints first
-        DateTimePicker1.MinDate = DateTime.Today.AddYears(-5) ' Allow up to 5 years in the past
-        DateTimePicker1.MaxDate = DateTime.Today ' Cannot select future dates
-        DateTimePicker2.MinDate = DateTime.Today.AddYears(-5) ' Allow up to 5 years in the past
-        DateTimePicker2.MaxDate = DateTime.Today ' Cannot select future dates
-
         ' Set default dates (current date and 30 days ago)
-        Dim defaultStartDate As DateTime = DateTime.Today.AddDays(-30)
-        Dim defaultEndDate As DateTime = DateTime.Today
-
-        ' Ensure dates are within allowed range
-        If defaultStartDate < DateTimePicker1.MinDate Then
-            defaultStartDate = DateTimePicker1.MinDate
-        End If
-        If defaultEndDate > DateTimePicker1.MaxDate Then
-            defaultEndDate = DateTimePicker1.MaxDate
-        End If
-
-        DateTimePicker1.Value = defaultStartDate
-        DateTimePicker2.Value = defaultEndDate
-
-        ' Set maximum date for DateTimePicker2 to 30 days after DateTimePicker1
-        DateTimePicker2.MaxDate = DateTimePicker1.Value.AddDays(30)
-
-        ' Initialize ComboBoxes
-        LoadMonthComboBoxes()
-        LoadYearComboBoxes()
+        DateTimePicker1.Value = DateTime.Now.AddDays(-30)
+        DateTimePicker2.Value = DateTime.Now
 
         ' Set chart title
         Chart1.Titles.Clear()
         Chart1.Titles.Add("Sales Report")
         Chart1.Titles(0).Font = New Font("Arial", 14, FontStyle.Bold)
-    End Sub
-
-    Private Sub LoadMonthComboBoxes()
-        ' Load months for ComboBox1 and ComboBox2
-        ComboBox1.Items.Clear()
-        ComboBox2.Items.Clear()
-
-        Dim months As String() = {"January", "February", "March", "April", "May", "June",
-                                 "July", "August", "September", "October", "November", "December"}
-
-        For Each monthItem In months
-            ComboBox1.Items.Add(monthItem)
-            ComboBox2.Items.Add(monthItem)
-        Next
-
-        ' Set default selections
-        ComboBox1.SelectedIndex = DateTime.Now.Month - 1 ' Current month
-        ComboBox2.SelectedIndex = DateTime.Now.Month - 1 ' Current month
-    End Sub
-
-    Private Sub LoadYearComboBoxes()
-        ' Load years for ComboBox3 (current year and 2 years before)
-        ComboBox3.Items.Clear()
-        Dim currentYear As Integer = DateTime.Now.Year
-        For i As Integer = currentYear - 2 To currentYear
-            ComboBox3.Items.Add(i.ToString())
-        Next
-
-        ' Set default selection to current year
-        ComboBox3.SelectedIndex = 2 ' Current year (index 2: currentYear-2, currentYear-1, currentYear)
-
-        ' Load years for ComboBox4 based on ComboBox3 selection
-        LoadYearComboBox4()
-    End Sub
-
-    Private Sub LoadYearComboBox4()
-        ComboBox4.Items.Clear()
-
-        If ComboBox3.SelectedItem IsNot Nothing Then
-            Dim selectedYear As Integer = Convert.ToInt32(ComboBox3.SelectedItem.ToString())
-
-            ' Add 4 years ahead from the year AFTER the selected year in ComboBox3
-            For i As Integer = selectedYear + 1 To selectedYear + 4
-                ComboBox4.Items.Add(i.ToString())
-            Next
-
-            ' Set default selection to the first year in the range (year after selected year)
-            ComboBox4.SelectedIndex = 0 ' First year in the range
-        End If
-    End Sub
-
-    Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
-        ' When ComboBox3 selection changes, update ComboBox4
-        LoadYearComboBox4()
-    End Sub
-
-    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
-        ' Update DateTimePicker2 maximum date to 30 days after selected date
-        DateTimePicker2.MaxDate = DateTimePicker1.Value.AddDays(30)
-
-        ' If current DateTimePicker2 value exceeds the new maximum, adjust it
-        If DateTimePicker2.Value > DateTimePicker2.MaxDate Then
-            DateTimePicker2.Value = DateTimePicker2.MaxDate
-        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -171,14 +84,10 @@ Public Class salesreport
             ' Clear existing data points
             Chart1.Series("Daily Sales").Points.Clear()
 
-            ' Calculate total amount
-            Dim totalAmount As Decimal = 0
-
             ' Add data points to chart
             For Each row As DataRow In ds.Tables("DailySales").Rows
                 Dim saleDate As String = row("SaleDate").ToString()
                 Dim dailyTotal As Decimal = Convert.ToDecimal(row("DailyTotal"))
-                totalAmount += dailyTotal
 
                 ' Add point to chart
                 Dim point As New DataVisualization.Charting.DataPoint()
@@ -189,9 +98,6 @@ Public Class salesreport
 
                 Chart1.Series("Daily Sales").Points.Add(point)
             Next
-
-            ' Update TextBox1 with total amount
-            TextBox1.Text = $"₱{totalAmount:F2}"
 
             ' Format chart
             Chart1.ChartAreas("ChartArea1").AxisX.Title = "Date"
@@ -222,12 +128,6 @@ Public Class salesreport
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
-            ' Validate ComboBox selections
-            If ComboBox1.SelectedItem Is Nothing Or ComboBox2.SelectedItem Is Nothing Then
-                MessageBox.Show("Please select both start and end months.", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                Return
-            End If
-
             ' Clear existing chart data
             Chart1.Series.Clear()
             Chart1.ChartAreas.Clear()
@@ -244,7 +144,7 @@ Public Class salesreport
             series.Legend = "Legend1"
             Chart1.Series.Add(series)
 
-            ' Load monthly sales data based on ComboBox selections
+            ' Load monthly sales data for 2025
             LoadMonthlySalesData()
 
         Catch ex As Exception
@@ -256,37 +156,19 @@ Public Class salesreport
         Try
             If conn.State <> ConnectionState.Open Then conn.Open()
 
-            ' Get selected months
-            Dim startMonth As Integer = ComboBox1.SelectedIndex + 1 ' Convert to 1-based month number
-            Dim endMonth As Integer = ComboBox2.SelectedIndex + 1
-
-            ' SQL query to get monthly sales totals for selected month range
+            ' SQL query to get monthly sales totals for 2025
             Dim query As String = $"
                 SELECT 
                     MONTH(s.salesDate) AS SaleMonth,
-                    CASE MONTH(s.salesDate)
-                        WHEN 1 THEN 'January'
-                        WHEN 2 THEN 'February'
-                        WHEN 3 THEN 'March'
-                        WHEN 4 THEN 'April'
-                        WHEN 5 THEN 'May'
-                        WHEN 6 THEN 'June'
-                        WHEN 7 THEN 'July'
-                        WHEN 8 THEN 'August'
-                        WHEN 9 THEN 'September'
-                        WHEN 10 THEN 'October'
-                        WHEN 11 THEN 'November'
-                        WHEN 12 THEN 'December'
-                    END AS MonthName,
+                    MONTHNAME(s.salesDate) AS MonthName,
                     SUM(ROUND(oi.productQty * p.productPrice, 2)) AS MonthlyTotal
                 FROM sales s
                 JOIN orders o ON s.orderId = o.orderId
                 JOIN orderitems oi ON o.orderId = oi.orders_orderId
                 JOIN products p ON oi.products_productId = p.productId
                 WHERE LOWER(o.orderStatus) = 'completed'
-                AND MONTH(s.salesDate) >= {startMonth}
-                AND MONTH(s.salesDate) <= {endMonth}
-                GROUP BY MONTH(s.salesDate)
+                AND YEAR(s.salesDate) = 2025
+                GROUP BY MONTH(s.salesDate), MONTHNAME(s.salesDate)
                 ORDER BY SaleMonth"
 
             cmd = New MySqlCommand(query, conn)
@@ -297,28 +179,21 @@ Public Class salesreport
             ' Clear existing data points
             Chart1.Series("Monthly Sales").Points.Clear()
 
-            ' Calculate total amount
-            Dim totalAmount As Decimal = 0
-
             ' Add data points to chart
             For Each row As DataRow In ds.Tables("MonthlySales").Rows
                 Dim monthNumber As Integer = Convert.ToInt32(row("SaleMonth"))
-                Dim monthText As String = row("MonthName").ToString()
+                Dim monthName As String = row("MonthName").ToString()
                 Dim monthlyTotal As Decimal = Convert.ToDecimal(row("MonthlyTotal"))
-                totalAmount += monthlyTotal
 
                 ' Add point to chart
                 Dim point As New DataVisualization.Charting.DataPoint()
                 point.XValue = monthNumber
                 point.YValues = {CDbl(monthlyTotal)}
-                point.ToolTip = $"Month: {monthText}{Environment.NewLine}Total: ${monthlyTotal:F2}"
-                point.AxisLabel = monthText
+                point.ToolTip = $"Month: {monthName}{Environment.NewLine}Total: ${monthlyTotal:F2}"
+                point.AxisLabel = monthName
 
                 Chart1.Series("Monthly Sales").Points.Add(point)
             Next
-
-            ' Update TextBox1 with total amount
-            TextBox1.Text = $"₱{totalAmount:F2}"
 
             ' Format chart
             Chart1.ChartAreas("ChartArea1").AxisX.Title = "Month"
@@ -328,13 +203,13 @@ Public Class salesreport
             Chart1.ChartAreas("ChartArea1").AxisY.MajorGrid.LineColor = Color.LightGray
             Chart1.ChartAreas("ChartArea1").AxisY.LabelStyle.Format = "C0"
 
-            ' Set X-axis to show selected month range
-            Chart1.ChartAreas("ChartArea1").AxisX.Minimum = startMonth
-            Chart1.ChartAreas("ChartArea1").AxisX.Maximum = endMonth
+            ' Set X-axis to show all months (1-12)
+            Chart1.ChartAreas("ChartArea1").AxisX.Minimum = 1
+            Chart1.ChartAreas("ChartArea1").AxisX.Maximum = 12
 
             ' Set chart title
             Chart1.Titles.Clear()
-            Chart1.Titles.Add($"Monthly Sales Report ({ComboBox1.SelectedItem} to {ComboBox2.SelectedItem})")
+            Chart1.Titles.Add("Monthly Sales Report - 2025")
             Chart1.Titles(0).Font = New Font("Arial", 12, FontStyle.Bold)
 
             If conn.State = ConnectionState.Open Then conn.Close()
@@ -346,131 +221,14 @@ Public Class salesreport
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Try
-            ' Validate ComboBox selections
-            If ComboBox3.SelectedItem Is Nothing Or ComboBox4.SelectedItem Is Nothing Then
-                MessageBox.Show("Please select both start and end years.", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                Return
-            End If
-
-            ' Clear existing chart data
-            Chart1.Series.Clear()
-            Chart1.ChartAreas.Clear()
-            Chart1.Legends.Clear()
-
-            ' Add chart area and legend
-            Chart1.ChartAreas.Add("ChartArea1")
-            Chart1.Legends.Add("Legend1")
-
-            ' Create series for yearly sales
-            Dim series As New DataVisualization.Charting.Series("Yearly Sales")
-            series.ChartType = DataVisualization.Charting.SeriesChartType.Column
-            series.ChartArea = "ChartArea1"
-            series.Legend = "Legend1"
-            Chart1.Series.Add(series)
-
-            ' Load yearly sales data based on ComboBox selections
-            LoadYearlySalesData()
-
-        Catch ex As Exception
-            MessageBox.Show($"Error generating yearly sales chart: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub LoadYearlySalesData()
-        Try
-            If conn.State <> ConnectionState.Open Then conn.Open()
-
-            ' Get selected years
-            Dim startYear As Integer = Convert.ToInt32(ComboBox3.SelectedItem.ToString())
-            Dim endYear As Integer = Convert.ToInt32(ComboBox4.SelectedItem.ToString())
-
-            ' SQL query to get yearly sales totals for selected year range
-            Dim query As String = $"
-                SELECT 
-                    YEAR(s.salesDate) AS SaleYear,
-                    SUM(ROUND(oi.productQty * p.productPrice, 2)) AS YearlyTotal
-                FROM sales s
-                JOIN orders o ON s.orderId = o.orderId
-                JOIN orderitems oi ON o.orderId = oi.orders_orderId
-                JOIN products p ON oi.products_productId = p.productId
-                WHERE LOWER(o.orderStatus) = 'completed'
-                AND YEAR(s.salesDate) >= {startYear}
-                AND YEAR(s.salesDate) <= {endYear}
-                GROUP BY YEAR(s.salesDate)
-                ORDER BY SaleYear"
-
-            cmd = New MySqlCommand(query, conn)
-            da = New MySqlDataAdapter(cmd)
-            ds = New DataSet()
-            da.Fill(ds, "YearlySales")
-
-            ' Clear existing data points
-            Chart1.Series("Yearly Sales").Points.Clear()
-
-            ' Calculate total amount
-            Dim totalAmount As Decimal = 0
-
-            ' Add data points to chart
-            For Each row As DataRow In ds.Tables("YearlySales").Rows
-                Dim yearNumber As Integer = Convert.ToInt32(row("SaleYear"))
-                Dim yearlyTotal As Decimal = Convert.ToDecimal(row("YearlyTotal"))
-                totalAmount += yearlyTotal
-
-                ' Add point to chart
-                Dim point As New DataVisualization.Charting.DataPoint()
-                point.XValue = yearNumber
-                point.YValues = {CDbl(yearlyTotal)}
-                point.ToolTip = $"Year: {yearNumber}{Environment.NewLine}Total: ${yearlyTotal:F2}"
-                point.AxisLabel = yearNumber.ToString()
-
-                Chart1.Series("Yearly Sales").Points.Add(point)
-            Next
-
-            ' Update TextBox1 with total amount
-            TextBox1.Text = $"₱{totalAmount:F2}"
-
-            ' Format chart
-            Chart1.ChartAreas("ChartArea1").AxisX.Title = "Year"
-            Chart1.ChartAreas("ChartArea1").AxisY.Title = "Sales Amount ($)"
-            Chart1.ChartAreas("ChartArea1").AxisX.Interval = 1
-            Chart1.ChartAreas("ChartArea1").AxisX.MajorGrid.LineColor = Color.LightGray
-            Chart1.ChartAreas("ChartArea1").AxisY.MajorGrid.LineColor = Color.LightGray
-            Chart1.ChartAreas("ChartArea1").AxisY.LabelStyle.Format = "C0"
-
-            ' Set X-axis to show selected year range
-            Chart1.ChartAreas("ChartArea1").AxisX.Minimum = startYear
-            Chart1.ChartAreas("ChartArea1").AxisX.Maximum = endYear
-
-            ' Set chart title
-            Chart1.Titles.Clear()
-            Chart1.Titles.Add($"Yearly Sales Report ({startYear} - {endYear})")
-            Chart1.Titles(0).Font = New Font("Arial", 12, FontStyle.Bold)
-
-            If conn.State = ConnectionState.Open Then conn.Close()
-
-        Catch ex As Exception
-            MessageBox.Show($"Error loading yearly sales data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            If conn.State = ConnectionState.Open Then conn.Close()
-        End Try
-    End Sub
-
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         ' Clear the chart
         Chart1.Series.Clear()
         Chart1.ChartAreas.Clear()
         Chart1.Legends.Clear()
         Chart1.Titles.Clear()
 
-        ' Clear TextBox1
-        TextBox1.Text = ""
-
         ' Reset chart title
         Chart1.Titles.Add("Sales Report")
         Chart1.Titles(0).Font = New Font("Arial", 14, FontStyle.Bold)
-    End Sub
-
-    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
-
     End Sub
 End Class
