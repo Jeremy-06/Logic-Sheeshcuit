@@ -36,6 +36,14 @@ Public Class netincomereport
         LoadMonthComboBoxes()
         LoadYearComboBoxes()
 
+        ' Initialize ComboBoxes for Chart 2
+        LoadMonthComboBox5()
+        LoadYearComboBox6()
+
+        ' Initialize ComboBoxes for Chart 3
+        LoadMonthComboBox7()
+        LoadYearComboBox8()
+
         ' Initialize charts
         SetupCharts()
 
@@ -97,6 +105,44 @@ Public Class netincomereport
             ' Set default selection to the first year in the range (year after selected year)
             ComboBox4.SelectedIndex = 0 ' First year in the range
         End If
+    End Sub
+
+    Private Sub LoadMonthComboBox5()
+        ComboBox5.Items.Clear()
+        Dim months As String() = {"January", "February", "March", "April", "May", "June",
+                                 "July", "August", "September", "October", "November", "December"}
+        For Each monthItem In months
+            ComboBox5.Items.Add(monthItem)
+        Next
+        ComboBox5.SelectedIndex = DateTime.Now.Month - 1
+    End Sub
+
+    Private Sub LoadYearComboBox6()
+        ComboBox6.Items.Clear()
+        Dim currentYear As Integer = DateTime.Now.Year
+        For i As Integer = currentYear - 2 To currentYear
+            ComboBox6.Items.Add(i.ToString())
+        Next
+        ComboBox6.SelectedIndex = 2
+    End Sub
+
+    Private Sub LoadMonthComboBox7()
+        ComboBox7.Items.Clear()
+        Dim months As String() = {"January", "February", "March", "April", "May", "June",
+                                 "July", "August", "September", "October", "November", "December"}
+        For Each monthItem In months
+            ComboBox7.Items.Add(monthItem)
+        Next
+        ComboBox7.SelectedIndex = DateTime.Now.Month - 1
+    End Sub
+
+    Private Sub LoadYearComboBox8()
+        ComboBox8.Items.Clear()
+        Dim currentYear As Integer = DateTime.Now.Year
+        For i As Integer = currentYear - 2 To currentYear
+            ComboBox8.Items.Add(i.ToString())
+        Next
+        ComboBox8.SelectedIndex = 2
     End Sub
 
     Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
@@ -827,11 +873,324 @@ Public Class netincomereport
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        ' Clear the chart
+        Chart1.Series.Clear()
+        Chart1.ChartAreas.Clear()
+        Chart1.Legends.Clear()
+        Chart1.Titles.Clear()
 
+        ' Clear TextBoxes
+        If TextBox1 IsNot Nothing Then TextBox1.Text = ""
+        If TextBox2 IsNot Nothing Then TextBox2.Text = ""
+        If TextBox3 IsNot Nothing Then TextBox3.Text = ""
+
+        ' Reset chart title
+        Chart1.Titles.Add("Net Income Report")
+        Chart1.Titles(0).Font = New Font("Arial", 14, FontStyle.Bold)
     End Sub
 
     Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
         ' This can be used for additional validation if needed
+    End Sub
+
+    ' ===== CHART 2 CONTROLS (Expenses Breakdown) =====
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Try
+            LoadExpensesBreakdownDaily()
+
+            Chart2.Titles.Clear()
+            Chart2.Titles.Add($"Expenses Breakdown by Category ({DateTimePicker3.Value:MM/dd/yyyy})")
+            Chart2.Titles(0).Font = New Font("Arial", 12, FontStyle.Bold)
+
+        Catch ex As Exception
+            MessageBox.Show($"Error loading daily expenses breakdown: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Try
+            If ComboBox5.SelectedItem Is Nothing Then
+                MessageBox.Show("Please select a month.", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
+
+            Dim selectedMonth As Integer = ComboBox5.SelectedIndex + 1
+            Dim targetDate As DateTime = New DateTime(DateTime.Now.Year, selectedMonth, 1)
+
+            LoadExpensesBreakdownData(targetDate)
+
+            Chart2.Titles.Clear()
+            Chart2.Titles.Add($"Expenses Breakdown by Category ({ComboBox5.SelectedItem})")
+            Chart2.Titles(0).Font = New Font("Arial", 12, FontStyle.Bold)
+
+        Catch ex As Exception
+            MessageBox.Show($"Error loading monthly expenses breakdown: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Try
+            If ComboBox6.SelectedItem Is Nothing Then
+                MessageBox.Show("Please select a year.", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
+
+            Dim selectedYear As Integer = Convert.ToInt32(ComboBox6.SelectedItem.ToString())
+            LoadExpensesBreakdownYearly(selectedYear)
+
+            Chart2.Titles.Clear()
+            Chart2.Titles.Add($"Expenses Breakdown by Category ({selectedYear})")
+            Chart2.Titles(0).Font = New Font("Arial", 12, FontStyle.Bold)
+
+        Catch ex As Exception
+            MessageBox.Show($"Error loading yearly expenses breakdown: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub LoadExpensesBreakdownDaily()
+        Try
+            If conn.State <> ConnectionState.Open Then conn.Open()
+
+            Dim query As String = $"
+                SELECT 
+                    expenseCategory,
+                    SUM(ROUND(expenseAmount, 2)) AS CategoryTotal
+                FROM expenses
+                WHERE DATE(expenseDate) = '{DateTimePicker3.Value:yyyy-MM-dd}'
+                GROUP BY expenseCategory
+                ORDER BY CategoryTotal DESC"
+
+            cmd = New MySqlCommand(query, conn)
+            da = New MySqlDataAdapter(cmd)
+            ds = New DataSet()
+            da.Fill(ds, "ExpensesBreakdown")
+
+            Chart2.Series("Expenses").Points.Clear()
+
+            Dim colors() As Color = {Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue, Color.Purple, Color.Pink, Color.Brown}
+
+            Dim colorIndex As Integer = 0
+            For Each row As DataRow In ds.Tables("ExpensesBreakdown").Rows
+                Dim category As String = row("expenseCategory").ToString()
+                Dim categoryTotal As Decimal = Convert.ToDecimal(row("CategoryTotal"))
+
+                Dim point As New DataVisualization.Charting.DataPoint()
+                point.XValue = colorIndex
+                point.YValues = {CDbl(categoryTotal)}
+                point.ToolTip = $"Category: {category}{Environment.NewLine}Amount: ₱{categoryTotal:F2}"
+                point.LegendText = $"{category} - ₱{categoryTotal:F0}"
+                point.Color = colors(colorIndex Mod colors.Length)
+                point.Label = $"₱{categoryTotal:F0}"
+
+                Chart2.Series("Expenses").Points.Add(point)
+                colorIndex += 1
+            Next
+
+            If conn.State = ConnectionState.Open Then conn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show($"Error loading daily expenses breakdown: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Sub
+
+    Private Sub LoadExpensesBreakdownYearly(targetYear As Integer)
+        Try
+            If conn.State <> ConnectionState.Open Then conn.Open()
+
+            Dim query As String = $"
+                SELECT 
+                    expenseCategory,
+                    SUM(ROUND(expenseAmount, 2)) AS CategoryTotal
+                FROM expenses
+                WHERE YEAR(expenseDate) = {targetYear}
+                GROUP BY expenseCategory
+                ORDER BY CategoryTotal DESC"
+
+            cmd = New MySqlCommand(query, conn)
+            da = New MySqlDataAdapter(cmd)
+            ds = New DataSet()
+            da.Fill(ds, "ExpensesBreakdown")
+
+            Chart2.Series("Expenses").Points.Clear()
+
+            Dim colors() As Color = {Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue, Color.Purple, Color.Pink, Color.Brown}
+
+            Dim colorIndex As Integer = 0
+            For Each row As DataRow In ds.Tables("ExpensesBreakdown").Rows
+                Dim category As String = row("expenseCategory").ToString()
+                Dim categoryTotal As Decimal = Convert.ToDecimal(row("CategoryTotal"))
+
+                Dim point As New DataVisualization.Charting.DataPoint()
+                point.XValue = colorIndex
+                point.YValues = {CDbl(categoryTotal)}
+                point.ToolTip = $"Category: {category}{Environment.NewLine}Amount: ₱{categoryTotal:F2}"
+                point.LegendText = $"{category} - ₱{categoryTotal:F0}"
+                point.Color = colors(colorIndex Mod colors.Length)
+                point.Label = $"₱{categoryTotal:F0}"
+
+                Chart2.Series("Expenses").Points.Add(point)
+                colorIndex += 1
+            Next
+
+            If conn.State = ConnectionState.Open Then conn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show($"Error loading yearly expenses breakdown: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Sub
+
+    ' ===== CHART 3 CONTROLS (Sales by Product Category) =====
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Try
+            LoadSalesByCategoryDaily()
+
+            Chart3.Titles.Clear()
+            Chart3.Titles.Add($"Sales by Product Category ({DateTimePicker4.Value:MM/dd/yyyy})")
+            Chart3.Titles(0).Font = New Font("Arial", 12, FontStyle.Bold)
+
+        Catch ex As Exception
+            MessageBox.Show($"Error loading daily sales by category: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Try
+            If ComboBox7.SelectedItem Is Nothing Then
+                MessageBox.Show("Please select a month.", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
+
+            Dim selectedMonth As Integer = ComboBox7.SelectedIndex + 1
+            Dim targetDate As DateTime = New DateTime(DateTime.Now.Year, selectedMonth, 1)
+
+            LoadSalesByCategoryData(targetDate)
+
+            Chart3.Titles.Clear()
+            Chart3.Titles.Add($"Sales by Product Category ({ComboBox7.SelectedItem})")
+            Chart3.Titles(0).Font = New Font("Arial", 12, FontStyle.Bold)
+
+        Catch ex As Exception
+            MessageBox.Show($"Error loading monthly sales by category: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Try
+            If ComboBox8.SelectedItem Is Nothing Then
+                MessageBox.Show("Please select a year.", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
+
+            Dim selectedYear As Integer = Convert.ToInt32(ComboBox8.SelectedItem.ToString())
+            LoadSalesByCategoryYearly(selectedYear)
+
+            Chart3.Titles.Clear()
+            Chart3.Titles.Add($"Sales by Product Category ({selectedYear})")
+            Chart3.Titles(0).Font = New Font("Arial", 12, FontStyle.Bold)
+
+        Catch ex As Exception
+            MessageBox.Show($"Error loading yearly sales by category: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub LoadSalesByCategoryDaily()
+        Try
+            If conn.State <> ConnectionState.Open Then conn.Open()
+
+            Dim query As String = $"
+                SELECT 
+                    pc.category,
+                    SUM(ROUND(oi.productQty * p.productPrice, 2)) AS CategorySales
+                FROM sales s
+                JOIN orders o ON s.orderId = o.orderId
+                JOIN orderitems oi ON o.orderId = oi.orders_orderId
+                JOIN products p ON oi.products_productId = p.productId
+                JOIN productCategories pc ON p.productCategories_categoryId = pc.categoryId
+                WHERE LOWER(o.orderStatus) = 'completed'
+                AND DATE(s.salesDate) = '{DateTimePicker4.Value:yyyy-MM-dd}'
+                GROUP BY pc.category
+                ORDER BY CategorySales DESC"
+
+            cmd = New MySqlCommand(query, conn)
+            da = New MySqlDataAdapter(cmd)
+            ds = New DataSet()
+            da.Fill(ds, "SalesByCategory")
+
+            Chart3.Series("Sales by Category").Points.Clear()
+
+            Dim categoryIndex As Integer = 0
+            For Each row As DataRow In ds.Tables("SalesByCategory").Rows
+                Dim category As String = row("category").ToString()
+                Dim categorySales As Decimal = Convert.ToDecimal(row("CategorySales"))
+
+                Dim point As New DataVisualization.Charting.DataPoint()
+                point.XValue = categoryIndex
+                point.YValues = {CDbl(categorySales)}
+                point.ToolTip = $"Category: {category}{Environment.NewLine}Sales: ₱{categorySales:F2}"
+                point.AxisLabel = category
+                point.Label = $"₱{categorySales:F0}"
+
+                Chart3.Series("Sales by Category").Points.Add(point)
+                categoryIndex += 1
+            Next
+
+            If conn.State = ConnectionState.Open Then conn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show($"Error loading daily sales by category: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Sub
+
+    Private Sub LoadSalesByCategoryYearly(targetYear As Integer)
+        Try
+            If conn.State <> ConnectionState.Open Then conn.Open()
+
+            Dim query As String = $"
+                SELECT 
+                    pc.category,
+                    SUM(ROUND(oi.productQty * p.productPrice, 2)) AS CategorySales
+                FROM sales s
+                JOIN orders o ON s.orderId = o.orderId
+                JOIN orderitems oi ON o.orderId = oi.orders_orderId
+                JOIN products p ON oi.products_productId = p.productId
+                JOIN productCategories pc ON p.productCategories_categoryId = pc.categoryId
+                WHERE LOWER(o.orderStatus) = 'completed'
+                AND YEAR(s.salesDate) = {targetYear}
+                GROUP BY pc.category
+                ORDER BY CategorySales DESC"
+
+            cmd = New MySqlCommand(query, conn)
+            da = New MySqlDataAdapter(cmd)
+            ds = New DataSet()
+            da.Fill(ds, "SalesByCategory")
+
+            Chart3.Series("Sales by Category").Points.Clear()
+
+            Dim categoryIndex As Integer = 0
+            For Each row As DataRow In ds.Tables("SalesByCategory").Rows
+                Dim category As String = row("category").ToString()
+                Dim categorySales As Decimal = Convert.ToDecimal(row("CategorySales"))
+
+                Dim point As New DataVisualization.Charting.DataPoint()
+                point.XValue = categoryIndex
+                point.YValues = {CDbl(categorySales)}
+                point.ToolTip = $"Category: {category}{Environment.NewLine}Sales: ₱{categorySales:F2}"
+                point.AxisLabel = category
+                point.Label = $"₱{categorySales:F0}"
+
+                Chart3.Series("Sales by Category").Points.Add(point)
+                categoryIndex += 1
+            Next
+
+            If conn.State = ConnectionState.Open Then conn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show($"Error loading yearly sales by category: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
     End Sub
 
     ' ===== SAMPLE DATA METHODS FOR CHARTS 2 AND 3 =====
@@ -839,7 +1198,6 @@ Public Class netincomereport
         Try
             If conn.State <> ConnectionState.Open Then conn.Open()
 
-            ' SQL query to get expenses breakdown by category
             Dim query As String = $"
                 SELECT 
                     expenseCategory,
@@ -855,13 +1213,10 @@ Public Class netincomereport
             ds = New DataSet()
             da.Fill(ds, "ExpensesBreakdown")
 
-            ' Clear existing data points
             Chart2.Series("Expenses").Points.Clear()
 
-            ' Define colors for different categories
             Dim colors() As Color = {Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue, Color.Purple, Color.Pink, Color.Brown}
 
-            ' Add data points
             Dim colorIndex As Integer = 0
             For Each row As DataRow In ds.Tables("ExpensesBreakdown").Rows
                 Dim category As String = row("expenseCategory").ToString()
@@ -871,8 +1226,9 @@ Public Class netincomereport
                 point.XValue = colorIndex
                 point.YValues = {CDbl(categoryTotal)}
                 point.ToolTip = $"Category: {category}{Environment.NewLine}Amount: ₱{categoryTotal:F2}"
-                point.LegendText = category
+                point.LegendText = $"{category} - ₱{categoryTotal:F0}"
                 point.Color = colors(colorIndex Mod colors.Length)
+                point.Label = $"₱{categoryTotal:F0}"
 
                 Chart2.Series("Expenses").Points.Add(point)
                 colorIndex += 1

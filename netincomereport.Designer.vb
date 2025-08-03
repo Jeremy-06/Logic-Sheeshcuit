@@ -22,16 +22,16 @@ Partial Class netincomereport
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(netincomereport))
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
@@ -58,6 +58,25 @@ Partial Class netincomereport
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
+        Me.Panel12 = New System.Windows.Forms.Panel()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,31 +86,37 @@ Partial Class netincomereport
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel6.SuspendLayout()
+        Me.Panel7.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        Me.Panel9.SuspendLayout()
+        Me.Panel10.SuspendLayout()
+        Me.Panel11.SuspendLayout()
         Me.SuspendLayout()
         '
         'Chart1
         '
         Me.Chart1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Chart1.BorderlineColor = System.Drawing.SystemColors.Control
-        ChartArea4.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea4)
-        Legend4.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend4)
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
         Me.Chart1.Location = New System.Drawing.Point(48, 153)
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel
-        Series5.BorderWidth = 3
-        Series5.ChartArea = "ChartArea1"
-        Series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series5.Legend = "Legend1"
-        Series5.Name = "Series1"
-        Series6.BorderWidth = 3
-        Series6.ChartArea = "ChartArea1"
-        Series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series6.Legend = "Legend1"
-        Series6.Name = "Series2"
-        Me.Chart1.Series.Add(Series5)
-        Me.Chart1.Series.Add(Series6)
+        Series1.BorderWidth = 3
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Series2.BorderWidth = 3
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series2"
+        Me.Chart1.Series.Add(Series1)
+        Me.Chart1.Series.Add(Series2)
         Me.Chart1.Size = New System.Drawing.Size(613, 310)
         Me.Chart1.TabIndex = 0
         Me.Chart1.Text = "Chart1"
@@ -99,35 +124,36 @@ Partial Class netincomereport
         'Chart2
         '
         Me.Chart2.BackColor = System.Drawing.SystemColors.ControlLight
-        ChartArea5.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea5)
-        Legend5.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend5)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend2)
         Me.Chart2.Location = New System.Drawing.Point(48, 652)
         Me.Chart2.Name = "Chart2"
         Me.Chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel
-        Series7.ChartArea = "ChartArea1"
-        Series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
-        Series7.Legend = "Legend1"
-        Series7.Name = "Series1"
-        Me.Chart2.Series.Add(Series7)
-        Me.Chart2.Size = New System.Drawing.Size(613, 300)
+        Series3.ChartArea = "ChartArea1"
+        Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Me.Chart2.Series.Add(Series3)
+        Me.Chart2.Size = New System.Drawing.Size(613, 310)
         Me.Chart2.TabIndex = 1
         Me.Chart2.Text = "Chart2"
         '
         'Chart3
         '
-        ChartArea6.Name = "ChartArea1"
-        Me.Chart3.ChartAreas.Add(ChartArea6)
-        Legend6.Name = "Legend1"
-        Me.Chart3.Legends.Add(Legend6)
-        Me.Chart3.Location = New System.Drawing.Point(48, 1035)
+        Me.Chart3.BackColor = System.Drawing.SystemColors.ControlLight
+        ChartArea3.Name = "ChartArea1"
+        Me.Chart3.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.Chart3.Legends.Add(Legend3)
+        Me.Chart3.Location = New System.Drawing.Point(48, 1056)
         Me.Chart3.Name = "Chart3"
-        Series8.ChartArea = "ChartArea1"
-        Series8.Legend = "Legend1"
-        Series8.Name = "Series1"
-        Me.Chart3.Series.Add(Series8)
-        Me.Chart3.Size = New System.Drawing.Size(867, 300)
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        Me.Chart3.Series.Add(Series4)
+        Me.Chart3.Size = New System.Drawing.Size(613, 310)
         Me.Chart3.TabIndex = 2
         Me.Chart3.Text = "Chart3"
         '
@@ -369,6 +395,209 @@ Partial Class netincomereport
         Me.PictureBox2.TabIndex = 253
         Me.PictureBox2.TabStop = False
         '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel6.Controls.Add(Me.Button4)
+        Me.Panel6.Controls.Add(Me.DateTimePicker3)
+        Me.Panel6.Location = New System.Drawing.Point(688, 652)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(242, 100)
+        Me.Panel6.TabIndex = 254
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.SystemColors.Window
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(15, 50)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(212, 30)
+        Me.Button4.TabIndex = 234
+        Me.Button4.Text = "DAILY"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'DateTimePicker3
+        '
+        Me.DateTimePicker3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker3.Location = New System.Drawing.Point(15, 18)
+        Me.DateTimePicker3.MaxDate = New Date(2029, 12, 25, 0, 0, 0, 0)
+        Me.DateTimePicker3.MinDate = New Date(2025, 7, 1, 0, 0, 0, 0)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(212, 26)
+        Me.DateTimePicker3.TabIndex = 232
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.BackColor = System.Drawing.SystemColors.Window
+        Me.ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox5.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Location = New System.Drawing.Point(15, 16)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(212, 27)
+        Me.ComboBox5.TabIndex = 257
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.BackColor = System.Drawing.SystemColors.Window
+        Me.ComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox6.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Location = New System.Drawing.Point(15, 18)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(212, 27)
+        Me.ComboBox6.TabIndex = 256
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.SystemColors.Window
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Location = New System.Drawing.Point(703, 807)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(212, 30)
+        Me.Button5.TabIndex = 255
+        Me.Button5.Text = "MONTHLY"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel7.Controls.Add(Me.ComboBox5)
+        Me.Panel7.Location = New System.Drawing.Point(688, 758)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(242, 100)
+        Me.Panel7.TabIndex = 258
+        '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel8.Controls.Add(Me.Button6)
+        Me.Panel8.Controls.Add(Me.ComboBox6)
+        Me.Panel8.Location = New System.Drawing.Point(688, 864)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(242, 100)
+        Me.Panel8.TabIndex = 251
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.SystemColors.Window
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Location = New System.Drawing.Point(15, 51)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(212, 30)
+        Me.Button6.TabIndex = 236
+        Me.Button6.Text = "YEARLY"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel9.Controls.Add(Me.ComboBox8)
+        Me.Panel9.Controls.Add(Me.Button9)
+        Me.Panel9.Location = New System.Drawing.Point(688, 1268)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(242, 100)
+        Me.Panel9.TabIndex = 259
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.SystemColors.Window
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.Location = New System.Drawing.Point(15, 50)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(212, 30)
+        Me.Button7.TabIndex = 236
+        Me.Button7.Text = "DAILY"
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'ComboBox7
+        '
+        Me.ComboBox7.BackColor = System.Drawing.SystemColors.Window
+        Me.ComboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox7.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Location = New System.Drawing.Point(15, 16)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(212, 27)
+        Me.ComboBox7.TabIndex = 256
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.SystemColors.Window
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.Location = New System.Drawing.Point(703, 1211)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(212, 30)
+        Me.Button8.TabIndex = 261
+        Me.Button8.Text = "MONTHLY"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel10.Controls.Add(Me.ComboBox7)
+        Me.Panel10.Location = New System.Drawing.Point(688, 1162)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(242, 100)
+        Me.Panel10.TabIndex = 262
+        '
+        'ComboBox8
+        '
+        Me.ComboBox8.BackColor = System.Drawing.SystemColors.Window
+        Me.ComboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox8.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Location = New System.Drawing.Point(15, 18)
+        Me.ComboBox8.Name = "ComboBox8"
+        Me.ComboBox8.Size = New System.Drawing.Size(212, 27)
+        Me.ComboBox8.TabIndex = 257
+        '
+        'Panel11
+        '
+        Me.Panel11.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel11.Controls.Add(Me.DateTimePicker4)
+        Me.Panel11.Controls.Add(Me.Button7)
+        Me.Panel11.Location = New System.Drawing.Point(688, 1056)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(242, 100)
+        Me.Panel11.TabIndex = 260
+        '
+        'Button9
+        '
+        Me.Button9.BackColor = System.Drawing.SystemColors.Window
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button9.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.Location = New System.Drawing.Point(15, 51)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(212, 30)
+        Me.Button9.TabIndex = 234
+        Me.Button9.Text = "YEARLY"
+        Me.Button9.UseVisualStyleBackColor = False
+        '
+        'DateTimePicker4
+        '
+        Me.DateTimePicker4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker4.Location = New System.Drawing.Point(15, 18)
+        Me.DateTimePicker4.MaxDate = New Date(2029, 12, 25, 0, 0, 0, 0)
+        Me.DateTimePicker4.MinDate = New Date(2025, 7, 1, 0, 0, 0, 0)
+        Me.DateTimePicker4.Name = "DateTimePicker4"
+        Me.DateTimePicker4.Size = New System.Drawing.Size(212, 26)
+        Me.DateTimePicker4.TabIndex = 232
+        '
+        'Panel12
+        '
+        Me.Panel12.Location = New System.Drawing.Point(48, 1372)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(200, 100)
+        Me.Panel12.TabIndex = 263
+        '
         'netincomereport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -376,6 +605,15 @@ Partial Class netincomereport
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.MenuBar
         Me.ClientSize = New System.Drawing.Size(984, 661)
+        Me.Controls.Add(Me.Panel12)
+        Me.Controls.Add(Me.Panel9)
+        Me.Controls.Add(Me.Button8)
+        Me.Controls.Add(Me.Panel10)
+        Me.Controls.Add(Me.Panel11)
+        Me.Controls.Add(Me.Panel8)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Panel7)
+        Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox41)
         Me.Controls.Add(Me.ComboBox2)
@@ -406,6 +644,12 @@ Partial Class netincomereport
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel9.ResumeLayout(False)
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel11.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -435,4 +679,23 @@ Partial Class netincomereport
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Button4 As Button
+    Friend WithEvents DateTimePicker3 As DateTimePicker
+    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents Button7 As Button
+    Friend WithEvents ComboBox7 As ComboBox
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents ComboBox8 As ComboBox
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents Button9 As Button
+    Friend WithEvents DateTimePicker4 As DateTimePicker
+    Friend WithEvents Panel12 As Panel
 End Class

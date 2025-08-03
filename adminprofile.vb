@@ -27,35 +27,27 @@ Public Class adminprofile
                 conn.Open()
             End If
 
+            ' Get admin information using the logged-in admin ID
             query = $"SELECT adminId, fullName, email, phone, lastLogin, createdAt FROM admin_users WHERE adminId = {login.adminId}"
             cmd = New MySqlCommand(query, conn)
             reader = cmd.ExecuteReader()
 
             If reader.Read() Then
                 adminIdlbl.Text = reader.GetInt32("adminId").ToString()
-                usernamelbl.Text = reader.GetString("fullName")
-                emaillbl.Text = reader.GetString("email")
-                phonelbl.Text = reader.GetString("phone")
-                lastLoginlbl.Text = reader.GetString("lastLogin")
-                createdAtlbl.Text = reader.GetString("createdAt")
-                rolelbl.Text = login.userRole
 
-                ' Set textboxes
-                Dim names = reader.GetString("fullName").Split(" "c)
-                If names.Length > 1 Then
-                    firstNameTextBox.Text = names(0)
-                    LastNameTextBox.Text = String.Join(" ", names.Skip(1))
-                Else
-                    firstNameTextBox.Text = reader.GetString("fullName")
-                    LastNameTextBox.Text = ""
-                End If
-                EmailTextBox.Text = reader.GetString("email")
-                PhoneTextBox.Text = reader.GetString("phone")
+                ' Set Label2 to fullName with NULL checking
+                usernamelbl.Text = If(reader.IsDBNull("fullName"), "N/A", reader.GetString("fullName"))
+                emaillbl.Text = If(reader.IsDBNull("email"), "N/A", reader.GetString("email"))
+                phonelbl.Text = If(reader.IsDBNull("phone"), "N/A", reader.GetString("phone"))
+                lastLoginlbl.Text = If(reader.IsDBNull("lastLogin"), "N/A", reader.GetString("lastLogin"))
+                createdAtlbl.Text = If(reader.IsDBNull("createdAt"), "N/A", reader.GetString("createdAt"))
+                rolelbl.Text = login.userRole
             Else
                 MessageBox.Show("Admin information not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
 
             reader.Close()
+
         Catch ex As Exception
             MessageBox.Show("Error loading admin profile: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
@@ -70,16 +62,29 @@ Public Class adminprofile
 
     Private Sub SetTextBoxesFromLabels()
         ' Set textboxes from label values (if needed)
-        Dim names = usernamelbl.Text.Split(" "c)
-        If names.Length > 1 Then
-            firstNameTextBox.Text = names(0)
-            LastNameTextBox.Text = String.Join(" ", names.Skip(1))
-        Else
-            firstNameTextBox.Text = usernamelbl.Text
+        Try
+            If Not String.IsNullOrEmpty(usernamelbl.Text) AndAlso usernamelbl.Text <> "N/A" Then
+                Dim names = usernamelbl.Text.Split(" "c)
+                If names.Length > 1 Then
+                    firstNameTextBox.Text = names(0)
+                    LastNameTextBox.Text = String.Join(" ", names.Skip(1))
+                Else
+                    firstNameTextBox.Text = usernamelbl.Text
+                    LastNameTextBox.Text = ""
+                End If
+            Else
+                firstNameTextBox.Text = ""
+                LastNameTextBox.Text = ""
+            End If
+
+            EmailTextBox.Text = If(emaillbl.Text = "N/A", "", emaillbl.Text)
+            PhoneTextBox.Text = If(phonelbl.Text = "N/A", "", phonelbl.Text)
+        Catch ex As Exception
+            firstNameTextBox.Text = ""
             LastNameTextBox.Text = ""
-        End If
-        EmailTextBox.Text = emaillbl.Text
-        PhoneTextBox.Text = phonelbl.Text
+            EmailTextBox.Text = ""
+            PhoneTextBox.Text = ""
+        End Try
     End Sub
 
     Private Sub EditTextBox_KeyDown(sender As Object, e As KeyEventArgs)
@@ -199,13 +204,13 @@ Public Class adminprofile
     End Sub
 
     Private Sub ConfirmEditAndUpdate()
-        ' Get values from textboxes
-        Dim fullName As String = (firstNameTextBox.Text.Trim() & " " & LastNameTextBox.Text.Trim()).Trim()
+        Dim firstName As String = firstNameTextBox.Text.Trim()
+        Dim lastName As String = LastNameTextBox.Text.Trim()
         Dim email As String = EmailTextBox.Text.Trim()
         Dim phone As String = PhoneTextBox.Text.Trim()
 
         ' Update labels
-        usernamelbl.Text = fullName
+        usernamelbl.Text = If(lastName = "", firstName, firstName & " " & lastName)
         emaillbl.Text = email
         phonelbl.Text = phone
 
@@ -213,9 +218,7 @@ Public Class adminprofile
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-
-            ' Update admin_users table 
-            query = $"UPDATE admin_users SET fullName='{fullName}', email='{email}', phone='{phone}' WHERE adminId={Convert.ToInt32(adminIdlbl.Text)}"
+            query = $"UPDATE admin_users SET fullName='{firstName} {lastName}', email='{email}', phone='{phone}' WHERE adminId={adminIdlbl.Text}"
             cmd = New MySqlCommand(query, conn)
             cmd.ExecuteNonQuery()
 
@@ -230,8 +233,10 @@ Public Class adminprofile
 
         LoadAdminProfile()
         SetTextBoxesFromLabels()
+
         SetTextBoxesReadOnly(True)
         isEditing = False
+
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click

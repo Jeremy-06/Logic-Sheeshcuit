@@ -4,6 +4,7 @@ Imports System.Text
 
 Public Class login
     Public Shared customerId As Integer = 0
+    Public Shared adminId As Integer = 0
     Public Shared userRole As String = ""
 
     ' Database connection objects
@@ -61,29 +62,45 @@ Public Class login
 
             If reader.Read() Then
                 Dim userId As Integer = reader.GetInt32("userId")
-                Dim userRole As String = reader.GetString("userRole")
+                Dim userRoleValue As String = reader.GetString("userRole")
                 reader.Close()
 
                 ' Set the user role first
-                login.userRole = userRole
+                login.userRole = userRoleValue
 
                 ' Try to get customer ID from customers table (only for customer accounts)
-                If userRole.ToLower() = "customer" Then
+                If userRoleValue.ToLower() = "customer" Then
                     query = $"SELECT customerId FROM customers WHERE userId = {userId}"
                     cmd = New MySqlCommand(query, conn)
                     reader = cmd.ExecuteReader()
 
                     If reader.Read() Then
-                        customerId = reader.GetInt32("customerId") ' Set the shared variable
+                        login.customerId = reader.GetInt32("customerId") ' Set the shared variable
                         reader.Close()
                     Else
                         reader.Close()
                         MessageBox.Show("Customer information not found.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Return
                     End If
+                ElseIf userRoleValue.ToLower() = "admin" Then
+                    ' For admin accounts, get admin ID from admin_users table
+                    query = $"SELECT adminId FROM admin_users WHERE userId = {userId}"
+                    cmd = New MySqlCommand(query, conn)
+                    reader = cmd.ExecuteReader()
+
+                    If reader.Read() Then
+                        login.adminId = reader.GetInt32("adminId") ' Set the shared variable
+                        Console.WriteLine($"Debug: Admin ID set to: {login.adminId}")
+                        reader.Close()
+                    Else
+                        reader.Close()
+                        MessageBox.Show("Admin information not found.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Return
+                    End If
                 Else
-                    ' For non-customer accounts (admin, auditor, etc.), set customerId to 0
-                    customerId = 0
+                    ' For other roles (auditor, etc.), set both IDs to 0
+                    login.customerId = 0
+                    login.adminId = 0
                 End If
 
                 ' Enable admin button for non-customer roles
