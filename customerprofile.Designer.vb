@@ -31,26 +31,22 @@ Partial Class customerprofile
         Me.rolelbl = New System.Windows.Forms.Label()
         Me.lightTheme = New System.Windows.Forms.Button()
         Me.darkTheme = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.firstNameTextBox = New System.Windows.Forms.TextBox()
+        Me.lastNameTextBox = New System.Windows.Forms.TextBox()
+        Me.addressTextBox = New System.Windows.Forms.TextBox()
+        Me.phoneTextBox = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.editDatalbl = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.editDataIcon = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.editDataIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button2
@@ -139,37 +135,37 @@ Partial Class customerprofile
         Me.darkTheme.TabIndex = 8
         Me.darkTheme.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'firstNameTextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(114, 473)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 9
+        Me.firstNameTextBox.Location = New System.Drawing.Point(137, 474)
+        Me.firstNameTextBox.Multiline = True
+        Me.firstNameTextBox.Name = "firstNameTextBox"
+        Me.firstNameTextBox.Size = New System.Drawing.Size(181, 20)
+        Me.firstNameTextBox.TabIndex = 9
         '
-        'TextBox2
+        'lastNameTextBox
         '
-        Me.TextBox2.Location = New System.Drawing.Point(114, 507)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 10
+        Me.lastNameTextBox.Location = New System.Drawing.Point(137, 508)
+        Me.lastNameTextBox.Multiline = True
+        Me.lastNameTextBox.Name = "lastNameTextBox"
+        Me.lastNameTextBox.Size = New System.Drawing.Size(181, 20)
+        Me.lastNameTextBox.TabIndex = 10
         '
-        'TextBox3
+        'addressTextBox
         '
-        Me.TextBox3.Location = New System.Drawing.Point(114, 541)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 11
+        Me.addressTextBox.Location = New System.Drawing.Point(137, 542)
+        Me.addressTextBox.Multiline = True
+        Me.addressTextBox.Name = "addressTextBox"
+        Me.addressTextBox.Size = New System.Drawing.Size(181, 20)
+        Me.addressTextBox.TabIndex = 11
         '
-        'TextBox4
+        'phoneTextBox
         '
-        Me.TextBox4.Location = New System.Drawing.Point(114, 575)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 12
+        Me.phoneTextBox.Location = New System.Drawing.Point(137, 576)
+        Me.phoneTextBox.Multiline = True
+        Me.phoneTextBox.Name = "phoneTextBox"
+        Me.phoneTextBox.Size = New System.Drawing.Size(181, 20)
+        Me.phoneTextBox.TabIndex = 12
         '
         'Label6
         '
@@ -192,25 +188,25 @@ Partial Class customerprofile
         Me.PictureBox1.TabIndex = 14
         Me.PictureBox1.TabStop = False
         '
-        'Label7
+        'editDatalbl
         '
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Himalaya", 14.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label7.Location = New System.Drawing.Point(150, 437)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(64, 23)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "Edit Data"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.editDatalbl.BackColor = System.Drawing.Color.Transparent
+        Me.editDatalbl.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.editDatalbl.Font = New System.Drawing.Font("Microsoft Himalaya", 14.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.editDatalbl.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.editDatalbl.Location = New System.Drawing.Point(157, 437)
+        Me.editDatalbl.Name = "editDatalbl"
+        Me.editDatalbl.Size = New System.Drawing.Size(64, 23)
+        Me.editDatalbl.TabIndex = 15
+        Me.editDatalbl.Text = "Edit Data"
+        Me.editDatalbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(21, 474)
+        Me.Label8.Location = New System.Drawing.Point(44, 475)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(87, 16)
         Me.Label8.TabIndex = 16
@@ -222,7 +218,7 @@ Partial Class customerprofile
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(21, 508)
+        Me.Label9.Location = New System.Drawing.Point(44, 509)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(87, 16)
         Me.Label9.TabIndex = 17
@@ -234,7 +230,7 @@ Partial Class customerprofile
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(21, 542)
+        Me.Label10.Location = New System.Drawing.Point(44, 543)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(87, 16)
         Me.Label10.TabIndex = 18
@@ -246,70 +242,31 @@ Partial Class customerprofile
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(21, 576)
+        Me.Label11.Location = New System.Drawing.Point(44, 577)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(87, 16)
         Me.Label11.TabIndex = 19
         Me.Label11.Text = "Phone"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TextBox5
+        'editDataIcon
         '
-        Me.TextBox5.Location = New System.Drawing.Point(248, 500)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 21
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(248, 559)
-        Me.TextBox6.Multiline = True
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox6.TabIndex = 20
-        '
-        'Label12
-        '
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(255, 540)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(87, 16)
-        Me.Label12.TabIndex = 23
-        Me.Label12.Text = "Password"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label13
-        '
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(255, 481)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(87, 16)
-        Me.Label13.TabIndex = 22
-        Me.Label13.Text = "Username"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(209, 439)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(13, 13)
-        Me.PictureBox2.TabIndex = 24
-        Me.PictureBox2.TabStop = False
+        Me.editDataIcon.BackColor = System.Drawing.Color.Transparent
+        Me.editDataIcon.BackgroundImage = CType(resources.GetObject("editDataIcon.BackgroundImage"), System.Drawing.Image)
+        Me.editDataIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.editDataIcon.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.editDataIcon.Location = New System.Drawing.Point(216, 439)
+        Me.editDataIcon.Name = "editDataIcon"
+        Me.editDataIcon.Size = New System.Drawing.Size(13, 13)
+        Me.editDataIcon.TabIndex = 24
+        Me.editDataIcon.TabStop = False
         '
         'Label14
         '
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Microsoft Himalaya", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(102, 409)
+        Me.Label14.Location = New System.Drawing.Point(109, 409)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(182, 26)
         Me.Label14.TabIndex = 25
@@ -337,21 +294,17 @@ Partial Class customerprofile
         Me.ControlBox = False
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.editDataIcon)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.editDatalbl)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.phoneTextBox)
+        Me.Controls.Add(Me.addressTextBox)
+        Me.Controls.Add(Me.lastNameTextBox)
+        Me.Controls.Add(Me.firstNameTextBox)
         Me.Controls.Add(Me.darkTheme)
         Me.Controls.Add(Me.lightTheme)
         Me.Controls.Add(Me.rolelbl)
@@ -366,7 +319,7 @@ Partial Class customerprofile
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " "
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.editDataIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -379,22 +332,18 @@ Partial Class customerprofile
     Friend WithEvents rolelbl As Label
     Friend WithEvents lightTheme As Button
     Friend WithEvents darkTheme As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents firstNameTextBox As TextBox
+    Friend WithEvents lastNameTextBox As TextBox
+    Friend WithEvents addressTextBox As TextBox
+    Friend WithEvents phoneTextBox As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label7 As Label
+    Friend WithEvents editDatalbl As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents editDataIcon As PictureBox
     Friend WithEvents Label14 As Label
     Friend WithEvents Button1 As Button
 End Class
