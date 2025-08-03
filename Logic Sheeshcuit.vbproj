@@ -96,6 +96,12 @@
     <Compile Include="admin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="adminprofile.Designer.vb">
+      <DependentUpon>adminprofile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminprofile.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="auditor.Designer.vb">
       <DependentUpon>auditor.vb</DependentUpon>
     </Compile>
@@ -352,6 +358,9 @@
   <ItemGroup>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminprofile.resx">
+      <DependentUpon>adminprofile.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="auditor.resx">
       <DependentUpon>auditor.vb</DependentUpon>
@@ -652,9 +661,6 @@
     <None Include="Resources\Search Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Home Form.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Home Icon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -706,16 +712,10 @@
     <None Include="Resources\User Dark Theme.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Home Form1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Products Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Home Form2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Home Form3.png" />
+    <None Include="Resources\Home Form.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -62,7 +62,7 @@ Partial Class adminprofile
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Microsoft Himalaya", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(104, 408)
+        Me.Label14.Location = New System.Drawing.Point(103, 408)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(182, 26)
         Me.Label14.TabIndex = 51
@@ -163,7 +163,7 @@ Partial Class adminprofile
         Me.Label7.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.Label7.Font = New System.Drawing.Font("Microsoft Himalaya", 14.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label7.Location = New System.Drawing.Point(152, 436)
+        Me.Label7.Location = New System.Drawing.Point(151, 436)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(64, 23)
         Me.Label7.TabIndex = 41
@@ -306,7 +306,7 @@ Partial Class adminprofile
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(211, 438)
+        Me.PictureBox2.Location = New System.Drawing.Point(210, 438)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(13, 13)
         Me.PictureBox2.TabIndex = 50
