@@ -130,17 +130,112 @@ Public Class home
         End If
     End Sub
 
+    'Refresh Home
     Private Sub PictureBox38_Click(sender As Object, e As EventArgs) Handles PictureBox38.Click
-
+        Dim homeForm As New home()
+        homeForm.Show()
     End Sub
 
+    Private Sub PictureBox42_Click(sender As Object, e As EventArgs) Handles PictureBox42.Click
+        Dim homeForm As New home()
+        homeForm.Show()
+    End Sub
+
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        Dim homeForm As New home()
+        homeForm.Show()
+    End Sub
+
+    'Products
+    Private Sub PictureBox40_Click(sender As Object, e As EventArgs) Handles PictureBox40.Click
+        ProductsToolStripMenuItem.Select()
+        ProductsToolStripMenuItem.ShowDropDown()
+    End Sub
+
+    Private Sub PictureBox43_Click(sender As Object, e As EventArgs) Handles PictureBox43.Click
+        ProductsToolStripMenuItem.Select()
+        ProductsToolStripMenuItem.ShowDropDown()
+    End Sub
+
+    'Cart
     Private Sub PictureBox39_Click(sender As Object, e As EventArgs) Handles PictureBox39.Click
         Dim cartForm As New cart()
         cartForm.Show()
     End Sub
 
+    Private Sub PictureBox44_Click(sender As Object, e As EventArgs) Handles PictureBox44.Click
+        Dim cartForm As New cart()
+        cartForm.Show()
+    End Sub
+
+    Private Sub CartToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CartToolStripMenuItem.Click
+        Dim cartForm As New cart()
+        cartForm.Show()
+    End Sub
+
+    'Profile
     Private Sub usericon_Click(sender As Object, e As EventArgs) Handles usericon.Click
         ' Check if user is logged in and exists in the database
+        Try
+            If login.customerId <= 0 Then
+                MessageBox.Show("Please log in or sign up first to view your profile.")
+                login.Show()
+                Return
+            End If
+
+            ' Use the shared/public connection object (assumed declared outside the form)
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+
+            Dim query As String = $"SELECT COUNT(*) FROM customers WHERE customerId = {login.customerId}"
+            Dim cmd As New MySqlCommand(query, conn)
+            Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+            If count = 0 Then
+                MessageBox.Show("Please sign up first to view your profile.")
+                signup.Show()
+                Return
+            End If
+
+            customerprofile.Show()
+        Catch ex As Exception
+            MessageBox.Show("Error checking user: " & ex.Message)
+            login.Show()
+        End Try
+    End Sub
+
+    Private Sub PictureBox45_Click(sender As Object, e As EventArgs) Handles PictureBox45.Click
+        Try
+            If login.customerId <= 0 Then
+                MessageBox.Show("Please log in or sign up first to view your profile.")
+                login.Show()
+                Return
+            End If
+
+            ' Use the shared/public connection object (assumed declared outside the form)
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+
+            Dim query As String = $"SELECT COUNT(*) FROM customers WHERE customerId = {login.customerId}"
+            Dim cmd As New MySqlCommand(query, conn)
+            Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+            If count = 0 Then
+                MessageBox.Show("Please sign up first to view your profile.")
+                signup.Show()
+                Return
+            End If
+
+            customerprofile.Show()
+        Catch ex As Exception
+            MessageBox.Show("Error checking user: " & ex.Message)
+            login.Show()
+        End Try
+    End Sub
+
+    Private Sub ProfileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfileToolStripMenuItem.Click
         Try
             If login.customerId <= 0 Then
                 MessageBox.Show("Please log in or sign up first to view your profile.")

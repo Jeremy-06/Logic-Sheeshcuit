@@ -175,7 +175,7 @@ Partial Class home
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.PRODUCTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MakerlabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CircuitrocksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -200,9 +200,9 @@ Partial Class home
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.MenuStrip3 = New System.Windows.Forms.MenuStrip()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CartToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip4 = New System.Windows.Forms.MenuStrip()
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label113 = New System.Windows.Forms.Label()
         Me.Label114 = New System.Windows.Forms.Label()
         Me.usericon = New System.Windows.Forms.PictureBox()
@@ -2092,7 +2092,7 @@ Partial Class home
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip1.Font = New System.Drawing.Font("Cambria", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PRODUCTSToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(227, 12)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
@@ -2100,15 +2100,15 @@ Partial Class home
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'PRODUCTSToolStripMenuItem
+        'ProductsToolStripMenuItem
         '
-        Me.PRODUCTSToolStripMenuItem.BackColor = System.Drawing.Color.Transparent
-        Me.PRODUCTSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SupplierToolStripMenuItem, Me.CatToolStripMenuItem})
-        Me.PRODUCTSToolStripMenuItem.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PRODUCTSToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.PRODUCTSToolStripMenuItem.Name = "PRODUCTSToolStripMenuItem"
-        Me.PRODUCTSToolStripMenuItem.Size = New System.Drawing.Size(123, 33)
-        Me.PRODUCTSToolStripMenuItem.Text = "Products"
+        Me.ProductsToolStripMenuItem.BackColor = System.Drawing.Color.Transparent
+        Me.ProductsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SupplierToolStripMenuItem, Me.CatToolStripMenuItem})
+        Me.ProductsToolStripMenuItem.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProductsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ProductsToolStripMenuItem.Name = "ProductsToolStripMenuItem"
+        Me.ProductsToolStripMenuItem.Size = New System.Drawing.Size(123, 33)
+        Me.ProductsToolStripMenuItem.Text = "Products"
         '
         'SupplierToolStripMenuItem
         '
@@ -2281,19 +2281,19 @@ Partial Class home
         Me.MenuStrip3.BackColor = System.Drawing.Color.LightGray
         Me.MenuStrip3.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip3.Font = New System.Drawing.Font("SimSun", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
+        Me.MenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CartToolStripMenuItem})
         Me.MenuStrip3.Location = New System.Drawing.Point(723, 12)
         Me.MenuStrip3.Name = "MenuStrip3"
         Me.MenuStrip3.Size = New System.Drawing.Size(82, 34)
         Me.MenuStrip3.TabIndex = 18
         '
-        'ToolStripMenuItem1
+        'CartToolStripMenuItem
         '
-        Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(73, 30)
-        Me.ToolStripMenuItem1.Text = "Cart"
+        Me.CartToolStripMenuItem.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CartToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CartToolStripMenuItem.Name = "CartToolStripMenuItem"
+        Me.CartToolStripMenuItem.Size = New System.Drawing.Size(73, 30)
+        Me.CartToolStripMenuItem.Text = "Cart"
         '
         'MenuStrip4
         '
@@ -2301,19 +2301,19 @@ Partial Class home
         Me.MenuStrip4.BackColor = System.Drawing.Color.LightGray
         Me.MenuStrip4.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip4.Font = New System.Drawing.Font("SimSun", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
+        Me.MenuStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProfileToolStripMenuItem})
         Me.MenuStrip4.Location = New System.Drawing.Point(868, 12)
         Me.MenuStrip4.Name = "MenuStrip4"
         Me.MenuStrip4.Size = New System.Drawing.Size(109, 34)
         Me.MenuStrip4.TabIndex = 19
         '
-        'ToolStripMenuItem2
+        'ProfileToolStripMenuItem
         '
-        Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripMenuItem2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(100, 30)
-        Me.ToolStripMenuItem2.Text = "Profile"
+        Me.ProfileToolStripMenuItem.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
+        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(100, 30)
+        Me.ProfileToolStripMenuItem.Text = "Profile"
         '
         'Label113
         '
@@ -2571,7 +2571,7 @@ Partial Class home
     Friend WithEvents PictureBox11 As PictureBox
     Friend WithEvents PictureBox12 As PictureBox
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents PRODUCTSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProductsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SupplierToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CatToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox25 As PictureBox
@@ -2727,9 +2727,9 @@ Partial Class home
     Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuStrip2 As MenuStrip
     Friend WithEvents MenuStrip3 As MenuStrip
-    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents CartToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuStrip4 As MenuStrip
-    Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents ProfileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label113 As Label
     Friend WithEvents Label114 As Label
     Friend WithEvents PictureBox42 As PictureBox
