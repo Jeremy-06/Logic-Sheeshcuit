@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class datasets
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class datasets
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.dsInventory_btn = New System.Windows.Forms.Button()
         Me.dsCart_btn = New System.Windows.Forms.Button()
@@ -29,8 +29,6 @@ Partial Class datasets
         Me.dsExpenses_btn = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.dsUsers_btn = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'dsInventory_btn
@@ -44,7 +42,7 @@ Partial Class datasets
         '
         'dsCart_btn
         '
-        Me.dsCart_btn.Location = New System.Drawing.Point(42, 172)
+        Me.dsCart_btn.Location = New System.Drawing.Point(42, 117)
         Me.dsCart_btn.Name = "dsCart_btn"
         Me.dsCart_btn.Size = New System.Drawing.Size(300, 50)
         Me.dsCart_btn.TabIndex = 1
@@ -53,7 +51,7 @@ Partial Class datasets
         '
         'dsManage_orders_btn
         '
-        Me.dsManage_orders_btn.Location = New System.Drawing.Point(42, 228)
+        Me.dsManage_orders_btn.Location = New System.Drawing.Point(42, 173)
         Me.dsManage_orders_btn.Name = "dsManage_orders_btn"
         Me.dsManage_orders_btn.Size = New System.Drawing.Size(300, 50)
         Me.dsManage_orders_btn.TabIndex = 5
@@ -62,7 +60,7 @@ Partial Class datasets
         '
         'dsSales_btn
         '
-        Me.dsSales_btn.Location = New System.Drawing.Point(42, 284)
+        Me.dsSales_btn.Location = New System.Drawing.Point(42, 229)
         Me.dsSales_btn.Name = "dsSales_btn"
         Me.dsSales_btn.Size = New System.Drawing.Size(300, 50)
         Me.dsSales_btn.TabIndex = 3
@@ -71,7 +69,7 @@ Partial Class datasets
         '
         'dsExpenses_btn
         '
-        Me.dsExpenses_btn.Location = New System.Drawing.Point(42, 340)
+        Me.dsExpenses_btn.Location = New System.Drawing.Point(42, 285)
         Me.dsExpenses_btn.Name = "dsExpenses_btn"
         Me.dsExpenses_btn.Size = New System.Drawing.Size(300, 50)
         Me.dsExpenses_btn.TabIndex = 8
@@ -80,7 +78,7 @@ Partial Class datasets
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(42, 452)
+        Me.Button8.Location = New System.Drawing.Point(42, 341)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(300, 50)
         Me.Button8.TabIndex = 7
@@ -89,38 +87,18 @@ Partial Class datasets
         '
         'dsUsers_btn
         '
-        Me.dsUsers_btn.Location = New System.Drawing.Point(42, 396)
+        Me.dsUsers_btn.Location = New System.Drawing.Point(42, 397)
         Me.dsUsers_btn.Name = "dsUsers_btn"
         Me.dsUsers_btn.Size = New System.Drawing.Size(300, 50)
         Me.dsUsers_btn.TabIndex = 6
         Me.dsUsers_btn.Text = "User Management"
         Me.dsUsers_btn.UseVisualStyleBackColor = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(42, 117)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(145, 50)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Product Categories"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(196, 117)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(145, 50)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "Suppliers"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'datasets
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(384, 561)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dsExpenses_btn)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.dsUsers_btn)
@@ -145,6 +123,4 @@ Partial Class datasets
     Friend WithEvents dsExpenses_btn As Button
     Friend WithEvents Button8 As Button
     Friend WithEvents dsUsers_btn As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
 End Class

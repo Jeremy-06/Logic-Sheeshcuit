@@ -47,6 +47,8 @@ Partial Class datainventory
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -67,7 +69,7 @@ Partial Class datainventory
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Location = New System.Drawing.Point(743, 544)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(150, 30)
         Me.Button3.TabIndex = 71
@@ -79,8 +81,8 @@ Partial Class datainventory
         Me.Button2.BackColor = System.Drawing.SystemColors.Window
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(743, 510)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Location = New System.Drawing.Point(743, 509)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(150, 30)
         Me.Button2.TabIndex = 70
@@ -93,7 +95,7 @@ Partial Class datainventory
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(743, 474)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(150, 30)
         Me.Button1.TabIndex = 69
@@ -120,7 +122,7 @@ Partial Class datainventory
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlText
         Me.DataGridView1.Location = New System.Drawing.Point(44, 80)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -280,7 +282,7 @@ Partial Class datainventory
         Me.Button4.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.Search_Icon
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button4.Location = New System.Drawing.Point(826, 36)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(35, 35)
         Me.Button4.TabIndex = 195
@@ -291,7 +293,7 @@ Partial Class datainventory
         Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox6.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox6.Location = New System.Drawing.Point(542, 39)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(282, 27)
         Me.TextBox6.TabIndex = 196
@@ -317,12 +319,36 @@ Partial Class datainventory
         Me.ComboBox3.Size = New System.Drawing.Size(136, 27)
         Me.ComboBox3.TabIndex = 202
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.Purple
+        Me.LinkLabel1.Location = New System.Drawing.Point(319, 531)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(41, 13)
+        Me.LinkLabel1.TabIndex = 203
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "TABLE"
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.LinkColor = System.Drawing.Color.Purple
+        Me.LinkLabel2.Location = New System.Drawing.Point(524, 532)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(41, 13)
+        Me.LinkLabel2.TabIndex = 204
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "TABLE"
+        '
         'datainventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(932, 611)
+        Me.Controls.Add(Me.LinkLabel2)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Button4)
@@ -347,7 +373,7 @@ Partial Class datainventory
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "datainventory"
@@ -382,4 +408,6 @@ Partial Class datainventory
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents LinkLabel2 As LinkLabel
 End Class
