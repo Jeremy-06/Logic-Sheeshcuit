@@ -12,6 +12,7 @@ Public Class cart
     Private orderQty As Integer = 0
     Private selectedCartId As Integer = 0
     Private customerId As Integer = 0
+    Private selectedItems As New List(Of DataGridViewRow) ' Track multiple selected items
 
     Private Sub cart_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InitializeCart()
@@ -95,6 +96,10 @@ Public Class cart
             ' Format price column
             DataGridView1.Columns("productPrice").DefaultCellStyle.Format = "₱#,##0.00"
 
+            ' Enable multi-selection
+            DataGridView1.MultiSelect = True
+            DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+
         Catch ex As Exception
             ' Ignore errors in grid configuration
         End Try
@@ -112,16 +117,54 @@ Public Class cart
         End If
 
         Try
-            If e.RowIndex >= 0 AndAlso e.RowIndex < DataGridView1.Rows.Count Then
-                Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
-
-                If row IsNot Nothing AndAlso row.Cells("productName").Value IsNot Nothing Then
-                    LoadSelectedItem(row)
-                End If
-            End If
+            UpdateSelectedItems()
+            UpdateItemDisplay()
         Catch ex As Exception
             MessageBox.Show("Error selecting item: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub DataGridView1_SelectionChanged(sender As Object, e As EventArgs) Handles DataGridView1.SelectionChanged
+        Try
+            UpdateSelectedItems()
+            UpdateItemDisplay()
+        Catch ex As Exception
+            ' Ignore selection change errors
+        End Try
+    End Sub
+
+    Private Sub UpdateSelectedItems()
+        selectedItems.Clear()
+        For Each row As DataGridViewRow In DataGridView1.SelectedRows
+            If row.Cells("productName").Value IsNot Nothing AndAlso row.Cells("productName").Value.ToString() <> "No items in cart" Then
+                selectedItems.Add(row)
+            End If
+        Next
+    End Sub
+
+    Private Sub UpdateItemDisplay()
+        If selectedItems.Count = 0 Then
+            ' No items selected
+            Label4.Text = "No item selected"
+            TextBox2.Clear()
+            TextBox3.Clear()
+            PictureBox1.Image = Nothing
+            plus_btn.Enabled = False
+            minus_btn.Enabled = False
+            Button2.Enabled = False
+        ElseIf selectedItems.Count = 1 Then
+            ' Single item selected
+            LoadSelectedItem(selectedItems(0))
+        Else
+            ' Multiple items selected
+            Label4.Text = $"{selectedItems.Count} items selected"
+            TextBox2.Text = "Multiple items"
+            TextBox3.Text = selectedItems.Count.ToString()
+            PictureBox1.Image = Nothing
+            plus_btn.Enabled = False
+            minus_btn.Enabled = False
+            Button2.Enabled = True ' Enable checkout for multiple items
+        End If
     End Sub
 
     Private Sub LoadSelectedItem(row As DataGridViewRow)
@@ -184,18 +227,123 @@ Public Class cart
             Return
         End If
 
-        If DataGridView1.SelectedRows.Count = 0 Then
-            MessageBox.Show("Please select an item to move to checkout.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        If selectedItems.Count = 0 Then
+            MessageBox.Show("Please select at least one item to move to checkout.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
         End If
 
-        Dim qtyToMove As Integer
-        If Not Integer.TryParse(TextBox3.Text, qtyToMove) OrElse qtyToMove <= 0 Then
-            MessageBox.Show("Please enter a valid quantity greater than 0.", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            Return
+        If selectedItems.Count = 1 Then
+            ' Single item checkout
+            Dim qtyToMove As Integer
+            If Not Integer.TryParse(TextBox3.Text, qtyToMove) OrElse qtyToMove <= 0 Then
+                MessageBox.Show("Please enter a valid quantity greater than 0.", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
+            MoveItemToCheckout(qtyToMove)
+        Else
+            ' Multiple items checkout
+            CheckoutMultipleItems()
         End If
+    End Sub
 
-        MoveItemToCheckout(qtyToMove)
+    Private Sub CheckoutMultipleItems()
+        Try
+            ' Show summary of selected items
+            Dim summaryMessage As String = "Selected items for checkout:" & vbCrLf & vbCrLf
+            Dim totalItems As Integer = 0
+            Dim totalValue As Decimal = 0
+
+            For Each row As DataGridViewRow In selectedItems
+                Dim productName As String = row.Cells("productName").Value.ToString()
+                Dim qty As Integer = Convert.ToInt32(row.Cells("remainingQty").Value)
+                Dim price As Decimal = Convert.ToDecimal(row.Cells("productPrice").Value)
+                Dim itemTotal As Decimal = qty * price
+
+                summaryMessage += $"{productName} - Qty: {qty} - Price: ₱{price:N2} - Total: ₱{itemTotal:N2}" & vbCrLf
+                totalItems += qty
+                totalValue += itemTotal
+            Next
+
+            summaryMessage += vbCrLf & $"Total Items: {totalItems}" & vbCrLf & $"Total Value: ₱{totalValue:N2}" & vbCrLf & vbCrLf
+            summaryMessage += "Do you want to checkout all selected items?"
+
+            Dim confirm As DialogResult = MessageBox.Show(summaryMessage, "Checkout Summary", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If confirm = DialogResult.No Then Return
+
+            ' Process checkout for all selected items
+            ProcessMultipleItemCheckout()
+
+        Catch ex As Exception
+            MessageBox.Show("Error preparing checkout summary: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub ProcessMultipleItemCheckout()
+        Try
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+
+            conn.Open()
+
+            Dim successCount As Integer = 0
+            Dim errorMessages As New List(Of String)
+
+            For Each row As DataGridViewRow In selectedItems
+                Try
+                    Dim cartId As Integer = Convert.ToInt32(row.Cells("cartId").Value)
+                    Dim productName As String = row.Cells("productName").Value.ToString()
+                    Dim totalQty As Integer = Convert.ToInt32(row.Cells("remainingQty").Value)
+
+                    ' Get product ID
+                    query = $"SELECT productId FROM products WHERE productName = '{productName}'"
+                    cmd = New MySqlCommand(query, conn)
+                    Dim productId As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+                    ' Check if item already exists in checkout
+                    Dim existingCheckoutItem = GetExistingCheckoutItem(productId)
+
+                    If existingCheckoutItem IsNot Nothing Then
+                        ' Update existing checkout item
+                        UpdateCheckoutItem(existingCheckoutItem, totalQty)
+                    Else
+                        ' Create new checkout item
+                        CreateNewCheckoutItem(productId, totalQty)
+                    End If
+
+                    ' Remove item from cart (all quantity)
+                    query = $"DELETE FROM cart WHERE cartId = {cartId}"
+                    cmd = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+
+                    successCount += 1
+
+                Catch ex As Exception
+                    errorMessages.Add($"Error processing {row.Cells("productName").Value}: {ex.Message}")
+                End Try
+            Next
+
+            ' Show results
+            Dim resultMessage As String = $"Successfully moved {successCount} items to checkout."
+            If errorMessages.Count > 0 Then
+                resultMessage += vbCrLf & vbCrLf & "Errors occurred:" & vbCrLf
+                For Each errorMsg As String In errorMessages
+                    resultMessage += errorMsg & vbCrLf
+                Next
+            End If
+
+            MessageBox.Show(resultMessage, "Checkout Complete", MessageBoxButtons.OK, If(errorMessages.Count > 0, MessageBoxIcon.Warning, MessageBoxIcon.Information))
+
+            LoadCartData()
+            ClearInputs()
+
+        Catch ex As Exception
+            MessageBox.Show("Error processing multiple item checkout: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
     End Sub
 
     Private Sub MoveItemToCheckout(qtyToMove As Integer)
@@ -323,18 +471,96 @@ Public Class cart
             Return
         End If
 
-        If DataGridView1.SelectedRows.Count = 0 Then
-            MessageBox.Show("Please select an item to remove.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        If selectedItems.Count = 0 Then
+            MessageBox.Show("Please select at least one item to remove.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
         End If
 
-        Dim qtyToRemove As Integer
-        If Not Integer.TryParse(TextBox3.Text, qtyToRemove) OrElse qtyToRemove <= 0 Then
-            MessageBox.Show("Please enter a valid quantity greater than 0.", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            Return
+        If selectedItems.Count = 1 Then
+            ' Single item removal
+            Dim qtyToRemove As Integer
+            If Not Integer.TryParse(TextBox3.Text, qtyToRemove) OrElse qtyToRemove <= 0 Then
+                MessageBox.Show("Please enter a valid quantity greater than 0.", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
+            RemoveItemFromCart(qtyToRemove)
+        Else
+            ' Multiple items removal
+            RemoveMultipleItems()
         End If
+    End Sub
 
-        RemoveItemFromCart(qtyToRemove)
+    Private Sub RemoveMultipleItems()
+        Try
+            Dim summaryMessage As String = "Selected items to remove:" & vbCrLf & vbCrLf
+            For Each row As DataGridViewRow In selectedItems
+                Dim productName As String = row.Cells("productName").Value.ToString()
+                Dim qty As Integer = Convert.ToInt32(row.Cells("remainingQty").Value)
+                summaryMessage += $"{productName} - Qty: {qty}" & vbCrLf
+            Next
+
+            summaryMessage += vbCrLf & "Do you want to remove all selected items from cart?"
+
+            Dim confirm As DialogResult = MessageBox.Show(summaryMessage, "Remove Items", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If confirm = DialogResult.No Then Return
+
+            ' Process removal for all selected items
+            ProcessMultipleItemRemoval()
+
+        Catch ex As Exception
+            MessageBox.Show("Error preparing removal summary: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub ProcessMultipleItemRemoval()
+        Try
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+
+            conn.Open()
+
+            Dim successCount As Integer = 0
+            Dim errorMessages As New List(Of String)
+
+            For Each row As DataGridViewRow In selectedItems
+                Try
+                    Dim cartId As Integer = Convert.ToInt32(row.Cells("cartId").Value)
+                    Dim productName As String = row.Cells("productName").Value.ToString()
+
+                    ' Delete cart record
+                    query = $"DELETE FROM cart WHERE cartId = {cartId}"
+                    cmd = New MySqlCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+
+                    successCount += 1
+
+                Catch ex As Exception
+                    errorMessages.Add($"Error removing {row.Cells("productName").Value}: {ex.Message}")
+                End Try
+            Next
+
+            ' Show results
+            Dim resultMessage As String = $"Successfully removed {successCount} items from cart."
+            If errorMessages.Count > 0 Then
+                resultMessage += vbCrLf & vbCrLf & "Errors occurred:" & vbCrLf
+                For Each errorMsg As String In errorMessages
+                    resultMessage += errorMsg & vbCrLf
+                Next
+            End If
+
+            MessageBox.Show(resultMessage, "Removal Complete", MessageBoxButtons.OK, If(errorMessages.Count > 0, MessageBoxIcon.Warning, MessageBoxIcon.Information))
+
+            LoadCartData()
+            ClearInputs()
+
+        Catch ex As Exception
+            MessageBox.Show("Error processing multiple item removal: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
     End Sub
 
     Private Sub RemoveItemFromCart(qtyToRemove As Integer)
@@ -469,6 +695,7 @@ Public Class cart
         plus_btn.Enabled = False
         minus_btn.Enabled = False
         Button2.Enabled = False
+        selectedItems.Clear()
     End Sub
 
     ' Public method to refresh cart from other forms

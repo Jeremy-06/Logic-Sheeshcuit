@@ -22,24 +22,20 @@ Partial Class receipt
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(receipt))
         Me.lblReceiptTitle = New System.Windows.Forms.Label()
         Me.lblOrderId = New System.Windows.Forms.Label()
         Me.lblOrderDate = New System.Windows.Forms.Label()
         Me.lblCustomerName = New System.Windows.Forms.Label()
         Me.lblCustomerPhone = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblAddress = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblReceiptTitle
@@ -65,9 +61,9 @@ Partial Class receipt
         '
         Me.lblOrderDate.BackColor = System.Drawing.Color.White
         Me.lblOrderDate.Font = New System.Drawing.Font("Microsoft Yi Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblOrderDate.Location = New System.Drawing.Point(174, 176)
+        Me.lblOrderDate.Location = New System.Drawing.Point(166, 134)
         Me.lblOrderDate.Name = "lblOrderDate"
-        Me.lblOrderDate.Size = New System.Drawing.Size(126, 20)
+        Me.lblOrderDate.Size = New System.Drawing.Size(134, 20)
         Me.lblOrderDate.TabIndex = 2
         '
         'lblCustomerName
@@ -76,7 +72,7 @@ Partial Class receipt
         Me.lblCustomerName.Font = New System.Drawing.Font("Microsoft Yi Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCustomerName.Location = New System.Drawing.Point(44, 176)
         Me.lblCustomerName.Name = "lblCustomerName"
-        Me.lblCustomerName.Size = New System.Drawing.Size(152, 20)
+        Me.lblCustomerName.Size = New System.Drawing.Size(256, 20)
         Me.lblCustomerName.TabIndex = 3
         '
         'lblCustomerPhone
@@ -85,56 +81,8 @@ Partial Class receipt
         Me.lblCustomerPhone.Font = New System.Drawing.Font("Microsoft Yi Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCustomerPhone.Location = New System.Drawing.Point(41, 134)
         Me.lblCustomerPhone.Name = "lblCustomerPhone"
-        Me.lblCustomerPhone.Size = New System.Drawing.Size(259, 20)
+        Me.lblCustomerPhone.Size = New System.Drawing.Size(119, 20)
         Me.lblCustomerPhone.TabIndex = 5
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AllowUserToResizeColumns = False
-        Me.DataGridView1.AllowUserToResizeRows = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlText
-        Me.DataGridView1.Location = New System.Drawing.Point(44, 212)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
-        Me.DataGridView1.MultiSelect = False
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(256, 83)
-        Me.DataGridView1.TabIndex = 7
         '
         'lblTotal
         '
@@ -193,17 +141,34 @@ Partial Class receipt
         Me.lblAddress.Size = New System.Drawing.Size(259, 20)
         Me.lblAddress.TabIndex = 12
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToResizeColumns = False
+        Me.DataGridView1.AllowUserToResizeRows = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Window
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.Window
+        Me.DataGridView1.Location = New System.Drawing.Point(44, 210)
+        Me.DataGridView1.MultiSelect = False
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(256, 94)
+        Me.DataGridView1.TabIndex = 13
+        '
         'receipt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(347, 580)
         Me.ControlBox = False
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.lblAddress)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.lblTotal)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.lblCustomerPhone)
         Me.Controls.Add(Me.lblCustomerName)
         Me.Controls.Add(Me.lblOrderDate)
@@ -215,8 +180,8 @@ Partial Class receipt
         Me.Name = "receipt"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Receipt"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -227,10 +192,10 @@ Partial Class receipt
     Friend WithEvents lblOrderDate As Label
     Friend WithEvents lblCustomerName As Label
     Friend WithEvents lblCustomerPhone As Label
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents lblTotal As Label
     Friend WithEvents btnSave As Button
     Friend WithEvents btnClose As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblAddress As Label
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

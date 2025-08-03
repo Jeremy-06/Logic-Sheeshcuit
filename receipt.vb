@@ -185,12 +185,12 @@ Public Class receipt
             ' Force complete rendering of all controls
             Me.Refresh()
             Application.DoEvents()
-            
+
             ' Force DataGridView to update and ensure all data is visible
             DataGridView1.Refresh()
             DataGridView1.Update()
             Application.DoEvents()
-            
+
             ' Ensure all labels are updated
             lblOrderId.Refresh()
             lblOrderDate.Refresh()
@@ -199,13 +199,13 @@ Public Class receipt
             lblAddress.Refresh()
             lblTotal.Refresh()
             Application.DoEvents()
-            
+
             ' Add delay to ensure everything is rendered
             System.Threading.Thread.Sleep(300)
-            
+
             ' Get PictureBox1 bounds (receipt area)
             Dim pictureBoxBounds As Rectangle = PictureBox1.Bounds
-            
+
             ' Create bitmap with PictureBox1 dimensions
             Using bmp As New Bitmap(pictureBoxBounds.Width, pictureBoxBounds.Height)
                 ' Create graphics object for the bitmap
@@ -214,24 +214,24 @@ Public Class receipt
                     g.SmoothingMode = Drawing.Drawing2D.SmoothingMode.AntiAlias
                     g.TextRenderingHint = Drawing.Text.TextRenderingHint.ClearTypeGridFit
                     g.InterpolationMode = Drawing.Drawing2D.InterpolationMode.HighQualityBicubic
-                    
+
                     ' Clear the bitmap with white background first
                     g.Clear(Color.White)
-                    
+
                     ' Draw the PictureBox1 background image first
                     If PictureBox1.BackgroundImage IsNot Nothing Then
                         g.DrawImage(PictureBox1.BackgroundImage, 0, 0, pictureBoxBounds.Width, pictureBoxBounds.Height)
                     End If
-                    
+
                     ' Now draw all the receipt details on top of the background
                     DrawReceiptDetails(g, pictureBoxBounds)
                 End Using
-                
+
                 Dim sfd As New SaveFileDialog()
                 sfd.Filter = "PNG Image|*.png"
                 sfd.Title = "Save Complete Receipt as Image"
                 sfd.FileName = $"Receipt_Complete_{lblOrderId.Text}.png"
-                
+
                 If sfd.ShowDialog() = DialogResult.OK Then
                     bmp.Save(sfd.FileName, Imaging.ImageFormat.Png)
                     MessageBox.Show("Complete receipt saved as image successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -248,12 +248,12 @@ Public Class receipt
             Using titleFont As New Font("Sitka Subheading", 20, FontStyle.Bold)
                 g.DrawString("RECEIPT", titleFont, Brushes.Black, 117 - pictureBoxBounds.X, 19 - pictureBoxBounds.Y)
             End Using
-            
+
             ' Draw order ID
             Using orderFont As New Font("Bahnschrift", 18, FontStyle.Bold)
                 g.DrawString(lblOrderId.Text, orderFont, Brushes.Black, 203 - pictureBoxBounds.X, 70 - pictureBoxBounds.Y)
             End Using
-            
+
             ' Draw customer details
             Using detailFont As New Font("Microsoft Yi Baiti", 12)
                 g.DrawString(lblOrderDate.Text, detailFont, Brushes.Black, 174 - pictureBoxBounds.X, 176 - pictureBoxBounds.Y)
@@ -261,15 +261,15 @@ Public Class receipt
                 g.DrawString(lblCustomerPhone.Text, detailFont, Brushes.Black, 41 - pictureBoxBounds.X, 134 - pictureBoxBounds.Y)
                 g.DrawString(lblAddress.Text, detailFont, Brushes.Black, 41 - pictureBoxBounds.X, 114 - pictureBoxBounds.Y)
             End Using
-            
+
             ' Draw DataGridView content
             DrawDataGridViewContent(g, pictureBoxBounds)
-            
+
             ' Draw total
             Using totalFont As New Font("Calibri", 18, FontStyle.Bold)
                 g.DrawString(lblTotal.Text, totalFont, Brushes.White, 86 - pictureBoxBounds.X, 411 - pictureBoxBounds.Y)
             End Using
-            
+
         Catch ex As Exception
             ' Ignore errors in drawing details
         End Try
@@ -280,12 +280,12 @@ Public Class receipt
             ' Force complete rendering of all controls
             Me.Refresh()
             Application.DoEvents()
-            
+
             ' Force DataGridView to update and ensure all data is visible
             DataGridView1.Refresh()
             DataGridView1.Update()
             Application.DoEvents()
-            
+
             ' Ensure all labels are updated
             lblOrderId.Refresh()
             lblOrderDate.Refresh()
@@ -294,13 +294,13 @@ Public Class receipt
             lblAddress.Refresh()
             lblTotal.Refresh()
             Application.DoEvents()
-            
+
             ' Add delay to ensure everything is rendered
             System.Threading.Thread.Sleep(300)
-            
+
             ' Get PictureBox1 bounds (receipt area)
             Dim pictureBoxBounds As Rectangle = PictureBox1.Bounds
-            
+
             ' Create bitmap with PictureBox1 dimensions
             Using bmp As New Bitmap(pictureBoxBounds.Width, pictureBoxBounds.Height)
                 ' Create graphics object for the bitmap
@@ -309,24 +309,24 @@ Public Class receipt
                     g.SmoothingMode = Drawing.Drawing2D.SmoothingMode.AntiAlias
                     g.TextRenderingHint = Drawing.Text.TextRenderingHint.ClearTypeGridFit
                     g.InterpolationMode = Drawing.Drawing2D.InterpolationMode.HighQualityBicubic
-                    
+
                     ' Clear the bitmap with white background first
                     g.Clear(Color.White)
-                    
+
                     ' Draw the PictureBox1 background image first
                     If PictureBox1.BackgroundImage IsNot Nothing Then
                         g.DrawImage(PictureBox1.BackgroundImage, 0, 0, pictureBoxBounds.Width, pictureBoxBounds.Height)
                     End If
-                    
+
                     ' Now draw all the receipt details on top of the background
                     DrawReceiptDetails(g, pictureBoxBounds)
                 End Using
-                
+
                 Dim sfd As New SaveFileDialog()
                 sfd.Filter = "PNG Image|*.png"
                 sfd.Title = "Save Complete Receipt as Image"
                 sfd.FileName = $"Receipt_Complete_{lblOrderId.Text}.png"
-                
+
                 If sfd.ShowDialog() = DialogResult.OK Then
                     bmp.Save(sfd.FileName, Imaging.ImageFormat.Png)
                     MessageBox.Show("Complete receipt saved as image successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -403,26 +403,26 @@ Public Class receipt
             Dim gridLocation As Point = DataGridView1.Location
             Dim relativeX As Integer = gridLocation.X - pictureBoxBounds.X
             Dim relativeY As Integer = gridLocation.Y - pictureBoxBounds.Y
-            
+
             ' Draw DataGridView content
             Using gridFont As New Font("Microsoft Sans Serif", 10)
                 Dim rowHeight As Integer = 24
                 Dim startY As Integer = relativeY + DataGridView1.ColumnHeadersHeight
-                
+
                 For i As Integer = 0 To DataGridView1.Rows.Count - 1
                     If Not DataGridView1.Rows(i).IsNewRow Then
                         Dim row As DataGridViewRow = DataGridView1.Rows(i)
                         Dim currentY As Integer = startY + (i * rowHeight)
-                        
+
                         ' Draw each cell content
                         For j As Integer = 0 To DataGridView1.Columns.Count - 1
                             Dim cell As DataGridViewCell = row.Cells(j)
                             Dim column As DataGridViewColumn = DataGridView1.Columns(j)
-                            
+
                             If cell.Value IsNot Nothing Then
                                 Dim cellText As String = cell.Value.ToString()
                                 Dim cellX As Integer = relativeX + column.DisplayIndex * (DataGridView1.Width / DataGridView1.Columns.Count)
-                                
+
                                 ' Draw cell text
                                 g.DrawString(cellText, gridFont, Brushes.Black, cellX + 5, currentY + 2)
                             End If

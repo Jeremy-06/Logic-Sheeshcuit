@@ -66,6 +66,14 @@ Public Class checkout
             DataGridView1.Columns("productQty").HeaderText = "Quantity"
             DataGridView1.Columns("totalPrice").HeaderText = "Total"
 
+            ' Format price columns
+            DataGridView1.Columns("productPrice").DefaultCellStyle.Format = "₱#,##0.00"
+            DataGridView1.Columns("totalPrice").DefaultCellStyle.Format = "₱#,##0.00"
+
+            ' Enable multi-selection
+            DataGridView1.MultiSelect = True
+            DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+
             ' Calculate total
             CalculateTotal()
 
@@ -84,13 +92,16 @@ Public Class checkout
 
     Private Sub CalculateTotal()
         Dim total As Decimal = 0
-        
+
         ' Calculate total from selected rows only
         For Each row As DataGridViewRow In DataGridView1.SelectedRows
             total += Convert.ToDecimal(row.Cells("totalPrice").Value)
         Next
-        
-        lblTotal.Text = $"Total: ₱{total:N2}"
+
+        lblTotalPrice.Text = $"₱{total:N2}"
+    End Sub
+
+    Private Sub UpdateOrderSummary()
     End Sub
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
@@ -99,9 +110,31 @@ Public Class checkout
             Return
         End If
 
+        ' Show detailed summary before payment
+        Dim summaryMessage As String = "Payment Summary:" & vbCrLf & vbCrLf
+        Dim totalItems As Integer = 0
+        Dim totalValue As Decimal = 0
+
+        For Each row As DataGridViewRow In DataGridView1.SelectedRows
+            Dim productName As String = row.Cells("productName").Value.ToString()
+            Dim qty As Integer = Convert.ToInt32(row.Cells("productQty").Value)
+            Dim price As Decimal = Convert.ToDecimal(row.Cells("productPrice").Value)
+            Dim itemTotal As Decimal = Convert.ToDecimal(row.Cells("totalPrice").Value)
+
+            summaryMessage += $"{productName}" & vbCrLf
+            summaryMessage += $"  Quantity: {qty} x ₱{price:N2} = ₱{itemTotal:N2}" & vbCrLf & vbCrLf
+
+            totalItems += qty
+            totalValue += itemTotal
+        Next
+
+        summaryMessage += "----------------------------------------" & vbCrLf
+        summaryMessage += $"Total Items: {totalItems}" & vbCrLf
+        summaryMessage += $"Total Amount: ₱{totalValue:N2}" & vbCrLf & vbCrLf
+        summaryMessage += "Do you want to proceed with payment?"
+
         ' Confirm payment for selected items
-        Dim selectedCount As Integer = DataGridView1.SelectedRows.Count
-        Dim confirm As DialogResult = MessageBox.Show($"Are you sure you want to pay for {selectedCount} selected item(s)?", "Confirm Payment", MessageBoxButtons.YesNo)
+        Dim confirm As DialogResult = MessageBox.Show(summaryMessage, "Confirm Payment", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If confirm = DialogResult.No Then Return
 
         Try
@@ -142,7 +175,7 @@ Public Class checkout
             cmd = New MySqlCommand(query, conn)
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show($"Payment successful! Order ID: {newOrderId}")
+            MessageBox.Show($"Payment successful! Order ID: {newOrderId}" & vbCrLf & $"Total Paid: ₱{totalValue:N2}", "Payment Complete", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             ' Refresh the form
             LoadCheckoutOrders()
@@ -162,9 +195,22 @@ Public Class checkout
             Return
         End If
 
+        ' Show summary of items to be returned
+        Dim summaryMessage As String = "Items to return to cart:" & vbCrLf & vbCrLf
+        Dim totalItems As Integer = 0
+
+        For Each row As DataGridViewRow In DataGridView1.SelectedRows
+            Dim productName As String = row.Cells("productName").Value.ToString()
+            Dim qty As Integer = Convert.ToInt32(row.Cells("productQty").Value)
+            summaryMessage += $"{productName} - Qty: {qty}" & vbCrLf
+            totalItems += qty
+        Next
+
+        summaryMessage += vbCrLf & $"Total items to return: {totalItems}" & vbCrLf & vbCrLf
+        summaryMessage += "Are you sure you want to return these items to cart?"
+
         ' Confirm removal of selected items
-        Dim selectedCount As Integer = DataGridView1.SelectedRows.Count
-        Dim confirm As DialogResult = MessageBox.Show($"Are you sure you want to return {selectedCount} selected item(s) to cart?", "Confirm Return to Cart", MessageBoxButtons.YesNo)
+        Dim confirm As DialogResult = MessageBox.Show(summaryMessage, "Confirm Return to Cart", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If confirm = DialogResult.No Then Return
 
         Try
@@ -213,7 +259,7 @@ Public Class checkout
             cmd = New MySqlCommand(query, conn)
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show($"{selectedCount} item(s) returned to cart.")
+            MessageBox.Show($"{totalItems} item(s) returned to cart successfully.", "Return Complete", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             ' Refresh the form
             LoadCheckoutOrders()
