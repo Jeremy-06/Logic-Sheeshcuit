@@ -72,7 +72,7 @@ Public Class datausers
         LoadUserData()
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
         LoadUserData()
     End Sub
 

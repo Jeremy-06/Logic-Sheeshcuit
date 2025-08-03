@@ -126,10 +126,10 @@
     <Compile Include="cart.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="crystalreport.Designer.vb">
-      <DependentUpon>crystalreport.vb</DependentUpon>
+    <Compile Include="netincomereport.Designer.vb">
+      <DependentUpon>netincomereport.vb</DependentUpon>
     </Compile>
-    <Compile Include="crystalreport.vb">
+    <Compile Include="netincomereport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="datacart.Designer.vb">
@@ -386,8 +386,8 @@
     <EmbeddedResource Include="cart.resx">
       <DependentUpon>cart.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="crystalreport.resx">
-      <DependentUpon>crystalreport.vb</DependentUpon>
+    <EmbeddedResource Include="netincomereport.resx">
+      <DependentUpon>netincomereport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="datacart.resx">
       <DependentUpon>datacart.vb</DependentUpon>
