@@ -561,4 +561,26 @@ Public Class datainventory
             e.Handled = True
         End If
     End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        productscategory.Show()
+        ' Refresh category combo box when returning from productscategory form
+        AddHandler productscategory.FormClosed, AddressOf ProductCategoryFormClosed
+    End Sub
+
+    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+        suppliers.Show()
+        ' Refresh supplier combo box when returning from suppliers form
+        AddHandler suppliers.FormClosed, AddressOf SuppliersFormClosed
+    End Sub
+
+    Private Sub ProductCategoryFormClosed(sender As Object, e As FormClosedEventArgs)
+        ' Refresh category combo box when productscategory form is closed
+        PopulateCategoryComboBox()
+    End Sub
+
+    Private Sub SuppliersFormClosed(sender As Object, e As FormClosedEventArgs)
+        ' Refresh supplier combo box when suppliers form is closed
+        PopulateSupplierComboBox()
+    End Sub
 End Class
