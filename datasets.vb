@@ -20,7 +20,7 @@
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-
+        netincomereport.Show()
     End Sub
 
     Private Sub dsUsers_btn_Click(sender As Object, e As EventArgs) Handles dsUsers_btn.Click
