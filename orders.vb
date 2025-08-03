@@ -148,7 +148,7 @@ Public Class orders
             Return
         End If
 
-        ' Show receipt form
+        ' Show the original receipt form
         Dim receiptForm As New receipt()
         receiptForm.LoadReceipt(orderId)
         receiptForm.Show()
