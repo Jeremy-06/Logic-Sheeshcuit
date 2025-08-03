@@ -2,7 +2,6 @@
 Imports System.Data
 
 Public Class datasales
-    ' Database connection and components
     Private conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
     Private cmd As MySqlCommand
     Private da As MySqlDataAdapter
@@ -10,8 +9,14 @@ Public Class datasales
 
     ' Flag to prevent search when populating textboxes from row selection
     Private isPopulatingFromRow As Boolean = False
+    ' Flag to track if DateTimePicker has been modified
+    Private isDateFilterActive As Boolean = False
 
     Private Sub datasales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Set DateTimePicker to show no date (null value)
+        DateTimePicker1.Value = DateTimePicker1.MinDate
+        ' Set max date to current date
+        DateTimePicker1.MaxDate = DateTime.Today
         LoadSalesData()
         PopulateSearchComboBox()
     End Sub
@@ -22,7 +27,7 @@ Public Class datasales
             ComboBox1.Items.Add("Product Name")
             ComboBox1.Items.Add("Month")
             ComboBox1.Items.Add("Year")
-            ComboBox1.SelectedIndex = 0 ' Default to first item
+            ComboBox1.SelectedIndex = 0
         Catch ex As Exception
             MessageBox.Show("Error populating search combo box: " + ex.Message)
         End Try
@@ -32,24 +37,49 @@ Public Class datasales
         Try
             If conn.State <> ConnectionState.Open Then conn.Open()
 
-            ' SQL query with requested columns
-            Dim query As String = $"
-                SELECT 
-                    s.salesId AS 'Sales ID',
-                    DATE_FORMAT(s.salesDate, '%Y-%m-%d') AS 'Date',
-                    o.orderId AS 'Order ID',
-                    CONCAT (c.customerFname, ' ', c.customerLname) AS 'Customer Name',
-                    p.productName AS 'Product Name',
-                    oi.productQty AS 'Quantity',
-                    p.productPrice AS 'Price',
-                    ROUND(oi.productQty * p.productPrice, 2) AS 'Total'
-                FROM sales s
-                JOIN orders o ON s.orderId = o.orderId
-                JOIN customers c ON o.customers_customerId = c.customerId
-                JOIN orderitems oi ON o.orderId = oi.orders_orderId
-                JOIN products p ON oi.products_productId = p.productId
-                WHERE LOWER(o.orderStatus) = 'completed'
-                ORDER BY s.salesDate DESC"
+            Dim query As String = ""
+
+            ' Check if date filter is active
+            If isDateFilterActive AndAlso DateTimePicker1.Value <> DateTimePicker1.MinDate Then
+                ' SQL query with date filter
+                query = $"
+                    SELECT 
+                        s.salesId AS 'Sales ID',
+                        DATE_FORMAT(s.salesDate, '%Y-%m-%d') AS 'Date',
+                        o.orderId AS 'Order ID',
+                        CONCAT (c.customerFname, ' ', c.customerLname) AS 'Customer Name',
+                        p.productName AS 'Product Name',
+                        oi.productQty AS 'Quantity',
+                        p.productPrice AS 'Price',
+                        ROUND(oi.productQty * p.productPrice, 2) AS 'Total'
+                    FROM sales s
+                    JOIN orders o ON s.orderId = o.orderId
+                    JOIN customers c ON o.customers_customerId = c.customerId
+                    JOIN orderitems oi ON o.orderId = oi.orders_orderId
+                    JOIN products p ON oi.products_productId = p.productId
+                    WHERE LOWER(o.orderStatus) = 'completed'
+                    AND DATE(s.salesDate) = '{DateTimePicker1.Value:yyyy-MM-dd}'
+                    ORDER BY s.salesDate DESC"
+            Else
+                ' SQL query to show all sales by default
+                query = $"
+                    SELECT 
+                        s.salesId AS 'Sales ID',
+                        DATE_FORMAT(s.salesDate, '%Y-%m-%d') AS 'Date',
+                        o.orderId AS 'Order ID',
+                        CONCAT (c.customerFname, ' ', c.customerLname) AS 'Customer Name',
+                        p.productName AS 'Product Name',
+                        oi.productQty AS 'Quantity',
+                        p.productPrice AS 'Price',
+                        ROUND(oi.productQty * p.productPrice, 2) AS 'Total'
+                    FROM sales s
+                    JOIN orders o ON s.orderId = o.orderId
+                    JOIN customers c ON o.customers_customerId = c.customerId
+                    JOIN orderitems oi ON o.orderId = oi.orders_orderId
+                    JOIN products p ON oi.products_productId = p.productId
+                    WHERE LOWER(o.orderStatus) = 'completed'
+                    ORDER BY s.salesDate DESC"
+            End If
 
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
@@ -84,10 +114,119 @@ Public Class datasales
 
             ' Auto-size columns
             DataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells)
+
+            ' Clear any existing row highlighting
+            ClearRowHighlighting()
         End If
     End Sub
 
-    ' Search functionality
+    ' Method to clear all row highlighting
+    Private Sub ClearRowHighlighting()
+        Try
+            For Each row As DataGridViewRow In DataGridView1.Rows
+                row.DefaultCellStyle.BackColor = Color.White
+            Next
+        Catch ex As Exception
+            ' Handle any errors silently
+        End Try
+    End Sub
+
+
+
+    Private Function GetMonthNumber(monthName As String) As Integer
+        Dim monthLower As String = monthName.ToLower().Trim()
+
+        Select Case monthLower
+            Case "january", "jan"
+                Return 1
+            Case "february", "feb"
+                Return 2
+            Case "march", "mar"
+                Return 3
+            Case "april", "apr"
+                Return 4
+            Case "may"
+                Return 5
+            Case "june", "jun"
+                Return 6
+            Case "july", "jul"
+                Return 7
+            Case "august", "aug"
+                Return 8
+            Case "september", "sept", "sep"
+                Return 9
+            Case "october", "oct"
+                Return 10
+            Case "november", "nov"
+                Return 11
+            Case "december", "dec"
+                Return 12
+        End Select
+
+        If monthLower.Length >= 3 Then
+            Select Case monthLower
+                Case "jan", "janu", "janua", "januar"
+                    Return 1
+                Case "feb", "febr", "febru", "februa", "februar"
+                    Return 2
+                Case "mar", "marc"
+                    Return 3
+                Case "apr", "apri"
+                    Return 4
+                Case "may"
+                    Return 5
+                Case "jun", "june"
+                    Return 6
+                Case "jul", "july"
+                    Return 7
+                Case "aug", "augu", "augus"
+                    Return 8
+                Case "sep", "sept", "septe", "septem", "septemb", "septembe"
+                    Return 9
+                Case "oct", "octo", "octob", "octobe"
+                    Return 10
+                Case "nov", "nove", "novem", "novemb", "novembe"
+                    Return 11
+                Case "dec", "dece", "decem", "decemb", "decembe"
+                    Return 12
+            End Select
+        End If
+
+        Return 0
+    End Function
+
+    ' Search button functionality
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        TextBox8_TextChanged(sender, e)
+    End Sub
+
+    ' Refresh button functionality
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        ' Reset to initial state
+        isDateFilterActive = False
+        DateTimePicker1.Value = DateTimePicker1.MinDate
+        LoadSalesData()
+        TextBox8.Clear()
+        ClearTextboxes()
+    End Sub
+
+    ' DateTimePicker value changed event
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+        ' Set flag to indicate date filter is active
+        isDateFilterActive = True
+        LoadSalesData()
+        TextBox8.Clear()
+        ClearTextboxes()
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        ' If there's text in the search box, perform search with new criteria
+        If Not String.IsNullOrEmpty(TextBox8.Text) Then
+            TextBox8_TextChanged(sender, e)
+        End If
+    End Sub
+
+    ' Search functionality - works independently of date filter
     Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles TextBox8.TextChanged
         Try
             If Not String.IsNullOrEmpty(TextBox8.Text) Then
@@ -169,7 +308,8 @@ Public Class datasales
                         JOIN customers c ON o.customers_customerId = c.customerId
                         JOIN orderitems oi ON o.orderId = oi.orders_orderId
                         JOIN products p ON oi.products_productId = p.productId
-                        WHERE LOWER(o.orderStatus) = 'completed' AND {searchCondition}
+                        WHERE LOWER(o.orderStatus) = 'completed' 
+                        AND {searchCondition}
                         ORDER BY s.salesDate DESC"
 
                     cmd = New MySqlCommand(query, conn)
@@ -192,87 +332,6 @@ Public Class datasales
             MessageBox.Show("Error searching: " + ex.Message)
             If conn.State = ConnectionState.Open Then conn.Close()
         End Try
-    End Sub
-
-    Private Function GetMonthNumber(monthName As String) As Integer
-        Dim monthLower As String = monthName.ToLower().Trim()
-
-        Select Case monthLower
-            Case "january", "jan"
-                Return 1
-            Case "february", "feb"
-                Return 2
-            Case "march", "mar"
-                Return 3
-            Case "april", "apr"
-                Return 4
-            Case "may"
-                Return 5
-            Case "june", "jun"
-                Return 6
-            Case "july", "jul"
-                Return 7
-            Case "august", "aug"
-                Return 8
-            Case "september", "sept", "sep"
-                Return 9
-            Case "october", "oct"
-                Return 10
-            Case "november", "nov"
-                Return 11
-            Case "december", "dec"
-                Return 12
-        End Select
-
-        If monthLower.Length >= 3 Then
-            Select Case monthLower
-                Case "jan", "janu", "janua", "januar"
-                    Return 1
-                Case "feb", "febr", "febru", "februa", "februar"
-                    Return 2
-                Case "mar", "marc"
-                    Return 3
-                Case "apr", "apri"
-                    Return 4
-                Case "may"
-                    Return 5
-                Case "jun", "june"
-                    Return 6
-                Case "jul", "july"
-                    Return 7
-                Case "aug", "augu", "augus"
-                    Return 8
-                Case "sep", "sept", "septe", "septem", "septemb", "septembe"
-                    Return 9
-                Case "oct", "octo", "octob", "octobe"
-                    Return 10
-                Case "nov", "nove", "novem", "novemb", "novembe"
-                    Return 11
-                Case "dec", "dece", "decem", "decemb", "decembe"
-                    Return 12
-            End Select
-        End If
-
-        Return 0
-    End Function
-
-    ' Search button functionality
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        TextBox8_TextChanged(sender, e)
-    End Sub
-
-    ' Refresh button functionality
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        LoadSalesData()
-        TextBox8.Clear()
-        ClearTextboxes()
-    End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        ' If there's text in the search box, perform search with new criteria
-        If Not String.IsNullOrEmpty(TextBox8.Text) Then
-            TextBox8_TextChanged(sender, e)
-        End If
     End Sub
 
     Private Sub ClearTextboxes()
@@ -324,9 +383,37 @@ Public Class datasales
             TextBox7.Text = row.Cells(7).Value?.ToString() ' Total
             salesDate.Text = row.Cells(1).Value?.ToString() ' Date
 
+            ' Highlight rows with the same Sales ID
+            HighlightRowsWithSameSalesId(row.Cells(0).Value?.ToString())
+
             ' Reset flag after populating
             isPopulatingFromRow = False
         End If
+    End Sub
+
+    ' Method to highlight rows with the same Sales ID
+    Private Sub HighlightRowsWithSameSalesId(selectedSalesId As String)
+        Try
+            ' Clear all row highlighting first
+            For Each row As DataGridViewRow In DataGridView1.Rows
+                row.DefaultCellStyle.BackColor = Color.White
+            Next
+
+            ' If no sales ID selected, return
+            If String.IsNullOrEmpty(selectedSalesId) Then
+                Return
+            End If
+
+            ' Highlight rows with the same Sales ID
+            For Each row As DataGridViewRow In DataGridView1.Rows
+                Dim rowSalesId As String = row.Cells(0).Value?.ToString()
+                If rowSalesId = selectedSalesId Then
+                    row.DefaultCellStyle.BackColor = Color.LightGray
+                End If
+            Next
+        Catch ex As Exception
+            ' Handle any errors silently
+        End Try
     End Sub
 
     Private Sub UpdateTotalAmount()

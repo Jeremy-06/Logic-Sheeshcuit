@@ -57,20 +57,20 @@ Partial Class dataorders
         'status
         '
         Me.status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.status.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.status.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.status.FormattingEnabled = True
-        Me.status.Location = New System.Drawing.Point(748, 488)
+        Me.status.Location = New System.Drawing.Point(747, 482)
         Me.status.Name = "status"
-        Me.status.Size = New System.Drawing.Size(146, 28)
+        Me.status.Size = New System.Drawing.Size(146, 27)
         Me.status.TabIndex = 194
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(427, 532)
+        Me.Label10.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(426, 526)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(104, 13)
+        Me.Label10.Size = New System.Drawing.Size(96, 16)
         Me.Label10.TabIndex = 193
         Me.Label10.Text = "TOTAL AMOUNT"
         '
@@ -78,21 +78,22 @@ Partial Class dataorders
         '
         Me.total.BackColor = System.Drawing.SystemColors.Window
         Me.total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.total.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.total.Location = New System.Drawing.Point(427, 548)
-        Me.total.Margin = New System.Windows.Forms.Padding(2)
+        Me.total.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.total.Location = New System.Drawing.Point(426, 542)
+        Me.total.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.total.Name = "total"
         Me.total.ReadOnly = True
-        Me.total.Size = New System.Drawing.Size(146, 26)
+        Me.total.Size = New System.Drawing.Size(146, 27)
         Me.total.TabIndex = 192
+        Me.total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(427, 474)
+        Me.Label9.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(426, 468)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(66, 13)
+        Me.Label9.Size = New System.Drawing.Size(65, 16)
         Me.Label9.TabIndex = 191
         Me.Label9.Text = "ADDRESS"
         '
@@ -100,21 +101,21 @@ Partial Class dataorders
         '
         Me.address.BackColor = System.Drawing.SystemColors.Window
         Me.address.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.address.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.address.Location = New System.Drawing.Point(427, 490)
-        Me.address.Margin = New System.Windows.Forms.Padding(2)
+        Me.address.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.address.Location = New System.Drawing.Point(426, 484)
+        Me.address.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.address.Name = "address"
         Me.address.ReadOnly = True
-        Me.address.Size = New System.Drawing.Size(146, 26)
+        Me.address.Size = New System.Drawing.Size(146, 27)
         Me.address.TabIndex = 190
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(141, 532)
+        Me.Label8.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(140, 526)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(106, 13)
+        Me.Label8.Size = New System.Drawing.Size(101, 16)
         Me.Label8.TabIndex = 189
         Me.Label8.Text = "PRODUCT NAME"
         '
@@ -122,21 +123,21 @@ Partial Class dataorders
         '
         Me.productName.BackColor = System.Drawing.SystemColors.Window
         Me.productName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.productName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.productName.Location = New System.Drawing.Point(144, 548)
-        Me.productName.Margin = New System.Windows.Forms.Padding(2)
+        Me.productName.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.productName.Location = New System.Drawing.Point(143, 542)
+        Me.productName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.productName.Name = "productName"
         Me.productName.ReadOnly = True
-        Me.productName.Size = New System.Drawing.Size(279, 26)
+        Me.productName.Size = New System.Drawing.Size(279, 27)
         Me.productName.TabIndex = 188
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(41, 474)
+        Me.Label7.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(40, 468)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(93, 13)
+        Me.Label7.Size = New System.Drawing.Size(88, 16)
         Me.Label7.TabIndex = 187
         Me.Label7.Text = "CUSTOMER ID"
         '
@@ -144,85 +145,86 @@ Partial Class dataorders
         '
         Me.customerID.BackColor = System.Drawing.SystemColors.Window
         Me.customerID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.customerID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.customerID.Location = New System.Drawing.Point(44, 490)
-        Me.customerID.Margin = New System.Windows.Forms.Padding(2)
+        Me.customerID.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.customerID.Location = New System.Drawing.Point(43, 484)
+        Me.customerID.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.customerID.Name = "customerID"
         Me.customerID.ReadOnly = True
-        Me.customerID.Size = New System.Drawing.Size(90, 26)
+        Me.customerID.Size = New System.Drawing.Size(90, 27)
         Me.customerID.TabIndex = 186
+        Me.customerID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'phone
         '
         Me.phone.BackColor = System.Drawing.SystemColors.Window
         Me.phone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.phone.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.phone.Location = New System.Drawing.Point(578, 490)
+        Me.phone.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.phone.Location = New System.Drawing.Point(577, 484)
         Me.phone.Mask = "+63 000-000-0000"
         Me.phone.Name = "phone"
         Me.phone.ReadOnly = True
-        Me.phone.Size = New System.Drawing.Size(147, 26)
+        Me.phone.Size = New System.Drawing.Size(147, 27)
         Me.phone.TabIndex = 185
         '
         'orderDate
         '
         Me.orderDate.BackColor = System.Drawing.SystemColors.Window
         Me.orderDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.orderDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.orderDate.Location = New System.Drawing.Point(578, 548)
+        Me.orderDate.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.orderDate.Location = New System.Drawing.Point(577, 542)
         Me.orderDate.Mask = "00/00/0000"
         Me.orderDate.Name = "orderDate"
         Me.orderDate.ReadOnly = True
-        Me.orderDate.Size = New System.Drawing.Size(147, 26)
+        Me.orderDate.Size = New System.Drawing.Size(147, 27)
         Me.orderDate.TabIndex = 184
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(575, 474)
+        Me.Label6.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(574, 468)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(123, 13)
+        Me.Label6.Size = New System.Drawing.Size(117, 16)
         Me.Label6.TabIndex = 183
         Me.Label6.Text = "CUSTOMER PHONE"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(141, 474)
+        Me.Label5.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(140, 468)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(115, 13)
+        Me.Label5.Size = New System.Drawing.Size(110, 16)
         Me.Label5.TabIndex = 182
         Me.Label5.Text = "CUSTOMER NAME"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(745, 473)
+        Me.Label4.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(744, 467)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(104, 13)
+        Me.Label4.Size = New System.Drawing.Size(96, 16)
         Me.Label4.TabIndex = 181
         Me.Label4.Text = "ORDER STATUS"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(575, 532)
+        Me.Label3.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(574, 526)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(88, 13)
+        Me.Label3.Size = New System.Drawing.Size(82, 16)
         Me.Label3.TabIndex = 180
         Me.Label3.Text = "ORDER DATE"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(41, 532)
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(40, 526)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(68, 13)
+        Me.Label2.Size = New System.Drawing.Size(64, 16)
         Me.Label2.TabIndex = 179
         Me.Label2.Text = "ORDER ID"
         '
@@ -230,7 +232,7 @@ Partial Class dataorders
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("NSimSun", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(39, 41)
+        Me.Label1.Location = New System.Drawing.Point(38, 35)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(177, 27)
         Me.Label1.TabIndex = 178
@@ -240,34 +242,35 @@ Partial Class dataorders
         '
         Me.customerName.BackColor = System.Drawing.SystemColors.Window
         Me.customerName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.customerName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.customerName.Location = New System.Drawing.Point(144, 490)
-        Me.customerName.Margin = New System.Windows.Forms.Padding(2)
+        Me.customerName.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.customerName.Location = New System.Drawing.Point(143, 484)
+        Me.customerName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.customerName.Name = "customerName"
         Me.customerName.ReadOnly = True
-        Me.customerName.Size = New System.Drawing.Size(279, 26)
+        Me.customerName.Size = New System.Drawing.Size(279, 27)
         Me.customerName.TabIndex = 176
         '
         'orderID
         '
         Me.orderID.BackColor = System.Drawing.SystemColors.Window
         Me.orderID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.orderID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.orderID.Location = New System.Drawing.Point(44, 548)
-        Me.orderID.Margin = New System.Windows.Forms.Padding(2)
+        Me.orderID.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.orderID.Location = New System.Drawing.Point(43, 542)
+        Me.orderID.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.orderID.Name = "orderID"
         Me.orderID.ReadOnly = True
-        Me.orderID.Size = New System.Drawing.Size(90, 26)
+        Me.orderID.Size = New System.Drawing.Size(90, 27)
         Me.orderID.TabIndex = 175
+        Me.orderID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'delete
         '
         Me.delete.BackColor = System.Drawing.SystemColors.Window
         Me.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.delete.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.delete.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.delete.Location = New System.Drawing.Point(749, 557)
-        Me.delete.Margin = New System.Windows.Forms.Padding(2)
+        Me.delete.Location = New System.Drawing.Point(748, 551)
+        Me.delete.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.delete.Name = "delete"
         Me.delete.Size = New System.Drawing.Size(146, 30)
         Me.delete.TabIndex = 172
@@ -278,10 +281,10 @@ Partial Class dataorders
         '
         Me.update.BackColor = System.Drawing.SystemColors.Window
         Me.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.update.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.update.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.update.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.update.Location = New System.Drawing.Point(749, 523)
-        Me.update.Margin = New System.Windows.Forms.Padding(2)
+        Me.update.Location = New System.Drawing.Point(748, 517)
+        Me.update.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.update.Name = "update"
         Me.update.Size = New System.Drawing.Size(146, 30)
         Me.update.TabIndex = 171
@@ -300,15 +303,15 @@ Partial Class dataorders
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlText
-        Me.DataGridView1.Location = New System.Drawing.Point(45, 80)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
+        Me.DataGridView1.Location = New System.Drawing.Point(44, 74)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -322,7 +325,7 @@ Partial Class dataorders
         '
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(864, 38)
+        Me.PictureBox2.Location = New System.Drawing.Point(864, 32)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox2.TabIndex = 200
@@ -332,8 +335,8 @@ Partial Class dataorders
         '
         Me.Button4.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.Search_Icon
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button4.Location = New System.Drawing.Point(827, 36)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button4.Location = New System.Drawing.Point(826, 30)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(35, 35)
         Me.Button4.TabIndex = 198
@@ -342,22 +345,22 @@ Partial Class dataorders
         'TextBox6
         '
         Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(401, 39)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox6.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(400, 33)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(424, 29)
+        Me.TextBox6.Size = New System.Drawing.Size(424, 27)
         Me.TextBox6.TabIndex = 199
         '
         'ComboBox1
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Product Name", "Customer Name", "Order ID", "Status", "Month", "Year"})
-        Me.ComboBox1.Location = New System.Drawing.Point(250, 39)
+        Me.ComboBox1.Location = New System.Drawing.Point(249, 33)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(146, 28)
+        Me.ComboBox1.Size = New System.Drawing.Size(146, 27)
         Me.ComboBox1.TabIndex = 201
         '
         'dataorders
