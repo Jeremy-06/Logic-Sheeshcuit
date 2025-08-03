@@ -47,6 +47,8 @@ Partial Class datainventory
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -55,7 +57,7 @@ Partial Class datainventory
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("NSimSun", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(39, 41)
+        Me.Label1.Location = New System.Drawing.Point(38, 41)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(357, 27)
         Me.Label1.TabIndex = 79
@@ -65,7 +67,8 @@ Partial Class datainventory
         '
         Me.Button3.BackColor = System.Drawing.SystemColors.Window
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(744, 544)
+        Me.Button3.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(743, 544)
         Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(150, 30)
@@ -77,7 +80,8 @@ Partial Class datainventory
         '
         Me.Button2.BackColor = System.Drawing.SystemColors.Window
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(744, 510)
+        Me.Button2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(743, 509)
         Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(150, 30)
@@ -89,7 +93,8 @@ Partial Class datainventory
         '
         Me.Button1.BackColor = System.Drawing.SystemColors.Window
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(744, 474)
+        Me.Button1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(743, 474)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(150, 30)
@@ -109,14 +114,14 @@ Partial Class datainventory
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlText
-        Me.DataGridView1.Location = New System.Drawing.Point(45, 80)
+        Me.DataGridView1.Location = New System.Drawing.Point(44, 80)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
@@ -131,140 +136,144 @@ Partial Class datainventory
         '
         Me.TextBox1.BackColor = System.Drawing.SystemColors.Window
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(44, 490)
+        Me.TextBox1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(43, 490)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(120, 26)
+        Me.TextBox1.Size = New System.Drawing.Size(120, 27)
         Me.TextBox1.TabIndex = 172
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TextBox2
         '
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(170, 490)
+        Me.TextBox2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(169, 490)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(396, 26)
+        Me.TextBox2.Size = New System.Drawing.Size(396, 27)
         Me.TextBox2.TabIndex = 173
         '
         'TextBox3
         '
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(572, 490)
+        Me.TextBox3.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(571, 490)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(130, 26)
+        Me.TextBox3.Size = New System.Drawing.Size(130, 27)
         Me.TextBox3.TabIndex = 174
+        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TextBox4
         '
         Me.TextBox4.BackColor = System.Drawing.SystemColors.Window
         Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(44, 548)
+        Me.TextBox4.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(43, 548)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(120, 26)
+        Me.TextBox4.Size = New System.Drawing.Size(120, 27)
         Me.TextBox4.TabIndex = 175
+        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TextBox5
         '
         Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(572, 548)
+        Me.TextBox5.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(571, 548)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(130, 26)
+        Me.TextBox5.Size = New System.Drawing.Size(130, 27)
         Me.TextBox5.TabIndex = 176
+        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'ComboBox1
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(170, 547)
+        Me.ComboBox1.Location = New System.Drawing.Point(169, 547)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(191, 28)
+        Me.ComboBox1.Size = New System.Drawing.Size(191, 27)
         Me.ComboBox1.TabIndex = 177
         '
         'ComboBox2
         '
         Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(367, 547)
+        Me.ComboBox2.Location = New System.Drawing.Point(366, 547)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(199, 28)
+        Me.ComboBox2.Size = New System.Drawing.Size(199, 27)
         Me.ComboBox2.TabIndex = 178
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(41, 474)
+        Me.Label7.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(40, 474)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(84, 13)
+        Me.Label7.Size = New System.Drawing.Size(79, 16)
         Me.Label7.TabIndex = 188
         Me.Label7.Text = "PRODUCT ID"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(167, 474)
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(166, 474)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(110, 13)
+        Me.Label2.Size = New System.Drawing.Size(104, 16)
         Me.Label2.TabIndex = 189
         Me.Label2.Text = "PRODUCT NAME "
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(569, 474)
+        Me.Label3.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(568, 474)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(108, 13)
+        Me.Label3.Size = New System.Drawing.Size(102, 16)
         Me.Label3.TabIndex = 190
         Me.Label3.Text = "PRODUCT PRICE"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(41, 532)
+        Me.Label4.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(40, 532)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 13)
+        Me.Label4.Size = New System.Drawing.Size(91, 16)
         Me.Label4.TabIndex = 191
         Me.Label4.Text = "INVENTORY ID"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(170, 531)
+        Me.Label5.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(169, 531)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(138, 13)
+        Me.Label5.Size = New System.Drawing.Size(127, 16)
         Me.Label5.TabIndex = 192
         Me.Label5.Text = "PRODUCT CATEGORY"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(364, 531)
+        Me.Label6.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(363, 531)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(68, 13)
+        Me.Label6.Size = New System.Drawing.Size(67, 16)
         Me.Label6.TabIndex = 193
         Me.Label6.Text = "SUPPLIER" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(569, 532)
+        Me.Label8.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(568, 532)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(112, 13)
+        Me.Label8.Size = New System.Drawing.Size(104, 16)
         Me.Label8.TabIndex = 194
         Me.Label8.Text = "PRODUCT STOCK"
         '
@@ -272,7 +281,7 @@ Partial Class datainventory
         '
         Me.Button4.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.Search_Icon
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button4.Location = New System.Drawing.Point(827, 36)
+        Me.Button4.Location = New System.Drawing.Point(826, 36)
         Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(35, 35)
@@ -282,18 +291,18 @@ Partial Class datainventory
         'TextBox6
         '
         Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(543, 39)
+        Me.TextBox6.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(542, 39)
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(282, 29)
+        Me.TextBox6.Size = New System.Drawing.Size(282, 27)
         Me.TextBox6.TabIndex = 196
         '
         'PictureBox2
         '
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(864, 38)
+        Me.PictureBox2.Location = New System.Drawing.Point(863, 38)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox2.TabIndex = 197
@@ -302,13 +311,35 @@ Partial Class datainventory
         'ComboBox3
         '
         Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox3.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Items.AddRange(New Object() {"Product Name", "Customer Name", "Order ID", "Status", "Month", "Year"})
-        Me.ComboBox3.Location = New System.Drawing.Point(402, 40)
+        Me.ComboBox3.Location = New System.Drawing.Point(401, 40)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(136, 28)
+        Me.ComboBox3.Size = New System.Drawing.Size(136, 27)
         Me.ComboBox3.TabIndex = 202
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.Purple
+        Me.LinkLabel1.Location = New System.Drawing.Point(319, 531)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(41, 13)
+        Me.LinkLabel1.TabIndex = 203
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "TABLE"
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.LinkColor = System.Drawing.Color.Purple
+        Me.LinkLabel2.Location = New System.Drawing.Point(524, 532)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(41, 13)
+        Me.LinkLabel2.TabIndex = 204
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "TABLE"
         '
         'datainventory
         '
@@ -316,6 +347,8 @@ Partial Class datainventory
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(932, 611)
+        Me.Controls.Add(Me.LinkLabel2)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Button4)
@@ -375,4 +408,6 @@ Partial Class datainventory
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents LinkLabel2 As LinkLabel
 End Class

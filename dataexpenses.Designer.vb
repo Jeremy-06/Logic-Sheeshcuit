@@ -22,11 +22,10 @@ Partial Class dataexpenses
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dataexpenses))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -44,6 +43,8 @@ Partial Class dataexpenses
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.expeensesReport_btn = New System.Windows.Forms.Button()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -68,14 +69,14 @@ Partial Class dataexpenses
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlText
         Me.DataGridView1.Location = New System.Drawing.Point(45, 77)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
@@ -88,23 +89,13 @@ Partial Class dataexpenses
         Me.DataGridView1.Size = New System.Drawing.Size(850, 350)
         Me.DataGridView1.TabIndex = 171
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(370, 529)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 13)
-        Me.Label4.TabIndex = 195
-        Me.Label4.Text = "DATE"
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(414, 471)
+        Me.Label7.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(40, 471)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(81, 13)
+        Me.Label7.Size = New System.Drawing.Size(79, 16)
         Me.Label7.TabIndex = 194
         Me.Label7.Text = "EXPENSE ID"
         '
@@ -112,20 +103,20 @@ Partial Class dataexpenses
         '
         Me.TextBox2.BackColor = System.Drawing.SystemColors.Window
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(43, 487)
+        Me.TextBox2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(366, 486)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(368, 84)
+        Me.TextBox2.Size = New System.Drawing.Size(368, 51)
         Me.TextBox2.TabIndex = 197
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(40, 471)
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(363, 470)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(91, 13)
+        Me.Label2.Size = New System.Drawing.Size(88, 16)
         Me.Label2.TabIndex = 198
         Me.Label2.Text = "DESCRIPTION"
         '
@@ -133,10 +124,10 @@ Partial Class dataexpenses
         '
         Me.TextBox1.BackColor = System.Drawing.SystemColors.Window
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(417, 487)
+        Me.TextBox1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(43, 487)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(120, 26)
+        Me.TextBox1.Size = New System.Drawing.Size(120, 23)
         Me.TextBox1.TabIndex = 192
         '
         'TextBox3
@@ -144,7 +135,7 @@ Partial Class dataexpenses
         Me.TextBox3.BackColor = System.Drawing.SystemColors.Window
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(544, 487)
+        Me.TextBox3.Location = New System.Drawing.Point(169, 487)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(191, 26)
         Me.TextBox3.TabIndex = 199
@@ -152,10 +143,10 @@ Partial Class dataexpenses
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(541, 471)
+        Me.Label3.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(166, 471)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(60, 13)
+        Me.Label3.Size = New System.Drawing.Size(58, 16)
         Me.Label3.TabIndex = 200
         Me.Label3.Text = "AMOUNT"
         '
@@ -165,7 +156,7 @@ Partial Class dataexpenses
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(544, 543)
+        Me.ComboBox1.Location = New System.Drawing.Point(169, 544)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(191, 28)
         Me.ComboBox1.TabIndex = 201
@@ -173,20 +164,20 @@ Partial Class dataexpenses
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(414, 529)
+        Me.Label5.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(40, 529)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(40, 13)
+        Me.Label5.Size = New System.Drawing.Size(38, 16)
         Me.Label5.TabIndex = 202
         Me.Label5.Text = "DATE"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(541, 527)
+        Me.Label6.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(166, 527)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(74, 13)
+        Me.Label6.Size = New System.Drawing.Size(68, 16)
         Me.Label6.TabIndex = 203
         Me.Label6.Text = "CATEGORY"
         '
@@ -194,7 +185,8 @@ Partial Class dataexpenses
         '
         Me.Button3.BackColor = System.Drawing.SystemColors.Window
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(745, 542)
+        Me.Button3.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(745, 543)
         Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(150, 30)
@@ -206,7 +198,8 @@ Partial Class dataexpenses
         '
         Me.Button2.BackColor = System.Drawing.SystemColors.Window
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(745, 508)
+        Me.Button2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(745, 509)
         Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(150, 30)
@@ -218,7 +211,8 @@ Partial Class dataexpenses
         '
         Me.Button1.BackColor = System.Drawing.SystemColors.Window
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(745, 472)
+        Me.Button1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(745, 473)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(150, 30)
@@ -230,7 +224,7 @@ Partial Class dataexpenses
         '
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(865, 38)
+        Me.PictureBox2.Location = New System.Drawing.Point(865, 37)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox2.TabIndex = 207
@@ -240,8 +234,8 @@ Partial Class dataexpenses
         '
         Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(417, 545)
-        Me.DateTimePicker1.MinDate = New Date(2025, 1, 1, 0, 0, 0, 0)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(43, 545)
+        Me.DateTimePicker1.MinDate = New Date(2025, 7, 1, 0, 0, 0, 0)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(121, 26)
         Me.DateTimePicker1.TabIndex = 208
@@ -250,7 +244,7 @@ Partial Class dataexpenses
         '
         Me.Button4.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.Search_Icon
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button4.Location = New System.Drawing.Point(827, 37)
+        Me.Button4.Location = New System.Drawing.Point(827, 35)
         Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(35, 35)
@@ -261,10 +255,10 @@ Partial Class dataexpenses
         '
         Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(544, 41)
+        Me.TextBox4.Location = New System.Drawing.Point(492, 37)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(279, 29)
+        Me.TextBox4.Size = New System.Drawing.Size(331, 29)
         Me.TextBox4.TabIndex = 212
         '
         'ComboBox2
@@ -273,10 +267,34 @@ Partial Class dataexpenses
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Product Name", "Customer Name", "Order ID", "Status", "Month", "Year"})
-        Me.ComboBox2.Location = New System.Drawing.Point(417, 41)
+        Me.ComboBox2.Location = New System.Drawing.Point(366, 37)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(121, 28)
         Me.ComboBox2.TabIndex = 213
+        '
+        'expeensesReport_btn
+        '
+        Me.expeensesReport_btn.BackColor = System.Drawing.SystemColors.Window
+        Me.expeensesReport_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.expeensesReport_btn.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.expeensesReport_btn.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.expeensesReport_btn.Location = New System.Drawing.Point(366, 542)
+        Me.expeensesReport_btn.Margin = New System.Windows.Forms.Padding(2)
+        Me.expeensesReport_btn.Name = "expeensesReport_btn"
+        Me.expeensesReport_btn.Size = New System.Drawing.Size(368, 30)
+        Me.expeensesReport_btn.TabIndex = 225
+        Me.expeensesReport_btn.Text = "VIEW EXPENSES REPORT"
+        Me.expeensesReport_btn.UseVisualStyleBackColor = False
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(252, 38)
+        Me.DateTimePicker2.MinDate = New Date(2025, 7, 1, 0, 0, 0, 0)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(108, 26)
+        Me.DateTimePicker2.TabIndex = 226
         '
         'dataexpenses
         '
@@ -284,6 +302,8 @@ Partial Class dataexpenses
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(932, 611)
+        Me.Controls.Add(Me.DateTimePicker2)
+        Me.Controls.Add(Me.expeensesReport_btn)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Button4)
@@ -299,11 +319,11 @@ Partial Class dataexpenses
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dataexpenses"
@@ -317,7 +337,6 @@ Partial Class dataexpenses
     End Sub
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label2 As Label
@@ -335,4 +354,6 @@ Partial Class dataexpenses
     Friend WithEvents Button4 As Button
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents expeensesReport_btn As Button
+    Friend WithEvents DateTimePicker2 As DateTimePicker
 End Class

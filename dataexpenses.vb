@@ -10,7 +10,15 @@ Public Class dataexpenses
     Dim ds As DataSet
     Dim query As String
 
+    ' Flag to track if DateTimePicker has been modified
+    Private isDateFilterActive As Boolean = False
+
     Private Sub dataexpenses_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Set DateTimePicker to show no date (null value)
+        DateTimePicker2.Value = DateTimePicker2.MinDate
+        ' Set max date to current date
+        DateTimePicker1.MaxDate = DateTime.Today
+        DateTimePicker2.MaxDate = DateTime.Today
         LoadInventoryData()
         LoadCategories()
         LoadSearchComboBox()
@@ -21,13 +29,33 @@ Public Class dataexpenses
     Private Sub LoadInventoryData()
         Try
             If conn.State <> ConnectionState.Open Then conn.Open()
-            query = "SELECT 
-                        expensesId, 
-                        expenseDate, 
-                        expenseDescription, 
-                        expenseAmount,
-                        expenseCategory
-                     FROM expenses;"
+
+            Dim query As String = ""
+
+            ' Check if date filter is active
+            If isDateFilterActive AndAlso DateTimePicker2.Value <> DateTimePicker2.MinDate Then
+                ' SQL query with date filter
+                query = $"SELECT 
+                            expensesId, 
+                            expenseDate, 
+                            expenseDescription, 
+                            expenseAmount,
+                            expenseCategory
+                         FROM expenses
+                         WHERE DATE(expenseDate) = '{DateTimePicker2.Value:yyyy-MM-dd}'
+                         ORDER BY expensesId;"
+            Else
+                ' SQL query to show all expenses by default
+                query = $"SELECT 
+                            expensesId, 
+                            expenseDate, 
+                            expenseDescription, 
+                            expenseAmount,
+                            expenseCategory
+                         FROM expenses
+                         ORDER BY expensesId;"
+            End If
+
             cmd = New MySqlCommand(query, conn)
             da = New MySqlDataAdapter(cmd)
             ds = New DataSet()
@@ -66,7 +94,7 @@ Public Class dataexpenses
     Private Sub LoadSearchComboBox()
         Try
             ComboBox2.Items.Clear()
-            ComboBox2.Items.Add("ID")
+            ComboBox2.Items.Add("Expense ID")
             ComboBox2.Items.Add("Category")
             ComboBox2.Items.Add("Month")
             ComboBox2.Items.Add("Year")
@@ -83,7 +111,8 @@ Public Class dataexpenses
         TextBox4.Text = ""
         ComboBox1.SelectedIndex = -1
         ComboBox2.SelectedIndex = 0
-        DateTimePicker1.Value = DateTime.Now
+        ' Don't reset DateTimePicker here as it's used for filtering
+        ' DateTimePicker1.Value = DateTime.Now
     End Sub
 
     Private Sub RefreshData()
@@ -340,7 +369,7 @@ Public Class dataexpenses
     End Sub
 
     Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
-        ' Search functionality based on selected combo box item
+        ' Search functionality based on selected combo box item - works independently of date filter
         Try
             If Not String.IsNullOrEmpty(TextBox4.Text) Then
                 If conn.State <> ConnectionState.Open Then conn.Open()
@@ -349,7 +378,7 @@ Public Class dataexpenses
                 Dim searchCondition As String = ""
 
                 Select Case searchType
-                    Case "ID"
+                    Case "Expense ID"
                         ' Only allow numbers for ID
                         If IsNumeric(TextBox4.Text) Then
                             searchCondition = $"expensesId = {TextBox4.Text}"
@@ -387,11 +416,22 @@ Public Class dataexpenses
                             End If
                         End If
                     Case "Year"
-                        ' Search by year (4 digits)
-                        If IsNumeric(TextBox4.Text) AndAlso TextBox4.Text.Length = 4 Then
-                            searchCondition = $"YEAR(expenseDate) = {TextBox4.Text}"
+                        ' Only allow numbers for Year and only search when exactly 4 digits
+                        If IsNumeric(TextBox4.Text) Then
+                            If TextBox4.Text.Length = 4 Then
+                                searchCondition = $"YEAR(expenseDate) = {TextBox4.Text}"
+                            ElseIf TextBox4.Text.Length > 4 Then
+                                MessageBox.Show("Year must be a 4-digit number (e.g., 2024).", "Invalid Year", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                                TextBox4.Text = ""
+                                If conn.State = ConnectionState.Open Then conn.Close()
+                                Return
+                            Else
+                                ' Don't search if less than 4 digits, just return
+                                If conn.State = ConnectionState.Open Then conn.Close()
+                                Return
+                            End If
                         Else
-                            MessageBox.Show("Year must be a 4-digit number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            MessageBox.Show("Year must be a 4-digit number (e.g., 2024).", "Invalid Year", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                             TextBox4.Text = ""
                             If conn.State = ConnectionState.Open Then conn.Close()
                             Return
@@ -400,6 +440,12 @@ Public Class dataexpenses
                         searchCondition = $"expensesId = {TextBox4.Text}"
                 End Select
 
+                ' Build the WHERE clause considering both search condition and date filter
+                Dim whereClause As String = searchCondition
+                If isDateFilterActive AndAlso DateTimePicker2.Value <> DateTimePicker2.MinDate Then
+                    whereClause = $"{searchCondition} AND DATE(expenseDate) = '{DateTimePicker2.Value:yyyy-MM-dd}'"
+                End If
+
                 query = $"SELECT 
                             expensesId, 
                             expenseDate, 
@@ -407,7 +453,7 @@ Public Class dataexpenses
                             expenseAmount,
                             expenseCategory
                          FROM expenses
-                         WHERE {searchCondition}
+                         WHERE {whereClause}
                          ORDER BY expensesId;"
                 cmd = New MySqlCommand(query, conn)
                 da = New MySqlDataAdapter(cmd)
@@ -440,9 +486,20 @@ Public Class dataexpenses
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        ' Clear all inputs and refresh data
+        ' Reset to initial state
+        isDateFilterActive = False
+        DateTimePicker2.Value = DateTimePicker2.MinDate
         ClearFields()
         RefreshData()
+    End Sub
+
+    ' DateTimePicker value changed event
+    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
+        ' Set flag to indicate date filter is active
+        isDateFilterActive = True
+        LoadInventoryData()
+        TextBox4.Clear()
+        ClearFields()
     End Sub
 
     Private Function GetMonthNumber(monthName As String) As Integer
@@ -506,4 +563,8 @@ Public Class dataexpenses
 
         Return 0
     End Function
+
+    Private Sub expeensesReport_btn_Click(sender As Object, e As EventArgs) Handles expeensesReport_btn.Click
+        expensesreport.Show()
+    End Sub
 End Class
