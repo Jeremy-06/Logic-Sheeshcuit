@@ -33,14 +33,48 @@ Public Class adminprofile
             reader = cmd.ExecuteReader()
 
             If reader.Read() Then
-                adminIdlbl.Text = reader.GetInt32("adminId").ToString()
+                ' Safely get adminId as integer
+                Try
+                    adminIdlbl.Text = reader.GetInt32("adminId").ToString()
+                Catch ex As Exception
+                    adminIdlbl.Text = "N/A"
+                End Try
 
-                ' Set Label2 to fullName with NULL checking
-                usernamelbl.Text = If(reader.IsDBNull("fullName"), "N/A", reader.GetString("fullName"))
-                emaillbl.Text = If(reader.IsDBNull("email"), "N/A", reader.GetString("email"))
-                phonelbl.Text = If(reader.IsDBNull("phone"), "N/A", reader.GetString("phone"))
-                lastLoginlbl.Text = If(reader.IsDBNull("lastLogin"), "N/A", reader.GetString("lastLogin"))
-                createdAtlbl.Text = If(reader.IsDBNull("createdAt"), "N/A", reader.GetString("createdAt"))
+                ' Safely get fullName as string with proper error handling
+                Try
+                    usernamelbl.Text = If(reader.IsDBNull("fullName"), "N/A", reader.GetString("fullName"))
+                Catch ex As Exception
+                    usernamelbl.Text = "N/A"
+                End Try
+
+                ' Safely get email as string
+                Try
+                    emaillbl.Text = If(reader.IsDBNull("email"), "N/A", reader.GetString("email"))
+                Catch ex As Exception
+                    emaillbl.Text = "N/A"
+                End Try
+
+                ' Safely get phone as string
+                Try
+                    phonelbl.Text = If(reader.IsDBNull("phone"), "N/A", reader.GetString("phone"))
+                Catch ex As Exception
+                    phonelbl.Text = "N/A"
+                End Try
+
+                ' Safely get lastLogin as string
+                Try
+                    lastLoginlbl.Text = If(reader.IsDBNull("lastLogin"), "N/A", reader.GetString("lastLogin"))
+                Catch ex As Exception
+                    lastLoginlbl.Text = "N/A"
+                End Try
+
+                ' Safely get createdAt as string
+                Try
+                    createdAtlbl.Text = If(reader.IsDBNull("createdAt"), "N/A", reader.GetString("createdAt"))
+                Catch ex As Exception
+                    createdAtlbl.Text = "N/A"
+                End Try
+
                 rolelbl.Text = login.userRole
             Else
                 MessageBox.Show("Admin information not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

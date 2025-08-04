@@ -175,94 +175,144 @@ Public Class home
 
     'Profile
     Private Sub usericon_Click(sender As Object, e As EventArgs) Handles usericon.Click
-        ' Check if user is logged in and exists in the database
-        Try
-            If login.customerId <= 0 Then
-                MessageBox.Show("Please log in or sign up first to view your profile.")
-                login.Show()
-                Return
-            End If
-
-            ' Use the shared/public connection object (assumed declared outside the form)
-            If conn.State = ConnectionState.Closed Then
-                conn.Open()
-            End If
-
-            Dim query As String = $"SELECT COUNT(*) FROM customers WHERE customerId = {login.customerId}"
-            Dim cmd As New MySqlCommand(query, conn)
-            Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
-
-            If count = 0 Then
-                MessageBox.Show("Please sign up first to view your profile.")
-                signup.Show()
-                Return
-            End If
-
-            customerprofile.Show()
-        Catch ex As Exception
-            MessageBox.Show("Error checking user: " & ex.Message)
+        ' Check if user is logged in
+        If String.IsNullOrEmpty(login.userRole) Then
+            MessageBox.Show("Please log in first to view your profile.")
             login.Show()
-        End Try
+            Return
+        End If
+
+        ' Check user role and show appropriate profile
+        If login.userRole.ToLower() = "admin" Then
+            ' Show admin profile
+            adminprofile.Show()
+        ElseIf login.userRole.ToLower() = "customer" Then
+            ' Check if customer exists in the database
+            Try
+                If login.customerId <= 0 Then
+                    MessageBox.Show("Please log in or sign up first to view your profile.")
+                    login.Show()
+                    Return
+                End If
+
+                ' Use the shared/public connection object (assumed declared outside the form)
+                If conn.State = ConnectionState.Closed Then
+                    conn.Open()
+                End If
+
+                Dim query As String = $"SELECT COUNT(*) FROM customers WHERE customerId = {login.customerId}"
+                Dim cmd As New MySqlCommand(query, conn)
+                Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+                If count = 0 Then
+                    MessageBox.Show("Please sign up first to view your profile.")
+                    signup.Show()
+                    Return
+                End If
+
+                customerprofile.Show()
+            Catch ex As Exception
+                MessageBox.Show("Error checking user: " & ex.Message)
+                login.Show()
+            End Try
+        Else
+            ' For other roles (auditor, etc.), show appropriate message
+            MessageBox.Show($"Profile access for {login.userRole} role is not yet implemented.")
+        End If
     End Sub
 
     Private Sub PictureBox45_Click(sender As Object, e As EventArgs) Handles PictureBox45.Click
-        Try
-            If login.customerId <= 0 Then
-                MessageBox.Show("Please log in or sign up first to view your profile.")
-                login.Show()
-                Return
-            End If
-
-            ' Use the shared/public connection object (assumed declared outside the form)
-            If conn.State = ConnectionState.Closed Then
-                conn.Open()
-            End If
-
-            Dim query As String = $"SELECT COUNT(*) FROM customers WHERE customerId = {login.customerId}"
-            Dim cmd As New MySqlCommand(query, conn)
-            Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
-
-            If count = 0 Then
-                MessageBox.Show("Please sign up first to view your profile.")
-                signup.Show()
-                Return
-            End If
-
-            customerprofile.Show()
-        Catch ex As Exception
-            MessageBox.Show("Error checking user: " & ex.Message)
+        ' Check if user is logged in
+        If String.IsNullOrEmpty(login.userRole) Then
+            MessageBox.Show("Please log in first to view your profile.")
             login.Show()
-        End Try
+            Return
+        End If
+
+        ' Check user role and show appropriate profile
+        If login.userRole.ToLower() = "admin" Then
+            ' Show admin profile
+            adminprofile.Show()
+        ElseIf login.userRole.ToLower() = "customer" Then
+            ' Check if customer exists in the database
+            Try
+                If login.customerId <= 0 Then
+                    MessageBox.Show("Please log in or sign up first to view your profile.")
+                    login.Show()
+                    Return
+                End If
+
+                ' Use the shared/public connection object (assumed declared outside the form)
+                If conn.State = ConnectionState.Closed Then
+                    conn.Open()
+                End If
+
+                Dim query As String = $"SELECT COUNT(*) FROM customers WHERE customerId = {login.customerId}"
+                Dim cmd As New MySqlCommand(query, conn)
+                Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+                If count = 0 Then
+                    MessageBox.Show("Please sign up first to view your profile.")
+                    signup.Show()
+                    Return
+                End If
+
+                customerprofile.Show()
+            Catch ex As Exception
+                MessageBox.Show("Error checking user: " & ex.Message)
+                login.Show()
+            End Try
+        Else
+            ' For other roles (auditor, etc.), show appropriate message
+            MessageBox.Show($"Profile access for {login.userRole} role is not yet implemented.")
+        End If
     End Sub
 
     Private Sub ProfileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfileToolStripMenuItem.Click
-        Try
-            If login.customerId <= 0 Then
-                MessageBox.Show("Please log in or sign up first to view your profile.")
-                login.Show()
-                Return
-            End If
-
-            ' Use the shared/public connection object (assumed declared outside the form)
-            If conn.State = ConnectionState.Closed Then
-                conn.Open()
-            End If
-
-            Dim query As String = $"SELECT COUNT(*) FROM customers WHERE customerId = {login.customerId}"
-            Dim cmd As New MySqlCommand(query, conn)
-            Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
-
-            If count = 0 Then
-                MessageBox.Show("Please sign up first to view your profile.")
-                signup.Show()
-                Return
-            End If
-
-            customerprofile.Show()
-        Catch ex As Exception
-            MessageBox.Show("Error checking user: " & ex.Message)
+        ' Check if user is logged in
+        If String.IsNullOrEmpty(login.userRole) Then
+            MessageBox.Show("Please log in first to view your profile.")
             login.Show()
-        End Try
+            Return
+        End If
+
+        ' Check user role and show appropriate profile
+        If login.userRole.ToLower() = "admin" Then
+            ' Show admin profile
+            adminprofile.Show()
+        ElseIf login.userRole.ToLower() = "customer" Then
+            ' Check if customer exists in the database
+            Try
+                If login.customerId <= 0 Then
+                    MessageBox.Show("Please log in or sign up first to view your profile.")
+                    login.Show()
+                    Return
+                End If
+
+                ' Use the shared/public connection object (assumed declared outside the form)
+                If conn.State = ConnectionState.Closed Then
+                    conn.Open()
+                End If
+
+                Dim query As String = $"SELECT COUNT(*) FROM customers WHERE customerId = {login.customerId}"
+                Dim cmd As New MySqlCommand(query, conn)
+                Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+                If count = 0 Then
+                    MessageBox.Show("Please sign up first to view your profile.")
+                    signup.Show()
+                    Return
+                End If
+
+                customerprofile.Show()
+            Catch ex As Exception
+                MessageBox.Show("Error checking user: " & ex.Message)
+                login.Show()
+            End Try
+        Else
+            ' For other roles (auditor, etc.), show appropriate message
+            MessageBox.Show($"Profile access for {login.userRole} role is not yet implemented.")
+        End If
     End Sub
 
     Private Sub home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
