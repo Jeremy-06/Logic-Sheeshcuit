@@ -11,6 +11,18 @@ Public Class customerprofile
     Private isEditing As Boolean = False
 
     Private Sub customerprofile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Check if user has been logged out from other forms
+        If login.customerId = 0 AndAlso Not String.IsNullOrEmpty(login.userRole) AndAlso login.userRole.ToLower() = "customer" Then
+            ' Clear all session data
+            login.userRole = ""
+            login.adminId = 0
+            login.adminRole = ""
+            MessageBox.Show("You have been logged out from all sessions.", "Session Expired", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            login.Show()
+            Me.Close()
+            Return
+        End If
+
         LoadCustomerProfile()
         SetTextBoxesFromLabels()
         SetTextBoxesReadOnly(True)
@@ -22,6 +34,12 @@ Public Class customerprofile
         AddHandler lastNameTextBox.KeyDown, AddressOf EditTextBox_KeyDown
         AddHandler addressTextBox.KeyDown, AddressOf EditTextBox_KeyDown
         AddHandler phoneTextBox.KeyDown, AddressOf EditTextBox_KeyDown
+
+        ' Check if customer is still logged in
+        If login.customerId <= 0 Then
+            ClearProfileData()
+            Return
+        End If
 
         Try
             If conn.State = ConnectionState.Closed Then
@@ -123,7 +141,7 @@ Public Class customerprofile
             login.customerId = 0 ' Reset customer ID to indicate not logged in
             MessageBox.Show("You have been logged out successfully.", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information)
             login.Show()
-            Me.Hide()
+            Me.Close()
             home.Button1.Visible = False
         End If
     End Sub
@@ -236,6 +254,21 @@ Public Class customerprofile
         SetTextBoxesReadOnly(True)
         isEditing = False
 
+    End Sub
+
+    Private Sub ClearProfileData()
+        ' Clear all profile data
+        customerIdlbl.Text = ""
+        usernamelbl.Text = ""
+        addresslbl.Text = ""
+        phonelbl.Text = ""
+        rolelbl.Text = ""
+
+        ' Clear textboxes
+        firstNameTextBox.Text = ""
+        lastNameTextBox.Text = ""
+        addressTextBox.Text = ""
+        phoneTextBox.Text = ""
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click

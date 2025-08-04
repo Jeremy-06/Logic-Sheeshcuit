@@ -43,7 +43,7 @@ Public Class inventorymanager
             login.adminId = 0
             MessageBox.Show("You have been logged out successfully.", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information)
             login.Show()
-            Me.Hide()
+            Me.Close()
             datasets.Close()
             home.Button1.Visible = False
         End If

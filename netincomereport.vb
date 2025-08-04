@@ -873,20 +873,79 @@ Public Class netincomereport
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        ' Clear the chart
-        Chart1.Series.Clear()
-        Chart1.ChartAreas.Clear()
-        Chart1.Legends.Clear()
-        Chart1.Titles.Clear()
+        ' Refresh all charts and data
+        RefreshAllData()
+    End Sub
 
-        ' Clear TextBoxes
-        If TextBox1 IsNot Nothing Then TextBox1.Text = ""
-        If TextBox2 IsNot Nothing Then TextBox2.Text = ""
-        If TextBox3 IsNot Nothing Then TextBox3.Text = ""
+    Private Sub RefreshAllData()
+        Try
+            ' Clear Chart 1 (Net Income)
+            Chart1.Series.Clear()
+            Chart1.ChartAreas.Clear()
+            Chart1.Legends.Clear()
+            Chart1.Titles.Clear()
 
-        ' Reset chart title
-        Chart1.Titles.Add("Net Income Report")
-        Chart1.Titles(0).Font = New Font("Arial", 14, FontStyle.Bold)
+            ' Clear Chart 2 (Expenses Breakdown)
+            Chart2.Series.Clear()
+            Chart2.ChartAreas.Clear()
+            Chart2.Legends.Clear()
+            Chart2.Titles.Clear()
+
+            ' Clear Chart 3 (Sales by Category)
+            Chart3.Series.Clear()
+            Chart3.ChartAreas.Clear()
+            Chart3.Legends.Clear()
+            Chart3.Titles.Clear()
+
+            ' Clear all TextBoxes
+            If TextBox1 IsNot Nothing Then TextBox1.Text = ""
+            If TextBox2 IsNot Nothing Then TextBox2.Text = ""
+            If TextBox3 IsNot Nothing Then TextBox3.Text = ""
+
+            ' Reset all chart titles
+            Chart1.Titles.Add("Net Income Report")
+            Chart1.Titles(0).Font = New Font("Arial", 14, FontStyle.Bold)
+
+            Chart2.Titles.Add("Expenses Breakdown by Category")
+            Chart2.Titles(0).Font = New Font("Arial", 12, FontStyle.Bold)
+
+            Chart3.Titles.Add("Sales by Product Category")
+            Chart3.Titles(0).Font = New Font("Arial", 12, FontStyle.Bold)
+
+            ' Reset date pickers to default values
+            Dim defaultStartDate As DateTime = DateTime.Today.AddDays(-30)
+            Dim defaultEndDate As DateTime = DateTime.Today
+
+            If defaultStartDate < DateTimePicker1.MinDate Then
+                defaultStartDate = DateTimePicker1.MinDate
+            End If
+            If defaultEndDate > DateTimePicker1.MaxDate Then
+                defaultEndDate = DateTimePicker1.MaxDate
+            End If
+
+            DateTimePicker1.Value = defaultStartDate
+            DateTimePicker2.Value = defaultEndDate
+            DateTimePicker3.Value = DateTime.Today
+            DateTimePicker4.Value = DateTime.Today
+
+            ' Reset ComboBoxes to default selections
+            ComboBox1.SelectedIndex = DateTime.Now.Month - 1
+            ComboBox2.SelectedIndex = DateTime.Now.Month - 1
+            ComboBox3.SelectedIndex = 2 ' Current year
+            ComboBox4.SelectedIndex = 0
+            ComboBox5.SelectedIndex = DateTime.Now.Month - 1
+            ComboBox6.SelectedIndex = 2 ' Current year
+            ComboBox7.SelectedIndex = DateTime.Now.Month - 1
+            ComboBox8.SelectedIndex = 2 ' Current year
+
+            ' Re-initialize charts
+            SetupCharts()
+
+            MessageBox.Show("All data has been refreshed successfully!", "Refresh Complete", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        Catch ex As Exception
+            MessageBox.Show($"Error refreshing data: {ex.Message}", "Refresh Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged

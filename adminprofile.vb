@@ -10,6 +10,18 @@ Public Class adminprofile
     Private isEditing As Boolean = False
 
     Private Sub adminprofile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Check if user has been logged out from other forms
+        If login.adminId = 0 AndAlso Not String.IsNullOrEmpty(login.userRole) AndAlso login.userRole.ToLower() = "admin" Then
+            ' Clear all session data
+            login.userRole = ""
+            login.customerId = 0
+            login.adminRole = ""
+            MessageBox.Show("You have been logged out from all sessions.", "Session Expired", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            login.Show()
+            Me.Close()
+            Return
+        End If
+
         LoadAdminProfile()
         SetTextBoxesFromLabels()
         SetTextBoxesReadOnly(True)
@@ -21,21 +33,46 @@ Public Class adminprofile
         AddHandler EmailTextBox.KeyDown, AddressOf EditTextBox_KeyDown
         AddHandler PhoneTextBox.KeyDown, AddressOf EditTextBox_KeyDown
 
+        ' Check if admin is still logged in
+        If login.adminId <= 0 Then
+            ClearProfileData()
+            Return
+        End If
+
         Try
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
+
+            ' Debug: Check what admin records exist
+            Dim debugQuery As String = "SELECT adminId, fullName, email, phone FROM admin_users"
+            Dim debugCmd As New MySqlCommand(debugQuery, conn)
+            Dim debugReader As MySqlDataReader = debugCmd.ExecuteReader()
+
+            Console.WriteLine("Debug: All admin records in database:")
+            While debugReader.Read()
+                Console.WriteLine($"Admin ID: {debugReader.GetInt32("adminId")}, Name: {debugReader.GetString("fullName")}, Email: {debugReader.GetString("email")}")
+            End While
+            debugReader.Close()
 
             ' Get admin information using the logged-in admin ID
             query = $"SELECT adminId, fullName, email, phone FROM admin_users WHERE adminId = {login.adminId}"
             cmd = New MySqlCommand(query, conn)
             reader = cmd.ExecuteReader()
 
+            ' Debug: Check if we found any records
+            If reader.HasRows Then
+                Console.WriteLine($"Debug: Found admin record with ID {login.adminId}")
+            Else
+                Console.WriteLine($"Debug: No admin record found for ID {login.adminId}")
+            End If
+
             If reader.Read() Then
                 adminIdlbl.Text = reader.GetInt32("adminId").ToString()
 
-                ' Set fullName directly like in customerprofile
-                usernamelbl.Text = reader.GetString("fullName")
+                ' Get fullName and format it properly
+                Dim fullName As String = reader.GetString("fullName")
+                usernamelbl.Text = fullName
 
                 emaillbl.Text = reader.GetString("email")
                 phonelbl.Text = reader.GetString("phone")
@@ -62,7 +99,8 @@ Public Class adminprofile
         ' Set textboxes from label values (if needed)
         Try
             If Not String.IsNullOrEmpty(usernamelbl.Text) AndAlso usernamelbl.Text <> "N/A" Then
-                fullNameTextBox.Text = usernamelbl.Text
+                ' Set the full name directly to the textbox
+                fullNameTextBox.Text = usernamelbl.Text.Trim()
             Else
                 fullNameTextBox.Text = ""
             End If
@@ -183,6 +221,12 @@ Public Class adminprofile
         Dim email As String = EmailTextBox.Text.Trim()
         Dim phone As String = PhoneTextBox.Text.Trim()
 
+        ' Validate full name (should contain at least first and last name)
+        If String.IsNullOrEmpty(fullName) Then
+            MessageBox.Show("Please enter a valid full name.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
         ' Update labels
         usernamelbl.Text = fullName
         emaillbl.Text = email
@@ -213,6 +257,20 @@ Public Class adminprofile
 
     End Sub
 
+    Private Sub ClearProfileData()
+        ' Clear all profile data
+        adminIdlbl.Text = ""
+        usernamelbl.Text = ""
+        emaillbl.Text = ""
+        phonelbl.Text = ""
+        rolelbl.Text = ""
+
+        ' Clear textboxes
+        fullNameTextBox.Text = ""
+        EmailTextBox.Text = ""
+        PhoneTextBox.Text = ""
+    End Sub
+
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
     End Sub
@@ -223,7 +281,7 @@ Public Class adminprofile
             login.adminId = 0
             MessageBox.Show("You have been logged out successfully.", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information)
             login.Show()
-            Me.Hide()
+            Me.Close()
             home.Button1.Visible = False
         End If
     End Sub

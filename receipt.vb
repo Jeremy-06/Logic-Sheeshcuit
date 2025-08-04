@@ -116,7 +116,7 @@ Public Class receipt
                     End If
                 Next
 
-                lblTotal.Text = $"Total: ₱{total:N2}"
+                lblTotal.Text = $"₱{total:N2}"
 
                 ' Check if order is completed and add to sales if needed
                 If orderStatus = "completed" Then

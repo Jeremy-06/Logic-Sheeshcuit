@@ -130,45 +130,49 @@ Public Class home
         End If
     End Sub
 
-    'Refresh Home
-    Private Sub PictureBox38_Click(sender As Object, e As EventArgs) Handles PictureBox38.Click
-        Dim homeForm As New home()
-        homeForm.Show()
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click, PictureBox38.Click, PictureBox42.Click
+        RefreshHomePanel()
     End Sub
 
-    Private Sub PictureBox42_Click(sender As Object, e As EventArgs) Handles PictureBox42.Click
-        Dim homeForm As New home()
-        homeForm.Show()
-    End Sub
+    Private Sub RefreshHomePanel()
+        TextBox1.Clear()
+        searchResults.Clear()
+        currentResultIndex = -1
+        lastSearchTerm = ""
 
-    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Dim homeForm As New home()
-        homeForm.Show()
+        For Each lbl As Label In previousResults
+            lbl.BackColor = SystemColors.Control
+            lbl.ForeColor = SystemColors.ControlText
+        Next
+        previousResults.Clear()
+
+        Try
+            If conn.State = ConnectionState.Closed Then conn.Open()
+            Dim countQuery As String = "SELECT COUNT(*) FROM products"
+            Dim countCmd As New MySqlCommand(countQuery, conn)
+            Dim totalProducts As Integer = Convert.ToInt32(countCmd.ExecuteScalar())
+            Label2.Text = totalProducts.ToString()
+        Catch ex As Exception
+            Label2.Text = "0"
+        Finally
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+
+        Panel1.Refresh()
+        Panel1.VerticalScroll.Value = 0
+        Panel1.PerformLayout()
+        Me.Invalidate()
+        Me.Update()
     End Sub
 
     'Products
-    Private Sub PictureBox40_Click(sender As Object, e As EventArgs) Handles PictureBox40.Click
-        ProductsToolStripMenuItem.Select()
-        ProductsToolStripMenuItem.ShowDropDown()
-    End Sub
-
-    Private Sub PictureBox43_Click(sender As Object, e As EventArgs) Handles PictureBox43.Click
+    Private Sub PictureBox40_Click(sender As Object, e As EventArgs) Handles PictureBox40.Click, PictureBox43.Click
         ProductsToolStripMenuItem.Select()
         ProductsToolStripMenuItem.ShowDropDown()
     End Sub
 
     'Cart
-    Private Sub PictureBox39_Click(sender As Object, e As EventArgs) Handles PictureBox39.Click
-        Dim cartForm As New cart()
-        cartForm.Show()
-    End Sub
-
-    Private Sub PictureBox44_Click(sender As Object, e As EventArgs) Handles PictureBox44.Click
-        Dim cartForm As New cart()
-        cartForm.Show()
-    End Sub
-
-    Private Sub CartToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CartToolStripMenuItem.Click
+    Private Sub CartToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CartToolStripMenuItem.Click, PictureBox39.Click, PictureBox44.Click
         Dim cartForm As New cart()
         cartForm.Show()
     End Sub
@@ -491,7 +495,7 @@ Public Class home
             MessageBox.Show("Access denied. Admin privileges required.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
-        
+
         ' Check admin role and show appropriate form
         Select Case login.adminRole.ToLower()
             Case "super_admin"

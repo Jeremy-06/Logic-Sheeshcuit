@@ -92,7 +92,7 @@ Partial Class adminprofile
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(87, 16)
         Me.Label8.TabIndex = 42
-        Me.Label8.Text = "First Name"
+        Me.Label8.Text = "Full Name"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'editDatalbl
