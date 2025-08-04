@@ -68,13 +68,13 @@ Partial Class netincomereport
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.ComboBox7 = New System.Windows.Forms.ComboBox()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
         Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Button9 = New System.Windows.Forms.Button()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.Panel12 = New System.Windows.Forms.Panel()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -119,7 +119,6 @@ Partial Class netincomereport
         Me.Chart1.Series.Add(Series2)
         Me.Chart1.Size = New System.Drawing.Size(613, 310)
         Me.Chart1.TabIndex = 0
-        Me.Chart1.Text = "Chart1"
         '
         'Chart2
         '
@@ -503,6 +502,29 @@ Partial Class netincomereport
         Me.Panel9.Size = New System.Drawing.Size(242, 100)
         Me.Panel9.TabIndex = 259
         '
+        'ComboBox8
+        '
+        Me.ComboBox8.BackColor = System.Drawing.SystemColors.Window
+        Me.ComboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox8.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Location = New System.Drawing.Point(15, 18)
+        Me.ComboBox8.Name = "ComboBox8"
+        Me.ComboBox8.Size = New System.Drawing.Size(212, 27)
+        Me.ComboBox8.TabIndex = 257
+        '
+        'Button9
+        '
+        Me.Button9.BackColor = System.Drawing.SystemColors.Window
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button9.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.Location = New System.Drawing.Point(15, 51)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(212, 30)
+        Me.Button9.TabIndex = 234
+        Me.Button9.Text = "YEARLY"
+        Me.Button9.UseVisualStyleBackColor = False
+        '
         'Button7
         '
         Me.Button7.BackColor = System.Drawing.SystemColors.Window
@@ -547,17 +569,6 @@ Partial Class netincomereport
         Me.Panel10.Size = New System.Drawing.Size(242, 100)
         Me.Panel10.TabIndex = 262
         '
-        'ComboBox8
-        '
-        Me.ComboBox8.BackColor = System.Drawing.SystemColors.Window
-        Me.ComboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox8.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox8.FormattingEnabled = True
-        Me.ComboBox8.Location = New System.Drawing.Point(15, 18)
-        Me.ComboBox8.Name = "ComboBox8"
-        Me.ComboBox8.Size = New System.Drawing.Size(212, 27)
-        Me.ComboBox8.TabIndex = 257
-        '
         'Panel11
         '
         Me.Panel11.BackColor = System.Drawing.SystemColors.ControlLight
@@ -567,18 +578,6 @@ Partial Class netincomereport
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(242, 100)
         Me.Panel11.TabIndex = 260
-        '
-        'Button9
-        '
-        Me.Button9.BackColor = System.Drawing.SystemColors.Window
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Font = New System.Drawing.Font("Bahnschrift SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(15, 51)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(212, 30)
-        Me.Button9.TabIndex = 234
-        Me.Button9.Text = "YEARLY"
-        Me.Button9.UseVisualStyleBackColor = False
         '
         'DateTimePicker4
         '

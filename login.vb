@@ -6,6 +6,7 @@ Public Class login
     Public Shared customerId As Integer = 0
     Public Shared adminId As Integer = 0
     Public Shared userRole As String = ""
+    Public Shared adminRole As String = ""
 
     ' Database connection objects
     Private conn As New MySqlConnection("server=localhost;user id=root;password=;database=sheeshcuit")
@@ -83,14 +84,16 @@ Public Class login
                         Return
                     End If
                 ElseIf userRoleValue.ToLower() = "admin" Then
-                    ' For admin accounts, get admin ID from admin_users table
-                    query = $"SELECT adminId FROM admin_users WHERE userId = {userId}"
+                    ' For admin accounts, get admin ID and admin role from admin_users table
+                    query = $"SELECT adminId, adminRole FROM admin_users WHERE userId = {userId}"
                     cmd = New MySqlCommand(query, conn)
                     reader = cmd.ExecuteReader()
 
                     If reader.Read() Then
                         login.adminId = reader.GetInt32("adminId") ' Set the shared variable
+                        login.adminRole = reader.GetString("adminRole") ' Set the admin role
                         Console.WriteLine($"Debug: Admin ID set to: {login.adminId}")
+                        Console.WriteLine($"Debug: Admin Role set to: {login.adminRole}")
                         reader.Close()
                     Else
                         reader.Close()

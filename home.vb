@@ -175,6 +175,17 @@ Public Class home
 
     'Profile
     Private Sub usericon_Click(sender As Object, e As EventArgs) Handles usericon.Click
+        ' Check if user has been logged out from admin forms (adminId = 0 means logged out)
+        If login.adminId = 0 AndAlso Not String.IsNullOrEmpty(login.userRole) AndAlso login.userRole.ToLower() = "admin" Then
+            ' Clear all session data
+            login.userRole = ""
+            login.customerId = 0
+            login.adminRole = ""
+            MessageBox.Show("You have been logged out from all sessions.", "Session Expired", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            login.Show()
+            Return
+        End If
+
         ' Check if user is logged in
         If String.IsNullOrEmpty(login.userRole) Then
             MessageBox.Show("Please log in first to view your profile.")
@@ -222,6 +233,17 @@ Public Class home
     End Sub
 
     Private Sub PictureBox45_Click(sender As Object, e As EventArgs) Handles PictureBox45.Click
+        ' Check if user has been logged out from admin forms (adminId = 0 means logged out)
+        If login.adminId = 0 AndAlso Not String.IsNullOrEmpty(login.userRole) AndAlso login.userRole.ToLower() = "admin" Then
+            ' Clear all session data
+            login.userRole = ""
+            login.customerId = 0
+            login.adminRole = ""
+            MessageBox.Show("You have been logged out from all sessions.", "Session Expired", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            login.Show()
+            Return
+        End If
+
         ' Check if user is logged in
         If String.IsNullOrEmpty(login.userRole) Then
             MessageBox.Show("Please log in first to view your profile.")
@@ -269,6 +291,17 @@ Public Class home
     End Sub
 
     Private Sub ProfileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfileToolStripMenuItem.Click
+        ' Check if user has been logged out from admin forms (adminId = 0 means logged out)
+        If login.adminId = 0 AndAlso Not String.IsNullOrEmpty(login.userRole) AndAlso login.userRole.ToLower() = "admin" Then
+            ' Clear all session data
+            login.userRole = ""
+            login.customerId = 0
+            login.adminRole = ""
+            MessageBox.Show("You have been logged out from all sessions.", "Session Expired", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            login.Show()
+            Return
+        End If
+
         ' Check if user is logged in
         If String.IsNullOrEmpty(login.userRole) Then
             MessageBox.Show("Please log in first to view your profile.")
@@ -458,11 +491,22 @@ Public Class home
             MessageBox.Show("Access denied. Admin privileges required.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
-        If login.userRole = "admin" Then
-            admin.Show()
-
-        End If
-        'ordermanager.Show()
+        
+        ' Check admin role and show appropriate form
+        Select Case login.adminRole.ToLower()
+            Case "super_admin"
+                admin.Show()
+            Case "admin"
+                admin.Show()
+            Case "inventory_manager"
+                inventorymanager.Show()
+            Case "order_manager"
+                ordermanager.Show()
+            Case "financial_auditor"
+                auditor.Show()
+            Case Else
+                MessageBox.Show("Unknown admin role. Please contact system administrator.", "Role Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Select
     End Sub
 End Class
 

@@ -102,6 +102,12 @@
     <Compile Include="adminprofile.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="adminregistration.Designer.vb">
+      <DependentUpon>adminregistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminregistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="auditor.Designer.vb">
       <DependentUpon>auditor.vb</DependentUpon>
     </Compile>
@@ -373,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminprofile.resx">
       <DependentUpon>adminprofile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminregistration.resx">
+      <DependentUpon>adminregistration.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="auditor.resx">
       <DependentUpon>auditor.vb</DependentUpon>

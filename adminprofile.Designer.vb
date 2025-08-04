@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class adminprofile
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,20 +20,18 @@ Partial Class adminprofile
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminprofile))
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.editDatalbl = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.PhoneTextBox = New System.Windows.Forms.TextBox()
         Me.EmailTextBox = New System.Windows.Forms.TextBox()
-        Me.LastNameTextBox = New System.Windows.Forms.TextBox()
-        Me.firstNameTextBox = New System.Windows.Forms.TextBox()
+        Me.fullNameTextBox = New System.Windows.Forms.TextBox()
         Me.darkTheme = New System.Windows.Forms.Button()
         Me.lightTheme = New System.Windows.Forms.Button()
         Me.rolelbl = New System.Windows.Forms.Label()
@@ -45,10 +43,6 @@ Partial Class adminprofile
         Me.editDataIcon = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.createdAtlbl = New System.Windows.Forms.Label()
-        Me.lastLoginlbl = New System.Windows.Forms.Label()
         CType(Me.editDataIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -70,7 +64,7 @@ Partial Class adminprofile
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(44, 577)
+        Me.Label11.Location = New System.Drawing.Point(44, 563)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(87, 16)
         Me.Label11.TabIndex = 45
@@ -82,31 +76,19 @@ Partial Class adminprofile
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(44, 543)
+        Me.Label10.Location = New System.Drawing.Point(44, 522)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(87, 16)
         Me.Label10.TabIndex = 44
         Me.Label10.Text = "Email"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label9
-        '
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(44, 509)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(87, 16)
-        Me.Label9.TabIndex = 43
-        Me.Label9.Text = "Last Name"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(44, 475)
+        Me.Label8.Location = New System.Drawing.Point(44, 481)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(87, 16)
         Me.Label8.TabIndex = 42
@@ -141,7 +123,7 @@ Partial Class adminprofile
         '
         'PhoneTextBox
         '
-        Me.PhoneTextBox.Location = New System.Drawing.Point(137, 576)
+        Me.PhoneTextBox.Location = New System.Drawing.Point(137, 562)
         Me.PhoneTextBox.Multiline = True
         Me.PhoneTextBox.Name = "PhoneTextBox"
         Me.PhoneTextBox.Size = New System.Drawing.Size(181, 20)
@@ -149,27 +131,19 @@ Partial Class adminprofile
         '
         'EmailTextBox
         '
-        Me.EmailTextBox.Location = New System.Drawing.Point(137, 542)
+        Me.EmailTextBox.Location = New System.Drawing.Point(137, 521)
         Me.EmailTextBox.Multiline = True
         Me.EmailTextBox.Name = "EmailTextBox"
         Me.EmailTextBox.Size = New System.Drawing.Size(181, 20)
         Me.EmailTextBox.TabIndex = 37
         '
-        'LastNameTextBox
+        'fullNameTextBox
         '
-        Me.LastNameTextBox.Location = New System.Drawing.Point(137, 508)
-        Me.LastNameTextBox.Multiline = True
-        Me.LastNameTextBox.Name = "LastNameTextBox"
-        Me.LastNameTextBox.Size = New System.Drawing.Size(181, 20)
-        Me.LastNameTextBox.TabIndex = 36
-        '
-        'firstNameTextBox
-        '
-        Me.firstNameTextBox.Location = New System.Drawing.Point(137, 474)
-        Me.firstNameTextBox.Multiline = True
-        Me.firstNameTextBox.Name = "firstNameTextBox"
-        Me.firstNameTextBox.Size = New System.Drawing.Size(181, 20)
-        Me.firstNameTextBox.TabIndex = 35
+        Me.fullNameTextBox.Location = New System.Drawing.Point(137, 480)
+        Me.fullNameTextBox.Multiline = True
+        Me.fullNameTextBox.Name = "fullNameTextBox"
+        Me.fullNameTextBox.Size = New System.Drawing.Size(181, 20)
+        Me.fullNameTextBox.TabIndex = 35
         '
         'darkTheme
         '
@@ -288,48 +262,6 @@ Partial Class adminprofile
         Me.PictureBox1.TabIndex = 40
         Me.PictureBox1.TabStop = False
         '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Himalaya", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Gray
-        Me.Label1.Location = New System.Drawing.Point(79, 370)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(105, 30)
-        Me.Label1.TabIndex = 53
-        Me.Label1.Text = "Created at :"
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Himalaya", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Gray
-        Me.Label2.Location = New System.Drawing.Point(79, 203)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(106, 30)
-        Me.Label2.TabIndex = 54
-        Me.Label2.Text = "Last Login :"
-        '
-        'createdAtlbl
-        '
-        Me.createdAtlbl.BackColor = System.Drawing.Color.Transparent
-        Me.createdAtlbl.Font = New System.Drawing.Font("Microsoft Himalaya", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.createdAtlbl.ForeColor = System.Drawing.Color.DimGray
-        Me.createdAtlbl.Location = New System.Drawing.Point(169, 371)
-        Me.createdAtlbl.Name = "createdAtlbl"
-        Me.createdAtlbl.Size = New System.Drawing.Size(150, 30)
-        Me.createdAtlbl.TabIndex = 55
-        '
-        'lastLoginlbl
-        '
-        Me.lastLoginlbl.BackColor = System.Drawing.Color.Transparent
-        Me.lastLoginlbl.Font = New System.Drawing.Font("Microsoft Himalaya", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lastLoginlbl.ForeColor = System.Drawing.Color.DimGray
-        Me.lastLoginlbl.Location = New System.Drawing.Point(174, 203)
-        Me.lastLoginlbl.Name = "lastLoginlbl"
-        Me.lastLoginlbl.Size = New System.Drawing.Size(141, 30)
-        Me.lastLoginlbl.TabIndex = 56
-        '
         'adminprofile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -337,23 +269,17 @@ Partial Class adminprofile
         Me.BackgroundImage = Global.Logic_Sheeshcuit.My.Resources.Resources.Admin_Light_Theme
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(384, 661)
-        Me.Controls.Add(Me.createdAtlbl)
-        Me.Controls.Add(Me.lastLoginlbl)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.editDataIcon)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.editDatalbl)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.PhoneTextBox)
         Me.Controls.Add(Me.EmailTextBox)
-        Me.Controls.Add(Me.LastNameTextBox)
-        Me.Controls.Add(Me.firstNameTextBox)
+        Me.Controls.Add(Me.fullNameTextBox)
         Me.Controls.Add(Me.darkTheme)
         Me.Controls.Add(Me.lightTheme)
         Me.Controls.Add(Me.rolelbl)
@@ -380,14 +306,12 @@ Partial Class adminprofile
     Friend WithEvents editDataIcon As PictureBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents editDatalbl As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents PhoneTextBox As TextBox
     Friend WithEvents EmailTextBox As TextBox
-    Friend WithEvents LastNameTextBox As TextBox
-    Friend WithEvents firstNameTextBox As TextBox
+    Friend WithEvents fullNameTextBox As TextBox
     Friend WithEvents darkTheme As Button
     Friend WithEvents lightTheme As Button
     Friend WithEvents rolelbl As Label
@@ -397,8 +321,4 @@ Partial Class adminprofile
     Friend WithEvents adminIdlbl As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents createdAtlbl As Label
-    Friend WithEvents lastLoginlbl As Label
 End Class

@@ -12,7 +12,7 @@ Public Class auditor
         Try
             conn.Open()
             Select Case ComboBox1.Text.ToLower()
-                Case "expenses", "sales"
+                Case "expenses", "sales", "orders", "orderitems"
 
                     query = $"SELECT * FROM {ComboBox1.Text}"
                     cmd = New MySqlCommand(query, conn)
@@ -34,8 +34,18 @@ Public Class auditor
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
-        MessageBox.Show("Logging Out...", "Goodbye, auditor.", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        home.Show()
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If result = DialogResult.Yes Then
+            login.adminId = 0
+            MessageBox.Show("You have been logged out successfully.", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            login.Show()
+            Me.Hide()
+            datasets.Close()
+            home.Button1.Visible = False
+        End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        datasets.Show()
     End Sub
 End Class

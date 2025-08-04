@@ -17,8 +17,7 @@ Public Class adminprofile
 
     Private Sub LoadAdminProfile()
 
-        AddHandler firstNameTextBox.KeyDown, AddressOf EditTextBox_KeyDown
-        AddHandler LastNameTextBox.KeyDown, AddressOf EditTextBox_KeyDown
+        AddHandler fullNameTextBox.KeyDown, AddressOf EditTextBox_KeyDown
         AddHandler EmailTextBox.KeyDown, AddressOf EditTextBox_KeyDown
         AddHandler PhoneTextBox.KeyDown, AddressOf EditTextBox_KeyDown
 
@@ -28,54 +27,19 @@ Public Class adminprofile
             End If
 
             ' Get admin information using the logged-in admin ID
-            query = $"SELECT adminId, fullName, email, phone, lastLogin, createdAt FROM admin_users WHERE adminId = {login.adminId}"
+            query = $"SELECT adminId, fullName, email, phone FROM admin_users WHERE adminId = {login.adminId}"
             cmd = New MySqlCommand(query, conn)
             reader = cmd.ExecuteReader()
 
             If reader.Read() Then
-                ' Safely get adminId as integer
-                Try
-                    adminIdlbl.Text = reader.GetInt32("adminId").ToString()
-                Catch ex As Exception
-                    adminIdlbl.Text = "N/A"
-                End Try
+                adminIdlbl.Text = reader.GetInt32("adminId").ToString()
 
-                ' Safely get fullName as string with proper error handling
-                Try
-                    usernamelbl.Text = If(reader.IsDBNull("fullName"), "N/A", reader.GetString("fullName"))
-                Catch ex As Exception
-                    usernamelbl.Text = "N/A"
-                End Try
+                ' Set fullName directly like in customerprofile
+                usernamelbl.Text = reader.GetString("fullName")
 
-                ' Safely get email as string
-                Try
-                    emaillbl.Text = If(reader.IsDBNull("email"), "N/A", reader.GetString("email"))
-                Catch ex As Exception
-                    emaillbl.Text = "N/A"
-                End Try
-
-                ' Safely get phone as string
-                Try
-                    phonelbl.Text = If(reader.IsDBNull("phone"), "N/A", reader.GetString("phone"))
-                Catch ex As Exception
-                    phonelbl.Text = "N/A"
-                End Try
-
-                ' Safely get lastLogin as string
-                Try
-                    lastLoginlbl.Text = If(reader.IsDBNull("lastLogin"), "N/A", reader.GetString("lastLogin"))
-                Catch ex As Exception
-                    lastLoginlbl.Text = "N/A"
-                End Try
-
-                ' Safely get createdAt as string
-                Try
-                    createdAtlbl.Text = If(reader.IsDBNull("createdAt"), "N/A", reader.GetString("createdAt"))
-                Catch ex As Exception
-                    createdAtlbl.Text = "N/A"
-                End Try
-
-                rolelbl.Text = login.userRole
+                emaillbl.Text = reader.GetString("email")
+                phonelbl.Text = reader.GetString("phone")
+                rolelbl.Text = login.adminRole
             Else
                 MessageBox.Show("Admin information not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
@@ -98,24 +62,15 @@ Public Class adminprofile
         ' Set textboxes from label values (if needed)
         Try
             If Not String.IsNullOrEmpty(usernamelbl.Text) AndAlso usernamelbl.Text <> "N/A" Then
-                Dim names = usernamelbl.Text.Split(" "c)
-                If names.Length > 1 Then
-                    firstNameTextBox.Text = names(0)
-                    LastNameTextBox.Text = String.Join(" ", names.Skip(1))
-                Else
-                    firstNameTextBox.Text = usernamelbl.Text
-                    LastNameTextBox.Text = ""
-                End If
+                fullNameTextBox.Text = usernamelbl.Text
             Else
-                firstNameTextBox.Text = ""
-                LastNameTextBox.Text = ""
+                fullNameTextBox.Text = ""
             End If
 
             EmailTextBox.Text = If(emaillbl.Text = "N/A", "", emaillbl.Text)
             PhoneTextBox.Text = If(phonelbl.Text = "N/A", "", phonelbl.Text)
         Catch ex As Exception
-            firstNameTextBox.Text = ""
-            LastNameTextBox.Text = ""
+            fullNameTextBox.Text = ""
             EmailTextBox.Text = ""
             PhoneTextBox.Text = ""
         End Try
@@ -135,7 +90,7 @@ Public Class adminprofile
     Private Sub SetTextBoxesReadOnly(readOnlyState As Boolean)
         Dim cursorType As Cursor = If(readOnlyState, Cursors.Default, Cursors.IBeam)
 
-        For Each tb As TextBox In {firstNameTextBox, LastNameTextBox, EmailTextBox, PhoneTextBox}
+        For Each tb As TextBox In {fullNameTextBox, EmailTextBox, PhoneTextBox}
             tb.ReadOnly = readOnlyState
             tb.TabStop = Not readOnlyState
             tb.Cursor = cursorType
@@ -163,13 +118,7 @@ Public Class adminprofile
         adminIdlbl.ForeColor = Color.Gray
         rolelbl.ForeColor = Color.Gray
 
-        Label1.ForeColor = Color.Gray
-        Label2.ForeColor = Color.Gray
-        createdAtlbl.ForeColor = Color.Gray
-        lastLoginlbl.ForeColor = Color.Gray
-
         Label8.ForeColor = Color.White
-        Label9.ForeColor = Color.White
         Label10.ForeColor = Color.White
         Label11.ForeColor = Color.White
 
@@ -188,13 +137,7 @@ Public Class adminprofile
         adminIdlbl.ForeColor = Color.White
         rolelbl.ForeColor = Color.White
 
-        Label1.ForeColor = Color.White
-        Label2.ForeColor = Color.White
-        createdAtlbl.ForeColor = Color.White
-        lastLoginlbl.ForeColor = Color.White
-
         Label8.ForeColor = Color.Gray
-        Label9.ForeColor = Color.Gray
         Label10.ForeColor = Color.Gray
         Label11.ForeColor = Color.Gray
 
@@ -218,13 +161,11 @@ Public Class adminprofile
     Private Sub ToggleEdit()
         If Not isEditing Then
             SetTextBoxesReadOnly(False)
-            firstNameTextBox.Focus()
+            fullNameTextBox.Focus()
             isEditing = True
         Else
             ' Save changes to labels
-            Dim firstName As String = firstNameTextBox.Text.Trim()
-            Dim lastName As String = LastNameTextBox.Text.Trim()
-            usernamelbl.Text = firstNameTextBox.Text & " " & LastNameTextBox.Text
+            usernamelbl.Text = fullNameTextBox.Text.Trim()
             emaillbl.Text = EmailTextBox.Text
             phonelbl.Text = PhoneTextBox.Text
             SetTextBoxesReadOnly(True)
@@ -238,13 +179,12 @@ Public Class adminprofile
     End Sub
 
     Private Sub ConfirmEditAndUpdate()
-        Dim firstName As String = firstNameTextBox.Text.Trim()
-        Dim lastName As String = LastNameTextBox.Text.Trim()
+        Dim fullName As String = fullNameTextBox.Text.Trim()
         Dim email As String = EmailTextBox.Text.Trim()
         Dim phone As String = PhoneTextBox.Text.Trim()
 
         ' Update labels
-        usernamelbl.Text = If(lastName = "", firstName, firstName & " " & lastName)
+        usernamelbl.Text = fullName
         emaillbl.Text = email
         phonelbl.Text = phone
 
@@ -252,7 +192,7 @@ Public Class adminprofile
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If
-            query = $"UPDATE admin_users SET fullName='{firstName} {lastName}', email='{email}', phone='{phone}' WHERE adminId={adminIdlbl.Text}"
+            query = $"UPDATE admin_users SET fullName='{fullName}', email='{email}', phone='{phone}' WHERE adminId={adminIdlbl.Text}"
             cmd = New MySqlCommand(query, conn)
             cmd.ExecuteNonQuery()
 
@@ -284,6 +224,7 @@ Public Class adminprofile
             MessageBox.Show("You have been logged out successfully.", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information)
             login.Show()
             Me.Hide()
+            home.Button1.Visible = False
         End If
     End Sub
 End Class
